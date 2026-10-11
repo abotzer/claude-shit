@@ -1,0 +1,25 @@
+as_of,metric,value,unit,scope,confidence,source_url
+2025-Q2,Lead time - power transformers,128,weeks,WoodMac survey average,S,https://www.woodmac.com/news/opinion/transformer-troubles-manufacturing-and-policy-constraints-hit-us-transformer-supply/
+2025-Q2,Lead time - GSU,144,weeks,WoodMac survey average,S,https://www.woodmac.com/news/opinion/transformer-troubles-manufacturing-and-policy-constraints-hit-us-transformer-supply/
+2026-08,Lead time - power/substation,160+,weeks,VAWN index,W,https://usevawn.com/resources/electrical-equipment-lead-times/
+2026-08,Lead time - pad-mount,~30,weeks,VAWN index,W,https://usevawn.com/resources/electrical-equipment-lead-times/
+2026,Lead time - pad-mount,40-60,weeks,DistroForge guide,W,https://distroforge.com/blog/transformer-procurement-2026/
+2026-05,Lead time - large HV (extreme quotes),up to 4 years,years,pv magazine / PwC,S,https://pv-magazine-usa.com/2026/05/11/u-s-transformer-market-faces-severe-supply-constraints-as-lead-times-extend-to-four-years/
+2026,Supply deficit - power transformers,15,percent,WoodMac 2026 estimate,S,https://www.woodmac.com/press-releases/us-executive-order-banning-chinese-bulk-power-equipment-set-to-worsen-critical-transformer-shortage/
+2026,Supply deficit - substation units,8,percent,WoodMac 2026 estimate,S,https://www.woodmac.com/press-releases/us-executive-order-banning-chinese-bulk-power-equipment-set-to-worsen-critical-transformer-shortage/
+2025,Supply deficit - power transformers,30,percent,WoodMac 2025,S,https://www.powermag.com/transformers-in-2026-shortage-scramble-or-self-inflicted-crisis/
+2026-07,PPI - power & distribution transformers (WPU117409),381.783,index Dec1999=100,"+91.4% vs Jan 2020; +8.7% YoY",S,https://labordatahub.com/producer-prices/power-distribution-and-specialty-transformer-manufacturing
+2026-03,PPI - NAICS 335311,455.9,index,"+4.27% YoY",S,https://tradingeconomics.com/united-states/producer-price-index-by-industry-electric-power-and-specialty-transformer-manufacturing-fed-data.html
+2026-01,PPI - power & distribution transformers ex parts (WPU11740999),366.604,index,FRED,S,https://fred.stlouisfed.org/series/WPU11740999
+2025,Price change since 2019 - power transformers,77,percent,WoodMac via POWER,S,https://www.powermag.com/transformers-in-2026-shortage-scramble-or-self-inflicted-crisis/
+2026,IOU capex - annual,239,USD bn,EEI projection,P,https://www.eei.org/en/news/news/all/2026-grid-record
+2026,IOU capex - 2026-2030,1400,USD bn,EEI projection,P,https://www.eei.org/en/news/news/all/2026-grid-record
+2026-04,Utility capex - 2026-2030 (RRA 46 cos),1295,USD bn,S&P RRA,S,https://www.spglobal.com/market-intelligence/en/news-insights/research/2026/04/surging-energy-demand-puts-us-utility-capex-forecast-near-1-3t-in-2026-30
+2025,Korea UHV transformer exports - total,1300,USD m,Record; ~738 to US,S,https://transformer-magazine.com/news/korean-transformer-exports-hit-1-3-b/
+2025,US UHV transformer market share - HD Hyundai,25.7,percent,,S,https://finance.biggo.com/news/78314cef-6521-4054-b7fb-58f76f7fde04
+2025-2026,Bulk-power imports exposed to EO 14420,22000+,USD m,WoodMac (since 2025),S,https://www.woodmac.com/press-releases/us-executive-order-banning-chinese-bulk-power-equipment-set-to-worsen-critical-transformer-shortage/
+2026-10-09,Copper COMEX,6.66,USD/lb,,W,https://metalcharts.org/copper-price
+2026-06-30,GE Vernova Electrification backlog,~41,USD bn,Q2 2026,P,https://www.sec.gov/Archives/edgar/data/0001996810/000199681026000147/gevpressrelease2q26.htm
+2026-06-30,Eaton Electrical Americas book-to-bill,1.3,ratio,Q2 2026; backlog +33% YoY,P,https://www.sec.gov/Archives/edgar/data/0001551182/000155118226000027/etn06302026exhibit99.htm
+2026-06-30,Hammond Power Solutions backlog,"-6.9% QoQ / +96.9% YoY",change,Q2 2026,P,https://tedmag.com/hammond-power-solutions-reports-2q-2026-results/
+2026-06-30,Quanta Services backlog,53.4,USD bn,Q2 2026 record,P,https://www.prnewswire.com/news-releases/quanta-services-reports-second-quarter-2026-results-302838646.html
