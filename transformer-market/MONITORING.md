@@ -47,7 +47,13 @@ Use web search in "extended" mode for anything time-sensitive. Run the searches 
 1. Add new rows to `data/capacity_expansions.csv`, `data/deals.csv` and `data/indicators.csv`. Change the status or value on existing rows when something moves. Never delete history; add a new dated indicator row instead.
 2. Edit `market-map.md` sections 1–9 where facts changed, and update the "Baseline as of" date.
 3. Write `weekly/<YYYY-MM-DD>.md` using the template below.
-4. Commit with the message `weekly: transformer market update <YYYY-MM-DD>` and push to the working branch.
+4. Refresh the dashboard at https://claude.ai/artifact/HPfiJXoEzG2ZwVXuMkAWYb:
+   - Update the rows in `dashboard/build_data.py`, including `report_window`, `events` (move last week's items to "Last six weeks"), `takeaways` and `watchlist`.
+   - Run `python3 -I dashboard/build_data.py <out_dir>`.
+   - Upload each changed JSON file as an asset on that artifact.
+   - Update `url`, `name` and `updated` on the matching `datasets/<id>` document.
+   - Edit `files/index.html` (source in `dashboard/index.html`) only when the layout itself needs to change.
+5. Commit with the message `weekly: transformer market update <YYYY-MM-DD>` and push to the working branch.
 
 ## 5. Weekly report template
 

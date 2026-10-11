@@ -1,0 +1,1309 @@
+<style>
+/* Layout: one reading column of sections; summary tiles first, then charts and tables in cards. */
+.tx { display: flex; flex-direction: column; gap: calc(var(--cds-gap-xl) * 1.5); font-family: var(--font-anthropic-sans); color: var(--color-fg); max-width: 78rem; margin-inline: auto; }
+.tx h1, .tx h2, .tx h3, .tx p { margin: 0; }
+.tx h1, .tx h2, .tx h3 { text-wrap: balance; }
+.tx a { color: inherit; }
+.tx a:focus-visible, .tx button:focus-visible, .tx input:focus-visible { outline: 2px solid var(--color-fg); outline-offset: 2px; }
+.tx-muted { color: var(--color-fg-muted); }
+
+.tx-head { display: flex; flex-direction: column; gap: var(--cds-gap-sm); }
+.tx-eyebrow { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); letter-spacing: .05em; text-transform: uppercase; }
+.tx-title { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: calc(var(--cds-font-size-title) * 1.45); line-height: 1.1; }
+.tx-lede { font-size: var(--cds-font-size-heading); line-height: 1.45; max-width: 62ch; }
+.tx-nav { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs); padding-top: var(--cds-pad-xs); }
+.tx-nav button { font: inherit; font-size: var(--cds-font-size-caption); padding: var(--cds-pad-xs) var(--cds-pad-sm); border: 1px solid var(--color-border-line); background: var(--color-panel); color: var(--color-fg); border-radius: 999px; cursor: pointer; }
+.tx-nav button:hover { border-color: var(--color-fg-muted); }
+
+.tx-section { display: flex; flex-direction: column; gap: var(--cds-gap-md); scroll-margin-top: var(--cds-gap-lg); }
+.tx-section-head { display: flex; flex-direction: column; gap: var(--cds-gap-xs); }
+.tx-h2 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); line-height: 1.2; }
+.tx-h3 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); }
+.tx-sub { color: var(--color-fg-muted); max-width: 70ch; line-height: 1.45; }
+
+.tx-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); gap: var(--cds-gap-md); align-items: start; }
+.tx-card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); display: flex; flex-direction: column; gap: var(--cds-gap-sm); min-width: 0; }
+.tx-span { grid-column: 1 / -1; }
+.tx-card-title { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); }
+.tx-card-note { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); line-height: 1.45; }
+
+.tx-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 11.5rem), 1fr)); gap: var(--cds-gap-md); }
+.tx-tile { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-md) var(--cds-pad-lg); display: flex; flex-direction: column; gap: var(--cds-gap-xs); min-width: 0; }
+.tx-tile-label { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); line-height: 1.35; }
+.tx-big { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); line-height: 1.1; font-variant-numeric: tabular-nums; }
+.tx-unit { font-family: var(--font-anthropic-sans); font-size: var(--cds-font-size-body); color: var(--color-fg-muted); }
+.tx-unit-word { margin-left: .25em; }
+.tx-tile-note { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); line-height: 1.4; }
+.tx-tile-prior { font-size: var(--cds-font-size-caption); color: var(--color-fg); }
+
+.tx-chip { display: inline-flex; align-items: center; font-size: var(--cds-font-size-caption); line-height: 1.5; padding: 0 var(--cds-pad-sm); border-radius: 999px; border: 1px solid var(--color-border-line); color: var(--color-fg-muted); white-space: nowrap; }
+.tx-chip[data-level="High"] { color: var(--color-fg); border-color: color-mix(in srgb, var(--color-warn) 55%, transparent); background: color-mix(in srgb, var(--color-warn) 22%, transparent); }
+.tx-chip[data-level="Medium"] { color: var(--color-fg); background: color-mix(in srgb, var(--color-warn) 9%, transparent); }
+.tx-chip[data-stance="Tailwind"] { color: var(--color-ok); border-color: color-mix(in srgb, var(--color-ok) 45%, transparent); }
+.tx-chip[data-stance="Risk"] { color: var(--color-bad); border-color: color-mix(in srgb, var(--color-bad) 45%, transparent); }
+.tx-chip[data-stance="Opportunity"] { color: var(--color-warn); border-color: color-mix(in srgb, var(--color-warn) 55%, transparent); }
+.tx-chips { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs); }
+
+.tx-events { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); gap: var(--cds-gap-md); }
+.tx-event { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); display: flex; flex-direction: column; gap: var(--cds-gap-sm); min-width: 0; }
+.tx-event-top { display: flex; flex-wrap: wrap; align-items: center; gap: var(--cds-gap-xs); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.tx-event-date { font-variant-numeric: tabular-nums; margin-right: auto; }
+.tx-event-title { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); line-height: 1.3; }
+.tx-event-detail { line-height: 1.45; }
+.tx-event-impl { line-height: 1.45; padding-top: var(--cds-pad-sm); border-top: 1px solid var(--color-border-line); }
+.tx-event-impl .tx-so { font-weight: var(--cds-font-weight-medium); }
+.tx-src { display: flex; align-items: center; gap: var(--cds-gap-xs); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); margin-top: auto; }
+.tx-conf { font-size: var(--cds-font-size-caption); font-weight: var(--cds-font-weight-medium); border: 1px solid var(--color-border-line); border-radius: 4px; padding: 0 4px; line-height: 1.4; color: var(--color-fg-muted); }
+
+.tx-list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; }
+.tx-item { display: grid; grid-template-columns: minmax(4.5rem, 6.5rem) minmax(0, 1fr); gap: var(--cds-gap-md); padding-block: var(--cds-pad-sm); border-top: 1px solid var(--color-border-line); }
+.tx-item:first-child { border-top: 0; }
+.tx-item-date { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); font-variant-numeric: tabular-nums; padding-top: 2px; }
+.tx-item-body { display: flex; flex-direction: column; gap: var(--cds-gap-xs); min-width: 0; }
+.tx-item-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--cds-gap-xs) var(--cds-gap-sm); }
+.tx-item-title { font-weight: var(--cds-font-weight-medium); }
+.tx-item-text { line-height: 1.45; }
+.tx-pol-dot { display: inline-block; width: .5rem; height: .5rem; border-radius: 50%; margin-right: .4rem; background: var(--color-fg-muted); vertical-align: middle; }
+.tx-item[data-kind="Tariff"] .tx-pol-dot { background: var(--color-warn); }
+.tx-item[data-kind="Ban"] .tx-pol-dot { background: var(--color-bad); }
+.tx-item[data-kind="Support"] .tx-pol-dot { background: var(--color-ok); }
+.tx-today { display: flex; align-items: center; gap: var(--cds-gap-sm); padding-block: var(--cds-pad-xs); font-size: var(--cds-font-size-caption); font-weight: var(--cds-font-weight-medium); color: var(--color-fg); }
+.tx-today::after { content: ""; flex: 1; border-top: 1px dashed var(--color-fg-muted); }
+
+.tx-figs { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); gap: var(--cds-gap-md) var(--cds-gap-lg); }
+.tx-fig { display: flex; flex-direction: column; gap: 2px; min-width: 0; padding-top: var(--cds-pad-sm); border-top: 1px solid var(--color-border-line); }
+.tx-fig-label { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); line-height: 1.35; }
+.tx-fig-value { font-family: var(--font-anthropic-serif); font-size: var(--cds-font-size-title); font-weight: 400; line-height: 1.15; font-variant-numeric: tabular-nums; }
+.tx-fig-unit { font-family: var(--font-anthropic-sans); font-size: var(--cds-font-size-body); color: var(--color-fg-muted); }
+.tx-fig-prior { font-size: var(--cds-font-size-caption); color: var(--color-fg); }
+.tx-fig-note { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); line-height: 1.4; }
+
+.tx-chart { position: relative; width: 100%; min-width: 0; }
+.tx-chart-cap { min-height: 38rem; }
+.tx-chart-year { min-height: 13.75rem; }
+.tx-chart-map { min-height: 16rem; }
+.tx-chart-lead { min-height: 16.5rem; }
+.tx-chart-def { min-height: 12.5rem; }
+.tx-chart-ppi { min-height: 13.75rem; }
+.tx-chart-capex { min-height: 6rem; }
+.tx-svg { display: block; width: 100%; height: auto; }
+.tx-svg text { font-family: var(--font-anthropic-sans); font-size: var(--cds-font-size-caption); fill: var(--color-fg-muted); font-variant-numeric: tabular-nums; }
+.tx-svg .tx-lbl { fill: var(--color-fg); }
+.tx-svg .tx-val { fill: var(--color-fg); }
+.tx-svg .tx-lane { fill: var(--color-fg-muted); letter-spacing: .06em; }
+.tx-svg .tx-row.is-hover .tx-lbl { font-weight: var(--cds-font-weight-medium); }
+.tx-tip { position: absolute; z-index: 3; max-width: 18rem; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); border-radius: var(--cds-radius); box-shadow: var(--cds-shadow-popover); padding: var(--cds-pad-xs) var(--cds-pad-sm); font-size: var(--cds-font-size-caption); line-height: 1.45; pointer-events: none; color: var(--color-fg); }
+.tx-tip-head { color: var(--cds-text-secondary); font-weight: var(--cds-font-weight-medium); }
+.tx-legend { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs) var(--cds-gap-md); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.tx-legend span { display: inline-flex; align-items: center; gap: .35rem; }
+.tx-swatch { width: .65rem; height: .65rem; border-radius: 50%; display: inline-block; }
+.tx-undated { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs); }
+.tx-undated .tx-chip { color: var(--color-fg); }
+.tx-sentence { line-height: 1.45; }
+.tx .tx-sentence b, .tx .tx-strong { font-weight: var(--cds-font-weight-medium); }
+.tx-capex-group { display: flex; flex-direction: column; gap: var(--cds-gap-xs); }
+.tx-capex-label { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); text-transform: uppercase; letter-spacing: .05em; }
+.tx-rates { display: flex; flex-direction: column; gap: var(--cds-gap-xs); font-size: var(--cds-font-size-caption); }
+.tx-rates .tx-rate-v { font-weight: var(--cds-font-weight-medium); font-variant-numeric: tabular-nums; }
+
+.tx-fail { display: flex; align-items: center; justify-content: center; gap: .5rem; min-height: inherit; height: 100%; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+.tx-fail-dot { width: .375rem; height: .375rem; border-radius: 50%; background: var(--color-bad); }
+.tx [data-dash-source-state=empty] { color: transparent; }
+.tx [data-dash-source-state=refreshing] { opacity: .5; transition: opacity var(--cds-dur-slow); }
+
+.tx-table-wrap { overflow: auto; max-height: 34rem; min-width: 0; }
+.tx-table { width: 100%; border-collapse: collapse; font-size: var(--cds-font-size-caption); }
+.tx-table th { position: sticky; top: 0; z-index: 1; background: var(--color-panel); text-align: left; font-weight: var(--cds-font-weight-medium); color: var(--color-fg-muted); padding: var(--cds-pad-xs) var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); white-space: nowrap; }
+.tx-table th button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+.tx-table th button::after { content: " ↕"; opacity: .4; }
+.tx-table th[aria-sort="ascending"] button::after { content: " ↑"; opacity: 1; }
+.tx-table th[aria-sort="descending"] button::after { content: " ↓"; opacity: 1; }
+.tx-table td { padding: var(--cds-pad-xs) var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); vertical-align: top; line-height: 1.4; }
+.tx-table td.tx-num, .tx-table th.tx-num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.tx-table td.tx-first { font-weight: var(--cds-font-weight-medium); color: var(--color-fg); }
+.tx-table tr.is-new td { background: color-mix(in srgb, var(--color-warn) 12%, transparent); }
+.tx-search { font: inherit; font-size: var(--cds-font-size-body); color: var(--color-fg); background: var(--color-bg); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-xs) var(--cds-pad-sm); width: min(100%, 22rem); }
+@media (max-width: 40rem) { .tx-hide-sm { display: none; } }
+
+.tx-bottom { display: flex; flex-direction: column; gap: var(--cds-gap-xs); padding: var(--cds-pad-lg); border-radius: var(--cds-radius); background: color-mix(in srgb, var(--color-warn) 10%, var(--color-panel)); border: 1px solid var(--color-border-line); }
+.tx-bottom-label { font-size: var(--cds-font-size-caption); text-transform: uppercase; letter-spacing: .05em; color: var(--color-fg-muted); }
+.tx-bottom-text { font-family: var(--font-anthropic-serif); font-size: var(--cds-font-size-heading); line-height: 1.45; max-width: 70ch; }
+.tx-imp { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); gap: var(--cds-gap-md); }
+.tx-imp-card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); display: flex; flex-direction: column; gap: var(--cds-gap-sm); min-width: 0; }
+.tx-imp-card p { line-height: 1.5; }
+.tx-caveats { margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: var(--cds-gap-xs); line-height: 1.5; max-width: 75ch; }
+@media (prefers-reduced-motion: no-preference) {
+  .tx-svg .tx-anim { animation: tx-grow var(--cds-dur-slow) var(--cds-ease-out) both; transform-origin: bottom; transform-box: fill-box; }
+  @keyframes tx-grow { from { transform: scaleY(0); } to { transform: scaleY(1); } }
+}
+</style>
+
+<div class="tx">
+  <header class="tx-head" id="top">
+    <p class="tx-eyebrow tx-fill" data-source="figures" data-field="label" data-where="id=report_window">—</p>
+    <h1 class="tx-title">North American transformer market</h1>
+    <p class="tx-lede tx-fill" data-source="takeaways" data-field="body" data-where="id=headline">—</p>
+    <nav class="tx-nav" aria-label="Sections">
+      <button type="button" data-target="this-week">This week</button>
+      <button type="button" data-target="capacity">Capacity</button>
+      <button type="button" data-target="lead-times">Lead times</button>
+      <button type="button" data-target="prices">Prices and inputs</button>
+      <button type="button" data-target="demand">Demand</button>
+      <button type="button" data-target="trade-policy">Trade and policy</button>
+      <button type="button" data-target="deals">Deals</button>
+      <button type="button" data-target="manufacturers">Manufacturers</button>
+      <button type="button" data-target="implications">What it means</button>
+      <button type="button" data-target="watchlist">Watchlist</button>
+      <button type="button" data-target="notes">Sources</button>
+    </nav>
+  </header>
+
+  <section class="tx-tiles" id="summary" aria-label="Market at a glance">
+    <div class="tx-tile">
+      <div class="tx-tile-label tx-fill" data-source="figures" data-field="label" data-where="id=lpt_lead">—</div>
+      <div class="tx-big"><span class="tx-fill" data-source="figures" data-field="value" data-where="id=lpt_lead">—</span><span class="tx-unit tx-unit-word tx-fill" data-source="figures" data-field="unit" data-where="id=lpt_lead"></span></div>
+      <div class="tx-tile-note tx-fill" data-source="figures" data-field="note" data-where="id=lpt_lead">—</div>
+    </div>
+    <div class="tx-tile">
+      <div class="tx-tile-label tx-fill" data-source="figures" data-field="label" data-where="id=gsu_lead">—</div>
+      <div class="tx-big"><span class="tx-fill" data-source="figures" data-field="value" data-where="id=gsu_lead">—</span><span class="tx-unit tx-unit-word tx-fill" data-source="figures" data-field="unit" data-where="id=gsu_lead"></span></div>
+      <div class="tx-tile-note tx-fill" data-source="figures" data-field="note" data-where="id=gsu_lead">—</div>
+    </div>
+    <div class="tx-tile">
+      <div class="tx-tile-label tx-fill" data-source="figures" data-field="label" data-where="id=deficit_power">—</div>
+      <div class="tx-big"><span class="tx-fill" data-source="figures" data-field="value" data-where="id=deficit_power">—</span><span class="tx-unit tx-fill" data-source="figures" data-field="unit" data-where="id=deficit_power"></span></div>
+      <div class="tx-tile-prior">Was <span class="tx-fill" data-source="figures" data-field="prior" data-where="id=deficit_power">—</span>% in <span class="tx-fill" data-source="figures" data-field="prior_label" data-where="id=deficit_power">—</span></div>
+      <div class="tx-tile-note tx-fill" data-source="figures" data-field="note" data-where="id=deficit_power">—</div>
+    </div>
+    <div class="tx-tile">
+      <div class="tx-tile-label tx-fill" data-source="figures" data-field="label" data-where="id=ppi_yoy">—</div>
+      <div class="tx-big"><span class="tx-fill" data-source="figures" data-field="prefix" data-where="id=ppi_yoy"></span><span class="tx-fill" data-source="figures" data-field="value" data-where="id=ppi_yoy">—</span><span class="tx-unit tx-fill" data-source="figures" data-field="unit" data-where="id=ppi_yoy"></span></div>
+      <div class="tx-tile-note tx-fill" data-source="figures" data-field="note" data-where="id=ppi_yoy">—</div>
+    </div>
+    <div class="tx-tile">
+      <div class="tx-tile-label tx-fill" data-source="figures" data-field="label" data-where="id=capex_2026">—</div>
+      <div class="tx-big"><span class="tx-fill" data-source="figures" data-field="prefix" data-where="id=capex_2026"></span><span class="tx-fill" data-source="figures" data-field="value" data-where="id=capex_2026">—</span><span class="tx-unit tx-fill" data-source="figures" data-field="unit" data-where="id=capex_2026"></span></div>
+      <div class="tx-tile-note tx-fill" data-source="figures" data-field="note" data-where="id=capex_2026">—</div>
+    </div>
+    <div class="tx-tile">
+      <div class="tx-tile-label tx-fill" data-source="figures" data-field="label" data-where="id=lpt_import">—</div>
+      <div class="tx-big"><span class="tx-fill" data-source="figures" data-field="qualifier" data-where="id=lpt_import"></span><span class="tx-fill" data-source="figures" data-field="value" data-where="id=lpt_import">—</span><span class="tx-unit tx-fill" data-source="figures" data-field="unit" data-where="id=lpt_import"></span></div>
+      <div class="tx-tile-note tx-fill" data-source="figures" data-field="note" data-where="id=lpt_import">—</div>
+    </div>
+  </section>
+
+  <section class="tx-section" id="this-week">
+    <div class="tx-section-head">
+      <h2 class="tx-h2">What changed this week</h2>
+      <p class="tx-sub">Ranked by how much each event moves supply, competition or policy, with what it means for a new builder.</p>
+    </div>
+    <div class="tx-events dash-skeleton" id="week-cards"></div>
+    <div class="tx-card">
+      <h3 class="tx-card-title" id="recent-title">Last six weeks</h3>
+      <p class="tx-card-note">The events that set up this week, newest first.</p>
+      <ol class="tx-list dash-skeleton" id="recent-list"></ol>
+    </div>
+  </section>
+
+  <section class="tx-section" id="capacity">
+    <div class="tx-section-head">
+      <h2 class="tx-h2">Capacity pipeline</h2>
+      <p class="tx-sub">Announced North American plants and expansions, placed where each is expected to start producing. The shaded band is when most new incumbent capacity arrives.</p>
+    </div>
+    <div class="tx-grid">
+      <div class="tx-card tx-span">
+        <h3 class="tx-card-title" id="cap-title">When announced capacity comes online</h3>
+        <p class="tx-card-note">Dot size shows disclosed investment; hollow dots have no disclosed amount. The dashed line marks today. Hover a row for details.</p>
+        <div class="tx-legend" id="cap-legend"></div>
+        <div class="tx-chart tx-chart-cap dash-skeleton" id="cap-chart" data-source="capacity"></div>
+        <p class="tx-card-note">Start date not disclosed:</p>
+        <div class="tx-undated dash-skeleton" id="cap-undated"></div>
+      </div>
+      <div class="tx-card">
+        <h3 class="tx-card-title" id="year-title">Disclosed investment by start year</h3>
+        <p class="tx-card-note">Dollars disclosed for projects starting each year. Hover a bar for how many projects have no published figure.</p>
+        <div class="tx-chart tx-chart-year dash-skeleton" id="year-chart" data-source="cap_by_year"></div>
+      </div>
+      <div class="tx-card">
+        <h3 class="tx-card-title" id="map-title">Where the projects are</h3>
+        <p class="tx-card-note">Tracked projects by state or province. Darker tiles hold more; dashed tiles are Canada and Mexico.</p>
+        <div class="tx-chart tx-chart-map dash-skeleton" id="map-chart" data-source="capacity"></div>
+        <p class="tx-sentence"><b class="tx-fill" data-source="region_split" data-field="projects" data-where="region=Southeast">—</b> of <span class="tx-fill" data-source="region_split" data-field="projects" data-where="region=All">—</span> tracked projects sit in the Southeast, from Virginia to Louisiana.</p>
+      </div>
+      <div class="tx-card tx-span">
+        <h3 class="tx-card-title" id="cap-table-title">All tracked projects</h3>
+        <p class="tx-card-note">Investment in millions of US dollars. Sort by any column.</p>
+        <div class="tx-table-wrap">
+          <table class="tx-table" id="cap-table" data-source="capacity" data-row-key="id"><thead></thead><tbody></tbody></table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tx-section" id="lead-times">
+    <div class="tx-section-head">
+      <h2 class="tx-h2">Lead times and the supply gap</h2>
+      <p class="tx-sub">How long buyers wait from order to delivery, and how much demand supply still can’t meet.</p>
+    </div>
+    <div class="tx-grid">
+      <div class="tx-card">
+        <h3 class="tx-card-title" id="lead-title">Lead time by transformer class</h3>
+        <p class="tx-card-note">Bars show the reported range, dots a survey average, dashed lines the longest quotes reported.</p>
+        <div class="tx-chart tx-chart-lead dash-skeleton" id="lead-chart" data-source="leadtimes"></div>
+      </div>
+      <div class="tx-card">
+        <h3 class="tx-card-title" id="deficit-title">Power transformer supply gap</h3>
+        <p class="tx-card-note">Share of US demand that supply can’t meet, per Wood Mackenzie. The last bar is a projection from a secondary source.</p>
+        <div class="tx-chart tx-chart-def dash-skeleton" id="deficit-chart" data-source="deficit"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tx-section" id="prices">
+    <div class="tx-section-head">
+      <h2 class="tx-h2">Prices and inputs</h2>
+      <p class="tx-sub">Transformer prices are still rising, but more slowly. Copper and electrical steel set the floor under costs.</p>
+    </div>
+    <div class="tx-grid">
+      <div class="tx-card">
+        <h3 class="tx-card-title" id="ppi-title">Transformer producer price index</h3>
+        <p class="tx-card-note">BLS power and distribution transformer index. The two earlier points are backed out of the reported percentage changes.</p>
+        <div class="tx-chart tx-chart-ppi dash-skeleton" id="ppi-chart" data-source="ppi_path"></div>
+        <div class="tx-rates" id="ppi-rates">
+          <div><span class="tx-fill" data-source="ppi_rates" data-field="period" data-where="id=before">—</span>: <span class="tx-rate-v tx-fill" data-source="ppi_rates" data-field="annual_pct" data-where="id=before">—</span>% a year</div>
+          <div><span class="tx-fill" data-source="ppi_rates" data-field="period" data-where="id=last12">—</span>: <span class="tx-rate-v tx-fill" data-source="ppi_rates" data-field="annual_pct" data-where="id=last12">—</span>%</div>
+          <div class="tx-muted">A second BLS series, <span class="tx-fill" data-source="ppi" data-field="name" data-where="series=PCU335311">—</span>, rose <span class="tx-fill" data-source="ppi" data-field="yoy_pct" data-where="series=PCU335311">—</span>% in the year to <span class="tx-fill" data-source="ppi" data-field="month" data-where="series=PCU335311">—</span>.</div>
+        </div>
+      </div>
+      <div class="tx-card">
+        <h3 class="tx-card-title" id="inputs-title">Inputs</h3>
+        <p class="tx-card-note">Copper windings and grain-oriented electrical steel (GOES) cores are the two biggest material costs.</p>
+        <div class="tx-figs dash-skeleton" id="inputs-list"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tx-section" id="demand">
+    <div class="tx-section-head">
+      <h2 class="tx-h2">Demand and order books</h2>
+      <p class="tx-sub">Utility spending keeps rising, and suppliers’ backlogs are at records.</p>
+    </div>
+    <div class="tx-grid">
+      <div class="tx-card">
+        <h3 class="tx-card-title" id="capex-title">Utility capex forecasts</h3>
+        <p class="tx-card-note">Forecasters cover different groups of companies, so compare bars within a chart, not across.</p>
+        <div class="tx-capex-group">
+          <div class="tx-capex-label">This year</div>
+          <div class="tx-chart tx-chart-capex dash-skeleton" id="capex-annual-chart" data-source="figures"></div>
+        </div>
+        <div class="tx-capex-group">
+          <div class="tx-capex-label">Five-year plans</div>
+          <div class="tx-chart tx-chart-capex dash-skeleton" id="capex-5yr-chart" data-source="figures"></div>
+        </div>
+      </div>
+      <div class="tx-card">
+        <h3 class="tx-card-title" id="backlog-title">Order books</h3>
+        <p class="tx-card-note">Latest reported backlogs of the main suppliers.</p>
+        <div class="tx-figs dash-skeleton" id="backlog-list"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tx-section" id="trade-policy">
+    <div class="tx-section-head">
+      <h2 class="tx-h2">Trade and policy</h2>
+      <p class="tx-sub">Where imports come from today, and the tariffs, bans and support programs reshaping that.</p>
+    </div>
+    <div class="tx-grid">
+      <div class="tx-card tx-span">
+        <h3 class="tx-card-title" id="trade-title">Trade flows</h3>
+        <p class="tx-card-note">Mixed years and scopes; there is no clean import series for this year yet.</p>
+        <div class="tx-figs dash-skeleton" id="trade-list"></div>
+      </div>
+      <div class="tx-card">
+        <h3 class="tx-card-title" id="policy-title">Policy timeline</h3>
+        <p class="tx-card-note">Dot color: amber for tariffs, red for bans, green for support, grey for standards and trade deals.</p>
+        <ol class="tx-list dash-skeleton" id="policy-list"></ol>
+      </div>
+      <div class="tx-card">
+        <h3 class="tx-card-title" id="tariff-title">Tariff rates on transformers and inputs</h3>
+        <p class="tx-card-note">Rates stack: the forced-labor tariff adds to the metals tariff on the same goods.</p>
+        <div class="tx-table-wrap">
+          <table class="tx-table" id="tariff-table" data-source="policy" data-row-key="id"><thead></thead><tbody></tbody></table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tx-section" id="deals">
+    <div class="tx-section-head">
+      <h2 class="tx-h2">Deals and valuations</h2>
+      <p class="tx-sub">Private equity is buying refurbishment, rental and service businesses, and public markets are paying up for electrical makers.</p>
+    </div>
+    <div class="tx-tiles">
+      <div class="tx-tile">
+        <div class="tx-tile-label">Prolec GE implied value, whole company</div>
+        <div class="tx-big">$<span class="tx-fill" data-source="prolec_implied">—</span><span class="tx-unit">B</span></div>
+        <div class="tx-tile-note">Twice the $<span class="tx-fill" data-source="figures" data-field="value" data-where="id=prolec_half">—</span>M GE Vernova paid for half.</div>
+      </div>
+      <div class="tx-tile">
+        <div class="tx-tile-label">Forgent follow-on vs IPO price</div>
+        <div class="tx-big">+<span class="tx-fill" data-source="forgent_uplift">—</span><span class="tx-unit">%</span></div>
+        <div class="tx-tile-note">IPO at $<span class="tx-fill" data-source="figures" data-field="value" data-where="id=forgent_ipo">—</span>, follow-on at $<span class="tx-fill" data-source="figures" data-field="value" data-where="id=forgent_follow">—</span> a share.</div>
+      </div>
+      <div class="tx-tile">
+        <div class="tx-tile-label tx-fill" data-source="figures" data-field="label" data-where="id=vtc_sale">—</div>
+        <div class="tx-big"><span class="tx-fill" data-source="figures" data-field="qualifier" data-where="id=vtc_sale"></span><span class="tx-fill" data-source="figures" data-field="prefix" data-where="id=vtc_sale"></span><span class="tx-fill" data-source="figures" data-field="value" data-where="id=vtc_sale">—</span><span class="tx-unit tx-fill" data-source="figures" data-field="unit" data-where="id=vtc_sale"></span></div>
+        <div class="tx-tile-note tx-fill" data-source="figures" data-field="note" data-where="id=vtc_sale">—</div>
+      </div>
+      <div class="tx-tile">
+        <div class="tx-tile-label tx-fill" data-source="figures" data-field="label" data-where="id=maclean">—</div>
+        <div class="tx-big"><span class="tx-fill" data-source="figures" data-field="qualifier" data-where="id=maclean"></span><span class="tx-fill" data-source="figures" data-field="prefix" data-where="id=maclean"></span><span class="tx-fill" data-source="figures" data-field="value" data-where="id=maclean">—</span><span class="tx-unit tx-fill" data-source="figures" data-field="unit" data-where="id=maclean"></span></div>
+        <div class="tx-tile-note tx-fill" data-source="figures" data-field="note" data-where="id=maclean">—</div>
+      </div>
+    </div>
+    <div class="tx-card">
+      <h3 class="tx-card-title" id="deals-title">Deals</h3>
+      <p class="tx-card-note">Highlighted rows happened this week. Values in US dollars where disclosed.</p>
+      <div class="tx-table-wrap">
+        <table class="tx-table" id="deals-table" data-source="deals" data-row-key="id"><thead></thead><tbody></tbody></table>
+      </div>
+    </div>
+  </section>
+
+  <section class="tx-section" id="manufacturers">
+    <div class="tx-section-head">
+      <h2 class="tx-h2">Manufacturers</h2>
+      <p class="tx-sub">Who makes transformers for North America, who owns them, and their latest move.</p>
+    </div>
+    <div class="tx-card">
+      <label class="tx-card-note" for="mfr-search">Search companies, owners, plants or moves</label>
+      <input class="tx-search" id="mfr-search" type="search" placeholder="Try “private”, “Virginia” or “Quanta”" autocomplete="off">
+      <div class="tx-table-wrap">
+        <table class="tx-table" id="mfr-table" data-source="manufacturers" data-row-key="company"><thead></thead><tbody></tbody></table>
+      </div>
+    </div>
+  </section>
+
+  <section class="tx-section" id="implications">
+    <div class="tx-section-head">
+      <h2 class="tx-h2">What it means if you want to build transformers</h2>
+    </div>
+    <div class="tx-bottom dash-skeleton" id="bottom-line"></div>
+    <div class="tx-imp dash-skeleton" id="imp-grid"></div>
+  </section>
+
+  <section class="tx-section" id="watchlist">
+    <div class="tx-section-head">
+      <h2 class="tx-h2">Watchlist</h2>
+      <p class="tx-sub">Dated events that could change the picture.</p>
+    </div>
+    <div class="tx-card">
+      <div class="tx-table-wrap">
+        <table class="tx-table" id="watch-table" data-source="watchlist" data-row-key="id"><thead></thead><tbody></tbody></table>
+      </div>
+    </div>
+  </section>
+
+  <section class="tx-section" id="notes">
+    <div class="tx-section-head">
+      <h2 class="tx-h2">Sources and confidence</h2>
+      <p class="tx-sub">Every figure links to its source. Tags: P is a company, government or filing source; S is trade press, a law firm or an analyst; W is a vendor blog or aggregator, directional only.</p>
+    </div>
+    <ul class="tx-caveats dash-skeleton" id="caveats"></ul>
+  </section>
+</div>
+
+<script>
+dash.calc('cap_by_year', {
+  inputs: ['capacity'],
+  title: 'Disclosed investment by start year',
+  description: 'Sums disclosed plant investment (US$ millions) by the year each project is expected to start producing.',
+  fn: (capacity) => [2025, 2026, 2027, 2028, 2029].map((year) => {
+    const starting = capacity.filter((r) => r.online_year != null && Math.floor(Number(r.online_year)) === year);
+    return {
+      year: year,
+      disclosed_usd_m: starting.reduce((sum, r) => sum + (Number(r.investment_usd_m) || 0), 0),
+      projects: starting.length,
+      undisclosed: starting.filter((r) => r.investment_usd_m == null).length,
+    };
+  }),
+});
+
+dash.calc('region_split', {
+  inputs: ['capacity'],
+  title: 'Projects in the Southeast',
+  description: 'Counts tracked projects in VA, NC, SC, GA, FL, AL, MS, TN and LA, and all tracked projects.',
+  fn: (capacity) => {
+    const southeast = ['VA', 'NC', 'SC', 'GA', 'FL', 'AL', 'MS', 'TN', 'LA'];
+    return [
+      { region: 'Southeast', projects: capacity.filter((r) => southeast.includes(r.state)).length },
+      { region: 'All', projects: capacity.length },
+    ];
+  },
+});
+
+dash.calc('ppi_path', {
+  inputs: ['ppi'],
+  title: 'Transformer price index path',
+  description: 'Backs out the index level in Jan 2020 and a year before the latest month from the latest level and its reported percentage changes.',
+  fn: (ppi) => {
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const label = (m) => months[Number(m.slice(5, 7)) - 1] + ' ' + m.slice(0, 4);
+    const r = ppi.find((x) => x.series === 'WPU117409');
+    if (!r) return [];
+    const now = Number(r.index_value);
+    const yearAgo = (Number(r.month.slice(0, 4)) - 1) + r.month.slice(4);
+    return [
+      { id: 'start', month: '2020-01', label: label('2020-01'), index: +(now / (1 + Number(r.since_jan2020_pct) / 100)).toFixed(1) },
+      { id: 'year_ago', month: yearAgo, label: label(yearAgo), index: +(now / (1 + Number(r.yoy_pct) / 100)).toFixed(1) },
+      { id: 'latest', month: r.month, label: label(r.month), index: +now.toFixed(1) },
+    ];
+  },
+});
+
+dash.calc('ppi_rates', {
+  inputs: ['ppi_path'],
+  title: 'Transformer price growth per year',
+  description: 'Compound yearly growth from Jan 2020 to a year ago, and growth over the last twelve months.',
+  fn: (ppi_path) => {
+    const [start, yearAgo, latest] = ppi_path;
+    if (!latest) return [];
+    const years = (Date.parse(yearAgo.month + '-01') - Date.parse(start.month + '-01')) / (365.25 * 86400000);
+    return [
+      { id: 'before', period: start.label + ' to ' + yearAgo.label, annual_pct: +((Math.pow(yearAgo.index / start.index, 1 / years) - 1) * 100).toFixed(1) },
+      { id: 'last12', period: yearAgo.label + ' to ' + latest.label, annual_pct: +((latest.index / yearAgo.index - 1) * 100).toFixed(1) },
+    ];
+  },
+});
+
+dash.calc('prolec_implied', {
+  inputs: ['figures'],
+  title: 'Prolec GE implied value',
+  description: 'Doubles what GE Vernova paid for half of Prolec GE, in US$ billions.',
+  fn: (figures) => {
+    const half = figures.find((r) => r.id === 'prolec_half');
+    return half ? +(Number(half.value) * 2 / 1000).toFixed(1) : null;
+  },
+});
+
+dash.calc('forgent_uplift', {
+  inputs: ['figures'],
+  title: 'Forgent follow-on vs IPO',
+  description: 'Percentage gain from the IPO price to the follow-on offering price.',
+  fn: (figures) => {
+    const ipo = figures.find((r) => r.id === 'forgent_ipo');
+    const follow = figures.find((r) => r.id === 'forgent_follow');
+    return ipo && follow ? Math.round((Number(follow.value) / Number(ipo.value) - 1) * 100) : null;
+  },
+});
+
+const FAIL = ['error', 'connect', 'declined', 'missing'];
+const LANES = ['765 kV / EHV', 'Power transformers', 'Distribution & MV', 'Components & steel', 'Solid-state'];
+const STATUSES = ['Operating', 'Under construction', 'Announced', 'Unconfirmed'];
+const TILES = { AK: [0, 0], ME: [10, 0], WI: [5, 1], ON: [7, 1], QC: [8, 1], VT: [9, 1], NH: [10, 1], WA: [0, 2], ID: [1, 2], MT: [2, 2], ND: [3, 2], MN: [4, 2], IL: [5, 2], MI: [6, 2], NY: [8, 2], MA: [9, 2], OR: [0, 3], NV: [1, 3], WY: [2, 3], SD: [3, 3], IA: [4, 3], IN: [5, 3], OH: [6, 3], PA: [7, 3], NJ: [8, 3], CT: [9, 3], RI: [10, 3], CA: [0, 4], UT: [1, 4], CO: [2, 4], NE: [3, 4], MO: [4, 4], KY: [5, 4], WV: [6, 4], VA: [7, 4], MD: [8, 4], DE: [9, 4], AZ: [1, 5], NM: [2, 5], KS: [3, 5], AR: [4, 5], TN: [5, 5], NC: [6, 5], SC: [7, 5], DC: [8, 5], OK: [3, 6], LA: [4, 6], MS: [5, 6], AL: [6, 6], GA: [7, 6], HI: [0, 7], TX: [3, 7], FL: [8, 7], MX: [3, 8] };
+const NON_US = { ON: true, QC: true, MX: true };
+const fmtComma = d3.format(',');
+const fmtMonth = d3.utcFormat('%b %Y');
+
+function num(v) {
+  if (v === null || v === undefined || v === '') return null;
+  const n = Number(v);
+  return Number.isFinite(n) ? n : null;
+}
+function fmtVal(v) {
+  if (v === null || v === undefined) return '';
+  if (typeof v === 'number') return Number.isInteger(v) ? fmtComma(v) : fmtComma(Math.round(v * 1000) / 1000);
+  return String(v);
+}
+function money(m) {
+  if (m === null) return 'Not disclosed';
+  return m >= 1000 ? '$' + fmtComma(Math.round(m / 100) / 10) + 'B' : '$' + fmtComma(m) + 'M';
+}
+function rows(id) {
+  const d = dash.data(id);
+  return d && d.status === 'ok' && Array.isArray(d.data) ? d.data : [];
+}
+function statusOf(ids) {
+  let st = 'ok';
+  ids.forEach((id) => {
+    const s = dash.data(id).status;
+    if (FAIL.includes(s)) st = 'fail';
+    else if (s !== 'ok' && st === 'ok') st = 'loading';
+  });
+  return st;
+}
+function prep(el, ids) {
+  const st = statusOf(ids);
+  el.textContent = '';
+  if (st === 'ok') { el.classList.remove('dash-skeleton'); return true; }
+  if (st === 'fail') {
+    el.classList.remove('dash-skeleton');
+    const f = document.createElement('div');
+    f.className = 'tx-fail';
+    const dot = document.createElement('span');
+    dot.className = 'tx-fail-dot';
+    const t = document.createElement('span');
+    t.textContent = 'Failed to load';
+    f.append(dot, t);
+    el.appendChild(f);
+    return false;
+  }
+  el.classList.add('dash-skeleton');
+  return false;
+}
+function mk(tag, cls, text, src, field, where) {
+  const n = document.createElement(tag);
+  if (cls) n.className = cls;
+  n.textContent = text === null || text === undefined ? '' : String(text);
+  if (src) {
+    n.setAttribute('data-source', src);
+    if (field) n.setAttribute('data-field', field);
+    if (where) n.setAttribute('data-where', where);
+  }
+  return n;
+}
+function safeUrl(u) { return typeof u === 'string' && /^https:\/\//.test(u) ? u : null; }
+function srcLine(conf, url, src, where) {
+  const line = document.createElement('div');
+  line.className = 'tx-src';
+  if (conf) line.appendChild(mk('span', 'tx-conf', conf, src, 'confidence', where));
+  const u = safeUrl(url);
+  if (u) {
+    const a = document.createElement('a');
+    a.href = u;
+    a.target = '_blank';
+    a.rel = 'noopener noreferrer';
+    a.textContent = 'Source ↗';
+    line.appendChild(a);
+  }
+  return line;
+}
+
+function parseWhere(s) {
+  return s.split('&').map((p) => {
+    const i = p.indexOf('=');
+    return [decodeURIComponent(p.slice(0, i)), decodeURIComponent(p.slice(i + 1))];
+  });
+}
+function fillMarks() {
+  document.querySelectorAll('#dash-root .tx-fill').forEach((el) => {
+    const src = el.getAttribute('data-source');
+    const d = dash.data(src);
+    if (d.status !== 'ok') {
+      if (FAIL.includes(d.status)) { el.classList.remove('dash-skeleton'); el.textContent = '—'; }
+      else el.classList.add('dash-skeleton');
+      return;
+    }
+    el.classList.remove('dash-skeleton');
+    const field = el.getAttribute('data-field');
+    if (!field) { el.textContent = fmtVal(d.data); return; }
+    const where = el.getAttribute('data-where');
+    const conds = where ? parseWhere(where) : [];
+    const list = Array.isArray(d.data) ? d.data : [];
+    const row = list.find((r) => conds.every((c) => String(r[c[0]]) === c[1]));
+    el.textContent = row ? fmtVal(row[field]) : '';
+  });
+}
+
+function tipEl(el) {
+  let t = el.querySelector('.tx-tip');
+  if (!t) {
+    t = document.createElement('div');
+    t.className = 'tx-tip';
+    t.hidden = true;
+    el.appendChild(t);
+  }
+  return t;
+}
+function showTip(el, head, lines, px, py) {
+  const t = tipEl(el);
+  t.textContent = '';
+  t.appendChild(mk('div', 'tx-tip-head', head));
+  lines.forEach((ln) => { if (ln) t.appendChild(mk('div', null, ln)); });
+  t.hidden = false;
+  const svg = el.querySelector('svg');
+  const vb = svg && svg.viewBox && svg.viewBox.baseVal;
+  const k = vb && vb.width ? svg.getBoundingClientRect().width / vb.width : 1;
+  const x = px * k, y = py * k;
+  const cw = el.clientWidth, ch = el.clientHeight, tw = t.offsetWidth, th = t.offsetHeight;
+  let left = x + 14;
+  if (left + tw > cw) left = x - tw - 14;
+  if (left < 0) left = Math.max(0, cw - tw);
+  let top = y - th / 2;
+  top = Math.max(0, Math.min(top, ch - th));
+  t.style.left = left + 'px';
+  t.style.top = top + 'px';
+}
+function hideTip(el) { const t = el.querySelector('.tx-tip'); if (t) t.hidden = true; }
+
+function newSvg(el, w, h) {
+  return d3.select(el).append('svg').attr('class', 'tx-svg').attr('width', '100%').attr('viewBox', '0 0 ' + w + ' ' + h).attr('role', 'img');
+}
+function measure(svg, texts, cls) {
+  const g = svg.append('g').style('visibility', 'hidden');
+  let w = 0;
+  texts.forEach((t) => {
+    const n = g.append('text').attr('class', cls).text(t).node();
+    w = Math.max(w, n.getComputedTextLength());
+  });
+  g.remove();
+  return w;
+}
+function fitText(node, maxW) {
+  const full = node.textContent;
+  if (node.getComputedTextLength() <= maxW) return;
+  let s = full;
+  while (s.length > 1 && node.getComputedTextLength() > maxW) {
+    s = s.slice(0, -1);
+    node.textContent = s.trimEnd() + '…';
+  }
+}
+function statusColor(s) {
+  const c = dash.colors;
+  if (s === 'Operating') return c[2];
+  if (s === 'Under construction') return c[0];
+  if (s === 'Announced') return c[1];
+  return 'var(--cds-chart-muted)';
+}
+function todayYear() {
+  const now = new Date();
+  const start = Date.UTC(now.getUTCFullYear(), 0, 1);
+  return now.getUTCFullYear() + (now.getTime() - start) / (365.25 * 86400000);
+}
+
+function renderLegend() {
+  const el = document.getElementById('cap-legend');
+  el.textContent = '';
+  STATUSES.forEach((s) => {
+    const item = document.createElement('span');
+    const sw = document.createElement('i');
+    sw.className = 'tx-swatch';
+    sw.style.background = statusColor(s);
+    item.append(sw, document.createTextNode(s));
+    el.appendChild(item);
+  });
+}
+
+function drawPipeline() {
+  const el = document.getElementById('cap-chart');
+  if (!prep(el, ['capacity'])) return;
+  const data = rows('capacity')
+    .filter((r) => num(r.online_year) !== null)
+    .map((r) => ({ r: r, oy: num(r.online_year), inv: num(r.investment_usd_m) }));
+  const items = [];
+  LANES.forEach((lane) => {
+    const rs = data.filter((d) => d.r.lane === lane).sort((a, b) => a.oy - b.oy);
+    if (!rs.length) return;
+    items.push({ type: 'lane', lane: lane });
+    rs.forEach((d) => items.push({ type: 'row', d: d }));
+  });
+  const W = Math.max(320, el.clientWidth || 640);
+  const rowH = 24, laneH = 30, top = 30, bottom = 6;
+  let y = top;
+  items.forEach((it) => {
+    const h = it.type === 'lane' ? laneH : rowH;
+    it.y = y + (it.type === 'lane' ? h - 9 : h / 2);
+    y += h;
+  });
+  const H = y + bottom;
+  const svg = newSvg(el, W, H).attr('aria-labelledby', 'cap-title');
+  const labelW = Math.min(measure(svg, data.map((d) => d.r.short), 'tx-lbl') + 12, W * 0.44);
+  const x = d3.scaleLinear([2024.75, 2029.6], [labelW + 12, W - 14]);
+  const maxInv = d3.max(data, (d) => d.inv || 0) || 1;
+  const r = d3.scaleSqrt([0, maxInv], [3, 11]);
+
+  const bx0 = x(2027), bx1 = x(2029.6);
+  svg.append('rect').attr('x', bx0).attr('y', top - 4).attr('width', bx1 - bx0).attr('height', H - top + 4 - bottom)
+    .style('fill', dash.colors[0]).style('fill-opacity', 0.08);
+  svg.append('text').attr('x', bx1 - 6).attr('y', top + 12).attr('text-anchor', 'end').attr('class', 'tx-lane').text('INCUMBENT WAVE');
+
+  const short = W < 520;
+  [2025, 2026, 2027, 2028, 2029].forEach((yr) => {
+    svg.append('line').attr('x1', x(yr)).attr('x2', x(yr)).attr('y1', top - 4).attr('y2', H - bottom)
+      .style('stroke', 'var(--cds-chart-grid)').style('stroke-width', 1);
+    svg.append('text').attr('x', x(yr)).attr('y', 14).attr('text-anchor', 'middle').text(short ? '’' + String(yr).slice(2) : String(yr));
+  });
+  const ty = todayYear();
+  if (ty > 2024.75 && ty < 2029.6) {
+    svg.append('line').attr('x1', x(ty)).attr('x2', x(ty)).attr('y1', 20).attr('y2', H - bottom)
+      .style('stroke', 'var(--cds-chart-reference)').style('stroke-width', 1).style('stroke-dasharray', '3 3');
+    svg.append('text').attr('x', x(ty)).attr('y', 27).attr('text-anchor', 'middle').attr('class', 'tx-val').text('Today');
+  }
+
+  items.forEach((it) => {
+    if (it.type === 'lane') {
+      svg.append('text').attr('class', 'tx-lane').attr('x', 0).attr('y', it.y).text(it.lane.toUpperCase());
+      return;
+    }
+    const d = it.d;
+    const c = statusColor(d.r.status);
+    const g = svg.append('g').attr('class', 'tx-row');
+    if (d.oy > ty) {
+      g.append('line').attr('x1', x(ty)).attr('x2', x(d.oy)).attr('y1', it.y).attr('y2', it.y)
+        .style('stroke', c).style('stroke-opacity', 0.35).style('stroke-width', 2).style('stroke-linecap', 'round');
+    }
+    const lab = g.append('text').attr('class', 'tx-lbl').attr('x', 0).attr('y', it.y + 4).text(d.r.short);
+    fitText(lab.node(), labelW - 6);
+    g.append('circle').attr('cx', x(d.oy)).attr('cy', it.y).attr('r', d.inv ? r(d.inv) : 4.5)
+      .style('fill', d.inv ? c : 'var(--color-panel)').style('stroke', c).style('stroke-width', d.inv ? 0 : 1.5);
+    g.append('rect').attr('x', 0).attr('y', it.y - rowH / 2).attr('width', W).attr('height', rowH).style('fill', 'transparent')
+      .on('mouseenter', () => {
+        g.classed('is-hover', true);
+        showTip(el, d.r.short, [
+          d.r.segment,
+          d.inv ? 'Investment: ' + money(d.inv) : 'Investment not disclosed',
+          d.r.capacity_note,
+          'Start: ' + d.r.online_label + ' · ' + d.r.status,
+          num(d.r.jobs) ? fmtComma(num(d.r.jobs)) + ' jobs' : null,
+        ], x(d.oy), it.y);
+      })
+      .on('mouseleave', () => { g.classed('is-hover', false); hideTip(el); });
+  });
+}
+
+function renderUndated() {
+  const el = document.getElementById('cap-undated');
+  if (!prep(el, ['capacity'])) return;
+  rows('capacity').filter((r) => num(r.online_year) === null).forEach((r) => {
+    const w = 'id=' + encodeURIComponent(r.id);
+    const chip = document.createElement('span');
+    chip.className = 'tx-chip';
+    chip.appendChild(mk('span', null, r.short, 'capacity', 'short', w));
+    const inv = num(r.investment_usd_m);
+    if (inv !== null) {
+      chip.appendChild(document.createTextNode(' · $'));
+      chip.appendChild(mk('span', null, fmtVal(inv), 'capacity', 'investment_usd_m', w));
+      chip.appendChild(document.createTextNode('M'));
+    }
+    el.appendChild(chip);
+  });
+}
+
+function drawByYear() {
+  const el = document.getElementById('year-chart');
+  if (!prep(el, ['cap_by_year'])) return;
+  const data = rows('cap_by_year');
+  const W = Math.max(260, el.clientWidth || 360), H = 220;
+  const m = { t: 22, r: 6, b: 40, l: 6 };
+  const svg = newSvg(el, W, H).attr('aria-labelledby', 'year-title');
+  const x = d3.scaleBand(data.map((d) => String(d.year)), [m.l, W - m.r]).padding(0.3);
+  const max = d3.max(data, (d) => num(d.disclosed_usd_m)) || 1;
+  const yS = d3.scaleLinear([0, max], [H - m.b, m.t]);
+  const bw = Math.min(x.bandwidth(), 44);
+  const peak = d3.max(data, (d) => num(d.disclosed_usd_m));
+  svg.append('line').attr('x1', m.l).attr('x2', W - m.r).attr('y1', H - m.b).attr('y2', H - m.b).style('stroke', 'var(--cds-chart-axis)');
+  data.forEach((d) => {
+    const v = num(d.disclosed_usd_m) || 0;
+    const cx = x(String(d.year)) + x.bandwidth() / 2;
+    const g = svg.append('g');
+    g.append('rect').attr('class', 'tx-anim').attr('x', cx - bw / 2).attr('y', yS(v)).attr('width', bw).attr('height', Math.max(0, H - m.b - yS(v))).attr('rx', 4)
+      .style('fill', v === peak ? dash.colors[0] : 'var(--cds-chart-muted)');
+    g.append('text').attr('class', 'tx-val').attr('x', cx).attr('y', yS(v) - 6).attr('text-anchor', 'middle').text(money(v));
+    g.append('text').attr('x', cx).attr('y', H - m.b + 16).attr('text-anchor', 'middle').attr('class', 'tx-lbl').text(String(d.year));
+    g.append('text').attr('x', cx).attr('y', H - m.b + 31).attr('text-anchor', 'middle').text(d.projects + (W > 420 ? ' projects' : ''));
+    g.append('rect').attr('x', x(String(d.year))).attr('y', m.t).attr('width', x.bandwidth()).attr('height', H - m.t).style('fill', 'transparent')
+      .on('mouseenter', () => showTip(el, String(d.year), [
+        money(v) + ' disclosed',
+        d.projects + ' projects starting',
+        d.undisclosed ? d.undisclosed + ' with no published amount' : null,
+      ], cx, yS(v)))
+      .on('mouseleave', () => hideTip(el));
+  });
+}
+
+function drawMap() {
+  const el = document.getElementById('map-chart');
+  if (!prep(el, ['capacity'])) return;
+  const agg = {};
+  rows('capacity').forEach((r) => {
+    if (!TILES[r.state]) return;
+    const a = agg[r.state] || (agg[r.state] = { n: 0, inv: 0, items: [] });
+    a.n += 1;
+    a.inv += num(r.investment_usd_m) || 0;
+    a.items.push(r.short);
+  });
+  const W = Math.max(260, el.clientWidth || 360);
+  const gap = 3;
+  const s = Math.max(20, Math.min(40, Math.floor((W - gap * 10) / 11)));
+  const gw = s * 11 + gap * 10, gh = s * 9 + gap * 8;
+  const svg = newSvg(el, gw, gh).style('max-width', gw + 'px').attr('aria-labelledby', 'map-title');
+  const maxN = d3.max(Object.values(agg), (a) => a.n) || 1;
+  const fs = Math.max(8, Math.round(s * 0.3));
+  Object.keys(TILES).forEach((k) => {
+    const p = TILES[k], a = agg[k];
+    const tx = p[0] * (s + gap), ty = p[1] * (s + gap);
+    const op = a ? 0.28 + 0.72 * (a.n / maxN) : 0;
+    const g = svg.append('g');
+    g.append('rect').attr('x', tx + 0.5).attr('y', ty + 0.5).attr('width', s - 1).attr('height', s - 1).attr('rx', 4)
+      .style('fill', a ? dash.colors[0] : 'transparent').style('fill-opacity', a ? op : 1)
+      .style('stroke', NON_US[k] ? 'var(--color-fg-muted)' : (a ? 'none' : 'var(--color-border-line)'))
+      .style('stroke-dasharray', NON_US[k] ? '3 2' : null);
+    const dark = a && op > 0.6;
+    g.append('text').attr('x', tx + s / 2).attr('y', ty + (a ? s * 0.45 : s * 0.6)).attr('text-anchor', 'middle')
+      .style('font-size', fs + 'px').style('fill', dark ? 'var(--color-bg)' : (a ? 'var(--color-fg)' : 'var(--color-fg-muted)')).text(k);
+    if (a) {
+      g.append('text').attr('x', tx + s / 2).attr('y', ty + s * 0.82).attr('text-anchor', 'middle')
+        .style('font-size', fs + 'px').style('font-weight', 600).style('fill', dark ? 'var(--color-bg)' : 'var(--color-fg)').text(String(a.n));
+      g.append('rect').attr('x', tx).attr('y', ty).attr('width', s).attr('height', s).style('fill', 'transparent')
+        .on('mouseenter', () => showTip(el, k + ' · ' + a.n + (a.n === 1 ? ' project' : ' projects'),
+          a.items.concat([a.inv ? money(a.inv) + ' disclosed' : 'No amounts disclosed']), tx + s, ty + s / 2))
+        .on('mouseleave', () => hideTip(el));
+    }
+  });
+}
+
+function drawLead() {
+  const el = document.getElementById('lead-chart');
+  if (!prep(el, ['leadtimes'])) return;
+  const data = rows('leadtimes');
+  const W = Math.max(280, el.clientWidth || 360);
+  const rowH = 46, top = 6, bottom = 30;
+  const H = top + data.length * rowH + bottom;
+  const svg = newSvg(el, W, H).attr('aria-labelledby', 'lead-title');
+  const labelW = Math.min(measure(svg, data.map((d) => d.cls), 'tx-lbl') + 12, W * 0.4);
+  const maxX = d3.max(data, (d) => Math.max(num(d.high_wks) || 0, num(d.extreme_wks) || 0));
+  const xMax = Math.ceil((maxX + 1) / 52) * 52;
+  const x = d3.scaleLinear([0, xMax], [labelW + 6, W - 12]);
+  const ticks = d3.range(0, xMax + 1, 52);
+  ticks.forEach((t) => {
+    svg.append('line').attr('x1', x(t)).attr('x2', x(t)).attr('y1', top).attr('y2', H - bottom + 4).style('stroke', 'var(--cds-chart-grid)');
+    svg.append('text').attr('x', x(t)).attr('y', H - bottom + 18).attr('text-anchor', 'middle').text(t === 0 ? '0' : (t / 52) + (W < 480 ? 'y' : ' yr'));
+  });
+  data.forEach((d, i) => {
+    const cy = top + i * rowH + rowH * 0.66;
+    const lo = num(d.low_wks), hi = num(d.high_wks), tp = num(d.typical_wks), ex = num(d.extreme_wks);
+    const g = svg.append('g').attr('class', 'tx-row');
+    const lab = g.append('text').attr('class', 'tx-lbl').attr('x', 0).attr('y', cy + 4).text(d.cls);
+    fitText(lab.node(), labelW - 6);
+    if (ex) {
+      g.append('line').attr('x1', x(hi)).attr('x2', x(ex)).attr('y1', cy).attr('y2', cy)
+        .style('stroke', 'var(--cds-chart-reference)').style('stroke-width', 1.5).style('stroke-dasharray', '3 3');
+      g.append('line').attr('x1', x(ex)).attr('x2', x(ex)).attr('y1', cy - 5).attr('y2', cy + 5).style('stroke', 'var(--cds-chart-reference)').style('stroke-width', 1.5);
+    }
+    g.append('rect').attr('x', x(lo)).attr('y', cy - 6).attr('width', Math.max(4, x(hi) - x(lo))).attr('height', 12).attr('rx', 6)
+      .style('fill', dash.colors[0]).style('fill-opacity', 0.4);
+    if (tp) g.append('circle').attr('cx', x(tp)).attr('cy', cy).attr('r', 5).style('fill', dash.colors[0]).style('stroke', 'var(--color-panel)').style('stroke-width', 1.5);
+    const vt = g.append('text').attr('class', 'tx-val').attr('x', x(lo)).attr('y', cy - 11)
+      .text(lo + '–' + hi + ' weeks' + (tp ? ' · avg ' + tp : '') + (ex ? ' · up to ' + ex : ''));
+    if (x(lo) + vt.node().getComputedTextLength() > W - 4) vt.attr('x', W - 4).attr('text-anchor', 'end');
+    g.append('rect').attr('x', 0).attr('y', cy - rowH * 0.66).attr('width', W).attr('height', rowH).style('fill', 'transparent')
+      .on('mouseenter', () => { g.classed('is-hover', true); showTip(el, d.cls, [lo + '–' + hi + ' weeks', d.note, 'Confidence: ' + d.confidence], x(hi), cy); })
+      .on('mouseleave', () => { g.classed('is-hover', false); hideTip(el); });
+  });
+}
+
+function drawDeficit() {
+  const el = document.getElementById('deficit-chart');
+  if (!prep(el, ['deficit'])) return;
+  const data = rows('deficit');
+  const W = Math.max(240, el.clientWidth || 320), H = 200;
+  const m = { t: 22, r: 6, b: 26, l: 6 };
+  const svg = newSvg(el, W, H).attr('aria-labelledby', 'deficit-title');
+  const x = d3.scaleBand(data.map((d) => d.label), [m.l, W - m.r]).padding(0.35);
+  const max = d3.max(data, (d) => num(d.power_pct)) || 1;
+  const yS = d3.scaleLinear([0, max], [H - m.b, m.t]);
+  const bw = Math.min(x.bandwidth(), 48);
+  svg.append('line').attr('x1', m.l).attr('x2', W - m.r).attr('y1', H - m.b).attr('y2', H - m.b).style('stroke', 'var(--cds-chart-axis)');
+  data.forEach((d) => {
+    const v = num(d.power_pct) || 0;
+    const proj = d.kind === 'Projection';
+    const cx = x(d.label) + x.bandwidth() / 2;
+    svg.append('rect').attr('class', 'tx-anim').attr('x', cx - bw / 2).attr('y', yS(v)).attr('width', bw).attr('height', H - m.b - yS(v)).attr('rx', 4)
+      .style('fill', dash.colors[0]).style('fill-opacity', proj ? 0.25 : 1)
+      .style('stroke', proj ? dash.colors[0] : 'none').style('stroke-dasharray', proj ? '4 3' : null);
+    svg.append('text').attr('class', 'tx-val').attr('x', cx).attr('y', yS(v) - 6).attr('text-anchor', 'middle').text((proj ? '~' : '') + v + '%');
+    svg.append('text').attr('class', 'tx-lbl').attr('x', cx).attr('y', H - m.b + 16).attr('text-anchor', 'middle').text(d.label + (proj ? ' (proj.)' : ''));
+    svg.append('rect').attr('x', x(d.label)).attr('y', m.t).attr('width', x.bandwidth()).attr('height', H - m.t).style('fill', 'transparent')
+      .on('mouseenter', () => showTip(el, d.label, [v + '% of demand unmet', d.kind + ' · ' + d.note, 'Confidence: ' + d.confidence], cx, yS(v)))
+      .on('mouseleave', () => hideTip(el));
+  });
+}
+
+function drawPPI() {
+  const el = document.getElementById('ppi-chart');
+  if (!prep(el, ['ppi_path'])) return;
+  const pts = rows('ppi_path').map((d) => ({ t: new Date(d.month + '-01T00:00:00Z'), v: num(d.index), label: d.label, id: d.id }));
+  if (pts.length < 2) return;
+  const W = Math.max(260, el.clientWidth || 360), H = 220;
+  const svg = newSvg(el, W, H).attr('aria-labelledby', 'ppi-title');
+  const yMax = d3.max(pts, (p) => p.v) * 1.18;
+  const yS = d3.scaleLinear([0, yMax], [H - 26, 14]);
+  const ticks = yS.ticks(4);
+  const tickW = measure(svg, ticks.map((t) => fmtComma(t)), null);
+  const m = { l: tickW + 10, r: 60 };
+  const x = d3.scaleUtc([pts[0].t, pts[pts.length - 1].t], [m.l + 6, W - m.r]);
+  ticks.forEach((t) => {
+    svg.append('line').attr('x1', m.l).attr('x2', W - 8).attr('y1', yS(t)).attr('y2', yS(t)).style('stroke', t === 0 ? 'var(--cds-chart-axis)' : 'var(--cds-chart-grid)');
+    svg.append('text').attr('x', m.l - 6).attr('y', yS(t) + 4).attr('text-anchor', 'end').text(fmtComma(t));
+  });
+  const grad = svg.append('defs').append('linearGradient').attr('id', 'tx-ppi-grad').attr('x1', 0).attr('x2', 0).attr('y1', 0).attr('y2', 1);
+  [[0, 0.26], [0.25, 0.16], [0.5, 0.08], [0.75, 0.03], [1, 0]].forEach((st) => {
+    grad.append('stop').attr('offset', st[0]).style('stop-color', dash.colors[0]).style('stop-opacity', st[1]);
+  });
+  svg.append('path').attr('d', d3.area().x((p) => x(p.t)).y0(yS(0)).y1((p) => yS(p.v))(pts)).style('fill', 'url(#tx-ppi-grad)');
+  svg.append('path').attr('d', d3.line().x((p) => x(p.t)).y((p) => yS(p.v))(pts))
+    .style('fill', 'none').style('stroke', dash.colors[0]).style('stroke-width', 2).style('stroke-linecap', 'round').style('stroke-linejoin', 'round');
+  pts.forEach((p, i) => {
+    const anchor = i === 0 ? 'start' : (i === pts.length - 1 ? 'start' : 'end');
+    const dx = i === 0 ? -4 : (i === pts.length - 1 ? 6 : -6);
+    svg.append('circle').attr('cx', x(p.t)).attr('cy', yS(p.v)).attr('r', 4).style('fill', dash.colors[0]).style('stroke', 'var(--color-panel)').style('stroke-width', 1.5);
+    svg.append('text').attr('class', 'tx-val').attr('x', x(p.t) + dx).attr('y', yS(p.v) - 9).attr('text-anchor', anchor).text(fmtComma(p.v));
+    svg.append('text').attr('x', x(p.t) + dx).attr('y', H - 8).attr('text-anchor', anchor).text(p.label);
+    svg.append('circle').attr('cx', x(p.t)).attr('cy', yS(p.v)).attr('r', 14).style('fill', 'transparent')
+      .on('mouseenter', () => showTip(el, p.label, ['Index ' + fmtComma(p.v), p.id === 'latest' ? 'Reported by BLS' : 'Backed out of reported changes'], x(p.t), yS(p.v)))
+      .on('mouseleave', () => hideTip(el));
+  });
+}
+
+function drawBars(elId, group, highlightId, title) {
+  const el = document.getElementById(elId);
+  if (!prep(el, ['figures'])) return;
+  const data = rows('figures').filter((r) => r.group === group);
+  const W = Math.max(240, el.clientWidth || 320), rowH = 30, H = data.length * rowH + 4;
+  const svg = newSvg(el, W, H).attr('aria-labelledby', title);
+  const valText = (d) => (d.prefix || '') + fmtVal(num(d.value)) + (d.unit || '');
+  const labelW = Math.min(measure(svg, data.map((d) => d.label), 'tx-lbl') + 10, W * 0.42);
+  const vW = measure(svg, data.map(valText), 'tx-val') + 8;
+  const x = d3.scaleLinear([0, d3.max(data, (d) => num(d.value)) || 1], [labelW, W - vW]);
+  data.forEach((d, i) => {
+    const cy = i * rowH + rowH / 2 + 2;
+    const v = num(d.value) || 0;
+    const lab = svg.append('text').attr('class', 'tx-lbl').attr('x', 0).attr('y', cy + 4).text(d.label);
+    fitText(lab.node(), labelW - 6);
+    svg.append('rect').attr('x', labelW).attr('y', cy - 8).attr('width', Math.max(2, x(v) - labelW)).attr('height', 16).attr('rx', 4)
+      .style('fill', d.id === highlightId ? dash.colors[0] : 'var(--cds-chart-muted)');
+    svg.append('text').attr('class', 'tx-val').attr('x', x(v) + 6).attr('y', cy + 4).text(valText(d));
+    svg.append('rect').attr('x', 0).attr('y', cy - rowH / 2).attr('width', W).attr('height', rowH).style('fill', 'transparent')
+      .on('mouseenter', () => showTip(el, d.label, [valText(d), d.note, 'Confidence: ' + d.confidence], x(v), cy))
+      .on('mouseleave', () => hideTip(el));
+  });
+}
+
+function renderFigList(elId, group) {
+  const el = document.getElementById(elId);
+  if (!prep(el, ['figures'])) return;
+  rows('figures').filter((r) => r.group === group).forEach((r) => {
+    const w = 'id=' + encodeURIComponent(r.id);
+    const box = mk('div', 'tx-fig');
+    box.appendChild(mk('div', 'tx-fig-label', r.label, 'figures', 'label', w));
+    const v = mk('div', 'tx-fig-value');
+    if (r.qualifier) {
+      v.appendChild(mk('span', null, r.qualifier, 'figures', 'qualifier', w));
+      if (/^[a-z]/i.test(r.qualifier)) v.appendChild(document.createTextNode(' '));
+    }
+    if (r.prefix) v.appendChild(mk('span', null, r.prefix, 'figures', 'prefix', w));
+    v.appendChild(mk('span', null, fmtVal(num(r.value)), 'figures', 'value', w));
+    if (r.unit) {
+      if (/^[a-z]{2,}/i.test(r.unit)) v.appendChild(document.createTextNode(' '));
+      v.appendChild(mk('span', 'tx-fig-unit', r.unit, 'figures', 'unit', w));
+    }
+    box.appendChild(v);
+    if (num(r.prior) !== null) {
+      const p = mk('div', 'tx-fig-prior');
+      p.appendChild(mk('span', null, r.prior_label, 'figures', 'prior_label', w));
+      p.appendChild(document.createTextNode(': ' + (r.prefix || '')));
+      p.appendChild(mk('span', null, fmtVal(num(r.prior)), 'figures', 'prior', w));
+      if (r.unit) p.appendChild(document.createTextNode(r.unit));
+      box.appendChild(p);
+    }
+    box.appendChild(mk('div', 'tx-fig-note', r.note, 'figures', 'note', w));
+    box.appendChild(srcLine(r.confidence, r.source_url, 'figures', w));
+    el.appendChild(box);
+  });
+}
+
+function renderEvents() {
+  const el = document.getElementById('week-cards');
+  if (!prep(el, ['events'])) return;
+  const rank = { High: 0, Medium: 1, Low: 2 };
+  rows('events').filter((r) => r.window === 'This week')
+    .sort((a, b) => (rank[a.significance] - rank[b.significance]) || (a.date < b.date ? 1 : -1))
+    .forEach((r) => {
+      const w = 'id=' + encodeURIComponent(r.id);
+      const card = mk('article', 'tx-event');
+      const top = mk('div', 'tx-event-top');
+      top.appendChild(mk('span', 'tx-event-date', r.date_label, 'events', 'date_label', w));
+      top.appendChild(mk('span', 'tx-chip', r.category, 'events', 'category', w));
+      const sig = mk('span', 'tx-chip', r.significance, 'events', 'significance', w);
+      sig.setAttribute('data-level', r.significance);
+      top.appendChild(sig);
+      card.appendChild(top);
+      card.appendChild(mk('h3', 'tx-event-title', r.title, 'events', 'title', w));
+      card.appendChild(mk('p', 'tx-event-detail', r.detail, 'events', 'detail', w));
+      if (r.implication) {
+        const p = mk('p', 'tx-event-impl');
+        p.appendChild(mk('span', 'tx-so', 'So what: '));
+        p.appendChild(mk('span', null, r.implication, 'events', 'implication', w));
+        card.appendChild(p);
+      }
+      card.appendChild(srcLine(null, r.source_url));
+      el.appendChild(card);
+    });
+}
+
+function renderRecent() {
+  const el = document.getElementById('recent-list');
+  if (!prep(el, ['events'])) return;
+  rows('events').filter((r) => r.window !== 'This week').sort((a, b) => (a.date < b.date ? 1 : -1)).forEach((r) => {
+    const w = 'id=' + encodeURIComponent(r.id);
+    const li = mk('li', 'tx-item');
+    li.appendChild(mk('div', 'tx-item-date', r.date_label, 'events', 'date_label', w));
+    const body = mk('div', 'tx-item-body');
+    const head = mk('div', 'tx-item-head');
+    head.appendChild(mk('span', 'tx-item-title', r.title, 'events', 'title', w));
+    const sig = mk('span', 'tx-chip', r.significance, 'events', 'significance', w);
+    sig.setAttribute('data-level', r.significance);
+    head.appendChild(sig);
+    body.appendChild(head);
+    body.appendChild(mk('p', 'tx-item-text tx-muted', r.detail, 'events', 'detail', w));
+    li.appendChild(body);
+    el.appendChild(li);
+  });
+}
+
+function renderPolicy() {
+  const el = document.getElementById('policy-list');
+  if (!prep(el, ['policy'])) return;
+  const today = new Date().toISOString().slice(0, 10);
+  let placed = false;
+  const marker = () => mk('li', 'tx-today', 'Today');
+  rows('policy').slice().sort((a, b) => (a.date < b.date ? -1 : 1)).forEach((r) => {
+    if (!placed && r.date > today) { placed = true; el.appendChild(marker()); }
+    const w = 'id=' + encodeURIComponent(r.id);
+    const li = mk('li', 'tx-item');
+    li.setAttribute('data-kind', r.kind);
+    const date = mk('div', 'tx-item-date');
+    date.appendChild(mk('span', 'tx-pol-dot'));
+    date.appendChild(mk('span', null, r.date_label, 'policy', 'date_label', w));
+    li.appendChild(date);
+    const body = mk('div', 'tx-item-body');
+    body.appendChild(mk('span', 'tx-item-title', r.instrument, 'policy', 'instrument', w));
+    const chips = mk('div', 'tx-chips');
+    chips.appendChild(mk('span', 'tx-chip', r.status, 'policy', 'status', w));
+    if (r.rate_label) chips.appendChild(mk('span', 'tx-chip', r.rate_label, 'policy', 'rate_label', w));
+    body.appendChild(chips);
+    body.appendChild(mk('p', 'tx-item-text', r.applies_to, 'policy', 'applies_to', w));
+    body.appendChild(mk('p', 'tx-item-text tx-muted', r.effect, 'policy', 'effect', w));
+    body.appendChild(srcLine(r.confidence, r.source_url, 'policy', w));
+    li.appendChild(body);
+    el.appendChild(li);
+  });
+  if (!placed) el.appendChild(marker());
+}
+
+const sortState = {};
+function buildHead(table, cols, rerender) {
+  const thead = table.querySelector('thead');
+  if (thead.childElementCount) return;
+  const tr = document.createElement('tr');
+  cols.forEach((c) => {
+    const th = document.createElement('th');
+    th.setAttribute('data-field', c.field);
+    if (c.sortBy) th.setAttribute('data-sort', c.sortBy);
+    if (c.cls) th.className = c.cls;
+    if (c.sortable === false) {
+      th.textContent = c.label;
+    } else {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.textContent = c.label;
+      b.addEventListener('click', () => {
+        const f = c.sortBy || c.field;
+        const st = sortState[table.id];
+        sortState[table.id] = { field: f, dir: st && st.field === f && st.dir === 'asc' ? 'desc' : 'asc' };
+        rerender();
+      });
+      th.appendChild(b);
+    }
+    tr.appendChild(th);
+  });
+  thead.appendChild(tr);
+}
+function applySort(table, list) {
+  const st = sortState[table.id];
+  table.querySelectorAll('th').forEach((th) => {
+    const f = th.getAttribute('data-sort') || th.getAttribute('data-field');
+    if (st && f === st.field) th.setAttribute('aria-sort', st.dir === 'asc' ? 'ascending' : 'descending');
+    else th.removeAttribute('aria-sort');
+  });
+  if (!st) return list;
+  const dir = st.dir === 'asc' ? 1 : -1;
+  const blank = (v) => v === null || v === undefined || v === '';
+  return list.slice().sort((a, b) => {
+    const va = a[st.field], vb = b[st.field];
+    if (blank(va) && blank(vb)) return 0;
+    if (blank(va)) return 1;
+    if (blank(vb)) return -1;
+    const na = num(va), nb = num(vb);
+    if (na !== null && nb !== null) return (na - nb) * dir;
+    return String(va).localeCompare(String(vb)) * dir;
+  });
+}
+function fillBody(table, list, cols, keyField, rowClass) {
+  const tb = table.querySelector('tbody');
+  tb.textContent = '';
+  list.forEach((r) => {
+    const tr = document.createElement('tr');
+    tr.setAttribute('data-key', String(r[keyField]));
+    const rc = rowClass ? rowClass(r) : '';
+    if (rc) tr.className = rc;
+    cols.forEach((c, i) => {
+      const td = document.createElement('td');
+      const cls = [c.cls, i === 0 ? 'tx-first' : ''].filter(Boolean).join(' ');
+      if (cls) td.className = cls;
+      td.textContent = fmtVal(c.num ? num(r[c.field]) : r[c.field]);
+      tr.appendChild(td);
+    });
+    tb.appendChild(tr);
+  });
+}
+function renderTable(cfg) {
+  const table = document.getElementById(cfg.id);
+  const wrap = table.parentElement;
+  const rerender = () => renderTable(cfg);
+  buildHead(table, cfg.cols, rerender);
+  const st = statusOf([cfg.src]);
+  if (st !== 'ok') {
+    table.querySelector('tbody').textContent = '';
+    wrap.classList.toggle('dash-skeleton', st === 'loading');
+    return;
+  }
+  wrap.classList.remove('dash-skeleton');
+  let list = rows(cfg.src);
+  if (cfg.filter) list = list.filter(cfg.filter);
+  if (cfg.defaultSort && !sortState[cfg.id]) list = list.slice().sort(cfg.defaultSort);
+  list = applySort(table, list);
+  fillBody(table, list, cfg.cols, cfg.key, cfg.rowClass);
+}
+
+const CAP_TABLE = {
+  id: 'cap-table', src: 'capacity', key: 'id',
+  cols: [
+    { field: 'short', label: 'Project' },
+    { field: 'segment', label: 'Segment', cls: 'tx-hide-sm' },
+    { field: 'investment_usd_m', label: 'Investment', num: true, cls: 'tx-num' },
+    { field: 'online_label', label: 'Start', sortBy: 'online_year' },
+    { field: 'status', label: 'Status' },
+    { field: 'jobs', label: 'Jobs', num: true, cls: 'tx-num tx-hide-sm' },
+    { field: 'capacity_note', label: 'Capacity added', cls: 'tx-hide-sm', sortable: false },
+    { field: 'confidence', label: 'Tag', cls: 'tx-hide-sm' },
+  ],
+  defaultSort: (a, b) => (num(a.online_year) === null) - (num(b.online_year) === null) || (num(a.online_year) || 0) - (num(b.online_year) || 0),
+};
+const TARIFF_TABLE = {
+  id: 'tariff-table', src: 'policy', key: 'id',
+  filter: (r) => !!r.rate_label,
+  cols: [
+    { field: 'instrument', label: 'Measure' },
+    { field: 'rate_label', label: 'Rate', sortable: false },
+    { field: 'applies_to', label: 'Applies to', sortable: false },
+    { field: 'status', label: 'Status' },
+    { field: 'until', label: 'Until', cls: 'tx-hide-sm', sortable: false },
+  ],
+};
+const DEALS_TABLE = {
+  id: 'deals-table', src: 'deals', key: 'id',
+  cols: [
+    { field: 'date_label', label: 'Date', sortBy: 'date' },
+    { field: 'target', label: 'Target' },
+    { field: 'acquirer', label: 'Buyer or investor' },
+    { field: 'value_note', label: 'Value', sortBy: 'value_usd_m' },
+    { field: 'segment', label: 'Segment' },
+    { field: 'status', label: 'Status', cls: 'tx-hide-sm' },
+    { field: 'read_through', label: 'Why it matters', cls: 'tx-hide-sm', sortable: false },
+  ],
+  defaultSort: (a, b) => (a.date < b.date ? 1 : -1),
+  rowClass: (r) => (r.this_week === 'Yes' ? 'is-new' : ''),
+};
+const MFR_TABLE = {
+  id: 'mfr-table', src: 'manufacturers', key: 'company',
+  cols: [
+    { field: 'company', label: 'Company' },
+    { field: 'ownership', label: 'Ownership' },
+    { field: 'segments', label: 'Segments' },
+    { field: 'na_plants', label: 'North American plants', cls: 'tx-hide-sm', sortable: false },
+    { field: 'latest_move', label: 'Latest move', sortable: false },
+    { field: 'owner', label: 'Owner', cls: 'tx-hide-sm' },
+  ],
+  filter: (r) => {
+    const q = (document.getElementById('mfr-search').value || '').trim().toLowerCase();
+    if (!q) return true;
+    return ['company', 'owner', 'ownership', 'segments', 'na_plants', 'latest_move'].some((k) => String(r[k] || '').toLowerCase().includes(q));
+  },
+};
+const WATCH_TABLE = {
+  id: 'watch-table', src: 'watchlist', key: 'id',
+  cols: [
+    { field: 'when', label: 'When', sortBy: 'sort_date' },
+    { field: 'item', label: 'What', sortable: false },
+    { field: 'why', label: 'Why it matters', sortable: false },
+  ],
+  defaultSort: (a, b) => (a.sort_date < b.sort_date ? -1 : 1),
+};
+
+function renderTakeaways() {
+  const grid = document.getElementById('imp-grid');
+  const bottom = document.getElementById('bottom-line');
+  const cav = document.getElementById('caveats');
+  const ok = prep(grid, ['takeaways']);
+  prep(bottom, ['takeaways']);
+  prep(cav, ['takeaways']);
+  if (!ok) return;
+  rows('takeaways').slice().sort((a, b) => num(a.order) - num(b.order)).forEach((r) => {
+    const w = 'id=' + encodeURIComponent(r.id);
+    if (r.kind === 'implication') {
+      const card = mk('article', 'tx-imp-card');
+      const chip = mk('span', 'tx-chip', r.stance, 'takeaways', 'stance', w);
+      chip.setAttribute('data-stance', r.stance);
+      const chips = mk('div', 'tx-chips');
+      chips.appendChild(chip);
+      card.appendChild(chips);
+      card.appendChild(mk('h3', 'tx-h3', r.heading, 'takeaways', 'heading', w));
+      card.appendChild(mk('p', null, r.body, 'takeaways', 'body', w));
+      grid.appendChild(card);
+    } else if (r.kind === 'bottom_line') {
+      bottom.appendChild(mk('div', 'tx-bottom-label', r.heading, 'takeaways', 'heading', w));
+      bottom.appendChild(mk('p', 'tx-bottom-text', r.body, 'takeaways', 'body', w));
+    } else if (r.kind === 'caveat') {
+      const li = mk('li');
+      li.appendChild(mk('span', 'tx-strong', r.heading, 'takeaways', 'heading', w));
+      li.appendChild(document.createTextNode('. '));
+      li.appendChild(mk('span', null, r.body, 'takeaways', 'body', w));
+      cav.appendChild(li);
+    }
+  });
+}
+
+document.querySelectorAll('#dash-root .tx-nav button').forEach((b) => {
+  b.addEventListener('click', () => {
+    const t = document.getElementById(b.getAttribute('data-target'));
+    if (!t) return;
+    t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    dash.setLink(t.id);
+  });
+});
+document.getElementById('mfr-search').addEventListener('input', () => renderTable(MFR_TABLE));
+
+let linked = false;
+dash.onData(() => {
+  [
+    fillMarks, renderLegend, drawPipeline, renderUndated, drawByYear, drawMap, drawLead, drawDeficit, drawPPI,
+    () => drawBars('capex-annual-chart', 'capex_annual', 'eei_2026', 'capex-title'),
+    () => drawBars('capex-5yr-chart', 'capex_5yr', 'eei_5yr', 'capex-title'),
+    () => renderFigList('inputs-list', 'inputs'),
+    () => renderFigList('backlog-list', 'backlog'),
+    () => renderFigList('trade-list', 'trade'),
+    renderEvents, renderRecent, renderPolicy, renderTakeaways,
+    () => renderTable(CAP_TABLE), () => renderTable(TARIFF_TABLE), () => renderTable(DEALS_TABLE),
+    () => renderTable(MFR_TABLE), () => renderTable(WATCH_TABLE),
+  ].forEach((f) => {
+    try { f(); } catch (e) { console.error(e); }
+  });
+  if (!linked && dash.data('figures').status === 'ok' && dash.data('capacity').status === 'ok') {
+    linked = true;
+    const named = location.hash ? document.getElementById(location.hash.slice(1)) : null;
+    if (named) named.scrollIntoView();
+  }
+});
+</script>
