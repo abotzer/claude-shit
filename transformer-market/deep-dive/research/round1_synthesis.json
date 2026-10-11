@@ -1,0 +1,709 @@
+{
+ "executive_summary": "**Answer: build, but not the version the bull case usually pictures.** The shortage is real and prices are still rising. But the gap is closing fastest in large power transformers, which a newcomer cannot realistically enter, and the segments a newcomer can enter are filling up. The case holds for one kind of entry:\n- 3-phase pad-mount and unit-substation transformers (about 0.5-10 MVA), with a later path to 10-100 MVA.\n- Entered by buying a plant or expanding an existing one, not greenfield.\n- Shipping by 2028.\n- Committed only after DOE's EO 14420 rules, due around Dec 24, 2026.\n\nA greenfield plant that ships in 2029 lands inside the incumbents' 2027-29 capacity wave.\n\n**What supports the bull case**\n- All four BLS transformer producer price indexes hit records in Jul-Aug 2026. Year-on-year growth roughly doubled, to 7.6-8.7% [ppi-momentum-reaccel, P].\n- Plants are running hot without adding output. Electrical-equipment utilization is ~86% against 76% for all industry, and NAICS 3353 output is still below its 2017 level [cu-335-util, ip-3353].\n- Imports of >100 MVA units rose from 617 (2019) to 2,901 in the year to June 2026 [lpt-100mva-ttm-2026, unverified]. Korea's US shipments are running ~38% above 2025.\n- Distribution imports pay 25% Section 232 duty from every origin.\n- Utilities plan $1.4T of capex in 2026-30 [eei-capex-2026].\n\n**What weakens it**\n- The 2026 price step is mostly cost pass-through. LME copper is up 45%, the base-oil PPI 111% and cold-rolled steel 28% since November, against ~8% higher output prices. No maker's margins were obtained, which is the biggest gap in this analysis.\n- 2021-22 (+33%, +21%) is not a base case. From 2023 to mid-2025 prices rose ~2-3% a year [ppi-plateau-check].\n- The EO windfall is smaller than the headlines suggest [reconcile-value-ceiling]:\n  - China supplied ~2% of >100 MVA imports.\n  - Transformers are at most ~$7B of WoodMac's >$22B 'exposed' figure.\n  - The >8,000 Chinese units must be mostly under 10 MVA, a range a 2020-style rule excluded as local distribution.\n- Large power has little tariff shelter: 15% through 2027 and 0% antidumping for HD Hyundai [korea-ad-final-2026]. Meanwhile imported cores pay 25% and GOES strip reportedly 50%.\n- The capacity wave is big. There are ~7,800 announced US jobs, ~4,400 of them at plants due in 2027-28 [announced-jobs-timing]. WoodMac's power-transformer deficit halved to 15% in one year.\n- Distribution may already be loosening:\n  - Howard told DOE most of its lead times are under 20 weeks.\n  - Hammond's backlog fell 6.9% QoQ.\n  - India-built suppliers quote 12-24 weeks.\n- There is one domestic GOES maker, and its expansion (early 2028-2029) targets power grades. Coil winders in electrical equipment fell 25% in 2020-23.\n\n**What to do**\n- Sell 3-phase units to data centers and utilities, with copper, steel and oil escalators in the contracts.\n- Buy cores rather than cutting strip.\n- Site the plant outside the Southeast, which holds ~82% of announced jobs.\n- Prefer buying or expanding a qualified plant over a $340-530M greenfield. For scale: VTC added 70% for $40M, and Prolec nearly doubled Goldsboro for $140M.\n- Avoid large power, EHV and generator step-up units.\n\n**Walk away if:**\n- DOE's rules exclude distribution and customer-owned substations.\n- Utility bids show lead times under 20 weeks.\n- PPI growth stays under ~3% for two quarters.\n- You cannot sign a core-supply contract and an anchor customer.\n\n**Caveat:** research on permits, incentives, utility bids, margins, transmission unit counts and QCEW employment was blocked this run. Plant dates are company guidance.",
+ "thesis_scorecard": [
+  {
+   "question": "Is the North American transformer shortage real and durable through 2030?",
+   "answer": "Real now, narrowing fast. WoodMac's power-transformer deficit halved from 30% to 15% between 2025 and 2026. Its ~5% figure for 2030 rests on a vendor blog and probably predates EO 14420, which WoodMac says worsens the shortage. Large power and GSU stay tight; distribution is near balance by 2027-28.",
+   "confidence": "medium",
+   "key_evidence": [
+    "deficit-2025-2026: power 30% -> 15%, substation 10% -> 8% (S)",
+    "deficit-2030-unverified: ~5% in 2030, vendor blog only (W)",
+    "eo-worsens-deficit: WoodMac says EO worsens shortage, 100 MVA+ hardest (S)",
+    "cu-335-util: NAICS 335 utilization 85.85% vs 76.3% all industry (P)",
+    "lpt-100mva-ttm-2026: 2,901 >100 MVA import units TTM Jun 2026, +28% vs 2025 (unverifiable)"
+   ]
+  },
+  {
+   "question": "Are transformer prices still rising?",
+   "answer": "Yes, at records, but in steps and mostly as cost pass-through. Base case: mid-single-digit nominal growth plus escalators, not a repeat of 2021-22.",
+   "confidence": "high",
+   "key_evidence": [
+    "ppi-momentum-reaccel: four transformer PPIs at 7.6-8.7% YoY in Jul-Aug 2026 (P, confirmed)",
+    "ppi-wpu117409-staircase: +4.6% in July alone, flat quarters before (P, corrected)",
+    "ppi-history-mpsc: +33.4% (2021), +20.7% (2022) (P)",
+    "ppi-plateau-check / ppi-annual-2023-2025: ~+2.7-6.7%/yr 2023-25",
+    "miso-escalation: MISO budgets >4%/yr for power transformers, 8%/yr substation equipment (P)"
+   ]
+  },
+  {
+   "question": "Are maker margins expanding?",
+   "answer": "Unknown. No margin data was obtained for any maker. Input inflation (copper +45%, base oil +111%, cold-rolled steel +28% since Nov) is running ahead of output prices (+8%), so makers with fixed-price backlogs are probably being squeezed. Hammond reports softening Canadian pricing.",
+   "confidence": "low",
+   "key_evidence": [
+    "cu-lme-yoy: LME copper $14,474/t, +45% YoY (P)",
+    "oil-baseoil-ppi: base-stock PPI +111% YoY (P)",
+    "steel-cold-rolled: +27.6% since Nov 2025 (P)",
+    "seg-hammond-soft: Hammond backlog -6.9% QoQ, Canadian pricing softening (S)",
+    "Forgent/Hammond/HD Hyundai/Hyosung margins: not retrieved (gap)"
+   ]
+  },
+  {
+   "question": "Will EO 14420 hand domestic builders a large new market?",
+   "answer": "Smaller than the headlines say. Transformers are at most ~$7B of the >$22B 'exposed' figure. China supplied ~2% of >100 MVA imports, and its >8,000 units are mostly under 10 MVA, a range a 2020-style bulk-power definition would exclude. The real opening is 10-100 MVA units with HV primaries, where China's 2026 flow concentrated. Final scope arrives ~Dec 24.",
+   "confidence": "medium",
+   "key_evidence": [
+    "china-lpt-share: China ~2.2% (~50 units) of >100 MVA imports 2025 (unverifiable)",
+    "woodmac-22b-mostly-non-transformer: China HS 8504 Jan 2025-Aug 2026 <= ~$7.1B (computed)",
+    "reconcile-value-ceiling: >8,000 units must average <= $375k (computed)",
+    "eo13920-bps-definition: 2020 template = 69 kV+, local distribution excluded (W)",
+    "goldman-2026-10-220: China 2026 US flow mostly 10-220 MVA (S)"
+   ]
+  },
+  {
+   "question": "Does trade policy protect a new US plant?",
+   "answer": "In distribution, yes: 25% Section 232 duty from all origins, with no Section 301 stacking. In large power, weakly: 15% through 2027 plus 0-4.32% antidumping on the main Korean makers, and imported cores pay 25% (strip reportedly 50%), which inverts the protection. Policy has reversed repeatedly.",
+   "confidence": "medium",
+   "key_evidence": [
+    "s232-grid-tier-weakly-sourced (corrected): 8504.23/.34 at 15% combined to 2027-12-31, Annex III (P)",
+    "cores-232-annexIB-25: cores and laminations 25% (P)",
+    "korea-ad-final-2026: HD Hyundai/Iljin 0%, LS/Hyosung 4.32% (P)",
+    "s301-excludes-232-articles: forced-labor 301 does not stack on 232 goods (P)",
+    "ieepa/sec122: IEEPA struck down; Section 122 ruled invalid (S)"
+   ]
+  },
+  {
+   "question": "Who would a US plant displace?",
+   "answer": "Allies and near-shore suppliers, not China. Mexico, Brazil and Korea supplied 57% of >100 MVA import units in 2025. Taiwan, Canada and Mexico lead in distribution. India-built suppliers are rising fast.",
+   "confidence": "medium",
+   "key_evidence": [
+    "lpt-100mva-origins-2025: Mexico 630, Brazil 343, Korea 323 units (unverifiable)",
+    "osti-lpt-origins: Mexico 19%, Brazil 12%, Korea 9% (P)",
+    "crs-distribution-imports: 25-30% of distribution imported, mainly Taiwan/Canada/Mexico (P)",
+    "india-asset-light-importers: Ayr >$500M contracts; Zetwerk >1,000 MVA/month (W)"
+   ]
+  },
+  {
+   "question": "Will the incumbents' 2027-29 capacity wave close the gap?",
+   "answer": "Partly. The wave is larger than the baseline counted (~7,800 jobs across 18 projects), but most plants do not state units. Stated large-power additions replace only ~5-8% of >100 MVA import units. Medium power and pad-mount absorb most of the wave, which is where an entrant would compete.",
+   "confidence": "low",
+   "key_evidence": [
+    "announced-us-jobs-total (corrected): ~7,770-7,870 US jobs, 18 projects",
+    "announced-jobs-timing (corrected): ~2,389 jobs in 2027, ~2,002 in 2028",
+    "supply-power-unstated: 12 of 16 power projects state no units",
+    "import-substitution-ratio: stated LPT/EHV adds = 6.3-7.8% of 2025 imports (computed, W)"
+   ]
+  },
+  {
+   "question": "Can a new builder secure core steel?",
+   "answer": "With difficulty. There is one domestic GOES maker. Its Butler expansion lands in early 2028 or 2029, is aimed at power grades, and competes with defense demand. Buying finished cores (25% duty; historically ~95% from Mexico and Canada) is the realistic route.",
+   "confidence": "medium",
+   "key_evidence": [
+    "cliffs-butler-only-facility: only US GOES facility (P)",
+    "cliffs-butler-timing/output: early 2028 (Cliffs) or 2029 (DOE); +25% or +12.5% (P)",
+    "howard-butler-power-grades: expansion targets power-transformer GOES (P)",
+    "dla-goes-contract: up to 53,000 st over 5 yrs to defense (S)",
+    "core-imports-value: core imports $205M (2019), ~95% MX+CA (P)"
+   ]
+  },
+  {
+   "question": "Is labor a binding constraint?",
+   "answer": "Likely, especially in the Southeast in 2027-28. Hiring difficulty was nearly universal in 2020. Coil-winder headcount in electrical equipment fell 25% from 2020 to 2023 while wages rose 15%. About 82% of announced jobs sit in eight Southeastern states.",
+   "confidence": "medium",
+   "key_evidence": [
+    "labor-constraint-unquantified (corrected): 89% of LPT component makers reported hiring difficulty (Commerce 2020) (P)",
+    "OEWS SOC 51-2021 in NAICS 3353: 4,800 (2020) -> 3,600 (2023); $18.92 -> $21.78/hr (P)",
+    "announced-jobs-by-state (corrected): AL 1,300, MS ~1,230, VA ~1,125, NC 1,106, SC 700"
+   ]
+  },
+  {
+   "question": "Is distribution softening while large power stays scarce?",
+   "answer": "Not established. The softening signals come from the import channel and dry-type, not from prices, and the blended PPI is at a record. Howard's 'under 20 weeks' claim is self-interested and unconfirmed by bid data.",
+   "confidence": "low",
+   "key_evidence": [
+    "howard-comment-leadtimes: most lead times <20 wks, some <10 (P, self-interested)",
+    "seg-dist-korea-pole: Korean pole-mount exports -50%+ (S)",
+    "seg-dist-leadtime-audit: baseline easing rests on two W trackers",
+    "seg-ppi-blended-reaccel: blended PPI record (P)"
+   ]
+  },
+  {
+   "question": "Buy or build?",
+   "answer": "Buy or expand, if the price is disciplined. Sellers are pricing in scarcity: Prolec at ~$9.7B for 100%, VTC's >$6B ask unsold for 18+ months, and Forgent's owners sold ~$7.2B of stock. Best value: a sub-scale qualified maker or reman shop, plus brownfield expansion. PTT cost Quanta ~$300M in 2024.",
+   "confidence": "low",
+   "key_evidence": [
+    "audit-prolec-implied-value: $9,656M total consideration for 100% (P)",
+    "audit-forgent-ipo-secondary (corrected): $27 IPO, follow-ons $29.50/$47/$49",
+    "vtc_sale_talk_6b: >$6B ask, no deal (S)",
+    "Quanta-PTT ~$300M (2024) (S)",
+    "No transaction multiples computable (gap)"
+   ]
+  },
+  {
+   "question": "Is demand durable through 2030?",
+   "answer": "At the capex level, yes: $1.4T of IOU plans and record OEM backlogs. At the unit level it is unquantified. No 765 kV autotransformer counts, GSU unit counts or distribution unit forecasts were retrieved, and six key demand claims lack sources.",
+   "confidence": "medium",
+   "key_evidence": [
+    "eei-capex-2026: $239B in 2026, $1.4T 2026-30 (P)",
+    "gev-electrification-backlog ~$41B; eaton-btb 1.3; quanta-backlog $53.4B (P)",
+    "baseline-unsourced-demand: six demand claims without URLs (W)"
+   ]
+  }
+ ],
+ "sections": [
+  {
+   "title": "1. What the primary data says that the press didn't",
+   "markdown": "These are the places where government data, filings or dockets change the baseline or the press story. Bracketed ids point to research findings; P/S/W = primary/secondary/weak. No research finding was refuted outright, but many baseline items were corrected.\n\n| # | Press / baseline story | What the primary data shows | Why it matters to a builder |\n|---|---|---|---|\n| 1 | Transformer price growth is 'decelerating' | All four BLS transformer PPIs set records in Jul-Aug 2026. YoY growth roughly doubled, from 3.6-4.1% in June to 7.6-8.7% [ppi-momentum-reaccel, P, confirmed] | Pricing power is intact |\n| 2 | Prices rise smoothly | WPU117409 moves in steps: 351.2 (Jul-Sep'25), 365.1 (Q4), 362.6 (Q1'26, revised down), 364.9 (Q2), 381.8 (Jul, +4.6% in one month). No August value has been published [ppi-wpu117409-staircase, corrected; ppi-wpu117409-aug-missing] | Model periodic resets. A flat print is not a reversal |\n| 3 | '+91% since 2020' means more to come | Most of it came in 2021 (+33.4%) and 2022 (+20.7%) [ppi-history-mpsc, P]. Feb 2023 to Jul 2025 added only ~5% in total [ppi-plateau-check]. CRS puts the real increase at ~40% for 2020-24 [price-measures-conflict] | Don't underwrite on the 2021-22 spike |\n| 4 | The shortage is pulling out more domestic output | NAICS 3353 industrial production is ~97 (2017=100), flat and below 2017. NAICS 335 utilization is 85.7-86.3%, against 76.3% for all industry [ip-3353, cu-335-util, P] | Nominal growth is price, not volume. The supply response is still ahead (2027-29) |\n| 5 | Import prices are surging | The BLS NAICS 335 import price index is -0.1% YoY (Aug 2026) and excludes duties [mxp-iz335-flat, mxp-excl-duties, P] | The domestic-import price gap is mostly the tariff wedge, so it depends on policy |\n| 6 | EO 14420 removes >$22B of Chinese imports, hitting large power hardest | China supplied ~2% (~50 units) of >100 MVA imports in 2025 [china-lpt-share, unverifiable]. All China HS 8504 shipments from Jan 2025 to Aug 2026 were at most ~$7.1B [woodmac-22b-mostly-non-transformer, computed] | The transformer windfall is single-digit billions |\n| 7 | >8,000 Chinese 'high-power' units | If counted for Jan-Oct 2025, they must average <=$375k each. That is below any >10 MVA unit value found, so most are under 10 MVA (8504.22 / 8504.34) [reconcile-value-ceiling, computed] | China's volume sits in the range a 2020-style rule excluded as 'local distribution' [eo13920-bps-definition, W] |\n| 8 | Large power is protected by tariffs | 8504.23 / 8504.34 pay 15% combined through Dec 31, 2027 [s232-grid-tier-weakly-sourced, corrected via Annex III]. Final antidumping rates on Korean large power transformers: 0% for HD Hyundai and Iljin, 4.32% for LS and Hyosung [korea-ad-final-2026, P] | Little shelter in the segment where Korea has pricing power (+20% $/t in 2025) |\n| 9 | Imported cores pay 50% | Cores and laminations (8504.90.9634/.9638/.9642) are in Annex I-B at 25% and explicitly excluded from the 15% tier [cores-232-annexIB-25, cores-excluded-annexIII, P]. GOES strip reportedly pays 50% (unconfirmed) [goes-strip-232-50-unconfirmed] | Tariff inversion: a US large-power assembler pays more on its cores than a competitor pays on a finished unit |\n| 10 | Mexican and Korean transformers carry a Section 301 adder | Section 301 forced-labor duties exclude Section 232 articles [s301-excludes-232-articles, P, CBP CSMS 69326983]. Mexico's HS 8504 exports to the US were ~$6.2-7.1B in 2024, not $2.3B [mexico-8504-contradiction, mexico-datamexico-2024] | Mexico competes at 15% or 25%, with no extra adder |\n| 11 | Prolec GE implies ~$10.5B | GE Vernova's purchase accounting gives $9,656M for 100%: $5,254M cash plus $4,402M fair value of the half it already held [audit-prolec-implied-value, P] | Use ~$9.7B as the benchmark |\n| 12 | DOE money is expanding domestic GOES | The $75M is a 2024 OCED decarbonization grant, not DPA money. DOE says +12.5% GOES shipments, completion 2029; Cliffs says +25%, early 2028 [cliffs-butler-award-origin, cliffs-butler-timing, cliffs-butler-output, P]. Howard says it targets power grades [howard-butler-power-grades] | No near-term GOES relief for a distribution entrant |\n| 13 | The labor shortage is anecdotal | 89% of LPT component makers reported hiring difficulty in a 2020 Commerce survey. Coil winders in NAICS 3353 fell from 4,800 (2020) to 3,600 (2023) while the mean wage rose from $18.92 to $21.78 [labor-constraint-unquantified, corrected, P] | A shrinking pool, rising wages, and ~7,800 announced jobs still to fill |\n| 14 | Distribution lead times are 26-60 weeks | Howard's DOE filing (Jul 2026) says most of its lead times are now under 20 weeks, some under 10 [howard-comment-leadtimes, P but self-interested] | Distribution may be loosening faster than the trackers show |\n\nTwo more corrections matter for valuation and competition:\n- **Forgent's IPO** is reported as raising $1.5-1.7B, but only 16.6M of the 56M base shares were primary, and the company netted $491.8M. Three follow-ons came at $29.50, $47 and $49 within five months [audit-forgent-ipo-secondary, corrected]. About $7.2B of stock was sold at offer prices across the four offerings (computed). Owners have been selling into the cycle.\n- **Cleveland-Cliffs** stopped investing in the $150M Weirton transformer plant in May 2025 [weirton-cancelled, S]. Cliffs is a supplier, not a competitor.\n\n**Net read:** the primary data supports a tight market with intact pricing, with three qualifications:\n- It moves the opportunity away from the headline (Chinese large units) toward mid-size units.\n- The 2026 price step is mostly cost pass-through.\n- Several tariff details work against a US large-power builder."
+  },
+  {
+   "title": "2. Capacity reality check: plant-by-plant status from permits and incentives",
+   "markdown": "**Bottom line:** no plant schedule here is verified by a permit or an incentive agreement. Both permit research streams and the incentive stream were blocked because the search budget ran out, so every online date is company guidance. What can be checked is the arithmetic. It shows the 2027-29 wave is larger than the baseline counted, and most of it is not disclosed in units.\n\n### Plant status (US, Canada, Mexico)\n\n| Plant | Segment | Stated capacity | Online | Evidence | Schedule / status risk |\n|---|---|---|---|---|---|\n| Siemens Energy, Charlotte NC | LPT | 24 -> 57 LPT/yr | 2027 | S | Already slipped from 2026 |\n| HD Hyundai, Montgomery AL #2 | EHV / 765 kV | +50% EHV (base undisclosed) | Apr 2027 | S; ground broken Mar 2026 | Low-medium |\n| Hyosung HICO, Memphis TN | EHV / 765 kV | 130 -> 250+ units/yr | 2027-28 | S; capex conflict $157-221M | Medium |\n| Prolec GE, Goldsboro NC | Power | 220 -> 420 units/yr | End-2027 | S; broke ground Mar 17, 2026 | Low-medium |\n| Niagara (Quanta), Cheektowaga NY | Power | 90 -> 140 units/yr | Not stated | S | Unknown |\n| PTT (Quanta), Raeford NC | 5-750 MVA | +300k sq ft; units not stated | Not stated | S | Unknown |\n| VTC, Rincon GA | Power | +70% | 2026-27 | P | Low |\n| VTC, Muscle Shoals AL | 2-500 MVA | 600k sq ft greenfield; units not stated | Jan 2028 | P | High: ~20 months from announcement |\n| Hitachi, South Boston VA | LPT | 'Largest US LPT plant'; units not stated | 2028 | S | Medium |\n| Hitachi, Gallman MS | 10-160 MVA | More than doubles Hitachi's US output in this class | 2029 | P (Sep 15, 2026) | Medium |\n| Hitachi, Varennes QC | LPT | ~3x; test bay by end-2027 | 2027 | S | Medium |\n| Howard, Ellisville MS | Medium power | +230k sq ft | Not stated | P | Unknown |\n| Delta Star, Lynchburg VA | Power / mobile | $35M | In progress | S | Ownership change (MacLean) |\n| Mitsubishi EPP, Memphis TN | 161-765 kV shell-type | Up to 1,500 MVA per unit | Operating | S | n/a |\n| Eaton, Jonesville SC | 3-phase distribution | Units not stated; 700 jobs | 2027 | S | Medium |\n| ERMCO, Maricopa Co. AZ | 3-phase distribution | 566k sq ft; units not stated | 2027 | S | Medium |\n| JST, Wytheville VA | Pad-mount | ~150 (2026) -> 1,000/yr | 2027 | S | Ownership unverified. A possible Jinpan link (W) bears on its EO status |\n| Giga Energy, Houston TX | MV pad-mount | 1,000-3,000+/yr (press releases conflict) | Q1 2026 | P; operation unverified | Medium |\n| Forgent VanTran, Waco TX | Custom distribution / substation | 430k sq ft | Operating (2025) | S | n/a |\n| Central Moloney, Panama City Beach FL | Distribution | Up to 250 jobs | Verifier: operating since Apr 2023 | S | Low |\n| Prolec GE, Monterrey MX | Power | Doubles Mexico output ($85M) | 2025 (completion unverified) | S | Unknown |\n| WEG, Atotonilco de Tula MX | Power <=550 kV | +50% over 3 yrs ($156M) | Unverified | S | Unknown |\n| Hammond, Mexico | Dry-type | Not stated | Shipping since Q1 2026 | S | n/a |\n| Cleveland-Cliffs, Weirton WV | Distribution | $150M | **Cancelled May 2025** | S | Removed |\n\n### Jobs as a capacity proxy (verified announcements)\n\n| Online | Announced US jobs | Main plants |\n|---|---|---|\n| 2025 or earlier | ~900-950 | Central Moloney 200-250; VanTran 700 (over 5 yrs) |\n| 2026 | ~913 | VTC Rincon 400; Delta Star 300; PTT 113; Giga 100 |\n| 2027 | ~2,389 | Siemens 559, Eaton 700, Prolec 330, HD Hyundai 200, ERMCO 500+, PTT 100 |\n| 2028 | ~2,002 | VTC Muscle Shoals 1,100; Hitachi South Boston 825; Niagara 73; PTT 4 |\n| 2029 | 654-700 | Hitachi Gallman |\n| Undated / phased | ~913 | Hyosung 363; Howard Ellisville 100; Howard three-county 450 (by ~2030) |\n| **Total** | **~7,770-7,870 across 18 projects** | Plus ~500 at Hitachi Varennes [announced-us-jobs-total, corrected] |\n\nWhat follows from these counts (computed):\n- The baseline counted 5,731 jobs. Verified announcements give ~7,800, and the 2027-28 peak is ~4,400 jobs, about 1.6x the baseline's figure [announced-jobs-timing, corrected].\n- About 6,400 of the ~7,800 announced jobs (~82%) sit in eight Southeastern states: AL 1,300, MS ~1,230, VA ~1,125, NC 1,106, SC 700, GA 400, TN 363, FL ~225 [announced-jobs-by-state, corrected].\n- 12 of the 16 power projects, including the biggest, give no units or MVA per year [supply-power-unstated].\n- Stated power additions total ~394-427 units/yr, of which large power and EHV are 144-177 [supply-power-stated-adds].\n- Stated distribution and MV additions total ~3,500-5,500 units/yr. But 1,500 of that (Prolec Shreveport) was already online in 2025, and the two biggest new 3-phase plants state no units [supply-dist-stated-adds].\n\n### Capex per unit of capacity (computed from announcements)\n\n| Project | Capex | Added capacity | Capex per unit/yr |\n|---|---|---|---|\n| Prolec GE Goldsboro (brownfield) | $140M | +200 units/yr | ~$0.70M |\n| Niagara Cheektowaga (brownfield) | $71M | +50 units/yr | ~$1.42M |\n| Hyosung Memphis | $157-221M | +120 units/yr | ~$1.3-1.8M |\n| Siemens Charlotte (greenfield LPT) | $150M | 57 LPT/yr | ~$2.6M |\n| Prolec Shreveport (small units) | $34M | +1,500 units/yr | ~$23k |\n\nCapex per announced job ranges from $0.10M (VTC Rincon) to $1.0M (Howard Ellisville), with a median of ~$0.47M [capex-per-announced-job, not checked].\n\n### What permit and incentive records would settle (next pull)\n- **Air construction permits and NPDES stormwater coverage for VTC Muscle Shoals (ADEM) and Hitachi Gallman (MDEQ).** These would show whether 2028 and 2029 are on a permit path, and coating/oven throughput caps would bound real output.\n- **Memphis-Shelby EDGE PILOT for Hyosung.** This would settle the $157-221M capex range.\n- **NC JDIG agreements for Siemens, Prolec and PTT.** These would show whether Siemens' milestones were amended after the slip.\n- **TCEQ registration for Giga** (1,000 vs 3,000+ units) and the **Virginia SCC record** for JST's owner.\n- **Abatement filings** that state the missing capex for VTC Muscle Shoals, ERMCO AZ, JST, Giga and VanTran."
+  },
+  {
+   "title": "3. Prices and margins: PPI, procurement prices, unit values",
+   "markdown": "**Bottom line:** prices are at records and accelerating again. But the 2026 step mostly passes input costs through, and no maker's margin data was obtained. Underwrite mid-single-digit nominal price growth plus escalators, not a repeat of 2021-22. No utility procurement prices (bid tabs, award memos) were retrieved, so transaction prices by segment remain unknown.\n\n### Domestic producer prices (BLS via FRED)\n\n| Series | Latest | YoY | Notes |\n|---|---|---|---|\n| WPU117409 power & distribution transformers ex parts | 381.783 (Jul 2026) | +8.7% | +4.6% in July alone. No August value published; September data due Oct 15 [ppi-wpu117409-jul26, corrected] |\n| PCU335311335311 transformer industry | 475.065 (Aug) | +7.8% | Soft patch: plateau ~458.4 from Oct'25 to Feb'26, 454.3 in Apr [ppi-335311-aug26, confirmed; ppi-335311-softpatch, corrected] |\n| PCU335311335311P primary products | 467.897 (Aug) | +7.6% | Up from +3.8% YoY in June [ppi-335311P-aug26] |\n| WPU1174 transformers & power regulators | 434.493 (Aug) | +7.6% | [ppi-wpu1174-aug26, confirmed] |\n| PCU335313335313 switchgear | 411.453 (Aug) | +13.1% | Outpacing transformers [ppi-switchgear] |\n| BLS import price index, NAICS 335 (duty-exclusive) | 126.9 (Aug) | -0.1% | No transformer-specific import index since Dec 2021 [mxp-iz335-flat, mxp-hs8504-stale] |\n\n**WPU117409 history:**\n- Annual changes: 2019 +3.0%, 2020 +2.6%, 2021 +33.4%, 2022 +20.7% [ppi-history-mpsc, P].\n- Annual averages: 2023 +6.7%, 2024 +2.7%, 2025 +3.0% [ppi-annual-2023-2025, W but confirmed].\n- Jan 2020 to Jul 2026: +91% nominal.\n\nBLS no longer splits distribution from power transformers; that series ended in Feb 2023 [bls-detail-cuts]. Segment prices therefore have to come from utility bid tabs or customs unit values.\n\n### Input costs (the reason for the July step)\n\n| Input | Latest | Change | Source |\n|---|---|---|---|\n| Copper, LME | $14,474/t (Sep 2026) | +45% YoY | World Bank [cu-lme-yoy, P] |\n| Copper wire & cable PPI | 602.48 (Aug) | ~+19% YoY (Jul); +12.9% since Apr | [cu-wire-ppi, P] |\n| Cold-rolled steel sheet PPI (proxy only; no GOES index) | 469.25 (Aug) | +27.6% since Nov 2025 | [steel-cold-rolled, P] |\n| Hot-rolled plate PPI | 312.47 (Aug) | +5.9% since Apr | [steel-plate, P] |\n| Aluminum mill shapes PPI | 370.90 (Aug) | -5.9% Jun-Aug | [aluminum-ppi, P] |\n| Lube base-stock PPI | 834.34 (Aug) | +111% YoY | [oil-baseoil-ppi, P] |\n| Ergon naphthenic transformer fluids | +$2.05/gal cumulative | 4 increases, Mar-Apr 2026 | [oil-ergon, P] |\n| GOES | No government index | Anchors from $3,892/st (W tracker) to $7,547/st (DLA ceiling) | [goes-pricing, goes-price-anchors] |\n\nThe COMEX premium over LME has collapsed to ~0.2% (Sep 2026), so LME is a fair hedge reference [cu-comex-premium].\n\n### Import and export unit values\n\n| Measure | Value | Change | Conf. |\n|---|---|---|---|\n| US imports >100 MVA, declared value per unit (all origins) | $1.005M (2019) -> $1.221M (2025) | +21.5% over 6 yrs | S/W; scope suspect [lpt-100mva-2025, nextmsc-scope-risk] |\n| Mexico >100 MVA declared unit value | ~$0.71M (2025) | Lowest origin | W [lpt-unit-values-country] |\n| Austria >100 MVA declared unit value | ~$2.43M (2025) | Highest origin | W |\n| Korea -> US UHV, $/ton | $19,060 (2024) -> $22,920 (2025) | +20.2% | S [korea-unit-price] |\n| Korea -> world UHV, $/ton | ~$20,689 Jan-Jul 2026 (computed; article says $26,890) | ~+6% vs 2025 world average | S [seg-power-korea-2026] |\n| China, all transformers, unit price | RMB205k (2025, up ~1/3) | +22.3% YoY Jan-May 2026 | S [china-2025-total, china-unit-price-2026] |\n| Canada -> US liquid <=650 kVA | ~$8,395/unit (2024) | No trend | S [canada-8504] |\n\n**A flag worth checking:** declared import unit values for >100 MVA rose ~22% from 2019 to 2025. Over a similar period (Jan 2020 to Jul 2025: 199.5 -> 351.2) the domestic PPI rose ~76%. Mix and scope could explain the gap. If it is real, imports are priced well below domestic transaction levels, and domestic prices are held up by lead times and tariffs rather than by cost.\n\n### Margins: the biggest gap\n\nNo gross or EBITDA margin was obtained for Forgent, Hammond, HD Hyundai, Hyosung, Hubbell or GE Vernova Electrification. Only indirect signals exist:\n- Hammond reported softening Canadian pricing and a 6.9% QoQ backlog decline [seg-hammond-soft].\n- Growth in Korean export prices slowed from +20% (2025, US-bound) to about +6% (2026, world basis) [seg-power-korea-2026].\n- MISO budgets more than 4% a year for power transformers and cited 8% a year for substation equipment [miso-escalation, P].\n\n**Illustrative squeeze (assumed cost shares, not evidence):**\n- Assume copper is ~15-20% of cost, core steel ~20-25% and fluid ~2-4%.\n- Apply the 2025-26 moves: +19% copper wire, +25-28% steel proxy, ~+100% base oil.\n- Material costs rise roughly 10-14 points, against a 7.6-8.7% price increase.\n\nMakers with fixed-price backlogs are likely losing margin, and new contracts must carry escalators.\n\n### What to underwrite\n- **Base case:** mid-single-digit nominal price growth, plus pass-through of copper, GOES and oil, delivered in periodic steps.\n- **Downside case:** the 2023 to mid-2025 plateau (~2-3% a year). Do not use 2021-22 as a base.\n- **Contracts:** quote with escalators on LME copper, steel and fluid, and hedge copper on LME. Aluminum windings help in distribution while aluminum prices fall."
+  },
+  {
+   "title": "4. Trade and policy: who fills imports, tariff math by origin and HTS line",
+   "markdown": "**Bottom line:** a US plant would mostly displace allies and near-shore suppliers, not China. Tariffs shelter distribution (25%) much more than large power, which gets 15% through 2027 and 0% antidumping on the main Korean maker. Core inputs also pay more than finished large units.\n\n### Who fills US imports of >100 MVA liquid transformers (2025)\n\n| Origin | Units | Unit share | Declared unit value | Notes |\n|---|---|---|---|---|\n| Mexico | 630 | 27.8% | ~$0.71M (W) | Prolec GE and WEG build there; lowest price |\n| Brazil | 343 | 15.1% | ~$1.41M, blended with Korea (computed) | |\n| South Korea | 323 | 14.2% | <=$2.29M (computed upper bound) | HD Hyundai, Hyosung, LS, Iljin |\n| China | ~50 | ~2.2% | n/a | |\n| All others (Austria, Germany, Turkey, Japan, India, etc.) | ~922 | ~41% | ~$1.4M (computed) | Austria ~$2.43M (W) |\n| **Total** | **2,268** | | **$1.22M** | $2.77B. 2,901 units in the 12 months to Jun 2026 |\n\n**Source and caveats:**\n- The data is NextMSC's Census-derived vendor series, which could not be verified [lpt-100mva-origins-2025, china-lpt-share].\n- A DOE-sponsored OSTI report ranks the same three origins first: Mexico 19%, Brazil 12%, Korea 9% (likely value shares, ~2024), with ~80% import reliance [osti-lpt-origins, P].\n- The implied $1.22M average is low for >100 MVA units, so this series may in fact cover all >10 MVA units [nextmsc-scope-risk].\n\n### Trends by origin\n- **Korea:**\n  - US shipments of >10 MVA units grew from $258M (2023) to $403M (2024) and $738M (2025), then $596M in Jan-Jul 2026 (~$1.02B annualized, +38%).\n  - The US took ~72% of Korean UHV exports in Jan-Jul 2026, up from ~43% in 2024 [korea-us-uhv-2026-janjul, korea-us-share-of-exports].\n  - Korea's global UHV exports grew only ~6% in H1 2026 [korea-global-uhv-2026]. Korea is redirecting capacity to the US, not adding much.\n- **China:**\n  - US-bound growth fell from +182% (Jan-Feb 2026) to ~+45% (H1).\n  - North America-bound liquid shipments fell 35.7% month on month in August, mostly before the EO [china-us-2026-path, china-liquid-aug-na].\n  - China's 2026 US mix moved into 10-220 MVA [goldman-2026-10-220].\n- **India:**\n  - US-designed, India-built suppliers are scaling. Ayr reported more than $500M of contracts; Zetwerk claims more than 1,000 MVA/month and 12-24 week lead times (W) [india-asset-light-importers].\n  - Ayr sued Zetwerk at the USITC (337-TA-1517, Aug 17, 2026) [section337-ayr-zetwerk, P].\n- **Distribution:**\n  - Imports supply ~25-30% of US distribution transformers, mainly from Taiwan, Canada and Mexico [crs-distribution-imports, P].\n  - Korean pole-mount exports more than halved in Q2 2025 [korea-pole-transformers].\n- **HS 8504 totals (these include converters and power supplies):**\n  - US imports were $35.4B in 2025.\n  - By origin: Mexico ~$6.3B; China $3.6B (share down from ~27% in 2020 to ~10%); Thailand $3.3B; Japan $2.4B; Canada $1.5B; India ~$1.3B (W).\n  - Vietnam was $1.66B in 2024, with a possible transshipment signal [us-8504-total-2025, china-share-8504, vietnam-transshipment].\n\n### Tariff math by HTS line and origin (as of Oct 11, 2026)\n\n| HTS line | Product | Korea (HD Hyundai / Iljin) | Korea (Hyosung / LS) | Mexico / Canada | EU, Brazil, India, Japan | China |\n|---|---|---|---|---|---|---|\n| 8504.21 / 8504.22 | Liquid <=10 MVA (distribution, pad-mount, small substation) | 25% | 25% | 25% (no USMCA relief found) | 25% | 25%, plus legacy China 301 (not re-verified), plus EO if in scope |\n| 8504.23 | Liquid >10 MVA | 15% combined + 0% AD = **15%** | 15% + 4.32% AD = **~19.3%** | **15%** | **15%** | 15%, plus EO prohibition for covered transactions |\n| 8504.31-.33 | Dry <=500 kVA | 25% | 25% | 25% | 25% | 25%, plus EO if in scope |\n| 8504.34 | Dry >500 kVA | 15% | 15% | 15% | 15% | 15%, plus EO if in scope |\n| 8504.90.9634/.9638/.9642 | Laminations, stacked and wound cores | 25% | 25% | 25% | 25% | 25% |\n| 8504.90.9646/.9650/.9690 | Other transformer parts | 15% | 15% | 15% | 15% | 15% |\n| 7225.11 / 7226.11 | GOES strip | 50% reported, unconfirmed | same | same | same | same |\n\nNotes:\n- **Section 232 basis:** rates apply to full customs value. The 15% is a combined cap (MFN + 232) that expires Dec 31, 2027, after which those lines revert to 25% [s232-grid-tier-weakly-sourced, corrected; cores-excluded-annexIII].\n- **Section 301:** the forced-labor duties (10-12.5% from Jul 24, 2026) do not apply to Section 232 articles, so they add nothing here [s301-excludes-232-articles, P].\n- **Antidumping:** Commerce published final results on Korean large power transformers on Aug 14, 2026. Korean producers outside the review pay 22% [korea-ad-final-2026, P]. A new review runs to Aug 31, 2027 [korea-ad-new-review, S].\n- **Copper:** 50% on semi-finished copper and 25% on copper-intensive derivatives. Refined copper goes to 15% in 2027 and 30% in 2028 [baseline-copper-232, S].\n\n**Worked examples (duty only, before freight):**\n- **A $1.0M >10 MVA unit:**\n  - ~$150k from HD Hyundai, Mexico, Brazil, the EU or India.\n  - ~$193k from Hyosung or LS.\n  - ~$370k from a Korean producer at the 22% all-others rate.\n  - From 2028, if the 15% tier lapses: ~$250k plus antidumping.\n- **A $10k distribution unit, any origin:** ~$2,500.\n- **The inversion:** a US large-power builder importing cores pays 25% on them (50% if it imports strip), while a finished import pays 15%. Illustratively, if cores are ~20% of unit cost, the inversion eats ~5 of the 15 points of shelter.\n\n### EO 14420 (or 14421) scope: what is known\n- **Process:** the DOE request for information is FR Doc 2026-18370 (Sep 9, 2026), docket DOE-HQ-2026-1123. Comments closed Oct 9, and rules are due ~Dec 24, 2026, 120 days after signing [doe-rfi-citation, rules-due-date]. The EO number is still disputed [eo-number-unresolved].\n- **Coverage:** power and instrument transformers, inverters, battery storage and breakers from 24 'foreign adversary' countries, for transactions after Aug 26 [covered-equipment-headline, S]. No kV/MVA threshold, distribution rule or grandfathering rule was retrieved.\n- **Likely template (W, not verified for 2026):** EO 13920 (2020) had the same title. It defined the bulk-power system as transmission at 69 kV and above, excluded local distribution, and used an ownership/control test rather than plant location [eo13920-bps-definition, eo13920-supplier-test].\n- **If DOE reuses that template:**\n  - China's large volume of units under 10 MVA may stay legal.\n  - 10-100 MVA units with HV primaries are caught.\n  - Chinese-owned plants in Mexico or the US are caught wherever they are (possibly JST, W).\n\n### Policy volatility\n- **Court reversals:** the IEEPA tariffs were struck down (Feb 20, 2026), and the CIT ruled the Section 122 tariff invalid (stayed on appeal) [ieepa-refund-status-unquantified, sec122-appeal-status-stale].\n- **USMCA:** not renewed at the Jul 2026 joint review; annual reviews continue.\n- **Federal support:** DPA PD 2026-10 (FR Doc 2026-08013) names transformers and core steel, but no Title III award to a transformer maker was found [dpa-pd-2026-10, corrected]. A lead that the 48C credit is fully allocated is unverified.\n- **Implication:** treat any margin that depends on tariffs as a policy bet."
+  },
+  {
+   "title": "5. Demand: transmission, data centers, generation, distribution",
+   "markdown": "**Bottom line:** spending plans are large and order books are at records, so demand is durable in dollar terms. What the research could not establish is unit demand by segment for 2027-29. That is the number that decides whether the incumbents' capacity wave overshoots.\n\n### Demand indicators\n\n| Driver | Evidence | Conf. |\n|---|---|---|\n| IOU capex | EEI: $239B in 2026 and $1.4T for 2026-30, up from $1.1T [eei-capex-2026] | P (not re-verified) |\n| Utility capex (46 companies, incl. gas) | S&P RRA: $259.1B in 2026, $1.295T for 2026-30 [rra-capex-2026-30] | S |\n| Capex mix | Distribution was ~33% and transmission ~18% of 2025 IOU capex (baseline). Applied to 2026: ~$79B distribution, ~$43B transmission (computed, assuming the same mix) | P/S |\n| OEM order books (Q2 2026) | GE Vernova Electrification backlog ~$41B, with ~$800M of US transformer orders in the quarter. Eaton Electrical Americas book-to-bill 1.3, backlog +33%. Quanta backlog $53.4B [gev-electrification-backlog, eaton-btb, quanta-backlog] | P |\n| Import pull | >100 MVA imports rose from 617 units (2019) to 2,268 (2025) and 2,901 (TTM Jun 2026), ~24% a year (computed CAGR) [lpt-100mva-2025] | S, unverifiable |\n| Supply deficit | WoodMac, 2025 -> 2026: power 30% -> 15%, substation 10% -> 8% [deficit-2025-2026] | S |\n| Hyperscaler direct buying | Hyosung: $287M of 765/345 kV orders from two US tech firms (Sep 2026) [hyosung-dc-765] | S |\n| Claims without sources | ERCOT $9.4B Eastern Backbone; STEP ~$36B; Hillje 3 x >=2,403 MVA; MISO-Transource $1.2B; GE Vernova $2.7B data-center orders; GE Vernova >100 GW gas backlog [baseline-unsourced-demand] | W (no URL) |\n\n### Transmission\n765 kV build-outs in ERCOT, PJM, MISO and SPP are the strongest qualitative driver for EHV autotransformers. No unit counts were retrieved from PUCT CCNs, the PJM RTEP or MISO Tranche 2.1, however. EHV demand goes to Hyosung, HD Hyundai, Mitsubishi and PTT, the makers that can build 765 kV units, so it is not a market a new entrant can reach.\n\n### Data centers\nData centers are the strongest near-term driver for the segments an entrant can reach: 3-phase pad-mount, unit substations and 10-100 MVA substation units. The evidence:\n- Eaton's data-center-led orders (+41% rolling).\n- Hyperscalers buying EHV units directly.\n- WoodMac expects the 3-phase pad-mount shortage to worsen.\n- China's 2026 US exports concentrated in 10-220 MVA, the data-center substation range [goldman-2026-10-220].\n\nThe key open question is whether customer-owned data-center substations count as 'bulk-power' under the EO.\n\n### Generation\nGSUs have the longest lead times: ~144 weeks, and over 160 in some 2026 trackers [leadtime-ladder]. Demand is cited only in GW (GE Vernova's gas backlog of over 100 GW, unsourced) [gsu-demand-proxy], with no conversion to units. The market is tight, but it is a large-power market.\n\n### Distribution\nRoughly a third of IOU capex goes to distribution, and imports supply 25-30% of distribution transformers [crs-distribution-imports]. No unit demand forecast was retrieved, such as the 2024 NREL study or housing starts. Distribution shows the first loosening signals (see section 3).\n\n### What is missing\nUnit or MVA demand by segment and year:\n- 765/345 kV autotransformer counts from CCN and RTEP project scopes.\n- GSU counts from EIA 860M planned units.\n- Distribution unit forecasts from NREL.\n\nWithout these, no segment's 2028 capacity-to-demand ratio can be computed honestly."
+  },
+  {
+   "title": "6. Inputs and bottlenecks",
+   "markdown": "**Bottom line:** core steel is the gating input for a new builder, followed by test capacity and coil-winding labor. Plan around bought-in cores and escalator contracts.\n\n### Bottleneck ranking\n\n| Rank | Input | State | Conf. |\n|---|---|---|---|\n| 1 | GOES / cores | See the GOES detail below | P/S |\n| 2 | Test capacity | Every OEM expansion builds its own test bay (Hitachi Varennes by end-2027, HD Hyundai 765 kV testing Apr 2027, PTT new test set). A newcomer cannot easily rent test time [baseline-test-capacity] | S |\n| 3 | Coil-winding labor | 89% of LPT component makers reported hiring difficulty (2020). Coil winders in NAICS 3353 fell from 4,800 (2020) to 3,600 (2023) while the mean wage rose from $18.92 to $21.78/hr. National coil-winder mean was $23.88/hr in 2025, against $30.07 average production earnings in NAICS 335 (Aug 2026) [labor-constraint-unquantified, P] | P |\n| 4 | Copper | LME +45% YoY; Section 232 at 50% on semi-finished copper; magnet-wire classification unresolved [cu-lme-yoy, baseline-copper-232] | P/S |\n| 5 | Bushings, OLTCs | Few makers. Hitachi's $106M Alamo TN bushing plant serves Hitachi [baseline-hitachi-alamo-bushings]. OLTC capacity not found | S |\n| 6 | Insulation kits | Hitachi is buying Canduct, an independent kit supplier [baseline-hitachi-canduct] | P |\n| 7 | Fluids | Base-oil PPI +111%; Ergon +$2.05/gal [oil-baseoil-ppi, oil-ergon] | P |\n| ? | Amorphous ribbon | The only large-scale producer supplies ~2% of the distribution market (NEMA) [nema-amorphous-2pct, P]. Hitachi's Quebec plant imports amorphous ribbon from China [amorphous-china-quebec] | P |\n\n**GOES detail:**\n- Cleveland-Cliffs Butler PA is the only US GOES facility [cliffs-butler-only-facility, P].\n- Its expansion adds +25% output (Cliffs) or +12.5% shipments (DOE). Completion is early 2028 (Cliffs) or 2029 (DOE and filings), and tonnage is undisclosed [cliffs-butler-output, cliffs-butler-timing].\n- Howard says the expansion targets power-transformer grades [howard-butler-power-grades].\n- DLA claims up to 53,000 short tons over 5 years, ~10,600 st/yr [dla-goes-contract, S].\n- Cliffs' maximum width is ~920mm, against the >=932mm wanted for large cores [baseline-goes-sole-domestic-width, S].\n- A docket commenter estimates ~80% of US GOES is imported (W).\n\nAnnounced hiring (~7,800 jobs, all roles) is about twice the entire coil-winder workforce in electrical equipment (~3,600 in 2023). The two figures are not like-for-like, but they show the scale of the training task.\n\n### Core-steel routes for a non-captive entrant\n\n| Route | Duty | Status | Verdict |\n|---|---|---|---|\n| Domestic GOES strip (Cliffs) | None | Sole producer. New volume arrives 2028-29, aimed at power grades, alongside defense demand | No reliable allocation for a newcomer |\n| Imported GOES strip, cut in-house | 50% reported (unconfirmed) | Origins and volumes not retrieved | Worst duty position, and needs a slitting/cutting line |\n| Imported finished cores (Mexico, Canada) | 25% (Annex I-B; no USMCA relief found) | Mexico and Canada supplied ~95% of $205M of core imports in 2019 [core-imports-value, P]. Worthington is building in Burlington ON | Most realistic route |\n| Cliffs strip cut in Mexico or Canada, cores shipped back to the US | Possibly reduced (US-melt threshold reportedly cut from 95% to 85%) | W [us-metal-threshold-lead] | Check before designing the supply chain |\n| Amorphous wound cores | Unknown | Single large-scale domestic supplier at ~2% market share | An option for the 2029 efficiency levels |\n\nBreak-even (computed): if strip pays 50% and cores 25%, imported cores are cheaper whenever the core price per ton is below ~1.2x the strip price plus 0.8x the in-house cutting cost [tariff-inversion-breakeven].\n\n### DOE 2029 efficiency rule\n- **Status:** compliance stays Apr 23, 2029. No NOPR, delay or withdrawal followed the Jul 15 comment close [doe-rfi-scope, doe-no-followup-after-rfi].\n- **Positions:** utilities, NEMA, Howard and ERMCO support the rule. EEI wants more time. Cliffs wants changes that keep GOES in all classes [doe-docket-positions].\n- **Legislation:** the House passed H.R. 4626, which would bar new distribution-transformer standards [hr4626-epca-exemption].\n- **Implication:** design any distribution line so it can switch between GOES and amorphous cores."
+  },
+  {
+   "title": "7. Deals, valuations and the buy-vs-build question",
+   "markdown": "**Bottom line:** sellers are pricing in scarcity, and owners are selling. No transaction multiple could be computed, because no target revenue or EBITDA was retrieved. Buying gets you time, qualifications and a test bay. Building is slower and lands in the 2027-29 wave.\n\n### Deal and valuation markers\n\n| Date | Deal | Value | What it says |\n|---|---|---|---|\n| 2026-02-02 | GE Vernova buys Xignux's 50% of Prolec GE | $5,254M cash; $9,656M total consideration for 100% [audit-prolec-implied-value, P] | Top-tier benchmark is ~$9.7B, not $10.5B |\n| 2026-02 to 2026-07 | Forgent IPO at $27; follow-ons at $29.50, $47 and $49 | IPO $1.74B gross incl. option, $491.8M net to the company. ~$7.2B sold at offer prices across the four offerings (computed) [audit-forgent-ipo-secondary, corrected] | Stock rose ~81% from IPO to the July offer, and owners sold heavily |\n| 2025-11 | Blackstone (with Centerbridge) buys MacLean Power Systems | ~$4B (reported) | PE platform for grid components |\n| 2026-09-03 | MacLean to buy Delta Star | Undisclosed; closes Q4 2026 | PE adds power transformers and mobile substations |\n| 2025 (early) | Virginia Transformer explores a sale | >$6B ask (reported) | No deal in 18+ months; bids may sit below the ask (inference) |\n| 2024 | Quanta buys PTT | ~$300M | A 5-750 MVA, 765 kV-capable maker cost ~$300M before 2025. Quanta then committed $102.5M to expand it |\n| 2026-07-20 | TJC to buy Sunbelt Solomon | Undisclosed | PE paying for reman and lifecycle services |\n| 2026-10-07 | IPS buys Belyea's HV business | Undisclosed | Roll-up of refurbishment and rental |\n| 2026-10-06 | Marsons + Cleanhill JV | Undisclosed | India to North America, importing first |\n| 2026-02 | Heron Power Series B | $140M | VC money going into solid-state transformers |\n\n### Build cost benchmarks\n\n| Route | Benchmark | Conf. |\n|---|---|---|\n| Brownfield capacity add | VTC Rincon $40M for +70%; Delta Star $35M | P/S |\n| Brownfield power line | Goldsboro $140M for +200 units/yr (~$0.70M per unit/yr); Niagara $71M for +50 (~$1.42M) | S |\n| Medium-power expansion | Howard Ellisville $100M, +230k sq ft, 100 jobs | P |\n| 3-phase distribution greenfield | Eaton Jonesville $340M, 700 jobs | S |\n| Medium-power greenfield (10-160 MVA) | Hitachi Gallman $528M, >700 jobs, ~2.5-3 years to production | P |\n| LPT greenfield | Siemens Charlotte $150M for 57 LPT/yr; Hitachi South Boston $457M | S |\n| Capex per announced job | $0.10M-1.0M, median ~$0.47M | Computed |\n\n### Buy vs build\n\n| Factor | Buy (sub-scale qualified maker or reman shop) | Buy, then expand brownfield | Greenfield |\n|---|---|---|---|\n| Time to qualified shipments | Immediate | New lines in ~1-2 years (inferred from announcements, not verified) | ~20-36 months to production for experienced makers (VTC Muscle Shoals, Hitachi Gallman), plus utility qualification for a newcomer |\n| Test bay and utility approvals | Included | Included | Must be built and earned |\n| Price | Scarcity-priced. Benchmarks range from $300M (PTT, 2024) to $6B+ asks | $0.7-1.4M of capex per unit/yr in power | $150-530M at scale |\n| Exposure to the 2027-29 wave | Lower (already producing) | Medium | Highest (ships into the wave) |\n| Labor | Comes with a trained workforce | Partly | Must hire in a tight market |\n\n**Read:** for a newcomer, buying a sub-scale private maker or a reman/rewind shop and expanding it beats greenfield on both time and qualification risk.\n- Candidates named in the baseline (Howard, Central Moloney, Maddox, ELSCO, Southwest Electric, Meta Power Solutions) have no public financials.\n- IPS, Sunbelt Solomon and Delta Star are already taken by PE.\n- Avoid paying peak multiples. Ask what the business would earn at 2023-25 price growth, not at 2026's."
+  },
+  {
+   "title": "8. A concrete entry playbook",
+   "markdown": "**One-line recommendation:**\n- **Enter** through 3-phase pad-mount and unit-substation transformers (~0.5-10 MVA) for data-center and utility customers.\n- **How:** buy a plant or expand an existing one, and ship qualified product by 2028. Keep a defined path to 10-60/100 MVA substation units.\n- **Avoid** large power, EHV and GSU.\n- **Commit capital only after** DOE's EO rules (~Dec 24, 2026) and a first read of margins and bid prices.\n\n### 1. Segment\n- **Primary:** 3-phase liquid pad-mount and unit-substation transformers (HTS 8504.22) for data centers, industrial loads and utilities.\n  - 25% tariff shelter against every origin.\n  - Direct data-center demand.\n  - The shortest path to qualification and revenue.\n  - Capex in the tens to low hundreds of millions.\n- **Phase 2 (2029 onward): 10-60/100 MVA substation units (8504.23).**\n  - China's 2026 flow concentrated here, and EO coverage is most likely here.\n  - Needs a test bay.\n  - Competes with Hitachi Gallman (2029) and VTC Muscle Shoals (2028).\n  - Tariff shelter is only 15% until the end of 2027.\n- **On-ramp option:** a rewind, refurbishment or mobile-substation shop to train winders and win utility relationships before the plant opens.\n- **Avoid:**\n  - Large power, EHV and GSU: capital needs, long qualification, GOES width and grade limits, 0% Korean antidumping.\n  - Single-phase pole-mount: a commodity with entrenched incumbents, and it is loosening.\n\n### 2. Location (reasoning; validate with QCEW and OEWS)\n- **Avoid the Southeastern hiring cluster:** ~82% of ~7,800 announced jobs sit in AL, MS, VA, NC, SC, GA, TN and FL, and that hiring peaks in 2027-28.\n- **Great Lakes / Ohio Valley (PA, OH, IN, MI, WI):** close to Cliffs (Butler PA) and Worthington cores (OH; Burlington ON), and to PJM/MISO demand.\n- **Texas / Southwest:** close to ERCOT and data-center load, but Giga, VanTran and Eaton Nacogdoches compete for labor.\n- **Mexico:** lower labor cost but no tariff advantage. Section 232 applies at 25% or 15%, and no USMCA relief was found.\n- **Incentives:** award per job and clawback terms were not retrieved and should be compared state by state.\n\n### 3. Timing and stage gates\n\n| Gate | When | Decision | Must have |\n|---|---|---|---|\n| 0: data | Now to Dec 2026 | Fill the evidence gaps | Census API HS-10 pulls (8504.22/.23/.34 by country, with units); 25+ utility bid tabs; Forgent and Hammond margins; DOE rules |\n| 1: go / no-go | Q1 2027 | Segment, site, buy vs build | Core-supply LOI; anchor customer LOIs; target shortlist |\n| 2: commit | Mid-2027 | Close an acquisition or approve brownfield capex | Signed offtake for a meaningful share of year-1 output; escalator terms |\n| 3: ship | By H2 2028 | First qualified shipments | Test capability; utility approvals |\n\nWhy 2028: experienced makers need ~20-36 months from announcement to production (VTC Muscle Shoals, Hitachi Gallman). A newcomer starting a greenfield plant in 2027 ships in 2029 or later. That is into the wave, as the deficit trends toward WoodMac's ~5% for 2030 (W).\n\n### 4. Capex range (from announced projects)\n- **Acquiring a sub-scale qualified maker:** ~$300M was enough for PTT in 2024; today's asks are higher.\n- **Brownfield distribution/pad-mount line:** ~$40-150M. VTC Rincon cost $40M; at ~$0.3-0.5M per job, a 150-300 job plant lands in this range.\n- **Medium-power expansion with a test bay:** ~$100-140M (Howard Ellisville, Prolec Goldsboro).\n- **Greenfield at incumbent scale:** $340M (Eaton, 3-phase) to $528M (Hitachi, 10-160 MVA).\n\n### 5. Customers and contracts\n- **Data-center developers and hyperscalers:** now buying direct (Hyosung's $287M order; Giga serves its own pipeline).\n- **Utilities:** IOU frame agreements, and munis and co-ops through joint action agencies (AMP, MEAG, FMPA, WPPI). Co-ops partly buy from ERMCO, which they own.\n- **Federal power marketing administrations (BPA, WAPA, TVA):** useful as reference customers; domestic-content rules may favor US builds.\n- **Contract terms:** index prices to LME copper, steel and fluid. MISO already budgets more than 4% a year for transformers and cited 8% for substation equipment.\n\n### 6. Steel and core strategy\n- **Phase 1:** buy finished stacked and wound cores from two North American core makers (25% duty), and design for both GOES and amorphous cores.\n- **No strip-cutting line yet:** wait until the 7225.11 rate is confirmed and you have a Cliffs allocation or a US-melt tolling route.\n- **Aluminum windings:** use them where specs allow; the aluminum PPI fell 5.9% from June to August.\n- **Copper:** hedge on LME.\n\n### 7. Key risks\n\n| Risk | Evidence | Mitigation |\n|---|---|---|\n| Incumbent capacity wave | ~4,400 jobs at plants due 2027-28; Gallman and Muscle Shoals in mid-power | Ship by 2028; sign offtake early |\n| EO narrower than hoped | The 2020 template excluded local distribution (W) | Don't rely on EO-driven demand for pad-mount |\n| Distribution loosening | Howard <20 wks; Hammond backlog -6.9% QoQ; India-built entrants | Focus on data-center 3-phase units; escalators |\n| Input squeeze | Copper +45% and oil +111% vs prices +8% | Escalators; hedges |\n| Policy reversal | IEEPA and Section 122 struck down; the 15% tier ends in 2027 | Don't depend on tariffs for margin |\n| Core supply | One GOES maker | Two core suppliers; amorphous option |\n| Labor | Coil winders -25% (2020-23) | Site outside the clusters; train through a reman shop |\n| Overpaying | VTC's >$6B ask; Forgent owners selling | Value the target at 2023-25 price growth |\n\n### 8. Kill criteria (proposed thresholds)\n- DOE's Dec 24 rules exclude distribution and customer-owned data-center substations, **and** Chinese 8504.22 shipments to the US recover in Sep-Dec 2026 Census data.\n- 25+ utility bid tabs show a median 3-phase pad-mount lead time under ~20 weeks, or award prices flat to down against 2024-25.\n- Transformer PPI YoY stays below ~3% (the 2023-25 plateau) for two consecutive quarters.\n- Forgent or Hammond gross margins fall two quarters in a row.\n- No core-supply contract at a landed cost competitive with incumbents' in-house supply.\n- Anchor offtake below a set share (e.g. 40%) of year-1 output by Gate 2.\n- The 15% Annex III tier is extended past 2027 **and** expanded to 8504.22, which would remove distribution's tariff edge."
+  }
+ ],
+ "supply_demand_balance": "**Best-evidence view:** no segment has both a stated North American capacity base and a unit or MVA demand forecast. So no 2028 capacity-to-demand ratio can be computed honestly. The view below rests on WoodMac's deficit series, lead times, import volumes and stated capacity additions.\n\n### Aggregate\n\n| Year | Power deficit | Substation deficit | Implied supply coverage (power) | Source |\n|---|---|---|---|---|\n| 2025 | 30% | 10% | 0.70 | WoodMac via POWER (S) |\n| 2026 | 15% | 8% | 0.85 | WoodMac EO release (S) |\n| 2030 | ~5% | n/a | ~0.95 | DistroForge citing WoodMac (W). Probably predates EO 14420, which WoodMac says worsens the shortage |\n\n### By segment, 2026-2030\n\n| Segment | 2026 state | Supply coming 2027-30 | Demand signal | Balance view | Conf. |\n|---|---|---|---|---|---|\n| LPT / EHV >100 MVA | ~128 wks lead time; 15% deficit (all power); imports 2,901 units TTM; domestic output <=~570 units/yr, implied by the >80% import share (computed) | Stated adds of 144-177 units/yr (Siemens, Hyosung), ~5-8% of import units. More undisclosed: South Boston (2028), HD Hyundai +50% EHV (2027), PTT Raeford, Varennes ~3x | 765 kV builds (unsourced); hyperscaler direct buying. The EO removes little here (China ~2%) | Short through 2028; still import-dependent in 2030 | Medium on direction, low on size |\n| GSU | ~144 wks; >160 in trackers (longest of any class) | No stated GSU capacity | Gas backlog >100 GW (unsourced) | Short through 2029 | Low |\n| Medium power 10-100 MVA | 60-90 wks (W). China's 2026 US flow concentrated in 10-220 MVA and is now being cut | Goldsboro +200 and Niagara +50 units (mixed sizes). Large undisclosed additions: Gallman more than doubles Hitachi's class output (2029), Muscle Shoals (2028), Ellisville, Rincon +70%, Prolec Monterrey 2x, WEG Mexico +50% | Data-center substations; EO displacement | Tight through 2027. Risk of loosening in 2029-30 as Gallman and Muscle Shoals ramp | Low |\n| 3-phase pad-mount / unit substation (0.65-10 MVA) | 30-60 wks (W); 8% substation deficit; Eaton book-to-bill 1.3 | JST +850 (2027); Giga +1,000-3,000+; Eaton Jonesville, ERMCO AZ and Forgent (units not stated); India-built supply (Zetwerk claims >1,000 MVA/month, W) | Data centers; WoodMac expects the shortage to worsen; most of the >8,000 Chinese units likely sit here | Near balance by 2027-28. EO scope decides whether the Chinese volume leaves | Low |\n| Single-phase distribution | 26-40 wks (W) vs Howard's <20 wks (P, self-interested) | Few announced additions (Central Moloney) | Distribution is ~33% of IOU capex; imports supply 25-30% | Closest to balance; most exposed to price softening | Low |\n| Dry-type | Hammond backlog -6.9% QoQ; Canadian pricing softening | Hammond Mexico (from Q1 2026) | Data centers, C&I | Easing | Low |\n\n### Numbers used\n- **Imports >100 MVA:** 617 (2019), 2,268 (2025), 2,901 TTM to Jun 2026. Source is NextMSC and could not be verified; it may cover all >10 MVA units. Growth is ~24% a year, computed.\n- **Domestic output ceiling:** 2,268 / 0.8 = ~2,835 total units, so domestic output is <=~567 units if >80% is imported (Siemens Energy's figure).\n  - Yet three existing plants alone list 440 units/yr (Goldsboro 220, Hyosung 130, Niagara 90).\n  - Unit counts mix sizes, so the balance needs rebuilding in MVA.\n- **Stated additions vs imports:**\n  - Large power and EHV: 144-177 units/yr, which is 6.3-7.8% of 2025 imports and 5.0-6.1% of TTM imports.\n  - All four plants that state units (394-427 units/yr): 17-19% of 2025 imports.\n- **Distribution/MV stated additions:** ~3,500-5,500 units/yr, of which 1,500 (Prolec Shreveport) was already online in 2025.\n- **Announced jobs:** ~2,389 at plants due in 2027 and ~2,002 in 2028. The supply ramp lands in the same window an entrant would.\n- **Korea's US run-rate:** ~$1.02B a year in 2026 vs $738M in 2025 (+38%). Import supply is also still growing.\n\n### What would change this view\n- WoodMac's primary 2027-30 series, updated for the EO.\n- Census HS-10 unit counts for 8504.22, 8504.23 and 8504.34 by country.\n- 765 kV autotransformer counts from CCN and RTEP project scopes.\n- Utility bid tabs with quoted delivery weeks and unit prices.",
+ "segment_ranking": [
+  {
+   "segment": "3-phase pad-mount and unit substations, ~0.5-10 MVA (HTS 8504.22; dry >500 kVA in 8504.34)",
+   "attractiveness": "medium",
+   "why": "Best fit for an entrant: lower capex, shorter qualification and fastest revenue. Liquid units get 25% tariff shelter from every origin, and data centers are pulling demand. Against that, it is the most crowded segment (Eaton, ERMCO, JST, Giga, Forgent, India-built suppliers), probably the first to loosen, and the EO may not cover it.",
+   "evidence": [
+    "Annex I-B 25% on 8504.22 for all origins; Section 301 does not stack (P)",
+    "eaton-btb: book-to-bill 1.3, backlog +33% (P)",
+    "WoodMac expects the 3-phase pad-mount shortage to worsen (baseline, S)",
+    "supply-dist-stated-adds: JST +850, Giga +1,000-3,000+, Eaton and ERMCO units not stated",
+    "howard-comment-leadtimes: <20 wks (P, self-interested)",
+    "reconcile-value-ceiling: Chinese units concentrated below 10 MVA"
+   ]
+  },
+  {
+   "segment": "Medium power / substation units, 10-100 MVA (HTS 8504.23.0040)",
+   "attractiveness": "medium",
+   "why": "China's 2026 US flow concentrated here, and the EO most likely covers units with HV primaries. Lead times run 60-90 weeks. But the incumbents' wave lands squarely here (Gallman 2029, Muscle Shoals 2028, Goldsboro, Ellisville, Rincon), a test bay is needed, and tariff shelter is only 15% until end-2027.",
+   "evidence": [
+    "goldman-2026-10-220: China's US units mostly 10-220 MVA (S)",
+    "eo13920-bps-definition: 69 kV+ template (W)",
+    "leadtime-ladder: mid power 60-90 wks (W)",
+    "Hitachi Gallman $528M, 10-160 MVA, 2029 (P)",
+    "sec232-tiers: 8504.23 at 15% through 2027-12-31"
+   ]
+  },
+  {
+   "segment": "Aftermarket: rewind, refurbishment, mobile/rental substations",
+   "attractiveness": "medium",
+   "why": "A low-capex on-ramp that trains coil winders and builds utility relationships, and PE is paying for these assets. Margin data is absent, and PE roll-ups are already competing for targets.",
+   "evidence": [
+    "IPS buys Belyea HV business (Oct 2026)",
+    "TJC to buy Sunbelt Solomon (Jul 2026)",
+    "MacLean to buy Delta Star incl. mobile substations (Sep 2026)",
+    "labor-constraint-unquantified: coil-winder pool shrinking (P)"
+   ]
+  },
+  {
+   "segment": "Large power / EHV >100 MVA incl. 765 kV",
+   "attractiveness": "low",
+   "why": "The tightest market, but the wrong one for a newcomer. Plants cost $150-457M, qualification takes years, Cliffs' GOES width and grades fall short, tariff shelter is only 15% through 2027, Korean antidumping is 0% for HD Hyundai, and the incumbents (Hyosung, HD Hyundai, Mitsubishi, Siemens, Hitachi, PTT) are expanding.",
+   "evidence": [
+    "korea-ad-final-2026 (P)",
+    "baseline-goes-sole-domestic-width (S)",
+    "Siemens Charlotte $150M for 57 LPT/yr; Hitachi South Boston $457M",
+    "import-substitution-ratio: stated additions are only 5-8% of imports"
+   ]
+  },
+  {
+   "segment": "Generator step-up (GSU)",
+   "attractiveness": "low",
+   "why": "Longest lead times (~144-160+ weeks), but the same barriers as large power. No stated GSU capacity, and demand is quantified only in GW.",
+   "evidence": [
+    "leadtime-ladder (S/W)",
+    "gsu-demand-proxy: gas backlog >100 GW, unsourced"
+   ]
+  },
+  {
+   "segment": "Single-phase pole/pad distribution (HTS 8504.21)",
+   "attractiveness": "low",
+   "why": "A commodity with entrenched incumbents (Howard, ERMCO, Eaton, Central Moloney) and cheap imports from Canada, Taiwan and Mexico. Korean exporters are retreating, but cores must be redesigned for the 2029 DOE rule, and Howard claims lead times are under 20 weeks.",
+   "evidence": [
+    "canada-8504: ~$8,395/unit (2024)",
+    "crs-distribution-imports: 25-30% imported (P)",
+    "korea-pole-transformers: Korean exports -50%+ (S)",
+    "doe-rfi-scope: compliance Apr 23, 2029 (P)"
+   ]
+  },
+  {
+   "segment": "Dry-type",
+   "attractiveness": "low",
+   "why": "Shows the clearest maker-level softening signal. A new Hammond Mexico plant has started, and 8504.34 above 500 kVA gets only 15% shelter until end-2027.",
+   "evidence": [
+    "seg-hammond-soft: backlog -6.9% QoQ, Canadian pricing softening (S)",
+    "Hammond Mexico shipping Q1 2026"
+   ]
+  },
+  {
+   "segment": "Cores and laminations service center",
+   "attractiveness": "low",
+   "why": "Cutting imported strip is at a tariff disadvantage (strip reportedly 50% vs finished cores 25%), and Cliffs strip is not available to newcomers. Revisit if the US-melt tolling rule (85%) is confirmed or Cliffs sells to new customers.",
+   "evidence": [
+    "tariff-inversion-breakeven (computed)",
+    "cores-232-annexIB-25 (P)",
+    "us-metal-threshold-lead (W)",
+    "howard-butler-power-grades (P)"
+   ]
+  },
+  {
+   "segment": "Solid-state transformers",
+   "attractiveness": "low",
+   "why": "Venture-funded and unproven at scale. It is a medium-term substitution risk in data-center MV rather than a fit for a conventional builder.",
+   "evidence": [
+    "Heron Power $140M Series B, 40 GW/yr target 2H 2027 (S)",
+    "DG Matrix $60M Series A (S)",
+    "Eaton bought Resilient Power (2025)"
+   ]
+  }
+ ],
+ "data_inventory": [
+  {
+   "source": "BLS PPI transformer and switchgear series (FRED/ALFRED: WPU117409, PCU335311, WPU1174, PCU335313)",
+   "type": "Government statistics",
+   "status": "reviewed_useful",
+   "takeaway": "Records in Jul-Aug 2026 at +7.6-8.7% YoY, moving in steps. There has been no distribution vs power split since Feb 2023."
+  },
+  {
+   "source": "BLS import price indexes (NAICS 335; HS 8504)",
+   "type": "Government statistics",
+   "status": "reviewed_useful",
+   "takeaway": "The NAICS 335 import index is flat YoY and excludes duties. The HS 8504 transformer index stopped in Dec 2021."
+  },
+  {
+   "source": "Commodity prices: World Bank Pink Sheet, IMF, COMEX, BLS input PPIs (copper wire, steel, aluminum, base oil)",
+   "type": "Market and government statistics",
+   "status": "reviewed_useful",
+   "takeaway": "Copper +45%, base oil +111%, cold-rolled steel +28% since Nov; aluminum is falling."
+  },
+  {
+   "source": "GOES price trackers (businessanalytiq, GTAIC, IMARC, Fastmarkets)",
+   "type": "Vendor price data",
+   "status": "reviewed_partial",
+   "takeaway": "No reliable US GOES price exists. Public anchors span about 2x ($3,892-7,547/st)."
+  },
+  {
+   "source": "Federal Reserve G.17 capacity utilization and industrial production (NAICS 335/3353)",
+   "type": "Government statistics",
+   "status": "reviewed_useful",
+   "takeaway": "Utilization is ~86% and NAICS 3353 output is flat below 2017. Annual revision due Nov 24, 2026."
+  },
+  {
+   "source": "Census Quarterly Survey of Plant Capacity (QPC) for NAICS 3353",
+   "type": "Government statistics",
+   "status": "blocked",
+   "takeaway": "XLS tables are not indexed. The rates are needed to cross-check G.17."
+  },
+  {
+   "source": "USITC DataWeb / Census International Trade API, HS-10 by country with units",
+   "type": "Trade data (primary)",
+   "status": "blocked",
+   "takeaway": "The single most important gap. Needed for 8504.22/.23/.34 units and unit values by origin and for the first post-EO month."
+  },
+  {
+   "source": "NextMSC Census-derived HTS 8504.23.0080 series",
+   "type": "Trade data (vendor)",
+   "status": "reviewed_partial",
+   "takeaway": "2,268 units in 2025 and 2,901 TTM, with origin units. Unverifiable, and may actually cover all >10 MVA units."
+  },
+  {
+   "source": "UN Comtrade mirrors (Trading Economics, TrendEconomy, WITS)",
+   "type": "Trade data (secondary)",
+   "status": "reviewed_partial",
+   "takeaway": "HS 8504 by origin. The totals mix in converters and power supplies."
+  },
+  {
+   "source": "Census FT-900 end-use release",
+   "type": "Government trade data",
+   "status": "reviewed_partial",
+   "takeaway": "End-use 'generators, accessories' only, +2.3% YTD. No HS detail."
+  },
+  {
+   "source": "Korea Customs / KITA via Korean press",
+   "type": "Foreign trade data",
+   "status": "reviewed_useful",
+   "takeaway": "Korea to US >10 MVA: $738M (2025), ~$1.02B annualized in 2026. US-bound $/t +20% in 2025."
+  },
+  {
+   "source": "China GACC via brokerage notes (Goldman, Changjiang, Caixin)",
+   "type": "Foreign trade data",
+   "status": "reviewed_useful",
+   "takeaway": "US-bound growth is slowing. North America-bound liquid shipments fell 35.7% month on month in August. The 2026 mix shifted to 10-220 MVA."
+  },
+  {
+   "source": "DataMexico, StatCan, INEGI",
+   "type": "Foreign trade data",
+   "status": "reviewed_partial",
+   "takeaway": "Mexico's HS 8504 exports to the US were $7.08B in 2024. No monthly or transformer-only series was found."
+  },
+  {
+   "source": "Federal Register, White House Section 232 annexes, CBP CSMS, USTR notices",
+   "type": "Policy primary texts",
+   "status": "reviewed_useful",
+   "takeaway": "Cores pay 25%; 8504.23/.34 pay 15% to 2027; Section 301 excludes 232 articles; Korean antidumping is 0-4.32%. Read via search snippets, so open the annex PDFs to confirm."
+  },
+  {
+   "source": "EO 14420/14421 text and DOE RFI docket DOE-HQ-2026-1123 comments",
+   "type": "Policy primary texts",
+   "status": "blocked",
+   "takeaway": "kV/MVA threshold, treatment of distribution and data-center substations, ownership test and grandfathering are all unknown until the text or the rules (~Dec 24) are read."
+  },
+  {
+   "source": "DOE efficiency docket EERE-2026-BT-STD-0133 comments",
+   "type": "Regulatory docket",
+   "status": "reviewed_useful",
+   "takeaway": "Positions of utilities, NEMA, Howard, ERMCO, EEI and Cliffs. Howard claims <20 week lead times. NEMA says the amorphous producer holds ~2% of the market."
+  },
+  {
+   "source": "USITC 337-TA-1517 and USITC pub 5531 (LPT from Korea)",
+   "type": "Trade remedy records",
+   "status": "reviewed_partial",
+   "takeaway": "Ayr v. Zetwerk was instituted Aug 17, 2026. The import tables in pub 5531 were not extracted."
+  },
+  {
+   "source": "CRS R48933, DOE LPT reports, OSTI DOE-sponsored LPT report, DOE 2022 supply-chain review",
+   "type": "Government reports",
+   "status": "reviewed_useful",
+   "takeaway": "Distribution is 25-30% imported; core imports were ~95% from Mexico and Canada (2019); LPT import reliance ~80%; 89% of component makers reported hiring difficulty (2020)."
+  },
+  {
+   "source": "State air and stormwater permits (MDEQ, ADEM, GA EPD, Shelby Co., TDEC, SC DES, VA DEQ, NC DAQ, MCAQ, TCEQ, NYSDEC, SEMARNAT)",
+   "type": "Permits",
+   "status": "blocked",
+   "takeaway": "No plant schedule is verified by a permit. A detailed retrieval checklist exists."
+  },
+  {
+   "source": "Economic-development incentive agreements (MDA, AL Commerce, VEDP, NC JDIG, EDGE PILOT, SC FILOT, IDAs, Investissement Quebec)",
+   "type": "Incentives",
+   "status": "blocked",
+   "takeaway": "Would give missing capex figures, job ramps and contracted milestones."
+  },
+  {
+   "source": "Federal programs: DPA Title III, 48C, LPO, GDO, OCED",
+   "type": "Federal awards",
+   "status": "reviewed_partial",
+   "takeaway": "Cliffs' $75M is a 2024 OCED IDP grant. No Title III award to a transformer maker was found. 48C status is unverified."
+  },
+  {
+   "source": "Federal procurement (USAspending, SAM.gov, BPA/WAPA/TVA/USACE)",
+   "type": "Procurement",
+   "status": "blocked",
+   "takeaway": "Would show federal unit prices, vendors and their domicile."
+  },
+  {
+   "source": "Utility bid tabs, council and board award memos, APPA/NRECA/CoBank surveys",
+   "type": "Procurement prices and lead times",
+   "status": "blocked",
+   "takeaway": "The biggest price and lead-time gap. No buyer-level $/kVA or quoted weeks were obtained."
+  },
+  {
+   "source": "State PUC rate cases and IOU capital plans",
+   "type": "Regulatory filings",
+   "status": "not_yet_reviewed",
+   "takeaway": "Would show $/kVA escalation that regulators accept as prudent."
+  },
+  {
+   "source": "BLS QCEW, CES, Economic Census and County Business Patterns for NAICS 335311",
+   "type": "Labor and industry statistics",
+   "status": "blocked",
+   "takeaway": "Needed to test whether real headcount is rising and to compare candidate sites."
+  },
+  {
+   "source": "BLS OEWS coil winders (SOC 51-2021)",
+   "type": "Labor statistics",
+   "status": "reviewed_partial",
+   "takeaway": "In NAICS 3353, headcount fell 25% and the mean wage rose 15% from 2020 to 2023. MSA-level data was not pulled."
+  },
+  {
+   "source": "GE Vernova Q2 2026 10-Q (Prolec purchase accounting)",
+   "type": "Company filing",
+   "status": "reviewed_partial",
+   "takeaway": "$9,656M total consideration for 100% of Prolec. Electrification margin was not extracted."
+  },
+  {
+   "source": "Forgent 424B4 and 10-Qs",
+   "type": "Company filing",
+   "status": "reviewed_partial",
+   "takeaway": "IPO structure and follow-ons confirmed. Gross margin, backlog and utilization were not retrieved."
+  },
+  {
+   "source": "Hammond MD&A (SEDAR+), Hubbell, Eaton and Quanta 10-Qs",
+   "type": "Company filings",
+   "status": "not_yet_reviewed",
+   "takeaway": "Only baseline press summaries were used. Margins and price/volume splits are needed."
+  },
+  {
+   "source": "Korean DART filings (HD Hyundai Electric, Hyosung, LS Electric)",
+   "type": "Company filings",
+   "status": "blocked",
+   "takeaway": "Would give contract values, delivery windows and segment margins."
+  },
+  {
+   "source": "Cleveland-Cliffs filings, releases and Q2 2026 call",
+   "type": "Company filings",
+   "status": "reviewed_partial",
+   "takeaway": "Butler completion early 2028 (Cliffs) or 2029 (DOE); Weirton cancelled. No GOES tonnage, price or width disclosed."
+  },
+  {
+   "source": "Transmission plans (PUCT/ERCOT CCNs, PJM RTEP, MISO Tranche 2.1, SPP ITP, CAISO, NYISO, BPA)",
+   "type": "Demand",
+   "status": "blocked",
+   "takeaway": "No 765/345 kV autotransformer unit counts. Six baseline demand claims remain unsourced."
+  },
+  {
+   "source": "EIA 860M, NREL distribution-transformer demand study, NERC LTRA",
+   "type": "Demand",
+   "status": "blocked",
+   "takeaway": "Needed to turn GW into GSU units and to forecast distribution units."
+  },
+  {
+   "source": "Hyperscaler capex guidance and turbine OEM GW backlogs (SEC filings)",
+   "type": "Demand",
+   "status": "blocked",
+   "takeaway": "Data-center and gas-generation pull is evidenced only qualitatively."
+  },
+  {
+   "source": "Canada and Mexico utility procurement (Hydro-Quebec, OEB, BC Hydro, CFE)",
+   "type": "Demand and procurement",
+   "status": "blocked",
+   "takeaway": "Canadian and Mexican demand and Buy-Canadian rules are unknown."
+  },
+  {
+   "source": "Private company registries and Form D (Virginia SCC for JST, Giga Energy, Texas SOS)",
+   "type": "Ownership",
+   "status": "blocked",
+   "takeaway": "JST ownership (possibly Jinpan, W) decides its EO status."
+  },
+  {
+   "source": "Chinese exchange filings (Jinpan, Sieyuan, TBEA, Chint) on North American subsidiaries",
+   "type": "Ownership",
+   "status": "not_yet_reviewed",
+   "takeaway": "Would identify Chinese-owned plants in Mexico or the US that an ownership test could reach."
+  },
+  {
+   "source": "PE and M&A press (Bloomberg, PE Hub, law-firm deal notes)",
+   "type": "Deals",
+   "status": "reviewed_partial",
+   "takeaway": "Baseline only. No revenue or EBITDA for any target, so no multiples."
+  },
+  {
+   "source": "Wood Mackenzie primary reports",
+   "type": "Analyst research",
+   "status": "reviewed_partial",
+   "takeaway": "Press releases only. The 2030 deficit figure has no primary source, and the definition of 'high-power' units is not published."
+  },
+  {
+   "source": "Baseline market-map.md and data/*.csv",
+   "type": "Internal baseline",
+   "status": "reviewed_useful",
+   "takeaway": "Several corrections: jobs, Prolec value, core tariff, Weirton, Mexico HS 8504, Section 301 treatment."
+  }
+ ],
+ "revised_implications": [
+  {
+   "stance": "Tailwind",
+   "heading": "Pricing power is intact into late 2026",
+   "body": "All four transformer PPIs reached records in Jul-Aug 2026 at +7.6-8.7% YoY, reversing the 'decelerating' view [ppi-momentum-reaccel]. Utilization of ~86% and MISO's >4% to 8% escalation budgets support continued nominal increases. Prices move in steps, though, so one flat print says little."
+  },
+  {
+   "stance": "Risk",
+   "heading": "The 2026 price step is cost pass-through, not margin expansion",
+   "body": "Copper +45%, base oil +111% and cold-rolled steel +28% are running ahead of ~8% output price growth. No maker's margins were obtained. A new entrant has to price with escalators from day one and should not extrapolate 2021-22 (+33%, +21%)."
+  },
+  {
+   "stance": "Risk",
+   "heading": "The EO 14420 windfall is smaller than headlines and partly in the wrong size class",
+   "body": "China supplied ~2% of >100 MVA imports. At most ~$7B of WoodMac's >$22B is HS 8504. The >8,000 Chinese units are mostly under 10 MVA, which a 2020-style rule would treat as local distribution. Final scope arrives ~Dec 24, 2026."
+  },
+  {
+   "stance": "Opportunity",
+   "heading": "10-100 MVA substation units are the real EO-displacement segment",
+   "body": "China's 2026 US shipments concentrated in 10-220 MVA and fell 36% month on month in August. Units with HV primaries are the most likely to be covered. This is the best phase-2 target for an entrant, provided it can ship before Hitachi Gallman (2029) and VTC Muscle Shoals (2028) ramp."
+  },
+  {
+   "stance": "Tailwind",
+   "heading": "Distribution has the strongest tariff shelter",
+   "body": "8504.21/.22 pay 25% from every origin, with no Section 301 stacking and no USMCA relief found. Korean small distribution exporters have retreated. This favors pad-mount and unit-substation production in the US."
+  },
+  {
+   "stance": "Risk",
+   "heading": "Tariff inversion works against a US large-power builder",
+   "body": "Finished >10 MVA imports pay 15% (HD Hyundai adds 0% antidumping), while imported cores pay 25% and GOES strip reportedly 50%. A US large-power assembler that imports cores gives up part of its shelter."
+  },
+  {
+   "stance": "Neutral",
+   "heading": "The 15% tier's expiry on Dec 31, 2027 could raise large-power shelter to 25% in 2028",
+   "body": "If Annex III lapses, 8504.23 and 8504.34 revert to 25% just as the 2028 plants open. It could equally be extended. Do not plan on either outcome."
+  },
+  {
+   "stance": "Risk",
+   "heading": "The incumbent capacity wave is bigger than counted and lands in the entrant's window",
+   "body": "Verified announcements give ~7,800 US jobs across 18 projects, ~4,400 of them at plants due in 2027-28, about 1.6x the baseline. Most plants do not disclose units. Medium power and 3-phase distribution absorb most of the wave."
+  },
+  {
+   "stance": "Risk",
+   "heading": "Distribution may loosen first",
+   "body": "Howard told DOE most of its lead times are under 20 weeks. Hammond's backlog fell 6.9% QoQ amid softer Canadian pricing. India-built suppliers claim 12-24 weeks. None of this is confirmed by bid data yet."
+  },
+  {
+   "stance": "Risk",
+   "heading": "Allies and India, not China, set the import price",
+   "body": "Mexico, Brazil and Korea supplied 57% of >100 MVA units in 2025. Mexico's declared values are ~$0.71M per unit, and Korea's US shipments are on a ~$1.0B annual run-rate. India-built asset-light suppliers are scaling, though 337-TA-1517 could limit some of them."
+  },
+  {
+   "stance": "Risk",
+   "heading": "Core steel and labor constrain a newcomer more than incumbents",
+   "body": "There is one domestic GOES maker, and its expansion arrives early 2028-2029 aimed at power grades. Incumbents are buying their component suppliers (Canduct, Alamo bushings). The coil-winder pool in electrical equipment shrank 25% in 2020-23, and ~82% of announced hiring is in the Southeast."
+  },
+  {
+   "stance": "Opportunity",
+   "heading": "Buy-and-expand, or a reman on-ramp, beats greenfield",
+   "body": "Brownfield benchmarks ($40M for +70% at Rincon; $0.70M per unit/yr at Goldsboro) and a qualified workforce shorten time to market. Reman and rewind shops train winders and build utility relationships, and PE is paying for them."
+  },
+  {
+   "stance": "Neutral",
+   "heading": "Valuations already price in scarcity, and owners are selling",
+   "body": "Prolec is valued at ~$9.7B for 100%. VTC's >$6B ask has gone unsold for 18+ months. Forgent owners sold ~$7.2B of stock across four offerings. Buy only at prices that work on 2023-25 price growth."
+  },
+  {
+   "stance": "Risk",
+   "heading": "Policy volatility",
+   "body": "IEEPA tariffs were struck down, Section 122 was ruled invalid, USMCA is under annual review, and the 15% tier expires in 2027. Any margin that depends on tariffs is a policy bet."
+  }
+ ],
+ "watch_items": [
+  {
+   "when": "2026-10-15",
+   "item": "BLS September PPI release (WPU117409, PCU335311, WPU1174)",
+   "why": "Shows whether the July step holds or reverses, and whether a missing WPU117409 August value appears."
+  },
+  {
+   "when": "~2026-10-18 to 10-20",
+   "item": "China GACC September exports by HS 8504.22/.23/.34, North America-bound",
+   "why": "The first full post-EO month. Shows whether China's 10-220 MVA US flow is really leaving."
+  },
+  {
+   "when": "2026-10-19",
+   "item": "Cleveland-Cliffs Q3 call",
+   "why": "GOES tonnage, pricing, Butler timing (2028 vs 2029) and whether merchant customers get allocation."
+  },
+  {
+   "when": "2026-10-22 or 10-28",
+   "item": "GE Vernova Q3 results",
+   "why": "Electrification orders and margin, Prolec contribution, pricing commentary."
+  },
+  {
+   "when": "Late Oct 2026",
+   "item": "HD Hyundai Electric, Hyosung, LS Electric Q3; Hubbell and Eaton Q3",
+   "why": "Korean US pricing and margins; Hubbell's price vs volume split; Eaton's book-to-bill and Jonesville ramp."
+  },
+  {
+   "when": "Early Nov 2026",
+   "item": "Census September trade data (pull HS-10 via the API)",
+   "why": "Units and value for 8504.22/.23/.34 by country. Tests the vendor series and the Chinese size mix."
+  },
+  {
+   "when": "Early Nov 2026",
+   "item": "Hammond Q3 results",
+   "why": "The clearest read on dry-type and distribution softening (backlog, pricing)."
+  },
+  {
+   "when": "Mid-Nov 2026",
+   "item": "Forgent Q3 10-Q",
+   "why": "The first clean margin, backlog and utilization read on a US data-center distribution maker."
+  },
+  {
+   "when": "Nov 2026",
+   "item": "Siemens Energy FY2026 results",
+   "why": "Grid Technologies backlog and Charlotte schedule (already slipped once)."
+  },
+  {
+   "when": "2026-11-24",
+   "item": "Fed G.17 annual revision",
+   "why": "May restate NAICS 335 capacity and utilization."
+  },
+  {
+   "when": "~2026-12-24",
+   "item": "DOE implementing rules under EO 14420/14421",
+   "why": "kV/MVA threshold, treatment of distribution and data-center substations, ownership test, grandfathering. This is the main go/no-go input."
+  },
+  {
+   "when": "Q4 2026",
+   "item": "MacLean-Delta Star closing",
+   "why": "The price or financing disclosed would give a private-market multiple."
+  },
+  {
+   "when": "2027 (ongoing)",
+   "item": "337-TA-1517 (Ayr v. Zetwerk) schedule",
+   "why": "A limited exclusion order would restrict some India-built supply."
+  },
+  {
+   "when": "2027-04 and 2027 generally",
+   "item": "HD Hyundai Montgomery #2, Siemens Charlotte, Prolec Goldsboro, Eaton Jonesville, ERMCO AZ start-ups",
+   "why": "Whether the 2027 wave arrives on time."
+  },
+  {
+   "when": "2027-07",
+   "item": "USMCA annual review",
+   "why": "Mexico-built supply (Prolec, WEG, Hammond) and any Section 232 treatment."
+  },
+  {
+   "when": "2027-08-31",
+   "item": "Korean LPT antidumping review final results",
+   "why": "Rates for HD Hyundai, Hyosung and LS Electric."
+  },
+  {
+   "when": "2027-12-31",
+   "item": "Section 232 Annex III 15% tier expiry",
+   "why": "8504.23/.34 revert to 25% unless extended. This changes large-power shelter."
+  },
+  {
+   "when": "Early 2028 to 2029",
+   "item": "Cliffs Butler GOES expansion completion",
+   "why": "The only new domestic GOES volume."
+  },
+  {
+   "when": "2028-01 and 2029",
+   "item": "VTC Muscle Shoals and Hitachi Gallman production start",
+   "why": "The largest new medium-power supply. The main loosening risk for 10-100 MVA."
+  },
+  {
+   "when": "2029-04-23",
+   "item": "DOE distribution-transformer efficiency compliance (and any NOPR or H.R. 4626 action before then)",
+   "why": "Determines the GOES vs amorphous core mix and redesign capex."
+  }
+ ],
+ "open_questions": [
+  "What gross and EBITDA margins do US distribution and power makers earn now (Forgent, Hammond, HD Hyundai, Hyosung, GE Vernova Electrification), and are they rising or being squeezed?",
+  "What do utilities actually pay ($/kVA, $/MVA) and what delivery weeks do 2025-26 bids quote, by segment? Do they confirm or contradict Howard's claim of under 20 weeks?",
+  "Will DOE's EO rules cover distribution transformers and customer-owned data-center substations, and will they use an ownership/control test that reaches Chinese-owned plants in Mexico and the US?",
+  "Who ultimately owns JST Power Equipment (possible Jinpan link), and are there other Chinese-owned plants in North America?",
+  "Is the NextMSC '>100 MVA' import series really >100 MVA, or all >10 MVA? What do Census HS-10 units show for 8504.22, 8504.23.0040 and 8504.34 by country in 2024-26?",
+  "How many units or MVA per year will Hitachi South Boston, Hitachi Gallman, VTC Muscle Shoals, HD Hyundai Montgomery #2, Eaton Jonesville and ERMCO Arizona produce, and do their permits support the stated dates?",
+  "What is WoodMac's primary 2027-2030 deficit path after EO 14420, by segment?",
+  "How many 765/345 kV autotransformers and GSUs will be needed by in-service year (ERCOT STEP, PJM, MISO Tranche 2.1, SPP, EIA 860M)?",
+  "What Section 232 rate applies to GOES strip (7225.11/7226.11), and does the reported 85% US-melt threshold let cores cut in Mexico or Canada from Cliffs strip enter at a reduced rate?",
+  "Will Cleveland-Cliffs sell GOES to new merchant customers, and at what price and width?",
+  "Will the 15% Annex III tier be extended past 2027 or widened to more HTS lines?",
+  "Is DPA Title III money or 48C credit actually available to a new transformer assembler?",
+  "At what price could a sub-scale qualified private maker (Howard, Central Moloney, Maddox, ELSCO, Southwest Electric, Meta Power) be bought, and what does VTC's stalled sale imply about clearing multiples?",
+  "What are QCEW headcount trends for NAICS 335311 and local coil-winder wages at candidate sites outside the Southeast?",
+  "Does Section 232 apply in full to USMCA-qualifying transformers built in Mexico or Canada, or is there any relief?"
+ ]
+}
