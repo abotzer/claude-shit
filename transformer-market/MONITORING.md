@@ -39,6 +39,10 @@ Use web search in "extended" mode for anything time-sensitive. Run the searches 
 - Solid-state transformer funding rounds; IPO and follow-on filings (SEC EDGAR)
 - Status checks on pending deals listed in `data/deals.csv` (Status = Signed / Pending)
 
+**Fulton Asset Management**
+- `"Fulton Asset Management"`, `"Imperial Group" Chicago acquisition`, `"Ashland Capital Partners" acquisition` (Fulton's usual co-sponsor), and press on the portfolio companies (Metaltec, Mayco, Stainless Foundry, Panther Metalflow, AFCO, Setna iO, Transend, ZYCI)
+- Deals and plant news among the targets named in the Fulton plays (value-chain section of the dashboard)
+
 **New entrants**
 - Indian, Turkish, Vietnamese and other non-covered-country suppliers entering North America (JVs, distributors, plants)
 
@@ -53,6 +57,7 @@ Use web search in "extended" mode for anything time-sensitive. Run the searches 
    - Upload each changed JSON file as an asset on that artifact.
    - Update `url`, `name` and `updated` on the matching `datasets/<id>` document.
    - Edit `files/index.html` (source in `dashboard/index.html`) only when the layout itself needs to change.
+   - The value-chain graph, the Fulton section and the glossary come from `value-chain/research/workflow_result.json`. After editing that file (a new flow, a changed estimate, a new Fulton deal, a new term), run `python3 -I value-chain/build_value_chain.py value-chain/research/workflow_result.json <out_dir> value-chain`, then upload `value_chain_nodes`, `value_chain_edges`, `fulton_plan`, `fulton_portfolio`, `fulton_plays` and `glossary` the same way. When a new acronym appears in the weekly text, add it to the glossary so the page underlines it.
 5. Commit with the message `weekly: transformer market update <YYYY-MM-DD>` and push to the working branch.
 
 ## 4b. Deep-dive follow-ups each week
@@ -68,6 +73,7 @@ Use web search in "extended" mode for anything time-sensitive. Run the searches 
 ## TL;DR (3–5 bullets, each with the "so what")
 ## What changed this week (table: date | event + links | category | significance High/Med/Low)
 ## What it implies (for someone building or investing in transformer manufacturing)
+## What it means for Fulton (portfolio exposure, plays, triggers hit)
 ## Scorecard (metric | value | change vs last week | 6–12 mo direction)
 ## Watchlist (dated catalysts)
 ## Confidence & gaps
