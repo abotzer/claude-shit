@@ -130,7 +130,26 @@
 .tx-bottom-text { font-family: var(--font-anthropic-serif); font-size: var(--cds-font-size-heading); line-height: 1.45; max-width: 70ch; }
 .tx-imp { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); gap: var(--cds-gap-md); }
 .tx-imp-card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); display: flex; flex-direction: column; gap: var(--cds-gap-sm); min-width: 0; }
-.tx-imp-card p { line-height: 1.5; }
+.tx-imp-card p { line-height: 1.5; white-space: pre-line; }
+.tx-pre { white-space: pre-line; }
+.tx-seg { display: grid; grid-template-columns: minmax(5rem, 6rem) minmax(0, 1fr); gap: var(--cds-gap-md); padding-block: var(--cds-pad-md); border-top: 1px solid var(--color-border-line); }
+.tx-seg:first-child { border-top: 0; }
+.tx-seg-name { font-weight: var(--cds-font-weight-medium); }
+.tx-seg-why { color: var(--color-fg-muted); line-height: 1.5; font-size: var(--cds-font-size-body); }
+.tx-chip[data-attr="High"] { color: var(--color-ok); border-color: color-mix(in srgb, var(--color-ok) 50%, transparent); background: color-mix(in srgb, var(--color-ok) 12%, transparent); }
+.tx-chip[data-attr="Medium"] { color: var(--color-warn); border-color: color-mix(in srgb, var(--color-warn) 50%, transparent); }
+.tx-chip[data-attr="Low"] { color: var(--color-fg-muted); }
+.tx-qa { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: var(--cds-gap-md); }
+.tx-qa-card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); display: flex; flex-direction: column; gap: var(--cds-gap-sm); min-width: 0; }
+.tx-qa-q { font-weight: var(--cds-font-weight-medium); line-height: 1.35; }
+.tx-qa-a { line-height: 1.5; color: var(--color-fg); }
+.tx-verdicts { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs); }
+.tx-table td.v-on_track, .tx-table td.v-operating { color: var(--color-ok); font-weight: var(--cds-font-weight-medium); white-space: nowrap; }
+.tx-table td.v-slipped { color: var(--color-warn); font-weight: var(--cds-font-weight-medium); white-space: nowrap; }
+.tx-table td.v-at_risk, .tx-table td.v-cancelled { color: var(--color-bad); font-weight: var(--cds-font-weight-medium); white-space: nowrap; }
+.tx-table td.v-unverified { color: var(--color-fg-muted); white-space: nowrap; }
+.tx-table td.tx-pre { white-space: pre-line; }
+.tx-chart-margin { min-height: 13rem; }
 .tx-caveats { margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: var(--cds-gap-xs); line-height: 1.5; max-width: 75ch; }
 @media (prefers-reduced-motion: no-preference) {
   .tx-svg .tx-anim { animation: tx-grow var(--cds-dur-slow) var(--cds-ease-out) both; transform-origin: bottom; transform-box: fill-box; }
@@ -144,6 +163,7 @@
     <h1 class="tx-title">North American transformer market</h1>
     <p class="tx-lede tx-fill" data-source="takeaways" data-field="body" data-where="id=headline">—</p>
     <nav class="tx-nav" aria-label="Sections">
+      <button type="button" data-target="verdict">Should you build?</button>
       <button type="button" data-target="this-week">This week</button>
       <button type="button" data-target="capacity">Capacity</button>
       <button type="button" data-target="lead-times">Lead times</button>
@@ -192,6 +212,21 @@
     </div>
   </section>
 
+  <section class="tx-section" id="verdict">
+    <div class="tx-section-head">
+      <h2 class="tx-h2">Should you build transformers?</h2>
+      <p class="tx-sub">The answer from two rounds of research on government data, permits, incentive filings, dockets, company filings and utility purchase records.</p>
+    </div>
+    <div class="tx-bottom dash-skeleton" id="bottom-line"></div>
+    <div class="tx-card">
+      <h3 class="tx-card-title" id="segments-title">Segments ranked for a new builder</h3>
+      <p class="tx-card-note">Where scarcity, policy protection and pricing power overlap, and where an entrant can realistically qualify.</p>
+      <div class="dash-skeleton" id="segments-list"></div>
+    </div>
+    <h3 class="tx-h3" id="scorecard-title">The questions behind the answer</h3>
+    <div class="tx-qa dash-skeleton" id="scorecard-list"></div>
+  </section>
+
   <section class="tx-section" id="this-week">
     <div class="tx-section-head">
       <h2 class="tx-h2">What changed this week</h2>
@@ -231,6 +266,14 @@
         <p class="tx-sentence"><b class="tx-fill" data-source="region_split" data-field="projects" data-where="region=Southeast">—</b> of <span class="tx-fill" data-source="region_split" data-field="projects" data-where="region=All">—</span> tracked projects sit in the Southeast, from Virginia to Louisiana.</p>
       </div>
       <div class="tx-card tx-span">
+        <h3 class="tx-card-title" id="plant-title">Plant reality check</h3>
+        <p class="tx-card-note">Each announced plant checked against groundbreakings, incentive filings, job postings and local records. No state permit for any plant is findable through search, so dates remain company guidance.</p>
+        <div class="tx-verdicts" id="plant-verdict-counts"></div>
+        <div class="tx-table-wrap">
+          <table class="tx-table" id="plant-table" data-source="plant_status" data-row-key="id"><thead></thead><tbody></tbody></table>
+        </div>
+      </div>
+      <div class="tx-card tx-span">
         <h3 class="tx-card-title" id="cap-table-title">All tracked projects</h3>
         <p class="tx-card-note">Investment in millions of US dollars. Sort by any column.</p>
         <div class="tx-table-wrap">
@@ -259,6 +302,20 @@
     </div>
   </section>
 
+  <section class="tx-section" id="bids">
+    <div class="tx-section-head">
+      <h2 class="tx-h2">What utilities actually paid</h2>
+      <p class="tx-sub">Purchase approvals and bid results from city councils, utility boards, federal buyers and surveys over the past two years. Most come from small municipal utilities and are summaries of meeting minutes, so treat them as weak evidence.</p>
+    </div>
+    <div class="tx-card">
+      <label class="tx-card-note" for="price-search">Search buyers, items, vendors or lead times</label>
+      <input class="tx-search" id="price-search" type="search" placeholder="Try “pad-mount”, “substation” or “weeks”" autocomplete="off">
+      <div class="tx-table-wrap">
+        <table class="tx-table" id="price-table" data-source="price_points" data-row-key="id"><thead></thead><tbody></tbody></table>
+      </div>
+    </div>
+  </section>
+
   <section class="tx-section" id="prices">
     <div class="tx-section-head">
       <h2 class="tx-h2">Prices and inputs</h2>
@@ -266,9 +323,10 @@
     </div>
     <div class="tx-grid">
       <div class="tx-card">
-        <h3 class="tx-card-title" id="ppi-title">Transformer producer price index</h3>
-        <p class="tx-card-note">BLS power and distribution transformer index. The two earlier points are backed out of the reported percentage changes.</p>
-        <div class="tx-chart tx-chart-ppi dash-skeleton" id="ppi-chart" data-source="ppi_path"></div>
+        <h3 class="tx-card-title" id="ppi-title">Transformer producer prices, month by month</h3>
+        <p class="tx-card-note">Two BLS transformer price indexes, each rebased to one hundred in July of last year. Prices move in steps: flat for months, then a jump.</p>
+        <div class="tx-legend" id="ppi-legend"></div>
+        <div class="tx-chart tx-chart-ppi dash-skeleton" id="ppi-chart" data-source="ppi_rebased"></div>
         <div class="tx-rates" id="ppi-rates">
           <div><span class="tx-fill" data-source="ppi_rates" data-field="period" data-where="id=before">—</span>: <span class="tx-rate-v tx-fill" data-source="ppi_rates" data-field="annual_pct" data-where="id=before">—</span>% a year</div>
           <div><span class="tx-fill" data-source="ppi_rates" data-field="period" data-where="id=last12">—</span>: <span class="tx-rate-v tx-fill" data-source="ppi_rates" data-field="annual_pct" data-where="id=last12">—</span>%</div>
@@ -302,9 +360,24 @@
         </div>
       </div>
       <div class="tx-card">
+        <h3 class="tx-card-title" id="margin-title">Maker margins, now vs a year earlier</h3>
+        <p class="tx-card-note">EBITDA or operating margin from filings. Gross margins at distribution makers are flat to down, so the gains come from volume and operating leverage.</p>
+        <div class="tx-chart tx-chart-margin dash-skeleton" id="margin-chart" data-source="margins"></div>
+      </div>
+      <div class="tx-card">
         <h3 class="tx-card-title" id="backlog-title">Order books</h3>
         <p class="tx-card-note">Latest reported backlogs of the main suppliers.</p>
         <div class="tx-figs dash-skeleton" id="backlog-list"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="tx-section" id="demand-units">
+    <div class="tx-card">
+      <h3 class="tx-card-title" id="demand-title">Demand in transformer units</h3>
+      <p class="tx-card-note">Transmission plans, large-load queues and turbine backlogs converted into transformer counts. Computed conversions are marked in the text.</p>
+      <div class="tx-table-wrap">
+        <table class="tx-table" id="demand-table" data-source="demand_units" data-row-key="id"><thead></thead><tbody></tbody></table>
       </div>
     </div>
   </section>
@@ -342,9 +415,9 @@
     </div>
     <div class="tx-tiles">
       <div class="tx-tile">
-        <div class="tx-tile-label">Prolec GE implied value, whole company</div>
+        <div class="tx-tile-label">Prolec GE value, whole company</div>
         <div class="tx-big">$<span class="tx-fill" data-source="prolec_implied">—</span><span class="tx-unit">B</span></div>
-        <div class="tx-tile-note">Twice the $<span class="tx-fill" data-source="figures" data-field="value" data-where="id=prolec_half">—</span>M GE Vernova paid for half.</div>
+        <div class="tx-tile-note">Total consideration GE Vernova booked for all of Prolec GE, including $<span class="tx-fill" data-source="figures" data-field="value" data-where="id=prolec_half">—</span>M cash for the second half. Roughly thirteen to fourteen times EBITDA.</div>
       </div>
       <div class="tx-tile">
         <div class="tx-tile-label">Forgent follow-on vs IPO price</div>
@@ -389,7 +462,6 @@
     <div class="tx-section-head">
       <h2 class="tx-h2">What it means if you want to build transformers</h2>
     </div>
-    <div class="tx-bottom dash-skeleton" id="bottom-line"></div>
     <div class="tx-imp dash-skeleton" id="imp-grid"></div>
   </section>
 
@@ -433,12 +505,12 @@ dash.calc('cap_by_year', {
 dash.calc('region_split', {
   inputs: ['capacity'],
   title: 'Projects in the Southeast',
-  description: 'Counts tracked projects in VA, NC, SC, GA, FL, AL, MS, TN and LA, and all tracked projects.',
+  description: 'Counts tracked projects (excluding cancelled ones) in VA, NC, SC, GA, FL, AL, MS, TN and LA, and all tracked projects.',
   fn: (capacity) => {
     const southeast = ['VA', 'NC', 'SC', 'GA', 'FL', 'AL', 'MS', 'TN', 'LA'];
     return [
-      { region: 'Southeast', projects: capacity.filter((r) => southeast.includes(r.state)).length },
-      { region: 'All', projects: capacity.length },
+      { region: 'Southeast', projects: capacity.filter((r) => r.status !== 'Cancelled' && southeast.includes(r.state)).length },
+      { region: 'All', projects: capacity.filter((r) => r.status !== 'Cancelled').length },
     ];
   },
 });
@@ -479,11 +551,34 @@ dash.calc('ppi_rates', {
 
 dash.calc('prolec_implied', {
   inputs: ['figures'],
-  title: 'Prolec GE implied value',
-  description: 'Doubles what GE Vernova paid for half of Prolec GE, in US$ billions.',
+  title: 'Prolec GE value',
+  description: 'Total consideration GE Vernova recorded for 100% of Prolec GE, in US$ billions.',
   fn: (figures) => {
-    const half = figures.find((r) => r.id === 'prolec_half');
-    return half ? +(Number(half.value) * 2 / 1000).toFixed(1) : null;
+    const total = figures.find((r) => r.id === 'prolec_total');
+    return total ? +(Number(total.value) / 1000).toFixed(1) : null;
+  },
+});
+
+dash.calc('ppi_rebased', {
+  inputs: ['ppi_monthly'],
+  title: 'Transformer PPIs rebased to Jul 2025',
+  description: 'Divides each BLS series by its July 2025 value and multiplies by 100.',
+  fn: (ppi_monthly) => {
+    const base = {};
+    ppi_monthly.filter((r) => r.month === '2025-07').forEach((r) => { base[r.series] = Number(r.value); });
+    return ppi_monthly.filter((r) => base[r.series]).map((r) => ({
+      month: r.month, series: r.series, index: +(Number(r.value) / base[r.series] * 100).toFixed(1),
+    }));
+  },
+});
+
+dash.calc('plant_verdicts', {
+  inputs: ['plant_status'],
+  title: 'Plants by status',
+  description: 'Counts checked plants by verdict.',
+  fn: (plant_status) => {
+    const order = ['On track', 'Operating', 'Slipped', 'At risk', 'Unverified', 'Cancelled'];
+    return order.map((v) => ({ verdict: v, plants: plant_status.filter((r) => r.verdict_label === v).length }));
   },
 });
 
@@ -500,7 +595,7 @@ dash.calc('forgent_uplift', {
 
 const FAIL = ['error', 'connect', 'declined', 'missing'];
 const LANES = ['765 kV / EHV', 'Power transformers', 'Distribution & MV', 'Components & steel', 'Solid-state'];
-const STATUSES = ['Operating', 'Under construction', 'Announced', 'Unconfirmed'];
+const STATUSES = ['Operating', 'Under construction', 'Announced', 'Slipped', 'At risk', 'Unconfirmed'];
 const TILES = { AK: [0, 0], ME: [10, 0], WI: [5, 1], ON: [7, 1], QC: [8, 1], VT: [9, 1], NH: [10, 1], WA: [0, 2], ID: [1, 2], MT: [2, 2], ND: [3, 2], MN: [4, 2], IL: [5, 2], MI: [6, 2], NY: [8, 2], MA: [9, 2], OR: [0, 3], NV: [1, 3], WY: [2, 3], SD: [3, 3], IA: [4, 3], IN: [5, 3], OH: [6, 3], PA: [7, 3], NJ: [8, 3], CT: [9, 3], RI: [10, 3], CA: [0, 4], UT: [1, 4], CO: [2, 4], NE: [3, 4], MO: [4, 4], KY: [5, 4], WV: [6, 4], VA: [7, 4], MD: [8, 4], DE: [9, 4], AZ: [1, 5], NM: [2, 5], KS: [3, 5], AR: [4, 5], TN: [5, 5], NC: [6, 5], SC: [7, 5], DC: [8, 5], OK: [3, 6], LA: [4, 6], MS: [5, 6], AL: [6, 6], GA: [7, 6], HI: [0, 7], TX: [3, 7], FL: [8, 7], MX: [3, 8] };
 const NON_US = { ON: true, QC: true, MX: true };
 const fmtComma = d3.format(',');
@@ -664,6 +759,8 @@ function statusColor(s) {
   if (s === 'Operating') return c[2];
   if (s === 'Under construction') return c[0];
   if (s === 'Announced') return c[1];
+  if (s === 'Slipped') return 'var(--color-warn)';
+  if (s === 'At risk') return 'var(--color-bad)';
   return 'var(--cds-chart-muted)';
 }
 function todayYear() {
@@ -765,7 +862,7 @@ function drawPipeline() {
 function renderUndated() {
   const el = document.getElementById('cap-undated');
   if (!prep(el, ['capacity'])) return;
-  rows('capacity').filter((r) => num(r.online_year) === null).forEach((r) => {
+  rows('capacity').filter((r) => num(r.online_year) === null && r.status !== 'Cancelled').forEach((r) => {
     const w = 'id=' + encodeURIComponent(r.id);
     const chip = document.createElement('span');
     chip.className = 'tx-chip';
@@ -817,7 +914,7 @@ function drawMap() {
   if (!prep(el, ['capacity'])) return;
   const agg = {};
   rows('capacity').forEach((r) => {
-    if (!TILES[r.state]) return;
+    if (!TILES[r.state] || r.status === 'Cancelled') return;
     const a = agg[r.state] || (agg[r.state] = { n: 0, inv: 0, items: [] });
     a.n += 1;
     a.inv += num(r.investment_usd_m) || 0;
@@ -922,36 +1019,76 @@ function drawDeficit() {
 
 function drawPPI() {
   const el = document.getElementById('ppi-chart');
-  if (!prep(el, ['ppi_path'])) return;
-  const pts = rows('ppi_path').map((d) => ({ t: new Date(d.month + '-01T00:00:00Z'), v: num(d.index), label: d.label, id: d.id }));
-  if (pts.length < 2) return;
+  const legend = document.getElementById('ppi-legend');
+  legend.textContent = '';
+  if (!prep(el, ['ppi_rebased'])) return;
+  const data = rows('ppi_rebased').map((d) => ({ t: new Date(d.month + '-01T00:00:00Z'), v: num(d.index), series: d.series, month: d.month }));
+  const names = Array.from(new Set(data.map((d) => d.series)));
+  names.forEach((n, i) => {
+    const item = document.createElement('span');
+    const sw = document.createElement('i');
+    sw.className = 'tx-swatch';
+    sw.style.background = dash.colors[i];
+    item.append(sw, document.createTextNode(n));
+    legend.appendChild(item);
+  });
   const W = Math.max(260, el.clientWidth || 360), H = 220;
   const svg = newSvg(el, W, H).attr('aria-labelledby', 'ppi-title');
-  const yMax = d3.max(pts, (p) => p.v) * 1.18;
-  const yS = d3.scaleLinear([0, yMax], [H - 26, 14]);
+  const lo = Math.floor((d3.min(data, (d) => d.v) - 2) / 2) * 2;
+  const hi = Math.ceil((d3.max(data, (d) => d.v) + 2) / 2) * 2;
+  const yS = d3.scaleLinear([lo, hi], [H - 26, 12]);
   const ticks = yS.ticks(4);
   const tickW = measure(svg, ticks.map((t) => fmtComma(t)), null);
-  const m = { l: tickW + 10, r: 60 };
-  const x = d3.scaleUtc([pts[0].t, pts[pts.length - 1].t], [m.l + 6, W - m.r]);
+  const m = { l: tickW + 10, r: 44 };
+  const x = d3.scaleUtc(d3.extent(data, (d) => d.t), [m.l + 6, W - m.r]);
   ticks.forEach((t) => {
-    svg.append('line').attr('x1', m.l).attr('x2', W - 8).attr('y1', yS(t)).attr('y2', yS(t)).style('stroke', t === 0 ? 'var(--cds-chart-axis)' : 'var(--cds-chart-grid)');
+    svg.append('line').attr('x1', m.l).attr('x2', W - 8).attr('y1', yS(t)).attr('y2', yS(t)).style('stroke', t === 100 ? 'var(--cds-chart-reference)' : 'var(--cds-chart-grid)');
     svg.append('text').attr('x', m.l - 6).attr('y', yS(t) + 4).attr('text-anchor', 'end').text(fmtComma(t));
   });
-  const grad = svg.append('defs').append('linearGradient').attr('id', 'tx-ppi-grad').attr('x1', 0).attr('x2', 0).attr('y1', 0).attr('y2', 1);
-  [[0, 0.26], [0.25, 0.16], [0.5, 0.08], [0.75, 0.03], [1, 0]].forEach((st) => {
-    grad.append('stop').attr('offset', st[0]).style('stop-color', dash.colors[0]).style('stop-opacity', st[1]);
+  x.ticks(W < 480 ? 3 : 5).forEach((t) => {
+    svg.append('text').attr('x', x(t)).attr('y', H - 8).attr('text-anchor', 'middle').text(fmtMonth(t));
   });
-  svg.append('path').attr('d', d3.area().x((p) => x(p.t)).y0(yS(0)).y1((p) => yS(p.v))(pts)).style('fill', 'url(#tx-ppi-grad)');
-  svg.append('path').attr('d', d3.line().x((p) => x(p.t)).y((p) => yS(p.v))(pts))
-    .style('fill', 'none').style('stroke', dash.colors[0]).style('stroke-width', 2).style('stroke-linecap', 'round').style('stroke-linejoin', 'round');
-  pts.forEach((p, i) => {
-    const anchor = i === 0 ? 'start' : (i === pts.length - 1 ? 'start' : 'end');
-    const dx = i === 0 ? -4 : (i === pts.length - 1 ? 6 : -6);
-    svg.append('circle').attr('cx', x(p.t)).attr('cy', yS(p.v)).attr('r', 4).style('fill', dash.colors[0]).style('stroke', 'var(--color-panel)').style('stroke-width', 1.5);
-    svg.append('text').attr('class', 'tx-val').attr('x', x(p.t) + dx).attr('y', yS(p.v) - 9).attr('text-anchor', anchor).text(fmtComma(p.v));
-    svg.append('text').attr('x', x(p.t) + dx).attr('y', H - 8).attr('text-anchor', anchor).text(p.label);
-    svg.append('circle').attr('cx', x(p.t)).attr('cy', yS(p.v)).attr('r', 14).style('fill', 'transparent')
-      .on('mouseenter', () => showTip(el, p.label, ['Index ' + fmtComma(p.v), p.id === 'latest' ? 'Reported by BLS' : 'Backed out of reported changes'], x(p.t), yS(p.v)))
+  names.forEach((n, i) => {
+    const pts = data.filter((d) => d.series === n).sort((a, b) => a.t - b.t);
+    const color = dash.colors[i];
+    svg.append('path').attr('d', d3.line().x((p) => x(p.t)).y((p) => yS(p.v)).curve(d3.curveStepAfter)(pts))
+      .style('fill', 'none').style('stroke', color).style('stroke-width', 2).style('stroke-linejoin', 'round');
+    pts.forEach((p) => {
+      svg.append('circle').attr('cx', x(p.t)).attr('cy', yS(p.v)).attr('r', 3).style('fill', color);
+      svg.append('circle').attr('cx', x(p.t)).attr('cy', yS(p.v)).attr('r', 10).style('fill', 'transparent')
+        .on('mouseenter', () => showTip(el, fmtMonth(p.t), [n, 'Index ' + fmtComma(p.v) + ' (Jul 2025 = 100)'], x(p.t), yS(p.v)))
+        .on('mouseleave', () => hideTip(el));
+    });
+    const last = pts[pts.length - 1];
+    svg.append('text').attr('class', 'tx-val').attr('x', x(last.t) + 6).attr('y', yS(last.v) + 4 + (i === 0 ? -8 : 8)).text(fmtComma(last.v));
+  });
+}
+
+function drawMargins() {
+  const el = document.getElementById('margin-chart');
+  if (!prep(el, ['margins'])) return;
+  const data = rows('margins').slice().sort((a, b) => num(b.now_pct) - num(a.now_pct));
+  const W = Math.max(260, el.clientWidth || 360), rowH = 30, H = data.length * rowH + 30;
+  const svg = newSvg(el, W, H).attr('aria-labelledby', 'margin-title');
+  const labelW = Math.min(measure(svg, data.map((d) => d.company), 'tx-lbl') + 10, W * 0.42);
+  const max = Math.ceil((d3.max(data, (d) => num(d.now_pct)) + 3) / 5) * 5;
+  const x = d3.scaleLinear([0, max], [labelW + 4, W - 40]);
+  [0, 10, 20, max].filter((t, i, a) => a.indexOf(t) === i && t <= max).forEach((t) => {
+    svg.append('line').attr('x1', x(t)).attr('x2', x(t)).attr('y1', 4).attr('y2', H - 22).style('stroke', 'var(--cds-chart-grid)');
+    svg.append('text').attr('x', x(t)).attr('y', H - 6).attr('text-anchor', 'middle').text(t + '%');
+  });
+  data.forEach((d, i) => {
+    const cy = i * rowH + rowH / 2 + 4;
+    const now = num(d.now_pct), prior = num(d.prior_pct);
+    const lab = svg.append('text').attr('class', 'tx-lbl').attr('x', 0).attr('y', cy + 4).text(d.company);
+    fitText(lab.node(), labelW - 6);
+    svg.append('line').attr('x1', x(prior)).attr('x2', x(now)).attr('y1', cy).attr('y2', cy)
+      .style('stroke', now >= prior ? 'var(--color-ok)' : 'var(--color-bad)').style('stroke-width', 2);
+    svg.append('circle').attr('cx', x(prior)).attr('cy', cy).attr('r', 4).style('fill', 'var(--color-panel)').style('stroke', 'var(--cds-chart-muted)').style('stroke-width', 1.5);
+    svg.append('circle').attr('cx', x(now)).attr('cy', cy).attr('r', 5).style('fill', dash.colors[0]);
+    svg.append('text').attr('class', 'tx-val').attr('x', x(Math.max(now, prior)) + 8).attr('y', cy + 4).text(fmtComma(now) + '%');
+    svg.append('rect').attr('x', 0).attr('y', cy - rowH / 2).attr('width', W).attr('height', rowH).style('fill', 'transparent')
+      .on('mouseenter', () => showTip(el, d.company, [d.period + ' · ' + d.metric, fmtComma(now) + '% vs ' + fmtComma(prior) + '% a year earlier', 'Gross margin: ' + d.gross, d.note], x(now), cy))
       .on('mouseleave', () => hideTip(el));
   });
 }
@@ -1150,7 +1287,7 @@ function fillBody(table, list, cols, keyField, rowClass) {
     if (rc) tr.className = rc;
     cols.forEach((c, i) => {
       const td = document.createElement('td');
-      const cls = [c.cls, i === 0 ? 'tx-first' : ''].filter(Boolean).join(' ');
+      const cls = [c.cls, c.cellClass ? c.cellClass(r) : '', i === 0 ? 'tx-first' : ''].filter(Boolean).join(' ');
       if (cls) td.className = cls;
       td.textContent = fmtVal(c.num ? num(r[c.field]) : r[c.field]);
       tr.appendChild(td);
@@ -1232,15 +1369,98 @@ const MFR_TABLE = {
     return ['company', 'owner', 'ownership', 'segments', 'na_plants', 'latest_move'].some((k) => String(r[k] || '').toLowerCase().includes(q));
   },
 };
+const PLANT_TABLE = {
+  id: 'plant-table', src: 'plant_status', key: 'id',
+  cols: [
+    { field: 'plant', label: 'Plant' },
+    { field: 'announced_online', label: 'Announced start', sortable: false },
+    { field: 'verdict_label', label: 'Verdict', cellClass: (r) => 'v-' + r.verdict },
+    { field: 'evidence', label: 'Evidence', cls: 'tx-hide-sm tx-pre', sortable: false },
+  ],
+  defaultSort: (a, b) => ['at_risk', 'slipped', 'unverified', 'on_track', 'operating', 'cancelled'].indexOf(a.verdict) - ['at_risk', 'slipped', 'unverified', 'on_track', 'operating', 'cancelled'].indexOf(b.verdict),
+};
+const PRICE_TABLE = {
+  id: 'price-table', src: 'price_points', key: 'id',
+  cols: [
+    { field: 'date', label: 'Date' },
+    { field: 'buyer', label: 'Buyer' },
+    { field: 'item', label: 'Item', sortable: false },
+    { field: 'vendor', label: 'Vendor', cls: 'tx-hide-sm' },
+    { field: 'unit_price', label: 'Price', sortable: false },
+    { field: 'lead_time', label: 'Lead time', sortable: false },
+  ],
+  filter: (r) => {
+    const q = (document.getElementById('price-search').value || '').trim().toLowerCase();
+    if (!q) return true;
+    return ['buyer', 'item', 'vendor', 'unit_price', 'lead_time', 'date'].some((k) => String(r[k] || '').toLowerCase().includes(q));
+  },
+};
+const DEMAND_TABLE = {
+  id: 'demand-table', src: 'demand_units', key: 'id',
+  cols: [
+    { field: 'driver', label: 'Driver' },
+    { field: 'quantity', label: 'Quantity', sortable: false },
+    { field: 'units_implied', label: 'Transformers implied', sortable: false },
+    { field: 'timing', label: 'Timing', cls: 'tx-hide-sm', sortable: false },
+  ],
+};
 const WATCH_TABLE = {
   id: 'watch-table', src: 'watchlist', key: 'id',
   cols: [
     { field: 'when', label: 'When', sortBy: 'sort_date' },
-    { field: 'item', label: 'What', sortable: false },
-    { field: 'why', label: 'Why it matters', sortable: false },
+    { field: 'item', label: 'What', sortable: false, cls: 'tx-pre' },
+    { field: 'why', label: 'Why it matters', sortable: false, cls: 'tx-pre' },
   ],
   defaultSort: (a, b) => (a.sort_date < b.sort_date ? -1 : 1),
 };
+
+function renderSegments() {
+  const el = document.getElementById('segments-list');
+  if (!prep(el, ['deep_segments'])) return;
+  rows('deep_segments').slice().sort((a, b) => num(a.order) - num(b.order)).forEach((r) => {
+    const w = 'id=' + encodeURIComponent(r.id);
+    const row = mk('div', 'tx-seg');
+    const left = mk('div');
+    const chip = mk('span', 'tx-chip', r.attractiveness, 'deep_segments', 'attractiveness', w);
+    chip.setAttribute('data-attr', r.attractiveness);
+    left.appendChild(chip);
+    const right = mk('div', 'tx-item-body');
+    right.appendChild(mk('span', 'tx-seg-name', r.segment, 'deep_segments', 'segment', w));
+    right.appendChild(mk('p', 'tx-seg-why tx-pre', r.why, 'deep_segments', 'why', w));
+    row.append(left, right);
+    el.appendChild(row);
+  });
+}
+
+function renderScorecard() {
+  const el = document.getElementById('scorecard-list');
+  if (!prep(el, ['deep_scorecard'])) return;
+  rows('deep_scorecard').slice().sort((a, b) => num(a.order) - num(b.order)).forEach((r) => {
+    const w = 'id=' + encodeURIComponent(r.id);
+    const card = mk('article', 'tx-qa-card');
+    const chips = mk('div', 'tx-chips');
+    const chip = mk('span', 'tx-chip', r.confidence, 'deep_scorecard', 'confidence', w);
+    chips.appendChild(mk('span', 'tx-card-note', 'Confidence'));
+    chips.appendChild(chip);
+    card.appendChild(mk('h4', 'tx-qa-q', r.question, 'deep_scorecard', 'question', w));
+    card.appendChild(chips);
+    card.appendChild(mk('p', 'tx-qa-a tx-pre', r.answer, 'deep_scorecard', 'answer', w));
+    el.appendChild(card);
+  });
+}
+
+function renderVerdictCounts() {
+  const el = document.getElementById('plant-verdict-counts');
+  el.textContent = '';
+  if (statusOf(['plant_verdicts']) !== 'ok') return;
+  rows('plant_verdicts').filter((r) => num(r.plants) > 0).forEach((r) => {
+    const chip = mk('span', 'tx-chip');
+    chip.appendChild(mk('span', null, r.verdict, 'plant_verdicts', 'verdict', 'verdict=' + encodeURIComponent(r.verdict)));
+    chip.appendChild(document.createTextNode('\u00a0'));
+    chip.appendChild(mk('b', null, fmtVal(num(r.plants)), 'plant_verdicts', 'plants', 'verdict=' + encodeURIComponent(r.verdict)));
+    el.appendChild(chip);
+  });
+}
 
 function renderTakeaways() {
   const grid = document.getElementById('imp-grid');
@@ -1284,11 +1504,12 @@ document.querySelectorAll('#dash-root .tx-nav button').forEach((b) => {
   });
 });
 document.getElementById('mfr-search').addEventListener('input', () => renderTable(MFR_TABLE));
+document.getElementById('price-search').addEventListener('input', () => renderTable(PRICE_TABLE));
 
 let linked = false;
 dash.onData(() => {
   [
-    fillMarks, renderLegend, drawPipeline, renderUndated, drawByYear, drawMap, drawLead, drawDeficit, drawPPI,
+    fillMarks, renderSegments, renderScorecard, renderVerdictCounts, renderLegend, drawPipeline, renderUndated, drawByYear, drawMap, drawLead, drawDeficit, drawPPI, drawMargins,
     () => drawBars('capex-annual-chart', 'capex_annual', 'eei_2026', 'capex-title'),
     () => drawBars('capex-5yr-chart', 'capex_5yr', 'eei_5yr', 'capex-title'),
     () => renderFigList('inputs-list', 'inputs'),
@@ -1297,6 +1518,7 @@ dash.onData(() => {
     renderEvents, renderRecent, renderPolicy, renderTakeaways,
     () => renderTable(CAP_TABLE), () => renderTable(TARIFF_TABLE), () => renderTable(DEALS_TABLE),
     () => renderTable(MFR_TABLE), () => renderTable(WATCH_TABLE),
+    () => renderTable(PLANT_TABLE), () => renderTable(PRICE_TABLE), () => renderTable(DEMAND_TABLE),
   ].forEach((f) => {
     try { f(); } catch (e) { console.error(e); }
   });

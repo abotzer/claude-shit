@@ -49,11 +49,17 @@ Use web search in "extended" mode for anything time-sensitive. Run the searches 
 3. Write `weekly/<YYYY-MM-DD>.md` using the template below.
 4. Refresh the dashboard at https://claude.ai/artifact/HPfiJXoEzG2ZwVXuMkAWYb:
    - Update the rows in `dashboard/build_data.py`, including `report_window`, `events` (move last week's items to "Last six weeks"), `takeaways` and `watchlist`.
-   - Run `python3 -I dashboard/build_data.py <out_dir>`.
+   - Run `python3 -I dashboard/build_data.py <out_dir>`, then `python3 -I dashboard/build_deep.py deep-dive/research/round2_synthesis.json deep-dive/research/round2_research.json <out_dir>`. The second script writes the deep-dive datasets (segments, scorecard, plant status, utility price points, margins, demand in units, monthly PPI) and also `takeaways.json` and `watchlist.json`. To change takeaways or the watchlist in a weekly run, edit `build_deep.py`.
    - Upload each changed JSON file as an asset on that artifact.
    - Update `url`, `name` and `updated` on the matching `datasets/<id>` document.
    - Edit `files/index.html` (source in `dashboard/index.html`) only when the layout itself needs to change.
 5. Commit with the message `weekly: transformer market update <YYYY-MM-DD>` and push to the working branch.
+
+## 4b. Deep-dive follow-ups each week
+
+- Re-check the plants in `deep-dive/research/round2_synthesis.json` → `plant_status` that are `at_risk`, `slipped` or `unverified`. Look for groundbreakings, stormwater notices, county minutes and job posts, and update their verdicts.
+- Add new utility purchase records (council or board approvals with price and lead time) to the price-points list.
+- Track the deep dive's walk-away thresholds: DOE's EO 14421 rules (~Dec 24-27), bid lead times under 20 weeks for 3-phase pad-mounts or under 52 weeks for substation units, gross margins at Forgent and Hammond, and transformer PPI growth under 3% YoY.
 
 ## 5. Weekly report template
 
