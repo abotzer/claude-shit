@@ -151,6 +151,74 @@
 .tx-table td.tx-pre { white-space: pre-line; }
 .tx-chart-margin { min-height: 13rem; }
 .tx-caveats { margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: var(--cds-gap-xs); line-height: 1.5; max-width: 75ch; }
+.tx { position: relative; }
+.tx h4 { margin: 0; }
+.tx-updated { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.tx-btn { font: inherit; font-size: var(--cds-font-size-caption); padding: var(--cds-pad-xs) var(--cds-pad-sm); border: 1px solid var(--color-border-line); background: var(--color-panel); color: var(--color-fg); border-radius: var(--cds-radius); cursor: pointer; }
+.tx-btn:hover { border-color: var(--color-fg-muted); }
+.tx-linkbtn { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; text-align: left; text-decoration: underline; text-decoration-color: var(--color-border-line); text-underline-offset: 3px; }
+.tx-linkbtn:hover { text-decoration-color: var(--color-fg); }
+
+/* Glossary terms and their Wikipedia-style preview */
+.tx-term { text-decoration: underline dotted; text-decoration-color: color-mix(in srgb, var(--color-fg) 45%, transparent); text-decoration-thickness: 1px; text-underline-offset: 3px; cursor: help; border-radius: 2px; }
+.tx-term:hover, .tx-term:focus-visible, .tx-term.is-open { text-decoration-color: var(--color-fg); background: color-mix(in srgb, var(--color-fg) 7%, transparent); outline: none; }
+.tx-gpop { position: absolute; z-index: 30; width: min(23rem, calc(100% - 1rem)); background: var(--cds-surface-popover); border: 1px solid var(--cds-border); border-radius: var(--cds-radius); box-shadow: var(--cds-shadow-popover); padding: var(--cds-pad-md) var(--cds-pad-lg); display: flex; flex-direction: column; gap: var(--cds-gap-xs); color: var(--color-fg); }
+.tx-gpop[hidden] { display: none; }
+.tx-gpop-cat { font-size: var(--cds-font-size-caption); text-transform: uppercase; letter-spacing: .05em; color: var(--color-fg-muted); }
+.tx-gpop-term { font-family: var(--font-anthropic-serif); font-size: var(--cds-font-size-heading); line-height: 1.25; }
+.tx-gpop-def { font-size: var(--cds-font-size-body); line-height: 1.5; }
+.tx-gpop-more { align-self: flex-start; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+
+/* Value-chain graph */
+.tx-vc-controls { display: flex; flex-wrap: wrap; align-items: center; gap: var(--cds-gap-sm) var(--cds-gap-lg); font-size: var(--cds-font-size-caption); }
+.tx-vc-controls label { display: inline-flex; align-items: center; gap: var(--cds-gap-xs); color: var(--color-fg); }
+.tx-vc-controls select { font: inherit; color: var(--color-fg); background: var(--color-bg); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-xs) var(--cds-pad-sm); max-width: 16rem; }
+.tx-vc-scroll { overflow-x: auto; min-width: 0; }
+.tx-vc { min-width: 70rem; min-height: 40rem; }
+.tx-vc .tx-vc-node { cursor: pointer; }
+.tx-vc .tx-vc-node rect { fill: var(--color-panel); stroke: var(--color-border-line); }
+.tx-vc .tx-vc-node.is-b rect { fill: color-mix(in srgb, var(--color-fg) 6%, var(--color-panel)); }
+.tx-vc .tx-vc-node.is-agg rect { stroke-dasharray: 3 2; }
+.tx-vc .tx-vc-node.is-fulton rect { stroke: var(--color-warn); fill: color-mix(in srgb, var(--color-warn) 16%, var(--color-panel)); }
+.tx-vc .tx-vc-node.is-sel rect { stroke: var(--color-fg); stroke-width: 2; }
+.tx-vc .tx-vc-node text { fill: var(--color-fg); }
+.tx-vc .tx-vc-node:focus { outline: none; }
+.tx-vc .tx-vc-node:focus-visible rect { stroke: var(--color-fg); stroke-width: 2; }
+.tx-vc .is-dim { opacity: .18; }
+.tx-vc .tx-vc-band { fill: color-mix(in srgb, var(--color-fg) 4%, transparent); }
+.tx-vc .tx-vc-group { fill: var(--color-fg-muted); letter-spacing: .04em; text-transform: uppercase; font-size: calc(var(--cds-font-size-caption) * .9); }
+.tx-vc .tx-vc-col { fill: var(--color-fg); font-weight: var(--cds-font-weight-medium); }
+.tx-vc .tx-vc-side { fill: var(--color-fg-muted); letter-spacing: .06em; text-transform: uppercase; }
+.tx-vc .tx-vc-hit { fill: none; stroke: transparent; pointer-events: stroke; cursor: pointer; }
+.tx-vc .tx-vc-elabel text { paint-order: stroke; stroke: var(--color-panel); stroke-width: 4px; stroke-linejoin: round; pointer-events: none; }
+.tx-vc .tx-vc-elabel .tx-vc-eprod { fill: var(--color-fg); }
+.tx-vc .tx-vc-elabel .tx-vc-evalue { fill: var(--color-fg); font-weight: var(--cds-font-weight-medium); }
+.tx-vc-detail { display: flex; flex-direction: column; gap: var(--cds-gap-sm); border-top: 1px solid var(--color-border-line); padding-top: var(--cds-pad-md); }
+.tx-vc-dhead { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--cds-gap-xs) var(--cds-gap-md); }
+.tx-vc-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: var(--cds-gap-md) var(--cds-gap-lg); }
+.tx-vc-h4 { margin: 0; font-size: var(--cds-font-size-caption); text-transform: uppercase; letter-spacing: .05em; color: var(--color-fg-muted); font-weight: var(--cds-font-weight-medium); }
+.tx-vc-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.tx-vc-item { display: flex; flex-direction: column; gap: 2px; padding-block: var(--cds-pad-sm); border-top: 1px solid var(--color-border-line); line-height: 1.45; }
+.tx-vc-item:first-child { border-top: 0; }
+.tx-vc-item-top { display: flex; flex-wrap: wrap; align-items: baseline; gap: var(--cds-gap-xs) var(--cds-gap-sm); }
+.tx-vc-val { font-variant-numeric: tabular-nums; font-weight: var(--cds-font-weight-medium); }
+.tx-chip[data-kind="est"] { border-style: dashed; }
+.tx-chip[data-kind="fulton"] { color: var(--color-fg); border-color: color-mix(in srgb, var(--color-warn) 60%, transparent); background: color-mix(in srgb, var(--color-warn) 16%, transparent); }
+
+/* Fulton section */
+.tx-plays { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); gap: var(--cds-gap-md); }
+.tx-play { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); display: flex; flex-direction: column; gap: var(--cds-gap-sm); min-width: 0; }
+.tx-play-top { display: flex; align-items: baseline; gap: var(--cds-gap-sm); }
+.tx-play-rank { font-family: var(--font-anthropic-serif); font-size: var(--cds-font-size-title); line-height: 1; color: var(--color-fg-muted); font-variant-numeric: tabular-nums; }
+.tx-play-title { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); line-height: 1.3; }
+.tx-dl { display: grid; grid-template-columns: minmax(6rem, 8rem) minmax(0, 1fr); gap: var(--cds-gap-xs) var(--cds-gap-md); margin: 0; font-size: var(--cds-font-size-body); line-height: 1.45; }
+.tx-dl dt { color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); padding-top: 2px; }
+.tx-dl dd { margin: 0; min-width: 0; white-space: pre-line; }
+.tx-checks { margin: 0; padding-left: 1.2rem; display: flex; flex-direction: column; gap: var(--cds-gap-xs); line-height: 1.5; }
+.tx-table td.i-High { color: var(--color-ok); font-weight: var(--cds-font-weight-medium); white-space: nowrap; }
+.tx-table td.i-Medium { color: var(--color-warn); font-weight: var(--cds-font-weight-medium); white-space: nowrap; }
+.tx-table td.i-Low, .tx-table td.i-None { color: var(--color-fg-muted); white-space: nowrap; }
+.tx-sources { margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 2px; font-size: var(--cds-font-size-caption); line-height: 1.45; }
 @media (prefers-reduced-motion: no-preference) {
   .tx-svg .tx-anim { animation: tx-grow var(--cds-dur-slow) var(--cds-ease-out) both; transform-origin: bottom; transform-box: fill-box; }
   @keyframes tx-grow { from { transform: scaleY(0); } to { transform: scaleY(1); } }
@@ -159,11 +227,14 @@
 
 <div class="tx">
   <header class="tx-head" id="top">
-    <p class="tx-eyebrow tx-fill" data-source="figures" data-field="label" data-where="id=report_window">—</p>
+    <p class="tx-eyebrow">Prepared for Fulton Asset Management</p>
     <h1 class="tx-title">North American transformer market</h1>
-    <p class="tx-lede tx-fill" data-source="takeaways" data-field="body" data-where="id=headline">—</p>
+    <p class="tx-lede tx-fill" data-source="fulton_plan" data-field="body" data-where="id=headline">—</p>
+    <p class="tx-updated tx-fill" data-source="figures" data-field="label" data-where="id=report_window">—</p>
     <nav class="tx-nav" aria-label="Sections">
-      <button type="button" data-target="verdict">Should you build?</button>
+      <button type="button" data-target="value-chain">How the market works</button>
+      <button type="button" data-target="fulton">For Fulton</button>
+      <button type="button" data-target="verdict">Builder's view</button>
       <button type="button" data-target="this-week">This week</button>
       <button type="button" data-target="capacity">Capacity</button>
       <button type="button" data-target="lead-times">Lead times</button>
@@ -174,6 +245,7 @@
       <button type="button" data-target="manufacturers">Manufacturers</button>
       <button type="button" data-target="implications">What it means</button>
       <button type="button" data-target="watchlist">Watchlist</button>
+      <button type="button" data-target="glossary">Glossary</button>
       <button type="button" data-target="notes">Sources</button>
     </nav>
   </header>
@@ -212,10 +284,73 @@
     </div>
   </section>
 
+  <section class="tx-section" id="value-chain">
+    <div class="tx-section-head">
+      <h2 class="tx-h2" id="vc-title">How the market works</h2>
+      <p class="tx-sub">Goods move left to right: raw materials, processed materials, parts and services, the transformer builders in the middle, then the direct buyers, their customers and the end demand behind them. Each arrow runs from seller to buyer and carries what is sold and its annual value; most values are estimates, marked est. Click a company to trace its suppliers and customers through every layer.</p>
+    </div>
+    <div class="tx-card">
+      <div class="tx-vc-controls">
+        <label>Find a company <select id="vc-select" aria-label="Find a company"><option value="">Choose…</option></select></label>
+        <label><input type="checkbox" id="vc-fulton" checked> Show Fulton companies and opportunities</label>
+        <button type="button" class="tx-btn" id="vc-clear">Clear selection</button>
+      </div>
+      <div class="tx-legend" id="vc-legend"></div>
+      <div class="tx-vc-scroll">
+        <div class="tx-chart tx-vc dash-skeleton" id="vc-chart" data-source="value_chain_nodes value_chain_edges"></div>
+      </div>
+      <div class="tx-vc-detail" id="vc-detail"></div>
+    </div>
+  </section>
+
+  <section class="tx-section" id="fulton">
+    <div class="tx-section-head">
+      <p class="tx-eyebrow">For Fulton Asset Management</p>
+      <h2 class="tx-h2" id="fam-title">How Fulton can profit from the build-out</h2>
+      <p class="tx-sub">Fulton does not need to build transformers to benefit. This section maps the shortage onto the companies Fulton already owns and onto acquisitions that fit its size and its way of investing.</p>
+    </div>
+    <div class="tx-bottom dash-skeleton" id="fam-summary"></div>
+    <div class="tx-grid">
+      <div class="tx-card">
+        <h3 class="tx-card-title" id="fam-fit-title">Why this fits how Fulton invests</h3>
+        <p class="tx-pre dash-skeleton" id="fam-fit"></p>
+      </div>
+      <div class="tx-card">
+        <h3 class="tx-card-title" id="fam-firm-title">Fulton at a glance</h3>
+        <p class="tx-pre dash-skeleton" id="fam-firm"></p>
+        <ul class="tx-sources" id="fam-sources"></ul>
+      </div>
+    </div>
+    <h3 class="tx-h3" id="fam-plays-title">Plays across the value chain, ranked</h3>
+    <div class="tx-plays dash-skeleton" id="fam-plays"></div>
+    <div class="tx-card">
+      <h3 class="tx-card-title" id="fam-port-title">What the trend means for each portfolio company</h3>
+      <p class="tx-card-note">How the grid build-out touches each company Fulton owns or partners with, and the next step worth taking.</p>
+      <div class="tx-table-wrap">
+        <table class="tx-table" id="fam-port-table" data-source="fulton_portfolio" data-row-key="id"><thead></thead><tbody></tbody></table>
+      </div>
+    </div>
+    <div class="tx-grid">
+      <div class="tx-card">
+        <h3 class="tx-card-title" id="fam-next-title">Next ninety days</h3>
+        <ol class="tx-checks dash-skeleton" id="fam-next"></ol>
+      </div>
+      <div class="tx-card">
+        <h3 class="tx-card-title" id="fam-trig-title">Signals that would change the plan</h3>
+        <ul class="tx-checks dash-skeleton" id="fam-triggers"></ul>
+      </div>
+      <div class="tx-card">
+        <h3 class="tx-card-title" id="fam-avoid-title">What to avoid</h3>
+        <ul class="tx-checks dash-skeleton" id="fam-avoid"></ul>
+      </div>
+    </div>
+    <p class="tx-card-note dash-skeleton" id="fam-caveats"></p>
+  </section>
+
   <section class="tx-section" id="verdict">
     <div class="tx-section-head">
-      <h2 class="tx-h2">Should you build transformers?</h2>
-      <p class="tx-sub">The answer from two rounds of research on government data, permits, incentive filings, dockets, company filings and utility purchase records.</p>
+      <h2 class="tx-h2">The builder's view: should a newcomer build transformers?</h2>
+      <p class="tx-sub">The answer from two rounds of research on government data, permits, incentive filings, dockets, company filings and utility purchase records. For Fulton this is the view from its potential customers: where builders are short, and what they will pay for.</p>
     </div>
     <div class="tx-bottom dash-skeleton" id="bottom-line"></div>
     <div class="tx-card">
@@ -477,6 +612,19 @@
     </div>
   </section>
 
+  <section class="tx-section" id="glossary">
+    <div class="tx-section-head">
+      <h2 class="tx-h2" id="gloss-title">Glossary</h2>
+      <p class="tx-sub">Plain-language definitions of the terms underlined across this page. Hover over, tap or tab to an underlined term to read its definition in place.</p>
+    </div>
+    <div class="tx-card">
+      <input class="tx-search" id="gloss-search" type="search" placeholder="Search, e.g. “GOES” or “tariff”" autocomplete="off" aria-label="Search the glossary">
+      <div class="tx-table-wrap">
+        <table class="tx-table" id="gloss-table" data-source="glossary" data-row-key="id"><thead></thead><tbody></tbody></table>
+      </div>
+    </div>
+  </section>
+
   <section class="tx-section" id="notes">
     <div class="tx-section-head">
       <h2 class="tx-h2">Sources and confidence</h2>
@@ -484,6 +632,7 @@
     </div>
     <ul class="tx-caveats dash-skeleton" id="caveats"></ul>
   </section>
+  <div class="tx-gpop" id="gloss-pop" role="tooltip" hidden></div>
 </div>
 
 <script>
@@ -1503,13 +1652,614 @@ document.querySelectorAll('#dash-root .tx-nav button').forEach((b) => {
     dash.setLink(t.id);
   });
 });
-document.getElementById('mfr-search').addEventListener('input', () => renderTable(MFR_TABLE));
-document.getElementById('price-search').addEventListener('input', () => renderTable(PRICE_TABLE));
+const VC_LAYERS = ['S3', 'S2', 'S1', 'B', 'C1', 'C2', 'C3'];
+const VC_TITLES = ['Raw materials', 'Processed materials', 'Parts and services', 'Transformer builders', 'Direct buyers', 'Their customers', 'End demand'];
+const vcState = { sel: null };
+
+function vcIsEst(e) { return e.estimated === true || e.estimated === 'true' || e.estimated === 'Yes'; }
+function vcMid(e) {
+  const lo = num(e.value_low_usd_m), hi = num(e.value_high_usd_m);
+  if (lo === null && hi === null) return null;
+  return ((lo === null ? hi : lo) + (hi === null ? lo : hi)) / 2;
+}
+function vcValue(e) {
+  const l = String(e.value_label || '');
+  return vcIsEst(e) && !/est/i.test(l) ? l + ' est.' : l;
+}
+function clip(t, n) { const s = String(t || ''); return s.length > n ? s.slice(0, n - 1).trimEnd() + '…' : s; }
+
+function vcModel() {
+  const showF = document.getElementById('vc-fulton').checked;
+  const nodes = rows('value_chain_nodes').filter((n) => VC_LAYERS.includes(n.layer) && (showF || n.kind !== 'fulton'));
+  const byId = new Map(nodes.map((n) => [n.id, n]));
+  const edges = rows('value_chain_edges').filter((e) => byId.has(e.source) && byId.has(e.target) && e.source !== e.target && (showF || e.kind !== 'fulton_opportunity'));
+  return { nodes, byId, edges };
+}
+function vcTrace(model, id) {
+  const inE = new Map(), outE = new Map();
+  model.edges.forEach((e) => {
+    if (!inE.has(e.target)) inE.set(e.target, []);
+    if (!outE.has(e.source)) outE.set(e.source, []);
+    inE.get(e.target).push(e);
+    outE.get(e.source).push(e);
+  });
+  const walk = (map, end) => {
+    const nodes = new Set(), edges = new Set();
+    const q = [id];
+    while (q.length) {
+      const n = q.shift();
+      (map.get(n) || []).forEach((e) => {
+        edges.add(e.id);
+        const next = e[end];
+        if (next !== id && !nodes.has(next)) { nodes.add(next); q.push(next); }
+      });
+    }
+    return { nodes, edges };
+  };
+  const up = walk(inE, 'source'), down = walk(outE, 'target');
+  return { up: up.nodes, upE: up.edges, down: down.nodes, downE: down.edges };
+}
+
+function vcLayout(model, W) {
+  const gap = Math.max(44, W * 0.05);
+  const boxW = (W - gap * 6) / 7;
+  const colX = VC_LAYERS.map((_, i) => i * (boxW + gap));
+  const top = 58, rowH = 22, rowGap = 6, headH = 22;
+  const cols = VC_LAYERS.map(() => []);
+  model.nodes.forEach((n) => cols[VC_LAYERS.indexOf(n.layer)].push(n));
+  const weight = new Map();
+  model.edges.forEach((e) => {
+    const v = vcMid(e) || 0;
+    weight.set(e.source, (weight.get(e.source) || 0) + v);
+    weight.set(e.target, (weight.get(e.target) || 0) + v);
+  });
+  const gOrd = (n) => { const g = num(n.group_order); return g === null ? 99 : g; };
+  cols.forEach((c) => c.sort((a, b) => (a.kind === 'fulton') - (b.kind === 'fulton') || gOrd(a) - gOrd(b) || (weight.get(b.id) || 0) - (weight.get(a.id) || 0)));
+  const nbrs = new Map();
+  model.nodes.forEach((n) => nbrs.set(n.id, []));
+  model.edges.forEach((e) => { nbrs.get(e.source).push(e.target); nbrs.get(e.target).push(e.source); });
+  const rel = new Map();
+  const setRel = () => cols.forEach((c) => c.forEach((n, i) => rel.set(n.id, c.length > 1 ? i / (c.length - 1) : 0.5)));
+  setRel();
+  for (let pass = 0; pass < 6; pass++) {
+    const order = pass % 2 ? cols.map((_, i) => cols.length - 1 - i) : cols.map((_, i) => i);
+    order.forEach((ci) => {
+      const c = cols[ci];
+      const bary = new Map();
+      c.forEach((n) => {
+        const ns = nbrs.get(n.id).filter((m) => model.byId.get(m).layer !== n.layer);
+        bary.set(n.id, ns.length ? d3.mean(ns, (m) => rel.get(m)) : rel.get(n.id));
+      });
+      const gMean = new Map();
+      d3.group(c, (n) => n.group).forEach((list, g) => gMean.set(g, d3.mean(list, (n) => bary.get(n.id))));
+      c.sort((a, b) => (a.kind === 'fulton') - (b.kind === 'fulton') ||
+        (ci === 3 ? gOrd(a) - gOrd(b) : gMean.get(a.group) - gMean.get(b.group)) ||
+        String(a.group).localeCompare(String(b.group)) || bary.get(a.id) - bary.get(b.id));
+      c.forEach((n, i) => rel.set(n.id, c.length > 1 ? i / (c.length - 1) : 0.5));
+    });
+  }
+  const items = cols.map((c, ci) => {
+    const list = [];
+    let prevGroup = null, fultonHead = false;
+    c.forEach((n) => {
+      if (n.kind === 'fulton' && !fultonHead) { fultonHead = true; list.push({ head: 'Fulton portfolio', h: headH, fulton: true }); }
+      else if (ci === 3 && n.kind !== 'fulton' && n.group !== prevGroup) list.push({ head: n.group, h: headH, group: n.group });
+      prevGroup = n.group;
+      list.push({ node: n, h: rowH + rowGap });
+    });
+    return list;
+  });
+  const need = items.map((l) => d3.sum(l, (it) => it.h));
+  const H = d3.max(need) || 0;
+  const pos = new Map(), heads = [];
+  items.forEach((list, ci) => {
+    const extra = H - need[ci];
+    const per = list.length > 1 ? Math.min(extra / (list.length - 1), 30) : 0;
+    let y = top + (extra - per * (list.length - 1)) / 2;
+    list.forEach((it) => {
+      if (it.node) pos.set(it.node.id, { x: colX[ci], y: y + rowH / 2, ci: ci });
+      else heads.push({ ci: ci, y: y, text: it.head, group: it.group, fulton: it.fulton });
+      y += it.h + per;
+    });
+  });
+  return { W: W, H: top + H + 8, gap: gap, boxW: boxW, colX: colX, rowH: rowH, top: top, pos: pos, heads: heads, cols: cols };
+}
+
+function drawValueChain() {
+  const el = document.getElementById('vc-chart');
+  const detail = document.getElementById('vc-detail');
+  const legend = document.getElementById('vc-legend');
+  const sel = document.getElementById('vc-select');
+  const ok = prep(el, ['value_chain_nodes', 'value_chain_edges']);
+  legend.textContent = '';
+  if (!ok) { detail.textContent = ''; return; }
+  const c = dash.colors;
+  [['Supplier chain of the selected company', c[0], false], ['Customer chain', c[1], false], ['Fulton opportunity: addressable market, not current sales', 'var(--color-warn)', true]].forEach((d) => {
+    const item = document.createElement('span');
+    const sw = document.createElement('i');
+    sw.className = 'tx-swatch';
+    sw.style.background = d[1];
+    if (d[2]) { sw.style.borderRadius = '0'; sw.style.height = '2px'; sw.style.width = '1rem'; }
+    item.append(sw, document.createTextNode(d[0]));
+    legend.appendChild(item);
+  });
+  legend.appendChild(mk('span', null, 'Line width shows annual value'));
+  legend.appendChild(mk('span', null, 'Dashed box: a group of many smaller firms'));
+
+  const model = vcModel();
+  if (vcState.sel && !model.byId.has(vcState.sel)) vcState.sel = null;
+  sel.textContent = '';
+  const none = document.createElement('option');
+  none.value = '';
+  none.textContent = 'Choose…';
+  sel.appendChild(none);
+  VC_LAYERS.forEach((L, li) => {
+    const og = document.createElement('optgroup');
+    og.label = VC_TITLES[li];
+    model.nodes.filter((n) => n.layer === L).sort((a, b) => String(a.name).localeCompare(String(b.name))).forEach((n) => {
+      const o = document.createElement('option');
+      o.value = n.id;
+      o.textContent = n.name;
+      og.appendChild(o);
+    });
+    sel.appendChild(og);
+  });
+  sel.value = vcState.sel || '';
+
+  const W = Math.max(el.clientWidth, 900);
+  const L = vcLayout(model, W);
+  const svg = newSvg(el, L.W, L.H).attr('aria-label', 'Value chain of the North American transformer market: suppliers, builders and customers with annual flows');
+  const tr = vcState.sel ? vcTrace(model, vcState.sel) : null;
+  const vals = model.edges.map(vcMid).filter((v) => v !== null && v > 0);
+  const wScale = d3.scaleLog().domain([Math.max(d3.min(vals) || 1, 0.1), Math.max(d3.max(vals) || 10, 1)]).range([1, 9]).clamp(true);
+  const sw = (e) => { const v = vcMid(e); return v && v > 0 ? wScale(v) : 1; };
+
+  // column titles
+  svg.append('text').attr('class', 'tx-vc-side').attr('x', L.colX[0]).attr('y', 14).text('← Suppliers');
+  svg.append('text').attr('class', 'tx-vc-side').attr('x', L.colX[3] + L.boxW / 2).attr('y', 14).attr('text-anchor', 'middle').text('Builders');
+  svg.append('text').attr('class', 'tx-vc-side').attr('x', L.colX[6] + L.boxW).attr('y', 14).attr('text-anchor', 'end').text('Customers →');
+  VC_LAYERS.forEach((_, i) => {
+    const t = svg.append('text').attr('class', 'tx-vc-col').attr('x', L.colX[i] + L.boxW / 2).attr('y', 36).attr('text-anchor', 'middle').text(VC_TITLES[i]);
+    fitText(t.node(), L.boxW + L.gap * 0.8);
+  });
+  // builder group bands
+  const bandG = svg.append('g');
+  L.heads.forEach((h) => {
+    const members = L.cols[h.ci].filter((n) => (h.fulton ? n.kind === 'fulton' : n.kind !== 'fulton' && n.group === h.group));
+    const ys = members.map((n) => L.pos.get(n.id).y);
+    if (!ys.length) return;
+    if (h.ci === 3 || h.fulton) {
+      bandG.append('rect').attr('class', 'tx-vc-band').attr('x', L.colX[h.ci] - 6).attr('y', h.y - 2).attr('width', L.boxW + 12)
+        .attr('height', d3.max(ys) + L.rowH / 2 + 5 - (h.y - 2)).attr('rx', 6);
+    }
+    const t = bandG.append('text').attr('class', 'tx-vc-group').attr('x', L.colX[h.ci]).attr('y', h.y + 13).text(h.text);
+    fitText(t.node(), L.boxW);
+  });
+
+  // ports: spread edge ends over each box's height
+  const outs = new Map(), ins = new Map();
+  model.edges.forEach((e) => {
+    if (!outs.has(e.source)) outs.set(e.source, []);
+    if (!ins.has(e.target)) ins.set(e.target, []);
+    outs.get(e.source).push(e);
+    ins.get(e.target).push(e);
+  });
+  const off = new Map();
+  const spread = (map, key, other) => map.forEach((list) => {
+    list.sort((a, b) => L.pos.get(a[other]).y - L.pos.get(b[other]).y);
+    const span = Math.min(L.rowH - 6, list.length * 3);
+    list.forEach((e, k) => off.set(e.id + key, list.length > 1 ? -span / 2 + span * k / (list.length - 1) : 0));
+  });
+  spread(outs, ':o', 'target');
+  spread(ins, ':i', 'source');
+
+  const geom = (e) => {
+    const s = L.pos.get(e.source), t = L.pos.get(e.target);
+    const w = sw(e), aw = Math.max(6, w + 4), aL = 6;
+    const y1 = s.y + off.get(e.id + ':o'), y2 = t.y + off.get(e.id + ':i');
+    if (t.ci > s.ci) {
+      const x1 = s.x + L.boxW, x2 = t.x - aL, dx = (x2 - x1) / 2;
+      return { d: 'M' + x1 + ',' + y1 + 'C' + (x1 + dx) + ',' + y1 + ' ' + (x2 - dx) + ',' + y2 + ' ' + x2 + ',' + y2,
+        arrow: [[t.x, y2], [x2, y2 - aw / 2], [x2, y2 + aw / 2]], mx: (x1 + x2) / 2, my: (y1 + y2) / 2, w: w };
+    }
+    const x1 = s.x + L.boxW, x2 = t.x + L.boxW + aL, b = L.gap * 0.75;
+    return { d: 'M' + x1 + ',' + y1 + 'C' + (x1 + b) + ',' + y1 + ' ' + (x2 + b) + ',' + y2 + ' ' + x2 + ',' + y2,
+      arrow: [[t.x + L.boxW, y2], [x2, y2 - aw / 2], [x2, y2 + aw / 2]], mx: x1 + b * 0.75, my: (y1 + y2) / 2, w: w };
+  };
+  const role = (e) => (!tr ? 'none' : tr.upE.has(e.id) ? 'up' : tr.downE.has(e.id) ? 'down' : 'dim');
+  const color = (e, r) => (e.kind === 'fulton_opportunity' ? 'var(--color-warn)' : r === 'up' ? c[0] : r === 'down' ? c[1] : 'var(--cds-chart-muted)');
+  const edgeG = svg.append('g');
+  const ordered = model.edges.slice().sort((a, b) => (role(a) !== 'dim' && role(a) !== 'none') - (role(b) !== 'dim' && role(b) !== 'none') || (vcMid(b) || 0) - (vcMid(a) || 0));
+  const name = (id) => (model.byId.get(id) || {}).name || id;
+  ordered.forEach((e) => {
+    const g = geom(e), r = role(e), col = color(e, r);
+    const eg = edgeG.append('g').attr('class', r === 'dim' ? 'is-dim' : null);
+    const op = r === 'none' ? (e.kind === 'fulton_opportunity' ? 0.75 : 0.4) : 0.9;
+    eg.append('path').attr('d', g.d).attr('fill', 'none').style('stroke', col).attr('stroke-width', g.w).attr('stroke-opacity', op)
+      .attr('stroke-dasharray', e.kind === 'fulton_opportunity' ? '5 4' : null);
+    eg.append('polygon').attr('points', g.arrow.map((p) => p.join(',')).join(' ')).style('fill', col).attr('fill-opacity', Math.min(1, op + 0.1));
+    eg.append('path').attr('class', 'tx-vc-hit').attr('d', g.d).attr('stroke-width', Math.max(9, g.w + 6))
+      .on('mousemove', (ev) => {
+        const [px, py] = d3.pointer(ev, svg.node());
+        showTip(el, name(e.source) + ' → ' + name(e.target), [e.product, vcValue(e),
+          e.kind === 'fulton_opportunity' ? 'Addressable market for a Fulton company, not current sales' : '', clip(e.basis, 220)], px, py);
+      })
+      .on('mouseleave', () => hideTip(el))
+      .on('click', (ev) => { ev.stopPropagation(); vcSelect(e.target === vcState.sel ? e.source : e.target); });
+  });
+
+  const nodeG = svg.append('g');
+  model.nodes.forEach((n) => {
+    const p = L.pos.get(n.id);
+    const inChain = tr && (n.id === vcState.sel || tr.up.has(n.id) || tr.down.has(n.id));
+    const cls = ['tx-vc-node', n.layer === 'B' ? 'is-b' : '', n.kind === 'aggregate' ? 'is-agg' : '', n.kind === 'fulton' ? 'is-fulton' : '',
+      n.id === vcState.sel ? 'is-sel' : '', tr && !inChain ? 'is-dim' : ''].filter(Boolean).join(' ');
+    const g = nodeG.append('g').attr('class', cls).attr('transform', 'translate(' + p.x + ',' + (p.y - L.rowH / 2) + ')')
+      .attr('tabindex', 0).attr('role', 'button').attr('aria-label', n.name);
+    g.append('rect').attr('width', L.boxW).attr('height', L.rowH).attr('rx', 4);
+    const t = g.append('text').attr('x', 7).attr('y', L.rowH / 2).attr('dy', '0.35em').text(n.name);
+    fitText(t.node(), L.boxW - 12);
+    g.on('mousemove', (ev) => {
+      const [px, py] = d3.pointer(ev, svg.node());
+      showTip(el, n.name, [n.group + ' · ' + VC_TITLES[VC_LAYERS.indexOf(n.layer)], n.size_label, n.ownership, clip(n.description, 220)], px, py);
+    })
+      .on('mouseleave', () => hideTip(el))
+      .on('click', (ev) => { ev.stopPropagation(); hideTip(el); vcSelect(n.id === vcState.sel ? null : n.id); })
+      .on('keydown', (ev) => { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); vcSelect(n.id === vcState.sel ? null : n.id); } });
+  });
+
+  // labels: the selected company's own arrows, or the largest arrow between each pair of columns
+  let labelled;
+  if (vcState.sel) labelled = model.edges.filter((e) => e.source === vcState.sel || e.target === vcState.sel);
+  else {
+    const best = new Map();
+    model.edges.filter((e) => e.kind !== 'fulton_opportunity').forEach((e) => {
+      const k = L.pos.get(e.source).ci;
+      if (!best.has(k) || (vcMid(e) || 0) > (vcMid(best.get(k)) || 0)) best.set(k, e);
+    });
+    labelled = Array.from(best.values());
+  }
+  const labs = labelled.map((e) => Object.assign({ e: e }, geom(e)));
+  d3.group(labs, (l) => Math.round(l.mx)).forEach((list) => {
+    list.sort((a, b) => a.my - b.my);
+    for (let i = 1; i < list.length; i++) if (list[i].my < list[i - 1].my + 28) list[i].my = list[i - 1].my + 28;
+    const over = list.length ? list[list.length - 1].my - (L.H - 16) : 0;
+    if (over > 0) list.forEach((l) => { l.my -= over; });
+  });
+  const labG = svg.append('g');
+  labs.forEach((l) => {
+    const g = labG.append('g').attr('class', 'tx-vc-elabel');
+    const a = g.append('text').attr('class', 'tx-vc-eprod').attr('x', l.mx).attr('y', l.my - 3).attr('text-anchor', 'middle').text(l.e.product);
+    fitText(a.node(), L.gap + L.boxW * 0.9);
+    const b = g.append('text').attr('class', 'tx-vc-evalue').attr('x', l.mx).attr('y', l.my + 11).attr('text-anchor', 'middle').text(vcValue(l.e));
+    fitText(b.node(), L.gap + L.boxW * 0.9);
+  });
+  svg.on('click', () => { if (vcState.sel) vcSelect(null); });
+  renderVcDetail(model);
+}
+
+function vcSelect(id) {
+  vcState.sel = id || null;
+  drawValueChain();
+  scheduleGlossary();
+}
+
+function renderVcDetail(model) {
+  const box = document.getElementById('vc-detail');
+  box.textContent = '';
+  const id = vcState.sel;
+  if (!id) {
+    box.appendChild(mk('p', 'tx-card-note', 'Click a company, or pick one from the list, to see who supplies it, who it sells to, what changes hands and how much it is worth each year. The chain lights up through every layer: one color traces its suppliers and their suppliers, the other its customers and theirs. With nothing selected, the largest flow between each pair of columns is labelled.'));
+    return;
+  }
+  const n = model.byId.get(id);
+  const w = 'id=' + encodeURIComponent(id);
+  const head = mk('div', 'tx-vc-dhead');
+  head.appendChild(mk('h3', 'tx-h3', n.name, 'value_chain_nodes', 'name', w));
+  const chips = mk('div', 'tx-chips');
+  chips.appendChild(mk('span', 'tx-chip', VC_TITLES[VC_LAYERS.indexOf(n.layer)]));
+  chips.appendChild(mk('span', 'tx-chip', n.group, 'value_chain_nodes', 'group', w));
+  if (n.kind === 'fulton') { const f = mk('span', 'tx-chip', 'Fulton portfolio'); f.setAttribute('data-kind', 'fulton'); chips.appendChild(f); }
+  if (n.kind === 'aggregate') chips.appendChild(mk('span', 'tx-chip', 'Group of firms'));
+  head.appendChild(chips);
+  box.appendChild(head);
+  if (n.description) box.appendChild(mk('p', 'tx-sentence', n.description, 'value_chain_nodes', 'description', w));
+  const meta = mk('p', 'tx-card-note');
+  if (n.size_label) meta.appendChild(mk('span', null, n.size_label, 'value_chain_nodes', 'size_label', w));
+  if (n.size_label && n.ownership) meta.appendChild(document.createTextNode(' · '));
+  if (n.ownership) meta.appendChild(mk('span', null, n.ownership, 'value_chain_nodes', 'ownership', w));
+  if (meta.childNodes.length) box.appendChild(meta);
+  if (safeUrl(n.source_url)) box.appendChild(srcLine(null, n.source_url));
+  const colsEl = mk('div', 'tx-vc-cols');
+  [['Buys from', (e) => e.target === id, 'source'], ['Sells to', (e) => e.source === id, 'target']].forEach((spec) => {
+    const list = model.edges.filter(spec[1]).sort((a, b) => (vcMid(b) || 0) - (vcMid(a) || 0));
+    const wrap = mk('div');
+    wrap.appendChild(mk('h4', 'tx-vc-h4', spec[0]));
+    const ul = mk('ul', 'tx-vc-list');
+    if (!list.length) ul.appendChild(mk('li', 'tx-vc-item tx-muted', 'Not mapped at this level of detail.'));
+    list.forEach((e) => {
+      const ew = 'id=' + encodeURIComponent(e.id);
+      const other = model.byId.get(e[spec[2]]);
+      const li = mk('li', 'tx-vc-item');
+      const top = mk('div', 'tx-vc-item-top');
+      const btn = mk('button', 'tx-linkbtn tx-strong');
+      btn.type = 'button';
+      btn.appendChild(mk('span', null, other.name, 'value_chain_nodes', 'name', 'id=' + encodeURIComponent(other.id)));
+      btn.addEventListener('click', () => vcSelect(other.id));
+      top.appendChild(btn);
+      top.appendChild(mk('span', 'tx-vc-val', e.value_label, 'value_chain_edges', 'value_label', ew));
+      if (vcIsEst(e)) { const ch = mk('span', 'tx-chip', 'Estimate'); ch.setAttribute('data-kind', 'est'); top.appendChild(ch); }
+      if (e.kind === 'fulton_opportunity') { const ch = mk('span', 'tx-chip', 'Opportunity'); ch.setAttribute('data-kind', 'fulton'); top.appendChild(ch); }
+      li.appendChild(top);
+      li.appendChild(mk('div', null, e.product, 'value_chain_edges', 'product', ew));
+      if (e.basis) li.appendChild(mk('div', 'tx-card-note', e.basis, 'value_chain_edges', 'basis', ew));
+      if (safeUrl(e.source_url)) li.appendChild(srcLine(null, e.source_url));
+      ul.appendChild(li);
+    });
+    wrap.appendChild(ul);
+    colsEl.appendChild(wrap);
+  });
+  box.appendChild(colsEl);
+}
+
+function renderFulton() {
+  const ids = ['fam-summary', 'fam-fit', 'fam-firm', 'fam-next', 'fam-triggers', 'fam-avoid', 'fam-caveats'];
+  const els = ids.map((i) => document.getElementById(i));
+  const okAll = els.map((e) => prep(e, ['fulton_plan']));
+  const srcs = document.getElementById('fam-sources');
+  srcs.textContent = '';
+  const plays = document.getElementById('fam-plays');
+  if (prep(plays, ['fulton_plays'])) {
+    rows('fulton_plays').slice().sort((a, b) => num(a.rank) - num(b.rank)).forEach((r) => {
+      const w = 'id=' + encodeURIComponent(r.id);
+      const card = mk('article', 'tx-play');
+      const top = mk('div', 'tx-play-top');
+      top.appendChild(mk('span', 'tx-play-rank', fmtVal(num(r.rank)), 'fulton_plays', 'rank', w));
+      top.appendChild(mk('h4', 'tx-play-title', r.play, 'fulton_plays', 'play', w));
+      card.appendChild(top);
+      const chips = mk('div', 'tx-chips');
+      const conv = mk('span', 'tx-chip', r.conviction, 'fulton_plays', 'conviction', w);
+      conv.setAttribute('data-attr', r.conviction);
+      chips.appendChild(conv);
+      chips.appendChild(mk('span', 'tx-chip', r.chain_position, 'fulton_plays', 'chain_position', w));
+      card.appendChild(chips);
+      const dl = mk('dl', 'tx-dl');
+      [['Why Fulton', 'why_fulton'], ['How', 'how'], ['Check size', 'check_size'], ['Targets', 'example_targets'], ['Timing', 'timing'], ['Risks', 'risks']].forEach((f) => {
+        if (!r[f[1]]) return;
+        dl.appendChild(mk('dt', null, f[0]));
+        dl.appendChild(mk('dd', null, r[f[1]], 'fulton_plays', f[1], w));
+      });
+      card.appendChild(dl);
+      plays.appendChild(card);
+    });
+  }
+  if (!okAll[0]) return;
+  const plan = rows('fulton_plan').slice().sort((a, b) => num(a.order) - num(b.order));
+  const [sum, fit, firm, next, trig, avoid, cav] = els;
+  plan.forEach((r) => {
+    const w = 'id=' + encodeURIComponent(r.id);
+    if (r.kind === 'summary') {
+      sum.appendChild(mk('div', 'tx-bottom-label', r.heading, 'fulton_plan', 'heading', w));
+      sum.appendChild(mk('p', 'tx-bottom-text tx-pre', r.body, 'fulton_plan', 'body', w));
+    } else if (r.kind === 'fit') fit.appendChild(mk('span', null, r.body, 'fulton_plan', 'body', w));
+    else if (r.kind === 'firm') firm.appendChild(mk('span', null, r.body, 'fulton_plan', 'body', w));
+    else if (r.kind === 'source' && safeUrl(r.url)) {
+      const li = mk('li');
+      const a = document.createElement('a');
+      a.href = safeUrl(r.url);
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+      a.appendChild(mk('span', null, r.heading, 'fulton_plan', 'heading', w));
+      a.appendChild(document.createTextNode(' ↗'));
+      li.appendChild(a);
+      srcs.appendChild(li);
+    } else if (r.kind === 'next') next.appendChild(mk('li', null, r.body, 'fulton_plan', 'body', w));
+    else if (r.kind === 'trigger') {
+      const li = mk('li');
+      li.appendChild(mk('span', 'tx-strong', r.heading, 'fulton_plan', 'heading', w));
+      li.appendChild(document.createTextNode(' — '));
+      li.appendChild(mk('span', null, r.body, 'fulton_plan', 'body', w));
+      trig.appendChild(li);
+    } else if (r.kind === 'avoid') avoid.appendChild(mk('li', null, r.body, 'fulton_plan', 'body', w));
+    else if (r.kind === 'caveat') cav.appendChild(mk('span', null, r.body, 'fulton_plan', 'body', w));
+  });
+}
+
+const FAM_TABLE = {
+  id: 'fam-port-table', src: 'fulton_portfolio', key: 'id',
+  cols: [
+    { field: 'company', label: 'Company' },
+    { field: 'what_it_does', label: 'What it does', cls: 'tx-hide-sm', sortable: false },
+    { field: 'impact', label: 'Exposure', sortBy: 'impact_rank', cellClass: (r) => 'i-' + r.impact },
+    { field: 'link_to_trend', label: 'Link to the build-out', sortable: false },
+    { field: 'action', label: 'Next step', sortable: false },
+    { field: 'confidence', label: 'Tag', cls: 'tx-hide-sm' },
+  ],
+  defaultSort: (a, b) => num(a.impact_rank) - num(b.impact_rank) || String(a.company).localeCompare(String(b.company)),
+};
+const GLOSS_TABLE = {
+  id: 'gloss-table', src: 'glossary', key: 'id',
+  cols: [
+    { field: 'term', label: 'Term' },
+    { field: 'category', label: 'Category', cls: 'tx-hide-sm' },
+    { field: 'definition', label: 'Definition', sortable: false },
+  ],
+  defaultSort: (a, b) => String(a.term).localeCompare(String(b.term)),
+  filter: (r) => {
+    const q = (document.getElementById('gloss-search').value || '').trim().toLowerCase();
+    if (!q) return true;
+    return ['term', 'aliases', 'category', 'definition'].some((k) => String(r[k] || '').toLowerCase().includes(q));
+  },
+};
+
+// ---------- glossary: underline terms in the page text and show a preview on hover, focus or tap ----------
+const GL = { sig: '', re: null, exact: new Map(), loose: new Map(), byId: new Map(), open: null, showT: 0, hideT: 0, queued: false };
+const GL_SKIP = 'svg, script, style, button, select, option, input, textarea, a, h1, h2, .tx-term, .tx-gpop, .tx-tip, .tx-nav, #glossary, .tx-chip, .tx-conf, .tx-big, .tx-fig-value, .tx-play-rank';
+const GL_SCOPE = '.tx-tile, .tx-event, .tx-imp-card, .tx-qa-card, .tx-seg, .tx-item, .tx-vc-item, .tx-play, tr, li, .tx-section-head, .tx-bottom, .tx-fig, .tx-head, .tx-card, .tx-vc-detail, section';
+function glIndex() {
+  const list = rows('glossary');
+  const sig = list.length + ':' + list.map((g) => g.id).join(',').length;
+  if (sig === GL.sig) return GL.re;
+  GL.sig = sig;
+  GL.exact = new Map();
+  GL.loose = new Map();
+  GL.byId = new Map();
+  const pats = new Set();
+  list.forEach((g) => {
+    GL.byId.set(String(g.id), g);
+    const cs = g.case_sensitive === true || g.case_sensitive === 'true' || g.case_sensitive === 'Yes';
+    String(g.aliases || '').split('|').map((a) => a.trim()).filter((a) => a.length > 1).forEach((a) => {
+      if (cs) { if (!GL.exact.has(a)) GL.exact.set(a, g); } else if (!GL.loose.has(a.toLowerCase())) GL.loose.set(a.toLowerCase(), g);
+      pats.add(a);
+    });
+  });
+  if (!pats.size) { GL.re = null; return null; }
+  const esc = Array.from(pats).sort((a, b) => b.length - a.length).map((a) => a.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+  GL.re = new RegExp('(?<![A-Za-z0-9])(?:' + esc.join('|') + ')(?![A-Za-z0-9])', 'gi');
+  return GL.re;
+}
+function glLookup(m) { return GL.exact.get(m) || GL.loose.get(m.toLowerCase()) || null; }
+function scheduleGlossary() {
+  if (GL.queued) return;
+  GL.queued = true;
+  requestAnimationFrame(() => { GL.queued = false; try { glossaryScan(); } catch (e) { console.error(e); } });
+}
+function glossaryScan() {
+  if (statusOf(['glossary']) !== 'ok') return;
+  const re = glIndex();
+  if (!re) return;
+  const root = document.getElementById('dash-root');
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+    acceptNode: (n) => {
+      if (!n.nodeValue || n.nodeValue.trim().length < 2) return NodeFilter.FILTER_REJECT;
+      const p = n.parentElement;
+      return !p || p.closest(GL_SKIP) || p.closest('.dash-skeleton') ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT;
+    },
+  });
+  const texts = [];
+  while (walker.nextNode()) texts.push(walker.currentNode);
+  const used = new Map();
+  const usedFor = (scope) => {
+    if (!used.has(scope)) {
+      const set = new Set();
+      scope.querySelectorAll('.tx-term').forEach((t) => set.add(t.getAttribute('data-term')));
+      used.set(scope, set);
+    }
+    return used.get(scope);
+  };
+  texts.forEach((tn) => {
+    const scope = tn.parentElement.closest(GL_SCOPE) || root;
+    const set = usedFor(scope);
+    const s = tn.nodeValue;
+    re.lastIndex = 0;
+    let m, last = 0;
+    const parts = [];
+    while ((m = re.exec(s))) {
+      const g = glLookup(m[0]);
+      if (!g || set.has(String(g.id))) continue;
+      set.add(String(g.id));
+      if (m.index > last) parts.push(document.createTextNode(s.slice(last, m.index)));
+      const span = document.createElement('span');
+      span.className = 'tx-term';
+      span.tabIndex = 0;
+      span.setAttribute('data-term', String(g.id));
+      span.setAttribute('aria-describedby', 'gloss-pop');
+      span.textContent = m[0];
+      parts.push(span);
+      last = m.index + m[0].length;
+    }
+    if (!parts.length) return;
+    if (last < s.length) parts.push(document.createTextNode(s.slice(last)));
+    const frag = document.createDocumentFragment();
+    parts.forEach((x) => frag.appendChild(x));
+    tn.parentNode.replaceChild(frag, tn);
+  });
+}
+function glShow(term) {
+  const g = GL.byId.get(term.getAttribute('data-term'));
+  const pop = document.getElementById('gloss-pop');
+  if (!g) return;
+  clearTimeout(GL.hideT);
+  if (GL.open && GL.open !== term) GL.open.classList.remove('is-open');
+  GL.open = term;
+  term.classList.add('is-open');
+  const w = 'id=' + encodeURIComponent(g.id);
+  pop.textContent = '';
+  pop.appendChild(mk('div', 'tx-gpop-cat', g.category, 'glossary', 'category', w));
+  pop.appendChild(mk('div', 'tx-gpop-term', g.term, 'glossary', 'term', w));
+  pop.appendChild(mk('div', 'tx-gpop-def', g.definition, 'glossary', 'definition', w));
+  const more = mk('button', 'tx-linkbtn tx-gpop-more', 'All terms in the glossary →');
+  more.type = 'button';
+  more.addEventListener('click', () => {
+    glHide(true);
+    const sec = document.getElementById('glossary');
+    document.getElementById('gloss-search').value = g.term;
+    renderTable(GLOSS_TABLE);
+    sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    dash.setLink('glossary');
+  });
+  pop.appendChild(more);
+  pop.hidden = false;
+  const wrap = pop.parentElement.getBoundingClientRect();
+  const r = term.getBoundingClientRect();
+  const pw = pop.offsetWidth, ph = pop.offsetHeight;
+  let left = r.left - wrap.left;
+  left = Math.max(0, Math.min(left, wrap.width - pw));
+  let top = r.bottom - wrap.top + 6;
+  if (r.bottom + ph + 12 > window.innerHeight && r.top - ph - 12 > 0) top = r.top - wrap.top - ph - 6;
+  pop.style.left = left + 'px';
+  pop.style.top = top + 'px';
+}
+function glHide(now) {
+  clearTimeout(GL.showT);
+  clearTimeout(GL.hideT);
+  const done = () => {
+    document.getElementById('gloss-pop').hidden = true;
+    if (GL.open) GL.open.classList.remove('is-open');
+    GL.open = null;
+  };
+  if (now) done(); else GL.hideT = setTimeout(done, 220);
+}
+(function wireGlossary() {
+  const root = document.getElementById('dash-root');
+  const pop = document.getElementById('gloss-pop');
+  root.addEventListener('mouseover', (ev) => {
+    const t = ev.target.closest && ev.target.closest('.tx-term');
+    if (t) { clearTimeout(GL.showT); clearTimeout(GL.hideT); GL.showT = setTimeout(() => glShow(t), 260); }
+  });
+  root.addEventListener('mouseout', (ev) => {
+    const t = ev.target.closest && ev.target.closest('.tx-term');
+    if (t) { clearTimeout(GL.showT); glHide(false); }
+  });
+  pop.addEventListener('mouseenter', () => clearTimeout(GL.hideT));
+  pop.addEventListener('mouseleave', () => glHide(false));
+  root.addEventListener('focusin', (ev) => {
+    const t = ev.target.closest && ev.target.closest('.tx-term');
+    if (t) glShow(t);
+  });
+  root.addEventListener('focusout', (ev) => {
+    const t = ev.target.closest && ev.target.closest('.tx-term');
+    if (t && !(ev.relatedTarget && pop.contains(ev.relatedTarget))) glHide(false);
+  });
+  root.addEventListener('click', (ev) => {
+    const t = ev.target.closest && ev.target.closest('.tx-term');
+    if (t) { ev.preventDefault(); if (GL.open === t && !pop.hidden) glHide(true); else glShow(t); return; }
+    if (!pop.contains(ev.target)) glHide(true);
+  });
+  root.addEventListener('keydown', (ev) => { if (ev.key === 'Escape' && GL.open) { const t = GL.open; glHide(true); t.focus(); } });
+})();
+
+document.getElementById('vc-select').addEventListener('change', (ev) => vcSelect(ev.target.value || null));
+document.getElementById('vc-fulton').addEventListener('change', () => { drawValueChain(); scheduleGlossary(); });
+document.getElementById('vc-clear').addEventListener('click', () => vcSelect(null));
+document.getElementById('gloss-search').addEventListener('input', () => renderTable(GLOSS_TABLE));
+document.getElementById('mfr-search').addEventListener('input', () => { renderTable(MFR_TABLE); scheduleGlossary(); });
+document.getElementById('price-search').addEventListener('input', () => { renderTable(PRICE_TABLE); scheduleGlossary(); });
 
 let linked = false;
 dash.onData(() => {
   [
-    fillMarks, renderSegments, renderScorecard, renderVerdictCounts, renderLegend, drawPipeline, renderUndated, drawByYear, drawMap, drawLead, drawDeficit, drawPPI, drawMargins,
+    fillMarks, drawValueChain, renderFulton, renderSegments, renderScorecard, renderVerdictCounts, renderLegend, drawPipeline, renderUndated, drawByYear, drawMap, drawLead, drawDeficit, drawPPI, drawMargins,
     () => drawBars('capex-annual-chart', 'capex_annual', 'eei_2026', 'capex-title'),
     () => drawBars('capex-5yr-chart', 'capex_5yr', 'eei_5yr', 'capex-title'),
     () => renderFigList('inputs-list', 'inputs'),
@@ -1519,9 +2269,12 @@ dash.onData(() => {
     () => renderTable(CAP_TABLE), () => renderTable(TARIFF_TABLE), () => renderTable(DEALS_TABLE),
     () => renderTable(MFR_TABLE), () => renderTable(WATCH_TABLE),
     () => renderTable(PLANT_TABLE), () => renderTable(PRICE_TABLE), () => renderTable(DEMAND_TABLE),
+    () => renderTable(FAM_TABLE), () => renderTable(GLOSS_TABLE),
   ].forEach((f) => {
     try { f(); } catch (e) { console.error(e); }
   });
+  glHide(true);
+  scheduleGlossary();
   if (!linked && dash.data('figures').status === 'ok' && dash.data('capacity').status === 'ok') {
     linked = true;
     const named = location.hash ? document.getElementById(location.hash.slice(1)) : null;
