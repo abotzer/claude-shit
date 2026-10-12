@@ -16,6 +16,10 @@ LAYER_TITLES = {"S3": "Raw materials", "S2": "Processed materials", "S1": "Parts
                 "C1": "Direct buyers", "C2": "Their customers", "C3": "End demand"}
 ID_BRACKETS = re.compile(r"\s*\[(?:[a-z0-9]+(?:-[a-z0-9]+)+)(?:,\s*[a-z0-9]+(?:-[a-z0-9]+)*)*(?:,\s*[PSW](?:/[PSW])?)?\]")
 IMPACT_RANK = {"High": 0, "Medium": 1, "Low": 2, "None": 3}
+# Glossary aliases that would underline ordinary words or the wrong thing, and terms not worth a definition.
+DROP_ALIASES = {"EO", "CT", "CC", "shelter", "fluids", "Wesco", "Irby", "Border States", "Annex readings", "Baseline P", "Baseline S",
+                "tagged W", "W-grade", "W summary", "Municipal", "municipal", "Reclamation", "EDGE", "ACA", "MDA", "EDO", "breaker", "breakers"}
+DROP_TERMS = {"computed"}
 
 
 def clean(text):
@@ -96,18 +100,22 @@ def main(src, out, md_dir):
     write(out, "value_chain_nodes.json", nodes)
     write(out, "value_chain_edges.json", edges)
 
-    # ---------- glossary ----------
-    gl, gids = [], set()
-    for t in r["glossary"]["terms"]:
+    # ---------- glossary (research terms, then the hand-written extras in glossary_extra.json) ----------
+    extra_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "glossary_extra.json")
+    extra = json.load(open(extra_path)) if os.path.exists(extra_path) else []
+    gl, gids, taken = [], set(), set()
+    for t in list(r["glossary"]["terms"]) + extra:
         gid = slug(t.get("id") or t["term"])
-        if gid in gids:
+        if gid in gids or gid in DROP_TERMS:
             continue
         gids.add(gid)
         aliases = []
         for a in [t["term"].split(" (")[0]] + list(t.get("aliases") or []):
             a = str(a).strip()
-            if len(a) > 1 and a not in aliases:
+            key = a if t.get("case_sensitive") else a.lower()
+            if len(a) > 1 and a not in aliases and a not in DROP_ALIASES and key not in taken:
                 aliases.append(a)
+                taken.add(key)
         gl.append(dict(id=gid, term=t["term"].strip(), aliases=" | ".join(aliases), case_sensitive=bool(t.get("case_sensitive")),
                        category=t["category"], definition=clean(t["definition"])))
     gl.sort(key=lambda x: x["term"].lower())
