@@ -10,6 +10,15 @@ def cell(text):
     return str(text if text is not None else "").replace("|", "\\|").replace("\n", " ")
 
 
+def bullet(text):
+    """One list item; nested lines become indented sub-items or paragraphs."""
+    lines = [l for l in str(text).split("\n")]
+    out = ["- " + lines[0]]
+    for l in lines[1:]:
+        out.append(("  " + l) if l.strip() else "")
+    return "\n".join(out)
+
+
 def table(headers, rows):
     out = ["| " + " | ".join(headers) + " |", "|" + "---|" * len(headers)]
     out += ["| " + " | ".join(cell(c) for c in r) + " |" for r in rows]
@@ -22,7 +31,7 @@ def main(src, dst, as_of):
     md += [
         "*Two rounds of multi-agent research on government data, permits, incentive filings, dockets, company filings, "
         "trade statistics and utility procurement, with independent checks of the key claims. "
-        "Confidence tags: P primary, S secondary, W weak. Bracketed ids point to findings in `findings.json`.*",
+        "Confidence tags: P primary, S secondary, W weak. Bracketed ids point to findings in `research/round1_research.json` and `research/round2_research.json`.*",
         "",
         "## Answer",
         "",
@@ -31,7 +40,7 @@ def main(src, dst, as_of):
     ]
     if s.get("what_changed_from_round1"):
         md += ["## What changed after the second research round", ""]
-        md += ["- " + x for x in s["what_changed_from_round1"]] + [""]
+        md += [bullet(x) for x in s["what_changed_from_round1"]] + [""]
     md += ["## Thesis scorecard", ""]
     md += [table(["Question", "Answer", "Confidence", "Key evidence"],
                  [[q["question"], q["answer"], q["confidence"], "; ".join(q["key_evidence"])] for q in s["thesis_scorecard"]]), ""]
@@ -53,10 +62,10 @@ def main(src, dst, as_of):
         title = sec["title"]
         md += ["## " + title.split(". ", 1)[-1] if title[:2].strip(". ").isdigit() else "## " + title, "", sec["markdown"], ""]
     md += ["## Implications", ""]
-    md += [f"- **{x['stance']}: {x['heading']}.** {x['body']}" for x in s["revised_implications"]] + [""]
+    md += [bullet(f"**{x['stance']}: {x['heading']}.** {x['body']}") for x in s["revised_implications"]] + [""]
     md += ["## Watchlist", ""]
     md += [table(["When", "What", "Why"], [[w["when"], w["item"], w["why"]] for w in s["watch_items"]]), ""]
-    md += ["## Open questions", ""] + ["- " + q for q in s["open_questions"]] + [""]
+    md += ["## Open questions", ""] + [bullet(q) for q in s["open_questions"]] + [""]
     md += ["## Data coverage", ""]
     md += [table(["Source", "Status", "Takeaway"],
                  [[d["source"], d["status"].replace("_", " "), d["takeaway"]] for d in s["data_inventory"]]), ""]

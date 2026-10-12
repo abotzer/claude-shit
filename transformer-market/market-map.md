@@ -1,8 +1,19 @@
 # North American Transformer Market Map
 
-**Baseline as of 2026-10-11.** Each weekly run updates this file. Every edit is logged in the `weekly/` report for that week.
+**Baseline as of 2026-10-12.** It now includes two rounds of primary-source research ([deep dive](deep-dive/2026-10-12-deep-dive.md)). Each weekly run updates this file, and every edit is logged in that week's report in `weekly/`.
 
-Confidence tags: **[P]** primary source (company/government/filing), **[S]** reputable secondary (trade press, law firm, analyst), **[W]** weak (vendor blog, aggregator; directional only).
+Confidence tags: **[P]** primary source (company, government or filing), **[S]** reputable secondary (trade press, law firm, analyst), **[W]** weak (vendor blog or aggregator; directional only).
+
+> **Corrections on 2026-10-12** (from the deep dive):
+> - The bulk-power executive order is **EO 14421**, not 14420.
+> - Transformer prices are **re-accelerating**, not decelerating.
+> - The Section 301 forced-labor tariff **does not stack** on Section 232 goods.
+> - The duty on imported cores is **unresolved (25% or 50%)**.
+> - **JST is owned by China's Jinpan.**
+> - The "Mitsubishi Memphis" plant **is Hyosung HICO's plant**. It was counted twice before.
+> - **Cleveland-Cliffs cancelled Weirton** in May 2025.
+> - **Prolec GE's total consideration was $9,656M**. The ~$10.5B was a doubling I had calculated.
+> - **Several plants slipped**: VTC Rincon, Hitachi South Boston, Siemens Charlotte.
 
 ---
 
@@ -10,16 +21,17 @@ Confidence tags: **[P]** primary source (company/government/filing), **[S]** rep
 
 | Indicator | Latest reading | Trend | Source |
 |---|---|---|---|
-| Large power transformer (LPT) lead time | ~128 wks avg (Q2'25 survey). 2026 trackers show 120–160+ wks. Some EHV quotes run 4–5 yrs | Flat to up | WoodMac [S], VAWN index [W], PwC via POWER [S] |
-| Generator step-up (GSU) lead time | ~144 wks. Some trackers say >160 wks in 2026 | Up | WoodMac [S], DistroForge [W] |
-| Distribution lead time | Pad-mount ~30–60 wks, pole ~26–40 wks. Some trackers expect easing to 26–38 wks by Q4'26 | Easing slightly | DistroForge [W], VAWN [W] |
-| Supply deficit, 2026 | Power transformers **15%**, substation units **8%** (was 30% / 10% in 2025) | Narrowing | WoodMac [S] |
-| Deficit outlook | Power-transformer shortfall narrows to about 5% by 2030 | Narrowing | DistroForge citing WoodMac [W] |
-| Price level | BLS power & distribution transformer PPI (WPU117409) at 381.8 in Jul'26, **+91% vs Jan'20**, **+8.7% YoY**. NAICS 335311 index +4.3% YoY (Mar'26) | Still rising, decelerating | BLS via LaborDataHub [S] |
-| Unit price vs 2019 | Power transformers +77% | — | WoodMac via POWER [S] |
-| Import share, LPT | >80% of US LPT demand imported. Domestic supply covers ~20% | Slowly falling as new US plants open | Siemens Energy [P] |
-| IOU capex, 2026 | EEI: **$239B** in 2026, **$1.4T** for 2026–30 (raised from $1.1T). S&P: $227.8B. RRA: $259B in 2026 | Up | EEI [P], S&P [S] |
-| Copper (COMEX) | ~$6.60–6.66/lb (Oct 7–9). Record ~$6.89 intraday on Sep 9, 2026 | Near record | MetalCharts [W], Mining.com [S] |
+| Large power transformer (LPT) lead time | Avg ~128 wks (Q2'25 survey). Utilities quote a median of ~130 wks for substation and power units (n=9 buyer records) | Flat to up | WoodMac [S]; municipal records [W] |
+| Generator step-up (GSU) lead time | ~144 wks; >160 wks in some 2026 trackers | Up | WoodMac [S] |
+| Distribution lead time | New pad-mounts quoted 40-50 wks (early 2026). APPA median for all types was 50 wks (Jun 2025). Howard tells DOE most of its lines are under 20 wks, some under 10. One Aug 2026 municipal order quoted 12-13 wks | Easing at the small end | APPA / Howard DOE dockets [P]; testimony [W] |
+| Supply deficit, 2026 | Power transformers 15%, substation units 8% (was 30% / 10% in 2025) | Narrowing | WoodMac [S] |
+| Price level | **Records in Jul-Aug 2026.** WPU117409 381.8 (Jul) after a +4.6% step that month. PCU335311 475.1 (Aug). Year-over-year growth across four BLS series rose from ~4% in Jun to **7.6-8.7%** | **Re-accelerating, in steps** | BLS via FRED [P] |
+| Price history | +33% (2021), +21% (2022), then only ~2-7%/yr in 2023 to mid-2025 | — | Mississippi PSC filing [P]; BLS [P] |
+| Input costs | LME copper +45% YoY (Sep 2026). Lube base-stock PPI +111% YoY. Cold-rolled steel PPI +28% since Nov 2025. Aluminum falling | Up sharply | World Bank, BLS [P] |
+| Capacity utilization, NAICS 335 | ~86% (Aug 2026) vs 76% for all industry. NAICS 3353 output still below 2017 | Tight | Fed G.17 [P] |
+| Maker margins | EBITDA margins rising: Forgent 24.4% (Q4 FY26), HD Hyundai 25.1%, Hyosung 15.7%, GE Vernova Electrification 18.4%. **Gross** margins flat to down at distribution makers (Forgent ~36.9% → ~35.1%) | EBITDA up, gross flat | Filings [P/S] |
+| Import share, LPT | ~80% of US >100 MVA demand imported | Slowly falling | DOE-sponsored OSTI report [P] |
+| IOU capex, 2026 | EEI: $239B in 2026, $1.4T over 2026-30 | Up | EEI [P] |
 
 ---
 
@@ -27,76 +39,69 @@ Confidence tags: **[P]** primary source (company/government/filing), **[S]** rep
 
 ### 2a. Power transformers (≈10 MVA to 765 kV)
 
-| Company | Owner / listing | NA plants (power) | Recent capacity moves | Notes |
+| Company | Owner / listing | NA plants (power) | Recent capacity moves and status | Notes |
 |---|---|---|---|---|
-| **Hitachi Energy** | Hitachi (TSE: 6501) | South Boston VA (LPT); Crystal Springs MS; Varennes QC | **$528M Gallman MS** plant for 10–160 MVA, ≤230 kV. More than doubles US small/mid power output, >700 jobs, production **2029** (ann. Sep 15, 2026). **$457M South Boston VA** LPT plant, ops ~2028. **Varennes QC** C$140M + C$270M, ~3x capacity, test bay by end-2027. **$106M Alamo TN** bushings plant. Bought **Canduct** (ON insulation kits), closing ~Q3'26 | ~$1.5B US program [P] |
-| **GE Vernova / Prolec GE** | NYSE: GEV. Owns 100% since **Feb 2, 2026**, paying **$5.254B** for Xignux's 50% | 7 sites in the Americas, ~10k staff: Goldsboro NC, Shreveport LA, Waukesha WI, Monterrey MX… | **Goldsboro $140M**: 220→420 units/yr, broke ground Mar 2026, done by end-2027. Shreveport $34M (+1,500 units/yr, smaller units). Monterrey $85M. ~$1B Prolec capex 2026–28 | Electrification backlog ~$41B. ~$800M US transformer orders in Q2'26 [P] |
-| **Siemens Energy** | ETR: ENR | Charlotte NC (under construction) | **$150M Charlotte** LPT plant, 24→57 LPT/yr. Start **slipped to 2027** | Grid Tech backlog record €51B (Aug'26) [S] |
-| **HD Hyundai Electric** | KRX: 267260 | Montgomery AL | **$200M second plant**, +50% EHV output, 765 kV capability. Done **Apr 2027** | #1 in US UHV market in 2025 (25.7% share). Backlog $8.5B [S] |
-| **Hyosung HICO** | Hyosung Heavy Ind. (KRX) | Memphis TN | 130→250+ units/yr by 2027–28 (~$157–221M) | Only US designer/builder of 765 kV units. **$287M** UHV orders from two US tech firms (Sep 15, 2026). Large 765 kV deal with a US transmission operator (Feb'26). HV-breaker JV with Quanta [S] |
-| **Mitsubishi Electric Power Products** | Mitsubishi Electric | Memphis TN | $200M shell-type plant, up to 1,500 MVA, 161–765 kV | Made the first US-built 765 kV unit in 25 yrs [S] |
-| **Virginia Transformer Corp (VTC)** | **Private** (Roanoke VA) | 6 NA plants incl. Rincon GA; 7th coming | **Muscle Shoals AL** greenfield: 600k sq ft, 2–500 MVA, 1,100 jobs, production **Jan 2028** (ann. May 19, 2026). **Rincon GA** $40M, +70% (2026) | Calls itself the largest NA power transformer maker. Bloomberg reported a sale being explored at **>$6B** (early 2025). No deal since [S] |
-| **Pennsylvania Transformer Technology (PTT)** | Quanta Services (NYSE: PWR), bought for ~$300M | Canonsburg PA; Raeford NC | **$102.5M Raeford** expansion (+300k sq ft, 217 jobs). New 2 MW/6 MVA test set in 2026 | 5–750 MVA, up to 765 kV [S] |
-| **Niagara Power Transformer** | Quanta Services | Cheektowaga NY | **$71M**: 90→140 units/yr (Sep 2026) | [S] |
-| **Delta Star** | **Private → MacLean Power Systems** (Blackstone + Centerbridge). Signed ~Sep 3, 2026, close **Q4'26** | Lynchburg VA; San Carlos CA; Saint-Jean-sur-Richelieu QC | $35M Lynchburg expansion (2025) | Power transformers and **mobile substations**. >1,400 staff. Price undisclosed [S] |
-| **Howard Industries** | **Private** (Laurel MS) | Ellisville MS (medium power); Laurel (distribution) | **$100M Ellisville** medium-power expansion (+230k sq ft, 100 jobs), Apr 2026 | Also a large distribution supplier [P] |
-| **WEG** | B3: WEGE3 | Washington MO (≤60 MVA / 161 kV); Atotonilco de Tula MX | ~$156M Mexico power-transformer plant (up to 550 kV). US expansion slated ~2028. Sep 28, 2026: $165M **generator** expansion in NA | [S] |
+| **Hitachi Energy** | Hitachi (TSE: 6501) | South Boston VA; Crystal Springs MS; Varennes QC; Alamo TN (bushings) | **South Boston**: $457M LPT plant, 825 jobs, **broke ground Jun 29, 2026**; output ~2028, possibly 2029. **Gallman MS**: $528M, 10-160 MVA ≤230 kV, production 2029, construction not started. It is **partly a move of Crystal Springs**, so net new capacity is about one Crystal Springs. **Varennes**: ~3x capacity, test bay by end-2027. **Alamo**: bushings to 800 kV, broke ground Aug 2025. Buying Canduct (insulation) | ~$1.5B US program [P] |
+| **GE Vernova / Prolec GE** | NYSE: GEV. 100% owned since Feb 2, 2026 | 7 sites in the Americas: Goldsboro NC, Shreveport LA, Waukesha WI, Monterrey MX… | **Goldsboro**: $140M, 220→420 units/yr, broke ground Mar 17, 2026, investment deadline Dec 31, 2027. Shreveport +1,500 small units/yr (done) | Total consideration **$9,656M** for 100% (~12.9-14.1x 2025E EBITDA). Prolec ~25% EBITDA margin pre-deal. Electrification EBITDA 18.4% (Q2'26) [P] |
+| **Siemens Energy** | ETR: ENR | Charlotte NC | **$149.9M Charlotte LPT plant**, 24→57/yr. Job posts say the building is done late 2026, so production starts in **2027 (slipped from early 2026)**. A separate $421M NC program (Feb 2026) is mostly generators and turbines. $18.3M 48C credit | [P] |
+| **HD Hyundai Electric** | KRX: 267260 | Montgomery AL | **Plant #2**: $200M, ~312k sq ft, +50% EHV, 765 kV build and test, 200 jobs. Broke ground Mar 6, 2026. Completion Apr 2027 per company, mid-2027 per Chamber | Q2'26 operating margin 25.1%. North America revenue +10% while margin rose (price and mix). Korea antidumping rate **0%** [P/S] |
+| **Hyosung HICO** | Hyosung Heavy Industries (KRX) | Memphis TN (the former Mitsubishi Electric plant Hyosung bought in 2019-20) | Two expansions, **$51M (123 jobs) + $157M (240 jobs)**, plus building (~$208-238M in total); +50% by 2028. Broke ground Nov 24, 2025 | Only US 765 kV maker. $287M hyperscaler orders (Sep 2026). Q2 operating margin 15.7% (+490 bp). Korea antidumping rate 4.32% [P/S] |
+| **Virginia Transformer (VTC)** | **Private** (Roanoke VA) | 6 NA plants incl. Rincon GA | **Rincon**: $40M, **scaled back to +50% by Mar 2027** (was +70% by end-2026). **Muscle Shoals AL**: 600k sq ft greenfield, 2-500 MVA, 1,100 jobs, production Jan 2028, ~$300M reported. **No site work found since the May 2026 announcement** | WAPA LPT blanket purchase agreement. Sale talk >$6B (2025), no deal [S] |
+| **Pennsylvania Transformer Technology (PTT)** | Quanta Services (NYSE: PWR) | Canonsburg PA; Raeford NC | **Raeford $102.5M**: includes a **new 150k sq ft pad-mount plant, building done Q4 2026, first shipments early 2027** | 5-750 MVA, to 765 kV [P] |
+| **Niagara Power Transformer** | Quanta Services | Cheektowaga NY | **$71.2M**: new 96k sq ft Dale Rd plant plus a 32k sq ft addition, staff 146→219. ECIDA inducement of $2.19M (Sep 2026) and NYPA $4.5M. **Pre-construction** | [P] |
+| **Howard Industries** | **Private** (Laurel MS) | Laurel, Ellisville MS | **Ellisville $100M**: rating rises from 168 MVA/230 kV to **250 MVA/345 kV by end-2026**. Separate **$237M / 450-job** MS program through ~2030 | Moving up-market into 10-100+ MVA. Tells DOE its lead times are under 20 wks [P] |
+| **Delta Star** | Private → MacLean Power Systems (Blackstone/Centerbridge), **signed Sep 1, 2026**, close Q4 | Lynchburg VA; San Carlos CA; Saint-Jean-sur-Richelieu QC | $35M Lynchburg expansion | Power transformers, mobile substations [S] |
+| **SGB-SMIT** | Germany (OEP) | Southwest Electric (OK), bought Mar 2025 | — | [S] |
+| **WEG** | B3: WEGE3 | Washington MO; Atotonilco de Tula MX | Mexico power-transformer plant (status unverified). US expansion ~2028 | [S] |
 
 ### 2b. Distribution, medium-voltage and dry-type
 
-| Company | Owner / listing | Plants | Recent moves | Notes |
+| Company | Owner | Plants | Recent moves | Notes |
 |---|---|---|---|---|
-| **Eaton** | NYSE: ETN | Waukesha WI (3-phase); Nacogdoches TX (1-phase, pole, pad) | **$340M Jonesville SC** 3-phase plant, production 2027, 700 jobs | Electrical Americas backlog +33% YoY, book-to-bill 1.3 (Q2'26). Bought Resilient Power (SST, 2025) and Boyd Thermal ($9.5B, 2026) [P] |
-| **ERMCO** | Arkansas Electric Cooperatives (co-op owned) | TN, AR, plus Spire (Power Partners, Pioneer Transformers, V&F; GA/TN/TX/CA/MX) | **Maricopa Co. AZ** 566k sq ft 3-phase plant, 2027 | Bought Spire in Dec 2022. Jefferson Electric and Pioneer Custom went to Voltaris (Mill Point) in 2024 [S] |
-| **Howard Industries** | Private | Laurel MS | See 2a | Major co-op/utility distribution supplier |
-| **Central Moloney** | Private (Pine Bluff AR) | Pine Bluff; Panama City Beach FL (new) | Second plant, up to 250 workers | Start date unverified [S] |
-| **Forgent Power Solutions** | **NYSE: FPS** (IPO Feb 5, 2026 at $27, $1.5–1.7B raised; follow-on at **$47**). Neos Partners controls | MGM Transformer (Vernon CA); VanTran (Waco TX, 430k sq ft, ~700 jobs over 5 yrs) | Waco opened May 2025 | Data-center focus. Also makes switchboards and PDUs [S] |
-| **JST Power Equipment** | Private | Wytheville VA (opened May 19, 2026) | Pad-mount: ~150 units in 2026 → **1,000/yr from 2027** | Ownership not verified. Check before treating as domestic under EO 14420 [S] |
-| **Giga Energy** | Private (venture-backed) | Houston TX (MV); Long Beach CA | 60k sq ft Houston plant, target 1,000–3,000+ units/yr (PR conflicts), started Q1'26 | Serves its own data-center pipeline [P] |
-| **Hammond Power Solutions** | TSX: HPS.A | Canada, US, **new Mexico plant** (shipping Q1'26) | Bought AEG Power Solutions (Jul 2026) | Q2'26 sales C$324.8M (+44.7%). Backlog −6.9% QoQ, +96.9% YoY. Canadian pricing softening [P] |
-| **Cleveland-Cliffs** | NYSE: CLF | Weirton WV (planned distribution transformer plant, $150M) | Status unverified since 2024–25 | Also the only domestic GOES maker (§4) [S] |
-| **Sunbelt Solomon** | **Trilantic → TJC** (signed Jul 20, 2026; close expected Q3'26, not yet confirmed) | Sharon PA coil winding; Elba AL repair/recycling | New and **remanufactured** units, field services | [S] |
-| **Voltaris Power** | Mill Point Capital | Pioneer Custom Electrical Products, Jefferson Electric | Carve-outs from ERMCO (Oct 2024) | [W] |
+| **Eaton** | NYSE: ETN | Waukesha WI; Nacogdoches TX; **Jonesville SC** | $340M, 700 jobs, production 2027. **Conversion of a former Belk distribution center**; $10M state Rural Infrastructure Fund grant | Electrical Americas data-center organic growth +65% [P] |
+| **ERMCO** | Arkansas Electric Cooperatives | TN, AR, Spire plants; **Waddell AZ** | **Bought a finished 566k sq ft spec shell for $91M** (Invesco) instead of building. 3-phase, >500 jobs, 2027 | [S] |
+| **Central Moloney** | **Wind Point Partners (since Oct 2023)** | Pine Bluff AR; Panama City Beach FL | FL site **operating**: leased 140k sq ft, single-phase pole-mounts, ≥$25M, ≥200 jobs | [P] |
+| **Forgent Power Solutions** | NYSE: FPS (Neos) | MGM (Vernon CA); VanTran (Waco TX, former Sherwin-Williams DC) | FY26 revenue $1.42B (+89%), Q4 adj EBITDA 24.4%, backlog $3.0B, Q4 book-to-bill 3.3x. Claims capacity for ~$5B revenue vs $2.5B FY27 guide | Gross margin ~36.9% → ~35.1% [P] |
+| **JST Power Equipment** | **Hainan Jinpan (China)** | Wytheville VA (45k sq ft, pad-mount); Lake Mary FL (switchgear) | 150 units (2026) → 1,000/yr (2027). Pad-mounts also imported from Yangzhou | **Chinese-owned**, so likely a "covered foreign entity" under EO 14421's ownership test [P] |
+| **Eaglerise** | China | US plant (location not found) and Mexico plant | Ramping 2026. **Won Lafayette (LA) 3-phase pad-mount items 18-23% below US distributors** | Chinese-owned [S/W] |
+| **Giga Energy** | Private (venture) | Houston TX (60k sq ft MV); Long Beach CA | Production started 2026. Output 1,000+ vs 3,000+ units/yr (sources conflict) | [P] |
+| **Hammond Power Solutions** | TSX: HPS.A | Canada, US, Mexico | Q2'26 C$324.8M (+44.7%), gross 31.5%, adj EBITDA 16.4%. Backlog −6.9% QoQ. Canada −23.7% on competitive pricing | Dry-type [P] |
+| **Cleveland-Cliffs** | NYSE: CLF | — | **Weirton WV transformer plant cancelled (May 2025)** | Still the only US GOES maker (§4) [S] |
+| **Sunbelt Solomon** | Trilantic → TJC (signed Jul 20, 2026; Q3 close target passed with no announcement) | Sharon PA; Elba AL | New and remanufactured | [S] |
+| **Pioneer Custom Electrical Products** | Sold by Pioneer Power Solutions for $50M | — | Not an ERMCO carve-out, as I had stated before | [S] |
 
 ### 2c. Aftermarket, refurbishment and mobile substations
 
-| Company | Owner | What changed |
-|---|---|---|
-| **Integrated Power Services (IPS)** | PE-backed (Greenville SC) | **Bought Belyea Company's HV business, effective Oct 7, 2026**: refurbished 69–230 kV transformers, breakers, switchgear and portable-substation rental (Easton PA) [S] |
-| **Sunbelt Solomon** | TJC (pending) | See 2b |
-| **Delta Star** | MacLean / Blackstone (pending) | Mobile and unitized substations |
+**IPS** bought Belyea's high-voltage refurbishment business (Oct 7, 2026). **Sunbelt Solomon** is going to TJC (pending). **Delta Star** is going to MacLean (pending). Remanufacturers such as Midwest Electric Transformer quote far shorter lead times than new-unit makers [W].
 
-### 2d. Solid-state and next-gen transformers (venture-funded)
+### 2d. Solid-state and next-gen
 
-| Company | Funding | Plan |
-|---|---|---|
-| **Heron Power** (Drew Baglino, ex-Tesla) | $140M Series B (Feb 2026; a16z, Breakthrough Energy). >$180M total | 40 GW/yr factory, full-scale production 2H'27. Reuters reports a ~$100M California factory. Claims 50 GW of orders [S] |
-| **DG Matrix** (Raleigh NC) | $60M Series A (Engine Ventures; ABB and MHI strategic). >$100M total | Claims to be the only SST maker shipping commercially. Partners: PowerSecure, Exowatt [S] |
-| **Amperesand** (Singapore) | $80M Series A (Nov 2025; Walden Catalyst, Temasek) | 30 MW of deployments targeted for 2026 [S] |
-| **Eaton / Resilient Power** | Acquired 2025 | SST-based EV charging and data-center power [P] |
+| Company | Status |
+|---|---|
+| **Heron Power** | $140M Series B. **First factory: Morgan Hill CA**, a converted 286k sq ft warehouse, >$100M, >600 jobs, **$26.4M CalCompetes**, up to 10,000 units/yr (>40 GW), commercial production late 2027 [P] |
+| **DG Matrix** | $60M Series A (ABB, MHI strategic) [S] |
+| **Amperesand** | $80M Series A [S] |
+| **Eaton / Resilient Power** | Acquired 2025 [P] |
 
-### 2e. Foreign suppliers entering or expanding NA sales
+### 2e. Foreign suppliers entering North America
 
-| Company | Country | Move |
-|---|---|---|
-| **Marsons Ltd + Cleanhill Partners** | India + NY PE | **JV approved Oct 6, 2026**: US LLC to import, sell and service Marsons transformers (11–345 kV, GSUs ≤200 MVA). Local manufacturing is a longer-term goal. Terms undisclosed [S] |
-| **LS Electric** | Korea | $123M UHV order for western-US renewables, built in Korea, deliveries from 2027. US plants make switchboards (Bastrop TX, Cedar City UT), not transformers [S] |
-| **Voltamp** | India | New Vadodara plant began production Oct 7, 2026. Not NA-specific, but Indian capacity is growing [W] |
+**Marsons + Cleanhill** JV (India, Oct 6, 2026). **Ayr Energy** (US-designed, India-built, >$500M contracts) and **Zetwerk** (India) are in USITC Section 337 case 337-TA-1517. **Korea** shipped a record $738M of >10 MVA units to the US in 2025, and 72% of Korea's UHV exports went to the US in Jan-Jul 2026 (single source). **LS Electric** builds in Korea.
 
 ---
 
-## 3. Announced NA capacity coming online, by year
+## 3. Announced NA capacity coming online, by year (status-checked)
 
-Use this to judge when supply catches up.
-
-| Online | Projects |
+| Online | Projects (status from permits, incentive filings, groundbreakings and job posts) |
 |---|---|
-| **2026** | Giga Houston (MV); JST Wytheville (pad-mount, ramping); Hammond Mexico; Howard Ellisville (building); VTC Rincon (+70%) |
-| **2027** | Eaton Jonesville (3-phase); ERMCO Arizona (3-phase); Siemens Energy Charlotte (LPT); HD Hyundai Montgomery #2 (Apr, EHV); Prolec GE Goldsboro (220→420 units, by end-2027); Hyosung Memphis (→250+ units, 2027–28); JST at 1,000 units/yr; Heron Power SST (2H); Hitachi Varennes test bay |
-| **2028** | VTC Muscle Shoals (Jan, 2–500 MVA); Hitachi South Boston (LPT); WEG US expansion |
-| **2029** | Hitachi Gallman MS (10–160 MVA, more than doubles Hitachi's US output in that range) |
+| **2026** | Howard Ellisville to 250 MVA/345 kV (on track, end-2026). Giga Houston, JST Wytheville and Central Moloney FL (operating). Hammond Mexico (operating). PTT pad-mount building complete Q4 |
+| **2027** | PTT Raeford pad-mount (early 2027). VTC Rincon +50% (Mar 2027, slipped). HD Hyundai #2 (Apr to mid-2027). Siemens Charlotte (slipped from 2026). Eaton Jonesville. ERMCO Waddell. Prolec Goldsboro to 420 units/yr (investment deadline Dec 31, 2027). Hyosung Memphis (phased 2027-28). Heron Power SST (late 2027) |
+| **2028** | VTC Muscle Shoals (Jan 2028, **at risk**, no site work seen). Hitachi South Boston (**at risk of slipping to 2029**). Cliffs Butler GOES +25%. Niagara (likely 2028+) |
+| **2029** | Hitachi Gallman (partly replaces Crystal Springs) |
 
-**What this means:** the incumbents' capacity wave lands in **2027–2029**. Most of it is brownfield expansion by firms that already hold utility qualifications and test bays.
+**What this means:**
+- The 10-160 MVA wave is **later and smaller** than the headlines.
+- The **pad-mount wave arrives earlier and bigger**: PTT, JST, Eaton, ERMCO, Giga, Forgent, plus Chinese-owned Eaglerise.
+- Seven plants hiring in 2027-28 announce **4,388 jobs**. That is about **1.2x all coil winders in NAICS 3353** (3,600 in 2023).
 
 ---
 
@@ -104,41 +109,40 @@ Use this to judge when supply catches up.
 
 | Input | State | Source |
 |---|---|---|
-| **Grain-oriented electrical steel (GOES)** | Cleveland-Cliffs (Butler Works PA) is the only domestic producer. **$200M expansion plus $75M DOE award, up to +25% GOES output**. Energy Secretary Wright visited Oct 6, 2026. DLA sole-source contract up to $400M (Jul 2026). Limits: max width ~920mm (LPT core makers want ≥932mm), and its grades lose more energy than Japanese grades. GOES prices doubled 2020–24. Imported cores/laminations face Section 232 steel tariffs | Cliffs PR [P], Breakthrough [S], Payne Inst. [S] |
-| **Transformer cores** | Worthington Steel: new electrical-steel / transformer-core facility in Burlington ON | Worthington ARS [P] |
-| **Copper** | Near record. Section 232: 50% on semi-finished copper, 25% on copper-intensive derivatives (full value) from Apr 6, 2026. Refined-copper tariff phases in (15% in 2027, 30% in 2028) | FreightFigures [W], White & Case [S] |
-| **Insulation / bushings** | Hitachi bought Canduct (insulation kits) and built $106M Alamo TN bushings plant: incumbents are vertically integrating scarce components | Hitachi [P] |
-| **Test capacity** | Test bays are a recurring bottleneck: PTT added a test set, Hitachi Varennes is building a test facility, HD Hyundai is adding 765 kV testing | [S] |
-| **Labor** | Coil winding and skilled assembly are cited as a binding constraint | Manufacturing mag [W], Utility Dive [S] |
+| **GOES** | Cleveland-Cliffs Butler PA is the only US producer. Expansion is now reported at **$170M plus a $75M DOE grant (2024 OCED program, not DPA)**, +25% output, **on schedule for 2028** per the CEO. Width (~920mm) and loss grade limit its use in large cores. No public GOES price index; public anchors span ~2x ($3.9k-7.5k per short ton) | Cliffs Q2 call [P]; Breakthrough [S] |
+| **Cores and laminations** | Section 232 duty on imported cores is **unresolved: 25% (Annex I-B) or 50% (Annex I-A)** under different readings of the April annex. GOES strip is reportedly at 50% | Proclamation 11021 annex reads [S] |
+| **Copper** | LME $14,474/t (Sep 2026), +45% YoY. COMEX premium near zero, so LME works for hedging. Copper wire PPI +19% YoY | World Bank, BLS [P] |
+| **Insulating oil** | Lube base-stock PPI +111% YoY. Ergon raised naphthenic transformer fluids +$2.05/gal (Mar-Apr 2026) | BLS, Ergon [P] |
+| **Insulation / bushings** | Hitachi buying Canduct; Hitachi Alamo bushings plant | [P] |
+| **Labor** | Coil winders in NAICS 3353: 3,600 (2023), mean $21.78/hr. Contracted plant wages $65-72k, 52-56% above county averages | BLS OEWS [P]; incentive filings [P] |
 
 ---
 
-## 5. Demand and announced projects
+## 5. Demand in units
 
-- **Utility capex**: EEI projects $239B in 2026 and $1.4T over 2026–30. Distribution was ~33% and transmission ~18% of 2025 IOU capex. [P/S]
-- **765 kV build-out**:
-  - ERCOT approved the $9.4B Eastern Backbone, part of the Permian/STEP plan; Aurora estimates the full STEP at ~$36B. Example spec: three 765/345 kV transformers ≥2,403 MVA at Hillje.
-  - PJM's 2026 TEAC plan includes several 765 kV lines in the AEP zone.
-  - MISO awarded a $1.2B 765 kV line to Transource/BHE.
-  - Hyosung, HD Hyundai, PTT and Mitsubishi are the 765 kV-capable suppliers. [S]
-- **Data centers**:
-  - GE Vernova booked $2.7B of data-center Electrification orders in Q2'26, >$5B in 1H'26.
-  - Hyosung: $287M in 765/345 kV orders from two US tech firms.
-  - Eaton: data centers drove its +41% rolling orders.
-  - WoodMac expects the **3-phase pad-mount** shortage to worsen because of data centers, factories and EV charging. [P/S]
-- **Gas generation build-out**: GE Vernova's gas backlog is >100 GW, which means sustained **GSU** demand. GSU lead times are the longest of any class. [P]
+| Driver | Quantity | Transformers implied |
+|---|---|---|
+| ERCOT 765 kV STEP core plan | 12 new 765 kV substations, $32.99B (2024 RTP) | ~27 765/345 kV banks (~81 single-phase units + spares), mostly 2030-32 |
+| ERCOT Eastern Backbone | $9.38B, 1,109 mi, Board-endorsed Dec 2025 | ~11 banks, incl. Hillje 3 × ≥2,403 MVA |
+| ERCOT Permian | PUCT approved 2 Oncor 765 kV CCNs (~$3.95B) Aug 28, 2026 [W] | ~16 banks |
+| PJM 2025 RTEP | $11.8B, 510 mi 765 kV, 185 mi 525 kV HVDC | Not found |
+| MISO Tranche 2.1 | $21.8B, 3,631 mi 765/345 kV; Transource/BHE $1.2B BECI | Not found |
+| ERCOT large loads | 474 GW requested; **9.5 GW approved to energize** | ~85-210 HV/MV + ~4,400-8,400 MV/LV units (computed, W) |
+| Data centers per GW | — | **460-890 MV/LV units and 9-22 HV/MV units per GW** (computed, W) |
+| Gas turbines (GEV 116 GW, Siemens 69 GW, MHI 35 GW) | ~220 GW backlog | **~50-160 US GSUs/yr** (computed, W) |
+| Utility capex | EEI $239B (2026), $1.4T (2026-30) | — |
+| NREL distribution | +160-260% capacity by 2050 | ~1.5-2.7M distribution units/yr replacement (computed, W) |
 
 ---
 
 ## 6. Imports and trade flows
 
-- **Korea**: record ~$1.3B UHV transformer exports in 2025, ~$738M of it to the US. Korean firms hold ~25% of the US market (HD Hyundai alone 25.7% of UHV in 2025). [S]
-- **China**:
-  - Record ¥64.6B (~$9.3B) transformer exports in 2025; US-bound shipments +182% in Jan–Feb 2026. [W]
-  - Imports of high-power units from China rose from <1,500 (2022) to >8,000 (through Oct 2025). [S, via CNBC coverage]
-  - WoodMac: data centers used Chinese units to shorten lead times. This is the flow EO 14420 targets.
-- **Mexico**: largest US source by value (~$2.3B in 2023, ~20% of HS 8504). Prolec GE, WEG and Hammond all build there. [S]
-- **Data gap**: no clean 2026 HS 8504 import series yet (USITC DataWeb / Census were not reachable from the monitor). Filling this is a standing to-do.
+- **Large units (>100 MVA, HTS 8504.23.0080)**: 617 units (2019) → 2,268 units / $2.77B (2025) → 2,901 (12 months to Jun 2026). Mexico 630, Brazil 343 and Korea 323 units in 2025, together 57%. **China ~2%**. *Vendor-compiled from Census and not independently verified. The ~$1.22M average unit value looks low for >100 MVA.*
+- **Korea** (>10 MVA): $258M (2023), $403M (2024), **$738M (2025, confirmed)**. Jan-Jul 2026 $596M (single source). US-bound price per ton +20% in 2025.
+- **China**: transformer exports +28.5% in Jan-Aug 2026. US-bound growth slowed from +182% (Jan-Feb) to ~+45% (H1). North America-bound liquid units −36% MoM in August.
+- **Mexico**: HS 8504 exports to the US $5.7-6.3B/yr (2023-25). That covers *all* of HS 8504 including converters; the old "$2.3B" figure was a different scope.
+- **India**: rising through US-designed, India-built suppliers (Ayr, Zetwerk) and the Marsons JV.
+- **Gap**: Census HS-10 monthly data by country (units and values) is still blocked in this environment.
 
 ---
 
@@ -146,43 +150,46 @@ Use this to judge when supply catches up.
 
 | Instrument | Status | Effect on transformers |
 |---|---|---|
-| **Section 232 metals (Proc. 11021, eff. Apr 6, 2026)** | Tiered, on full customs value. 50% on goods made almost entirely of metal; 25% on derivatives; goods ≤15% metal content excluded | HTS 8504 transformers generally at **25%**. **15% temporary tier through Dec 31, 2027** for some grid equipment. Its scope is disputed: the narrow reading covers only **8504.23.00 (liquid, >10 MVA)** and **8504.34.00**, which leaves distribution gear and switchgear at 25% [S/W] |
-| **GOES / cores / laminations** | Covered by steel 232 since 2025 | Raises domestic builders' input costs if they import cores |
-| **IEEPA tariffs** | **Struck down** by the Supreme Court Feb 20, 2026 (*Learning Resources v. Trump*). Refunds being processed via CBP's CAPE system | — |
-| **Section 122 (10% global)** | Feb 24 to Jul 24, 2026 (expired). CIT ruled it invalid (May 7), stayed on appeal | Refunds uncertain |
-| **Section 301 "forced labor" tariffs** | **From Jul 24, 2026**: 10–12.5% on 60 economies, stacked on other duties. Mexico 10% (USMCA goods possibly exempt); Korea topped up to 12.5% combined with MFN | Small adder on Korean and Mexican imports |
-| **USMCA** | Not renewed at the Jul 1, 2026 joint review. Stays in force with annual reviews | Uncertainty for Mexico-built supply (Prolec, WEG, Hammond) |
-| **DPA Presidential Determination 2026-10 (Apr 20, 2026)** | Grid equipment, transformers and electrical core steel ruled essential to national defense | DOE can use DPA Title III purchases and financing to expand domestic capacity |
-| **EO 14420 (Aug 26, 2026)**, cited as 14421 by some firms | National emergency on foreign-adversary bulk-power equipment from 24 countries, mainly China. Covers power and instrument transformers, inverters, BESS, breakers. DOE RFI (FR Sep 9) comments closed **Oct 9**. **Rules due ~Dec 24, 2026**. Applies to transactions after Aug 26 | WoodMac: >$22B of imports since 2025 exposed; the 100 MVA+ segment is hit hardest. Open question: whether data-center substations count as "bulk-power" |
-| **DOE distribution-transformer efficiency rule (Apr 2024, compliance 2029)** | Under RFI (comments closed Jul 15, 2026). EEI wants a later compliance date; some makers want changes | Bears on the amorphous vs GOES core mix and on redesign capex |
+| **Section 232 metals** (Proc. 11021, Apr 6, 2026; Proc. 11032, Jun 8, 2026) | Derivatives at 25% of full value | Distribution transformers 25% from all origins. **8504.23 and 8504.34 are listed in Annex III (temporary reduction to Dec 31, 2027)**, reportedly at 15% (rate from secondary sources) |
+| Cores / laminations (8504.90.96xx), GOES strip | **Unresolved: 25% or 50%** | A tariff inversion risk for a US builder that imports cores |
+| **Section 301 forced-labor** (Jul 24, 2026) | 10-12.5% on 60 economies | **Excludes Section 232 articles**, so it does not stack on transformers |
+| **Antidumping, LPT from Korea** (final Aug 14, 2026) | HD Hyundai 0%, Iljin 0%, LS Electric and Hyosung 4.32%, others 22% | Little shelter against the strongest LPT importers. New review opened Oct 1, 2026 |
+| IEEPA tariffs | Struck down Feb 20, 2026; refunds under way | — |
+| Section 122 | Expired Jul 24, 2026 | — |
+| **EO 14421** (Aug 26, 2026; FR Doc 2026-17843) | **Covers bulk-power equipment at ≥69 kV, excludes local distribution, no MVA floor.** "Covered foreign entity" means the **24 ITAR 126.1 countries plus an ownership, control or jurisdiction test**. Nothing is banned until DOE finds undue risk. Installed equipment is not grandfathered | The opening is grid-facing 69-138 kV substation units, not utility pad-mounts. Chinese-owned plants in the US or Mexico (JST/Jinpan, Eaglerise) could be caught. DOE RFI docket DOE-HQ-2026-1123 closed Oct 9; **rules due ~Dec 24-27, 2026** |
+| DPA Presidential Determination 2026-10 | No Title III solicitation or award six months on. A W-grade source flags a Title III sunset on Sep 30, 2026 | Do not count on federal money |
+| 48C | Fully allocated | — |
+| DOE distribution efficiency rule (compliance 2029) | Under review (EERE-2026-BT-STD-0133) | Bears on the amorphous vs GOES mix |
+| USMCA | Not renewed Jul 1, 2026; reviewed annually | — |
 
 ---
 
-## 8. M&A and capital markets
+## 8. M&A, valuations and capital markets
 
 | Date | Deal | Value | Read-through |
 |---|---|---|---|
-| **2026-10-07** | IPS buys Belyea HV business | Undisclosed | Roll-up of refurbishment and rental |
-| **2026-10-06** | Marsons + Cleanhill JV (India → NA) | Undisclosed | Indian suppliers moving into the space China is losing |
-| 2026-10-05 | Schneider Electric to buy PTC (software) | $22.6B | Not transformers. Shows how much cash electrical majors can deploy |
-| 2026-09-03 | MacLean Power Systems (Blackstone/Centerbridge) to buy Delta Star | Undisclosed | PE platform adds power transformers and mobile substations |
-| 2026-07-20 | TJC to buy Sunbelt Solomon from Trilantic | Undisclosed | PE pays for reman and lifecycle services |
-| 2026-07 | Hammond buys AEG Power Solutions | — | Adds power electronics |
-| 2026-06 | Hitachi Energy buys Canduct (ON) | — | Vertical integration into components |
-| 2026-02-05 | Forgent (FPS) IPO at $27, later follow-on at $47 | ~$1.5–1.7B raised | Public markets reward data-center electrical pure-plays |
-| 2026-02-02 | GE Vernova closes buyout of Xignux's 50% of Prolec GE | $5.254B | Implies ~$10.5B for 100% |
-| 2025-11 | Blackstone buys MacLean Power Systems | ~$4B (reported) | Same platform buying Delta Star |
-| 2025 (early) | Virginia Transformer explores sale | >$6B (reported) | No transaction confirmed |
-| Older | Quanta → PTT (~$300M), Niagara; ERMCO → Spire (2022); Eaton → Resilient Power (2025) | | |
+| 2026-10-07 | IPS buys Belyea's high-voltage business | Undisclosed | Refurbishment and rental roll-up |
+| 2026-10-06 | Marsons + Cleanhill JV | Undisclosed | Indian supply |
+| 2026-09-01 | MacLean (Blackstone/Centerbridge) to buy Delta Star | Undisclosed | PE platform |
+| 2026-07-20 | TJC to buy Sunbelt Solomon | Undisclosed | Close not yet announced |
+| 2026-02-05 | Forgent IPO at $27; later follow-on at $47 | ~$1.5-1.7B | — |
+| 2026-02-02 | GE Vernova buys remaining 50% of Prolec GE | $5,254M cash; **$9,656M total consideration** | **~12.9-14.1x 2025E EBITDA**, ~10x 2028E |
+| 2025-11 | Blackstone buys MacLean Power Systems | ~$4B (reported) | — |
+| 2025-03 | SGB-SMIT buys Southwest Electric | Undisclosed | — |
+| 2023-10 | Wind Point buys Central Moloney | Undisclosed | — |
+| — | Pioneer Power sells PCEP | $50M | — |
+| 2025 | Virginia Transformer sale talk | >$6B (reported) | No deal |
+
+Lower-middle-market manufacturing trades at roughly **5.9-8.8x EBITDA**, against ~13-14x for Prolec. Scale and qualifications command the premium. **Available targets are thin**: Southwest Electric, Delta Star, PTT, Central Moloney and Sunbelt Solomon are already taken.
 
 ---
 
-## 9. Private companies to watch (sale, IPO or partnership candidates)
+## 9. Private companies to watch
 
-Virginia Transformer · Howard Industries · Central Moloney · JST Power Equipment · Giga Energy · Delta Star (being acquired) · Sunbelt Solomon (being acquired) · IPS · Voltaris Power · Heron Power · DG Matrix · Amperesand · Maddox (reman/distribution) · Southwest Electric (no 2026 news found)
+Virginia Transformer · Howard Industries · Giga Energy · Maddox · ELSCO · Meta Power Solutions · regional rewinders and remanufacturers · Heron Power · DG Matrix · Amperesand · Ayr Energy
 
 ---
 
 ## Sources
 
-Primary and secondary links are listed in the weekly reports, and each row of `data/*.csv` carries its source URL.
+Each row of `data/*.csv` carries its source URL. Full findings with URLs, confidence tags and verification verdicts are in `deep-dive/research/`.
