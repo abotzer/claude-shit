@@ -185,6 +185,10 @@
 .tx-vc .tx-vc-node.is-fulton rect { stroke: var(--color-warn); fill: color-mix(in srgb, var(--color-warn) 16%, var(--color-panel)); }
 .tx-vc .tx-vc-node.is-sel rect { stroke: var(--color-fg); stroke-width: 2; }
 .tx-vc .tx-vc-node text { fill: var(--color-fg); }
+.tx-vc .tx-svg text { font-size: 10.5px; }
+.tx-vc .tx-vc-col { font-size: 11.5px; }
+.tx-vc .tx-vc-group { font-size: 9.5px; }
+.tx-vc .tx-vc-node .tx-vc-mono { fill: #fff; font-size: 7.5px; font-weight: 600; letter-spacing: 0; }
 .tx-vc .tx-vc-node:focus { outline: none; }
 .tx-vc .tx-vc-node:focus-visible rect { stroke: var(--color-fg); stroke-width: 2; }
 .tx-vc .is-dim { opacity: .18; }
@@ -1669,6 +1673,18 @@ function vcValue(e) {
   const l = String(e.value_label || '');
   return vcIsEst(e) && !/est/i.test(l) ? l + ' est.' : l;
 }
+function vcInitials(name) {
+  const skip = ['other', 'the', 'and', 'of', 'us', 'na', 'incl.'];
+  const w = String(name || '').replace(/\(.*?\)/g, ' ').split(/[\s\/,&-]+/).filter((x) => x && !skip.includes(x.toLowerCase()));
+  return ((w[0] || '?')[0] + (w[1] ? w[1][0] : (w[0] || '')[1] || '')).toUpperCase();
+}
+function vcBadgeColor(n) {
+  if (n.kind === 'fulton') return 'var(--color-warn)';
+  if (n.kind === 'aggregate') return 'var(--cds-chart-muted)';
+  let h = 0;
+  String(n.id).split('').forEach((ch) => { h = (h * 31 + ch.charCodeAt(0)) >>> 0; });
+  return dash.colors[h % dash.colors.length];
+}
 function clip(t, n) { const s = String(t || ''); return s.length > n ? s.slice(0, n - 1).trimEnd() + '…' : s; }
 
 function vcModel() {
@@ -1707,7 +1723,7 @@ function vcLayout(model, W) {
   const gap = Math.max(44, W * 0.05);
   const boxW = (W - gap * 6) / 7;
   const colX = VC_LAYERS.map((_, i) => i * (boxW + gap));
-  const top = 58, rowH = 22, rowGap = 6, headH = 22;
+  const top = 58, rowH = 20, rowGap = 13, headH = 24;
   const cols = VC_LAYERS.map(() => []);
   model.nodes.forEach((n) => cols[VC_LAYERS.indexOf(n.layer)].push(n));
   const weight = new Map();
@@ -1900,8 +1916,10 @@ function drawValueChain() {
     const g = nodeG.append('g').attr('class', cls).attr('transform', 'translate(' + p.x + ',' + (p.y - L.rowH / 2) + ')')
       .attr('tabindex', 0).attr('role', 'button').attr('aria-label', n.name);
     g.append('rect').attr('width', L.boxW).attr('height', L.rowH).attr('rx', 4);
-    const t = g.append('text').attr('x', 7).attr('y', L.rowH / 2).attr('dy', '0.35em').text(n.name);
-    fitText(t.node(), L.boxW - 12);
+    g.append('circle').attr('cx', 11).attr('cy', L.rowH / 2).attr('r', 7).style('fill', vcBadgeColor(n));
+    g.append('text').attr('class', 'tx-vc-mono').attr('x', 11).attr('y', L.rowH / 2).attr('dy', '0.35em').attr('text-anchor', 'middle').text(vcInitials(n.name));
+    const t = g.append('text').attr('x', 22).attr('y', L.rowH / 2).attr('dy', '0.35em').text(n.name);
+    fitText(t.node(), L.boxW - 26);
     g.on('mousemove', (ev) => {
       const [px, py] = d3.pointer(ev, svg.node());
       showTip(el, n.name, [n.group + ' · ' + VC_TITLES[VC_LAYERS.indexOf(n.layer)], n.size_label, n.ownership, clip(n.description, 220)], px, py);
