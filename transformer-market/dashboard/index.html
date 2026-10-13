@@ -151,7 +151,10 @@
 .tx-table td.tx-pre { white-space: pre-line; }
 .tx-chart-margin { min-height: 13rem; }
 .tx-caveats { margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: var(--cds-gap-xs); line-height: 1.5; max-width: 75ch; }
-.tx { position: relative; }
+.tx { position: relative; overflow-x: clip; min-width: 0; overflow-wrap: anywhere; }
+.tx > *, .tx-section, .tx-card, .tx-grid > * { min-width: 0; max-width: 100%; }
+.tx .tx-chip { white-space: normal; max-width: 100%; }
+.tx-table td { overflow-wrap: anywhere; }
 .tx h4 { margin: 0; }
 .tx-updated { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
 .tx-btn { font: inherit; font-size: var(--cds-font-size-caption); padding: var(--cds-pad-xs) var(--cds-pad-sm); border: 1px solid var(--color-border-line); background: var(--color-panel); color: var(--color-fg); border-radius: var(--cds-radius); cursor: pointer; }
