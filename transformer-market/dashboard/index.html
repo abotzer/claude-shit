@@ -249,6 +249,58 @@ details.tx-fold > summary::before { content: "▸"; color: var(--color-fg-muted)
 details.tx-fold[open] > summary::before { transform: rotate(90deg); }
 details.tx-fold > .tx-fold-body { display: flex; flex-direction: column; gap: var(--cds-gap-sm); padding-top: var(--cds-pad-sm); min-width: 0; }
 #fam-summary .tx-bottom-text { max-width: none; }
+/* refinement: rhythm, readability, sticky tabs */
+.tx p, .tx li, .tx dd { line-height: 1.55; }
+.tx-lede { max-width: 72ch; }
+.tx-sub { font-size: var(--cds-font-size-body); line-height: 1.55; max-width: 78ch; }
+.tx-section-head { gap: var(--cds-gap-sm); }
+.tx-panel > .tx-section + .tx-section, .tx-panel > .tx-tiles + .tx-section { border-top: 1px solid var(--color-border-line); padding-top: calc(var(--cds-gap-xl) * 1.25); }
+.tx-card { gap: var(--cds-gap-md); }
+.tx-card-note { max-width: 80ch; }
+.tx-tabs { position: sticky; top: 0; z-index: 8; background: var(--color-bg); }
+.tx-table th { font-size: calc(var(--cds-font-size-caption) * .95); letter-spacing: .03em; text-transform: uppercase; padding-block: var(--cds-pad-sm); }
+.tx-table td { padding: var(--cds-pad-sm); }
+.tx-table tbody tr:hover td { background: color-mix(in srgb, var(--color-fg) 4%, transparent); }
+details.tx-fold > summary { padding-block: 2px; }
+details.tx-fold > summary:hover .tx-card-title, details.tx-fold > summary:hover .tx-h3 { text-decoration: underline; text-decoration-color: var(--color-border-line); text-underline-offset: 4px; }
+details.tx-fold-inline > summary { cursor: pointer; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); padding-block: var(--cds-pad-xs); }
+details.tx-fold-inline > summary:hover { color: var(--color-fg); }
+details.tx-fold-inline[open] > summary { margin-bottom: var(--cds-gap-sm); }
+.tx-checks { gap: var(--cds-gap-sm); }
+.tx-play { gap: var(--cds-gap-sm); }
+.tx-play details summary, .tx-pmore summary { cursor: pointer; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.tx-play details[open] summary { margin-bottom: var(--cds-gap-sm); }
+#fam-summary .tx-bottom-text { font-family: var(--font-anthropic-sans); font-size: var(--cds-font-size-body); line-height: 1.65; }
+/* plant status strip */
+.tx-vbar { display: flex; height: .75rem; border-radius: 999px; overflow: hidden; gap: 2px; background: var(--color-panel); }
+.tx-vbar i { display: block; height: 100%; min-width: 4px; }
+.tx-vbar-legend { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs) var(--cds-gap-md); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.tx-vbar-legend span { display: inline-flex; align-items: center; gap: .35rem; }
+.tx-vbar-legend b { color: var(--color-fg); font-weight: var(--cds-font-weight-medium); }
+/* watchlist by month */
+.tx-wt { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 16rem), 1fr)); gap: var(--cds-gap-md); }
+.tx-wt-month { border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-md); display: flex; flex-direction: column; gap: var(--cds-gap-sm); min-width: 0; }
+.tx-wt-head { font-family: var(--font-anthropic-serif); font-size: var(--cds-font-size-heading); }
+.tx-wt-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--cds-gap-sm); }
+.tx-wt-item { display: grid; grid-template-columns: .6rem minmax(0, 1fr); gap: var(--cds-gap-sm); }
+.tx-wt-dot { width: .5rem; height: .5rem; border-radius: 50%; margin-top: .45rem; background: var(--color-fg-muted); }
+.tx-wt-item.is-soon .tx-wt-dot { background: var(--color-warn); }
+.tx-wt-when { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); font-variant-numeric: tabular-nums; }
+.tx-wt-item details summary { cursor: pointer; list-style: none; }
+.tx-wt-item details summary::-webkit-details-marker { display: none; }
+.tx-wt-item details p { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); margin-top: var(--cds-gap-xs); white-space: pre-line; }
+/* portfolio exposure board */
+.tx-board { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); gap: var(--cds-gap-md); align-items: start; }
+.tx-board-col { display: flex; flex-direction: column; gap: var(--cds-gap-sm); min-width: 0; }
+.tx-board-head { display: flex; align-items: center; gap: var(--cds-gap-xs); font-size: var(--cds-font-size-caption); text-transform: uppercase; letter-spacing: .05em; color: var(--color-fg-muted); padding-bottom: var(--cds-pad-xs); border-bottom: 2px solid var(--color-border-line); }
+.tx-board-col[data-level="High"] .tx-board-head { border-color: var(--color-ok); color: var(--color-fg); }
+.tx-board-col[data-level="Medium"] .tx-board-head { border-color: var(--color-warn); color: var(--color-fg); }
+.tx-board-item { border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-sm) var(--cds-pad-md); display: flex; flex-direction: column; gap: var(--cds-gap-xs); background: var(--color-panel); }
+.tx-board-item p { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+.tx-board-item details summary { cursor: pointer; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.tx-board-item details p { -webkit-line-clamp: unset; display: block; color: var(--color-fg); margin-top: var(--cds-gap-xs); }
+.tx-chart-deals { min-height: 15rem; }
+.tx-chart-opps { min-height: 18rem; }
 @media (prefers-reduced-motion: no-preference) {
   .tx-svg .tx-anim { animation: tx-grow var(--cds-dur-slow) var(--cds-ease-out) both; transform-origin: bottom; transform-box: fill-box; }
   @keyframes tx-grow { from { transform: scaleY(0); } to { transform: scaleY(1); } }
@@ -333,6 +385,11 @@ details.tx-fold > .tx-fold-body { display: flex; flex-direction: column; gap: va
       <h3 class="tx-card-title" id="fam-fit-title">Why this fits how Fulton invests</h3>
       <p class="tx-pre dash-skeleton" id="fam-fit"></p>
     </div>
+    <div class="tx-card">
+      <h3 class="tx-card-title" id="fam-opps-title">Where Fulton's companies could sell</h3>
+      <p class="tx-card-note">Each bar is the estimated yearly market a Fulton company could address with one buyer group, from low to high estimate, on a log scale. These are addressable markets, not current sales. Hover a bar for the basis.</p>
+      <div class="tx-chart tx-chart-opps dash-skeleton" id="fam-opps-chart" data-source="value_chain_edges value_chain_nodes"></div>
+    </div>
     <h3 class="tx-h3" id="fam-plays-title">Plays across the value chain, ranked</h3>
     <div class="tx-plays dash-skeleton" id="fam-plays"></div>
     <div class="tx-card">
@@ -342,7 +399,8 @@ details.tx-fold > .tx-fold-body { display: flex; flex-direction: column; gap: va
     </div>
     <div class="tx-card">
       <h3 class="tx-card-title" id="fam-port-title">What the trend means for each portfolio company</h3>
-      <p class="tx-card-note">How the grid build-out touches each company Fulton owns or partners with, and the next step worth taking.</p>
+      <p class="tx-card-note">How the grid build-out touches each company Fulton owns or partners with, grouped by how strong the link is. Open a company for the next step.</p>
+      <div class="tx-board dash-skeleton" id="fam-port-board" data-source="fulton_portfolio"></div>
       <div class="tx-table-wrap">
         <table class="tx-table" id="fam-port-table" data-source="fulton_portfolio" data-row-key="id"><thead></thead><tbody></tbody></table>
       </div>
@@ -420,7 +478,7 @@ details.tx-fold > .tx-fold-body { display: flex; flex-direction: column; gap: va
       <div class="tx-card tx-span">
         <h3 class="tx-card-title" id="plant-title">Plant reality check</h3>
         <p class="tx-card-note">Each announced plant checked against groundbreakings, incentive filings, job postings and local records. No state permit for any plant is findable through search, so dates remain company guidance.</p>
-        <div class="tx-verdicts" id="plant-verdict-counts"></div>
+        <div class="tx-verdicts tx-vbar-wrap" id="plant-verdict-counts" data-source="plant_verdicts"></div>
         <div class="tx-table-wrap">
           <table class="tx-table" id="plant-table" data-source="plant_status" data-row-key="id"><thead></thead><tbody></tbody></table>
         </div>
@@ -589,7 +647,8 @@ details.tx-fold > .tx-fold-body { display: flex; flex-direction: column; gap: va
     </div>
     <div class="tx-card">
       <h3 class="tx-card-title" id="deals-title">Deals</h3>
-      <p class="tx-card-note">Highlighted rows happened this week. Values in US dollars where disclosed.</p>
+      <p class="tx-card-note">Each deal placed by date and grouped by segment. Dot area shows the disclosed value; hollow dots are undisclosed; an amber ring marks this week. Hover a dot for details.</p>
+      <div class="tx-chart tx-chart-deals dash-skeleton" id="deals-chart" data-source="deals"></div>
       <div class="tx-table-wrap">
         <table class="tx-table" id="deals-table" data-source="deals" data-row-key="id"><thead></thead><tbody></tbody></table>
       </div>
@@ -623,6 +682,9 @@ details.tx-fold > .tx-fold-body { display: flex; flex-direction: column; gap: va
       <p class="tx-sub">Dated events that could change the picture.</p>
     </div>
     <div class="tx-card">
+      <h3 class="tx-card-title" id="watch-title">Upcoming catalysts by month</h3>
+      <p class="tx-card-note">Amber dots fall within the next thirty days. Click an item for why it matters.</p>
+      <div class="tx-wt dash-skeleton" id="watch-timeline" data-source="watchlist"></div>
       <div class="tx-table-wrap">
         <table class="tx-table" id="watch-table" data-source="watchlist" data-row-key="id"><thead></thead><tbody></tbody></table>
       </div>
@@ -1623,13 +1685,29 @@ function renderVerdictCounts() {
   const el = document.getElementById('plant-verdict-counts');
   el.textContent = '';
   if (statusOf(['plant_verdicts']) !== 'ok') return;
-  rows('plant_verdicts').filter((r) => num(r.plants) > 0).forEach((r) => {
-    const chip = mk('span', 'tx-chip');
-    chip.appendChild(mk('span', null, r.verdict, 'plant_verdicts', 'verdict', 'verdict=' + encodeURIComponent(r.verdict)));
-    chip.appendChild(document.createTextNode('\u00a0'));
-    chip.appendChild(mk('b', null, fmtVal(num(r.plants)), 'plant_verdicts', 'plants', 'verdict=' + encodeURIComponent(r.verdict)));
-    el.appendChild(chip);
+  const list = rows('plant_verdicts').filter((r) => num(r.plants) > 0);
+  const color = { 'On track': 'var(--color-ok)', Operating: 'color-mix(in srgb, var(--color-ok) 55%, var(--color-panel))', Slipped: 'var(--color-warn)', 'At risk': 'var(--color-bad)', Unverified: 'var(--cds-chart-muted)', Cancelled: 'color-mix(in srgb, var(--color-bad) 45%, var(--color-panel))' };
+  const bar = mk('div', 'tx-vbar');
+  bar.setAttribute('role', 'img');
+  bar.setAttribute('aria-label', 'Plants by verdict');
+  list.forEach((r) => {
+    const seg = document.createElement('i');
+    seg.style.flex = String(num(r.plants));
+    seg.style.background = color[r.verdict] || 'var(--cds-chart-muted)';
+    bar.appendChild(seg);
   });
+  const legend = mk('div', 'tx-vbar-legend');
+  list.forEach((r) => {
+    const w = 'verdict=' + encodeURIComponent(r.verdict);
+    const item = mk('span');
+    const sw = mk('i', 'tx-swatch');
+    sw.style.background = color[r.verdict] || 'var(--cds-chart-muted)';
+    item.appendChild(sw);
+    item.appendChild(mk('span', null, r.verdict, 'plant_verdicts', 'verdict', w));
+    item.appendChild(mk('b', null, fmtVal(num(r.plants)), 'plant_verdicts', 'plants', w));
+    legend.appendChild(item);
+  });
+  el.append(bar, legend);
 }
 
 function renderTakeaways() {
@@ -2057,13 +2135,17 @@ function renderFulton() {
       chips.appendChild(conv);
       chips.appendChild(mk('span', 'tx-chip', r.chain_position, 'fulton_plays', 'chain_position', w));
       card.appendChild(chips);
+      card.appendChild(mk('p', null, r.why_fulton, 'fulton_plays', 'why_fulton', w));
+      const more = document.createElement('details');
+      more.appendChild(mk('summary', null, 'How, check size, targets, timing and risks'));
       const dl = mk('dl', 'tx-dl');
-      [['Why Fulton', 'why_fulton'], ['How', 'how'], ['Check size', 'check_size'], ['Targets', 'example_targets'], ['Timing', 'timing'], ['Risks', 'risks']].forEach((f) => {
+      [['How', 'how'], ['Check size', 'check_size'], ['Targets', 'example_targets'], ['Timing', 'timing'], ['Risks', 'risks']].forEach((f) => {
         if (!r[f[1]]) return;
         dl.appendChild(mk('dt', null, f[0]));
         dl.appendChild(mk('dd', null, r[f[1]], 'fulton_plays', f[1], w));
       });
-      card.appendChild(dl);
+      more.appendChild(dl);
+      card.appendChild(more);
       plays.appendChild(card);
     });
   }
@@ -2113,6 +2195,148 @@ function renderActions() {
     c.appendChild(mk('p', 'tx-card-note', r.why, 'fulton_actions', 'why', w));
     c.appendChild(mk('p', 'tx-act-verify', r.verify, 'fulton_actions', 'verify', w));
     el.appendChild(c);
+  });
+}
+
+function drawDeals() {
+  const el = document.getElementById('deals-chart');
+  if (!prep(el, ['deals'])) return;
+  const list = rows('deals').filter((r) => r.date).map((r) => Object.assign({}, r, { t: new Date(r.date + 'T00:00:00Z'), v: num(r.value_usd_m) }));
+  if (!list.length) return;
+  const segs = Array.from(d3.rollup(list, (v) => v.length, (r) => r.segment)).sort((a, b) => b[1] - a[1]).map((d) => d[0]);
+  const W = Math.max(el.clientWidth, 320);
+  const svg0 = newSvg(el, W, 10);
+  const left = Math.min(W * 0.3, measure(svg0, segs, 'tx-lbl') + 16);
+  svg0.remove();
+  const rowH = 40, top = 10, H = top + segs.length * rowH + 28;
+  const svg = newSvg(el, W, H).attr('aria-label', 'Deals by date and segment');
+  const [t0, t1] = d3.extent(list, (r) => r.t);
+  const x = d3.scaleUtc().domain([d3.utcMonth.offset(t0, -3), d3.utcMonth.offset(t1, 3)]).range([left, W - 16]);
+  const vmax = d3.max(list, (r) => r.v || 0) || 1;
+  const rad = (v) => Math.max(4.5, Math.sqrt(v / vmax) * 20);
+  const y = (sg) => top + segs.indexOf(sg) * rowH + rowH / 2;
+  segs.forEach((sg) => {
+    svg.append('line').attr('x1', left).attr('x2', W - 16).attr('y1', y(sg)).attr('y2', y(sg)).style('stroke', 'var(--cds-chart-grid)');
+    const t = svg.append('text').attr('class', 'tx-lbl').attr('x', 0).attr('y', y(sg)).attr('dy', '0.35em').text(sg);
+    fitText(t.node(), left - 12);
+  });
+  const ax = svg.append('g').attr('transform', 'translate(0,' + (H - 22) + ')');
+  x.ticks(d3.utcYear.every(1)).forEach((d) => {
+    ax.append('line').attr('x1', x(d)).attr('x2', x(d)).attr('y1', -(H - 32)).attr('y2', 0).style('stroke', 'var(--cds-chart-grid)').attr('stroke-dasharray', '2 3');
+    ax.append('text').attr('x', x(d)).attr('y', 14).attr('text-anchor', 'middle').text(d3.utcFormat('%Y')(d));
+  });
+  const c = dash.colors;
+  list.slice().sort((a, b) => (b.v || 0) - (a.v || 0)).forEach((r) => {
+    const g = svg.append('g');
+    const cx = x(r.t), cy = y(r.segment);
+    g.append('circle').attr('cx', cx).attr('cy', cy).attr('r', r.v ? rad(r.v) : 4.5)
+      .style('fill', r.v ? c[0] : 'var(--color-panel)').attr('fill-opacity', r.v ? 0.75 : 1)
+      .style('stroke', r.this_week === 'Yes' ? 'var(--color-warn)' : (r.v ? 'var(--color-panel)' : c[0]))
+      .attr('stroke-width', r.this_week === 'Yes' ? 2.5 : 1.5);
+    if (r.v && r.v >= vmax * 0.12) {
+      const t = g.append('text').attr('class', 'tx-val').attr('x', cx + rad(r.v) + 4).attr('y', cy).attr('dy', '0.35em').text(clip(r.target, 26));
+      if (cx + rad(r.v) + 120 > W) t.attr('x', cx - rad(r.v) - 4).attr('text-anchor', 'end');
+    }
+    g.append('circle').attr('cx', cx).attr('cy', cy).attr('r', Math.max(10, r.v ? rad(r.v) : 10)).style('fill', 'transparent')
+      .on('mousemove', (ev) => {
+        const [px, py] = d3.pointer(ev, svg.node());
+        showTip(el, r.target, [r.acquirer, r.value_note + ' · ' + r.date_label, r.status, clip(r.read_through, 180)], px, py);
+      })
+      .on('mouseleave', () => hideTip(el));
+  });
+}
+
+function renderWatchTimeline() {
+  const el = document.getElementById('watch-timeline');
+  if (!prep(el, ['watchlist'])) return;
+  const now = Date.now();
+  const byMonth = d3.group(rows('watchlist').slice().sort((a, b) => (a.sort_date < b.sort_date ? -1 : 1)), (r) => String(r.sort_date).slice(0, 7));
+  byMonth.forEach((list, m) => {
+    const box = mk('section', 'tx-wt-month');
+    box.appendChild(mk('div', 'tx-wt-head', d3.utcFormat('%B %Y')(new Date(m + '-01T00:00:00Z'))));
+    const ul = mk('ul', 'tx-wt-list');
+    list.forEach((r) => {
+      const w = 'id=' + encodeURIComponent(r.id);
+      const t = Date.parse(r.sort_date + 'T00:00:00Z');
+      const li = mk('li', 'tx-wt-item' + (t >= now - 86400000 && t - now < 30 * 86400000 ? ' is-soon' : ''));
+      li.appendChild(mk('span', 'tx-wt-dot'));
+      const body = mk('div');
+      body.appendChild(mk('div', 'tx-wt-when', r.when, 'watchlist', 'when', w));
+      const d = document.createElement('details');
+      const sm = document.createElement('summary');
+      sm.appendChild(mk('span', 'tx-pre', r.item, 'watchlist', 'item', w));
+      d.appendChild(sm);
+      d.appendChild(mk('p', null, r.why, 'watchlist', 'why', w));
+      body.appendChild(d);
+      li.appendChild(body);
+      ul.appendChild(li);
+    });
+    box.appendChild(ul);
+    el.appendChild(box);
+  });
+}
+
+function renderPortfolioBoard() {
+  const el = document.getElementById('fam-port-board');
+  if (!prep(el, ['fulton_portfolio'])) return;
+  const levels = [['High', 'Strong link'], ['Medium', 'Some link'], ['Low', 'Weak link'], ['None', 'No link']];
+  const list = rows('fulton_portfolio');
+  levels.forEach(([lv, label]) => {
+    const items = list.filter((r) => r.impact === lv);
+    if (!items.length) return;
+    const col = mk('div', 'tx-board-col');
+    col.setAttribute('data-level', lv);
+    col.appendChild(mk('div', 'tx-board-head', label));
+    items.forEach((r) => {
+      const w = 'id=' + encodeURIComponent(r.id);
+      const it = mk('article', 'tx-board-item');
+      it.appendChild(mk('div', 'tx-strong', r.company, 'fulton_portfolio', 'company', w));
+      it.appendChild(mk('p', null, r.link_to_trend, 'fulton_portfolio', 'link_to_trend', w));
+      if (r.action) {
+        const d = document.createElement('details');
+        d.appendChild(mk('summary', null, 'Next step'));
+        d.appendChild(mk('p', null, r.action, 'fulton_portfolio', 'action', w));
+        it.appendChild(d);
+      }
+      col.appendChild(it);
+    });
+    el.appendChild(col);
+  });
+}
+
+function drawFultonOpps() {
+  const el = document.getElementById('fam-opps-chart');
+  if (!prep(el, ['value_chain_edges', 'value_chain_nodes'])) return;
+  const names = new Map(rows('value_chain_nodes').map((n) => [n.id, String(n.name).replace(/\s*\(.*?\)\s*/g, ' ').trim()]));
+  const list = rows('value_chain_edges').filter((e) => e.kind === 'fulton_opportunity' && num(e.value_high_usd_m) > 0)
+    .map((e) => Object.assign({}, e, { lo: Math.max(num(e.value_low_usd_m) || num(e.value_high_usd_m), 0.1), hi: num(e.value_high_usd_m) }))
+    .sort((a, b) => b.hi - a.hi);
+  if (!list.length) return;
+  const W = Math.max(el.clientWidth, 320);
+  const rowH = 34, top = 8, H = top + list.length * rowH + 30;
+  const left = Math.min(W * 0.42, 330);
+  const svg = newSvg(el, W, H).attr('aria-label', 'Addressable market per Fulton opening');
+  const x = d3.scaleLog().domain([Math.min(0.2, d3.min(list, (r) => r.lo)), Math.max(150, d3.max(list, (r) => r.hi))]).range([left, W - 70]).clamp(true);
+  const ticks = [0.3, 1, 3, 10, 30, 100].filter((t) => t >= x.domain()[0] && t <= x.domain()[1]);
+  ticks.forEach((t) => {
+    svg.append('line').attr('x1', x(t)).attr('x2', x(t)).attr('y1', top).attr('y2', H - 24).style('stroke', 'var(--cds-chart-grid)');
+    svg.append('text').attr('x', x(t)).attr('y', H - 8).attr('text-anchor', 'middle').text('$' + (t < 1 ? t : fmtComma(t)) + 'M');
+  });
+  list.forEach((r, i) => {
+    const cy = top + i * rowH + rowH / 2;
+    const g = svg.append('g');
+    const a = g.append('text').attr('class', 'tx-lbl').attr('x', 0).attr('y', cy - 6).text(names.get(r.source) || r.source);
+    fitText(a.node(), left - 12);
+    const b = g.append('text').attr('x', 0).attr('y', cy + 9).text('→ ' + (names.get(r.target) || r.target));
+    fitText(b.node(), left - 12);
+    g.append('rect').attr('x', x(r.lo)).attr('y', cy - 5).attr('width', Math.max(4, x(r.hi) - x(r.lo))).attr('height', 10).attr('rx', 5).style('fill', 'var(--color-warn)');
+    g.append('text').attr('class', 'tx-val').attr('x', x(r.hi) + 6).attr('y', cy).attr('dy', '0.35em').text(String(r.value_label).split(/\s+addressable|\/yr/)[0]);
+    g.append('rect').attr('x', 0).attr('y', cy - rowH / 2).attr('width', W).attr('height', rowH).style('fill', 'transparent')
+      .on('mousemove', (ev) => {
+        const [px, py] = d3.pointer(ev, svg.node());
+        showTip(el, (names.get(r.source) || '') + ' → ' + (names.get(r.target) || ''), [r.product, r.value_label, clip(r.basis, 200)], px, py);
+      })
+      .on('mouseleave', () => hideTip(el));
   });
 }
 
@@ -2311,7 +2535,7 @@ document.getElementById('price-search').addEventListener('input', () => { render
 let linked = false;
 function renderAll() {
   [
-    fillMarks, drawValueChain, renderFulton, renderSegments, renderScorecard, renderVerdictCounts, renderLegend, drawPipeline, renderUndated, drawByYear, drawMap, drawLead, drawDeficit, drawPPI, drawMargins,
+    fillMarks, drawValueChain, renderFulton, drawFultonOpps, renderPortfolioBoard, drawDeals, renderWatchTimeline, renderSegments, renderScorecard, renderVerdictCounts, renderLegend, drawPipeline, renderUndated, drawByYear, drawMap, drawLead, drawDeficit, drawPPI, drawMargins,
     () => drawBars('capex-annual-chart', 'capex_annual', 'eei_2026', 'capex-title'),
     () => drawBars('capex-5yr-chart', 'capex_5yr', 'eei_5yr', 'capex-title'),
     () => renderFigList('inputs-list', 'inputs'),
@@ -2383,11 +2607,23 @@ const TABS = {
   document.querySelectorAll('#dash-root .tx-panel .tx-card').forEach((card) => {
     const panel = card.closest('.tx-panel');
     const title = card.querySelector(':scope > .tx-card-title');
-    if (!title || panel.id === 'tab-overview') return;
-    if (panel.id === 'tab-market' && card.querySelector('.tx-chart') && !card.querySelector('.tx-table')) return;
+    if (panel.id === 'tab-overview') return;
+    const visual = card.querySelector('.tx-chart, .tx-board, .tx-wt, .tx-vbar-wrap, .tx-figs');
+    const table = card.querySelector('.tx-table-wrap');
+    if (visual && table) {
+      const d = document.createElement('details');
+      d.className = 'tx-fold-inline';
+      const sum = document.createElement('summary');
+      sum.textContent = 'Show as a table';
+      table.before(d);
+      d.append(sum, table);
+      d.addEventListener('toggle', () => { if (d.open) redraw(); });
+      return;
+    }
+    if (visual || !title) return;
     fold(card, title);
   });
-  ['scorecard-title', 'fam-plays-title'].forEach((id) => {
+  ['scorecard-title'].forEach((id) => {
     const h = document.getElementById(id);
     if (!h) return;
     const body = h.nextElementSibling;
