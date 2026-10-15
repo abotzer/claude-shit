@@ -1,0 +1,122 @@
+[
+ {
+  "id": "a01",
+  "priority": 1,
+  "fulton_company": "Imperial Group (Imperial Recycling)",
+  "fulton_contact": "Zach Spellman, President, Imperial Group",
+  "counterparty": "Southwire (copper rod)",
+  "counterparty_contact": "Christy Wright, EVP Supply Chain, Southwire",
+  "action": "Introduce Imperial to Southwire's metals buying team and propose a supply agreement for granulated copper chops recovered from cable and retired transformers, priced off COMEX.",
+  "why": "Southwire's SCR rod lines can take high-quality scrap; Imperial already granulates copper wire.",
+  "value_label": "$20-80M/yr addressable (est.)",
+  "verify": "Contact from Southwire's Feb 2026 executive-change release; confirm scrap-buying owner."
+ },
+ {
+  "id": "a02",
+  "priority": 1,
+  "fulton_company": "Imperial Group + Transend Logistics",
+  "fulton_contact": "Zach Spellman (Imperial) with Transend leadership",
+  "counterparty": "Duke Energy and AEP (investment recovery)",
+  "counterparty_contact": "Investment-recovery / surplus-asset managers at Duke and AEP (names to identify)",
+  "action": "Pitch a turnkey retired-transformer buyback: pickup by Transend, oil handling, teardown and metal recovery at Imperial, with a certificate of destruction and PCB testing.",
+  "why": "Utilities replace 1.5-2.7M distribution units a year; few regional buyers offer an end-to-end service.",
+  "value_label": "$30-120M/yr addressable (est.)",
+  "verify": "Names not found in public sources; reach via utility supplier portals or EEI contacts."
+ },
+ {
+  "id": "a03",
+  "priority": 2,
+  "fulton_company": "Stainless Foundry & Engineering",
+  "fulton_contact": "Mat Staudinger, CEO, SFE",
+  "counterparty": "Reinhausen Manufacturing (Humboldt, TN)",
+  "counterparty_contact": "Bob Vary, President and CEO, Reinhausen Manufacturing",
+  "action": "Request a supplier-qualification meeting to quote stainless and high-alloy castings for on-load tap-changer and Messko accessory parts, timed to Humboldt's 2026 expansion.",
+  "why": "Reinhausen is adding Humboldt capacity (May 2026, 90 jobs) and buys castings in North America.",
+  "value_label": "$1-5M/yr addressable (est.)",
+  "verify": "Vary named CEO in May 2026 local coverage."
+ },
+ {
+  "id": "a04",
+  "priority": 2,
+  "fulton_company": "Stainless Foundry & Engineering",
+  "fulton_contact": "Mat Staudinger, CEO, SFE",
+  "counterparty": "Hitachi Energy (South Boston VA, Alamo TN)",
+  "counterparty_contact": "Hitachi Energy US procurement lead for power transformers (name to identify)",
+  "action": "Offer stainless valve bodies, cooler flanges and fittings for the new large-transformer and bushing plants; ask to join the supplier onboarding for South Boston.",
+  "why": "New plants qualify local suppliers 12-24 months before production.",
+  "value_label": "$2-10M/yr addressable (est.)",
+  "verify": "Name not found; use Hitachi Energy supplier portal."
+ },
+ {
+  "id": "a05",
+  "priority": 2,
+  "fulton_company": "AFCO Industries",
+  "fulton_contact": "Don Fowler, CEO, AFCO Industries",
+  "counterparty": "Howard Industries (Laurel / Ellisville, MS)",
+  "counterparty_contact": "Cyndi Howard-McCoy, President, Howard Industries",
+  "action": "Propose AFCO as an overflow fabricator for pad-mount cabinets and non-pressure enclosure sub-assemblies, starting with a sample run against a purchase order.",
+  "why": "AFCO (Alexandria, LA) is a short haul from Howard's Mississippi plants, which are expanding medium power.",
+  "value_label": "$3-20M/yr addressable (est.)",
+  "verify": "Howard-McCoy quoted as president, Apr 2026."
+ },
+ {
+  "id": "a06",
+  "priority": 2,
+  "fulton_company": "AFCO Industries + Panther Metalflow",
+  "fulton_contact": "Don Fowler (AFCO); Panther Metalflow leadership",
+  "counterparty": "Eaton Electrical (Cooper Power, Waukesha WI / Jonesville SC)",
+  "counterparty_contact": "Heath Monesmith, President and COO, Electrical Sector, Eaton; ask for the Power Systems division supply-chain lead",
+  "action": "Ask for an introduction to Cooper Power's sourcing team: AFCO for pad-mount cabinets ahead of Jonesville's 2027 start, Panther for turned terminals, studs and bushing hardware.",
+  "why": "Eaton is adding three-phase capacity (Jonesville 2027) and buys cabinets and hardware outside.",
+  "value_label": "$4-31M/yr addressable combined (est.)",
+  "verify": "Monesmith from Eaton's leadership page; division contact to identify."
+ },
+ {
+  "id": "a07",
+  "priority": 2,
+  "fulton_company": "Metaltec Steel Abrasive",
+  "fulton_contact": "Metaltec leadership (name to confirm)",
+  "counterparty": "Howard Industries",
+  "counterparty_contact": "Jason Cook, VP Purchasing, Howard Industries (unverified directory listing)",
+  "action": "Offer a trial of Metaltec shot and grit on Howard's tank and enclosure blast lines, with a consigned-inventory program.",
+  "why": "Every tank, radiator and cabinet is blasted before coating; consumable sales are recurring.",
+  "value_label": "$0.3-2M/yr addressable (est.)",
+  "verify": "Purchasing name from an aggregator; verify on LinkedIn first."
+ },
+ {
+  "id": "a08",
+  "priority": 3,
+  "fulton_company": "Transend Logistics",
+  "fulton_contact": "Transend leadership",
+  "counterparty": "Prolec GE (Monterrey MX to US)",
+  "counterparty_contact": "Ricardo Suarez, CEO, Prolec GE",
+  "action": "Bid for cross-border flatbed lanes from Monterrey to US distribution yards and utility sites, via Prolec's logistics procurement.",
+  "why": "Prolec ships most US distribution and medium-power units from Mexico.",
+  "value_label": "$10-40M/yr addressable (est.)",
+  "verify": "Suarez confirmed as CEO at GE Vernova's acquisition; logistics buyer to identify."
+ },
+ {
+  "id": "a09",
+  "priority": 1,
+  "fulton_company": "Fulton Asset Management (new platform)",
+  "fulton_contact": "Jason Kozin, CEO, Fulton Asset Management",
+  "counterparty": "Sunbelt Solomon (benchmark / possible partner)",
+  "counterparty_contact": "Gus Cedeño, CEO, Sunbelt Solomon",
+  "action": "Meet Sunbelt Solomon's CEO to benchmark reman economics and explore partnership. In parallel, have a sell-side adviser list founder-owned regional rewind and repair shops for a platform deal.",
+  "why": "Rebuilt units sell near new prices with 4-12 week delivery; regional shops trade at about 6-9x EBITDA.",
+  "value_label": "Regional reman pool $350-850M/yr (est.)",
+  "verify": "Cedeño quoted as CEO in 2026 company releases."
+ },
+ {
+  "id": "a10",
+  "priority": 3,
+  "fulton_company": "Imperial Aluminum-Minerva",
+  "fulton_contact": "Imperial Aluminum plant leadership",
+  "counterparty": "Foundries and machine shops supplying bushing and tap-changer makers",
+  "counterparty_contact": "Purchasing at regional die-casters (names to identify)",
+  "action": "Offer secondary aluminum foundry alloys to the casters that make bushing caps, terminal connectors and tank fittings.",
+  "why": "Weak direct link; worth a mailing to existing customers rather than a sales hire.",
+  "value_label": "$10-45M/yr addressable (est.)",
+  "verify": "No named counterpart."
+ }
+]

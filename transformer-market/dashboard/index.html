@@ -226,6 +226,16 @@
 .tx-table td.i-Medium { color: var(--color-warn); font-weight: var(--cds-font-weight-medium); white-space: nowrap; }
 .tx-table td.i-Low, .tx-table td.i-None { color: var(--color-fg-muted); white-space: nowrap; }
 .tx-sources { margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: 2px; font-size: var(--cds-font-size-caption); line-height: 1.45; }
+.tx-acts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: var(--cds-gap-md); }
+.tx-act { border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-md); display: flex; flex-direction: column; gap: var(--cds-gap-xs); min-width: 0; }
+.tx-act-link { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: var(--cds-gap-sm); align-items: start; padding-block: var(--cds-pad-xs); }
+.tx-act-arrow { color: var(--color-warn); font-size: var(--cds-font-size-heading); padding-top: 2px; }
+.tx-act-do { line-height: 1.45; }
+.tx-act-verify { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); font-style: italic; }
+.tx-pol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 17rem), 1fr)); gap: var(--cds-gap-sm); }
+.tx .tx-pol-item { display: flex; flex-direction: column; gap: var(--cds-gap-xs); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-sm) var(--cds-pad-md); border-top: 1px solid var(--color-border-line); }
+.tx-pol-today { grid-column: 1 / -1; }
+.tx-pol-more summary { cursor: pointer; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
 @media (prefers-reduced-motion: no-preference) {
   .tx-svg .tx-anim { animation: tx-grow var(--cds-dur-slow) var(--cds-ease-out) both; transform-origin: bottom; transform-box: fill-box; }
   @keyframes tx-grow { from { transform: scaleY(0); } to { transform: scaleY(1); } }
@@ -317,19 +327,17 @@
       <p class="tx-sub">Fulton does not need to build transformers to benefit. This section maps the shortage onto the companies Fulton already owns and onto acquisitions that fit its size and its way of investing.</p>
     </div>
     <div class="tx-bottom dash-skeleton" id="fam-summary"></div>
-    <div class="tx-grid">
-      <div class="tx-card">
-        <h3 class="tx-card-title" id="fam-fit-title">Why this fits how Fulton invests</h3>
-        <p class="tx-pre dash-skeleton" id="fam-fit"></p>
-      </div>
-      <div class="tx-card">
-        <h3 class="tx-card-title" id="fam-firm-title">Fulton at a glance</h3>
-        <p class="tx-pre dash-skeleton" id="fam-firm"></p>
-        <ul class="tx-sources" id="fam-sources"></ul>
-      </div>
+    <div class="tx-card">
+      <h3 class="tx-card-title" id="fam-fit-title">Why this fits how Fulton invests</h3>
+      <p class="tx-pre dash-skeleton" id="fam-fit"></p>
     </div>
     <h3 class="tx-h3" id="fam-plays-title">Plays across the value chain, ranked</h3>
     <div class="tx-plays dash-skeleton" id="fam-plays"></div>
+    <div class="tx-card">
+      <h3 class="tx-card-title" id="fam-actions-title">Introductions to make</h3>
+      <p class="tx-card-note">Who to connect, and what to put on the table, for each company with a market opening. Named contacts come from public sources; check each before reaching out.</p>
+      <div class="tx-acts dash-skeleton" id="fam-actions" data-source="fulton_actions"></div>
+    </div>
     <div class="tx-card">
       <h3 class="tx-card-title" id="fam-port-title">What the trend means for each portfolio company</h3>
       <p class="tx-card-note">How the grid build-out touches each company Fulton owns or partners with, and the next step worth taking.</p>
@@ -535,10 +543,10 @@
         <p class="tx-card-note">Mixed years and scopes; there is no clean import series for this year yet.</p>
         <div class="tx-figs dash-skeleton" id="trade-list"></div>
       </div>
-      <div class="tx-card">
+      <div class="tx-card tx-span">
         <h3 class="tx-card-title" id="policy-title">Policy timeline</h3>
         <p class="tx-card-note">Dot color: amber for tariffs, red for bans, green for support, grey for standards and trade deals.</p>
-        <ol class="tx-list dash-skeleton" id="policy-list"></ol>
+        <ol class="tx-pol dash-skeleton" id="policy-list"></ol>
       </div>
       <div class="tx-card">
         <h3 class="tx-card-title" id="tariff-title">Tariff rates on transformers and inputs</h3>
@@ -1360,11 +1368,11 @@ function renderPolicy() {
   if (!prep(el, ['policy'])) return;
   const today = new Date().toISOString().slice(0, 10);
   let placed = false;
-  const marker = () => mk('li', 'tx-today', 'Today');
+  const marker = () => mk('li', 'tx-today tx-pol-today', 'Today');
   rows('policy').slice().sort((a, b) => (a.date < b.date ? -1 : 1)).forEach((r) => {
     if (!placed && r.date > today) { placed = true; el.appendChild(marker()); }
     const w = 'id=' + encodeURIComponent(r.id);
-    const li = mk('li', 'tx-item');
+    const li = mk('li', 'tx-item tx-pol-item');
     li.setAttribute('data-kind', r.kind);
     const date = mk('div', 'tx-item-date');
     date.appendChild(mk('span', 'tx-pol-dot'));
@@ -1377,7 +1385,11 @@ function renderPolicy() {
     if (r.rate_label) chips.appendChild(mk('span', 'tx-chip', r.rate_label, 'policy', 'rate_label', w));
     body.appendChild(chips);
     body.appendChild(mk('p', 'tx-item-text', r.applies_to, 'policy', 'applies_to', w));
-    body.appendChild(mk('p', 'tx-item-text tx-muted', r.effect, 'policy', 'effect', w));
+    const more = document.createElement('details');
+    more.className = 'tx-pol-more';
+    more.appendChild(mk('summary', null, 'Why it matters'));
+    more.appendChild(mk('p', 'tx-item-text tx-muted', r.effect, 'policy', 'effect', w));
+    body.appendChild(more);
     body.appendChild(srcLine(r.confidence, r.source_url, 'policy', w));
     li.appendChild(body);
     el.appendChild(li);
@@ -2024,11 +2036,10 @@ function renderVcDetail(model) {
 }
 
 function renderFulton() {
-  const ids = ['fam-summary', 'fam-fit', 'fam-firm', 'fam-next', 'fam-triggers', 'fam-avoid', 'fam-caveats'];
+  const ids = ['fam-summary', 'fam-fit', 'fam-next', 'fam-triggers', 'fam-avoid', 'fam-caveats'];
   const els = ids.map((i) => document.getElementById(i));
   const okAll = els.map((e) => prep(e, ['fulton_plan']));
-  const srcs = document.getElementById('fam-sources');
-  srcs.textContent = '';
+  renderActions();
   const plays = document.getElementById('fam-plays');
   if (prep(plays, ['fulton_plays'])) {
     rows('fulton_plays').slice().sort((a, b) => num(a.rank) - num(b.rank)).forEach((r) => {
@@ -2056,25 +2067,14 @@ function renderFulton() {
   }
   if (!okAll[0]) return;
   const plan = rows('fulton_plan').slice().sort((a, b) => num(a.order) - num(b.order));
-  const [sum, fit, firm, next, trig, avoid, cav] = els;
+  const [sum, fit, next, trig, avoid, cav] = els;
   plan.forEach((r) => {
     const w = 'id=' + encodeURIComponent(r.id);
     if (r.kind === 'summary') {
       sum.appendChild(mk('div', 'tx-bottom-label', r.heading, 'fulton_plan', 'heading', w));
       sum.appendChild(mk('p', 'tx-bottom-text tx-pre', r.body, 'fulton_plan', 'body', w));
     } else if (r.kind === 'fit') fit.appendChild(mk('span', null, r.body, 'fulton_plan', 'body', w));
-    else if (r.kind === 'firm') firm.appendChild(mk('span', null, r.body, 'fulton_plan', 'body', w));
-    else if (r.kind === 'source' && safeUrl(r.url)) {
-      const li = mk('li');
-      const a = document.createElement('a');
-      a.href = safeUrl(r.url);
-      a.target = '_blank';
-      a.rel = 'noopener noreferrer';
-      a.appendChild(mk('span', null, r.heading, 'fulton_plan', 'heading', w));
-      a.appendChild(document.createTextNode(' ↗'));
-      li.appendChild(a);
-      srcs.appendChild(li);
-    } else if (r.kind === 'next') next.appendChild(mk('li', null, r.body, 'fulton_plan', 'body', w));
+    else if (r.kind === 'next') next.appendChild(mk('li', null, r.body, 'fulton_plan', 'body', w));
     else if (r.kind === 'trigger') {
       const li = mk('li');
       li.appendChild(mk('span', 'tx-strong', r.heading, 'fulton_plan', 'heading', w));
@@ -2083,6 +2083,34 @@ function renderFulton() {
       trig.appendChild(li);
     } else if (r.kind === 'avoid') avoid.appendChild(mk('li', null, r.body, 'fulton_plan', 'body', w));
     else if (r.kind === 'caveat') cav.appendChild(mk('span', null, r.body, 'fulton_plan', 'body', w));
+  });
+}
+
+function renderActions() {
+  const el = document.getElementById('fam-actions');
+  if (!prep(el, ['fulton_actions'])) return;
+  rows('fulton_actions').slice().sort((a, b) => num(a.priority) - num(b.priority) || String(a.id).localeCompare(String(b.id))).forEach((r) => {
+    const w = 'id=' + encodeURIComponent(r.id);
+    const c = mk('article', 'tx-act');
+    const top = mk('div', 'tx-chips');
+    const pr = mk('span', 'tx-chip', ['', 'Do first', 'Next', 'Later'][num(r.priority)] || '');
+    pr.setAttribute('data-attr', ['', 'High', 'Medium', 'Low'][num(r.priority)] || 'Low');
+    top.appendChild(pr);
+    top.appendChild(mk('span', 'tx-chip', r.value_label, 'fulton_actions', 'value_label', w));
+    c.appendChild(top);
+    const link = mk('div', 'tx-act-link');
+    const a = mk('div', 'tx-act-side');
+    a.appendChild(mk('div', 'tx-strong', r.fulton_company, 'fulton_actions', 'fulton_company', w));
+    a.appendChild(mk('div', 'tx-card-note', r.fulton_contact, 'fulton_actions', 'fulton_contact', w));
+    const b = mk('div', 'tx-act-side');
+    b.appendChild(mk('div', 'tx-strong', r.counterparty, 'fulton_actions', 'counterparty', w));
+    b.appendChild(mk('div', 'tx-card-note', r.counterparty_contact, 'fulton_actions', 'counterparty_contact', w));
+    link.append(a, mk('span', 'tx-act-arrow', '⇄'), b);
+    c.appendChild(link);
+    c.appendChild(mk('p', 'tx-act-do', r.action, 'fulton_actions', 'action', w));
+    c.appendChild(mk('p', 'tx-card-note', r.why, 'fulton_actions', 'why', w));
+    c.appendChild(mk('p', 'tx-act-verify', r.verify, 'fulton_actions', 'verify', w));
+    el.appendChild(c);
   });
 }
 
