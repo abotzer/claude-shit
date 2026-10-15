@@ -236,6 +236,18 @@
 .tx .tx-pol-item { display: flex; flex-direction: column; gap: var(--cds-gap-xs); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-sm) var(--cds-pad-md); border-top: 1px solid var(--color-border-line); }
 .tx-pol-today { grid-column: 1 / -1; }
 .tx-pol-more summary { cursor: pointer; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.tx-tabs { display: flex; flex-wrap: wrap; gap: 2px; border-bottom: 1px solid var(--color-border-line); padding-top: var(--cds-pad-sm); }
+.tx-tabs button { font: inherit; font-size: var(--cds-font-size-body); padding: var(--cds-pad-sm) var(--cds-pad-md); background: none; border: 0; border-bottom: 2px solid transparent; color: var(--color-fg-muted); cursor: pointer; margin-bottom: -1px; }
+.tx-tabs button:hover { color: var(--color-fg); }
+.tx-tabs button[aria-selected="true"] { color: var(--color-fg); border-bottom-color: var(--color-fg); font-weight: var(--cds-font-weight-medium); }
+.tx-panel { display: flex; flex-direction: column; gap: calc(var(--cds-gap-xl) * 1.5); min-width: 0; }
+.tx-panel[hidden] { display: none; }
+details.tx-fold { min-width: 0; }
+details.tx-fold > summary { cursor: pointer; list-style: none; display: flex; align-items: center; gap: var(--cds-gap-sm); }
+details.tx-fold > summary::-webkit-details-marker { display: none; }
+details.tx-fold > summary::before { content: "▸"; color: var(--color-fg-muted); transition: transform .15s; }
+details.tx-fold[open] > summary::before { transform: rotate(90deg); }
+details.tx-fold > .tx-fold-body { display: flex; flex-direction: column; gap: var(--cds-gap-sm); padding-top: var(--cds-pad-sm); min-width: 0; }
 @media (prefers-reduced-motion: no-preference) {
   .tx-svg .tx-anim { animation: tx-grow var(--cds-dur-slow) var(--cds-ease-out) both; transform-origin: bottom; transform-box: fill-box; }
   @keyframes tx-grow { from { transform: scaleY(0); } to { transform: scaleY(1); } }
@@ -248,22 +260,11 @@
     <h1 class="tx-title">North American transformer market</h1>
     <p class="tx-lede tx-fill" data-source="fulton_plan" data-field="body" data-where="id=headline">—</p>
     <p class="tx-updated tx-fill" data-source="figures" data-field="label" data-where="id=report_window">—</p>
-    <nav class="tx-nav" aria-label="Sections">
-      <button type="button" data-target="value-chain">How the market works</button>
-      <button type="button" data-target="fulton">For Fulton</button>
-      <button type="button" data-target="verdict">Builder's view</button>
-      <button type="button" data-target="this-week">This week</button>
-      <button type="button" data-target="capacity">Capacity</button>
-      <button type="button" data-target="lead-times">Lead times</button>
-      <button type="button" data-target="prices">Prices and inputs</button>
-      <button type="button" data-target="demand">Demand</button>
-      <button type="button" data-target="trade-policy">Trade and policy</button>
-      <button type="button" data-target="deals">Deals</button>
-      <button type="button" data-target="manufacturers">Manufacturers</button>
-      <button type="button" data-target="implications">What it means</button>
-      <button type="button" data-target="watchlist">Watchlist</button>
-      <button type="button" data-target="glossary">Glossary</button>
-      <button type="button" data-target="notes">Sources</button>
+    <nav class="tx-tabs" role="tablist" aria-label="Report sections">
+      <button type="button" role="tab" data-tab="overview">Overview</button>
+      <button type="button" role="tab" data-tab="market">Market</button>
+      <button type="button" role="tab" data-tab="fam">Analysis for Fulton</button>
+      <button type="button" role="tab" data-tab="appendix">Appendix</button>
     </nav>
   </header>
 
@@ -2241,6 +2242,7 @@ function glShow(term) {
   more.type = 'button';
   more.addEventListener('click', () => {
     glHide(true);
+    showTab('appendix');
     const sec = document.getElementById('glossary');
     document.getElementById('gloss-search').value = g.term;
     renderTable(GLOSS_TABLE);
@@ -2306,7 +2308,7 @@ document.getElementById('mfr-search').addEventListener('input', () => { renderTa
 document.getElementById('price-search').addEventListener('input', () => { renderTable(PRICE_TABLE); scheduleGlossary(); });
 
 let linked = false;
-dash.onData(() => {
+function renderAll() {
   [
     fillMarks, drawValueChain, renderFulton, renderSegments, renderScorecard, renderVerdictCounts, renderLegend, drawPipeline, renderUndated, drawByYear, drawMap, drawLead, drawDeficit, drawPPI, drawMargins,
     () => drawBars('capex-annual-chart', 'capex_annual', 'eei_2026', 'capex-title'),
@@ -2329,5 +2331,109 @@ dash.onData(() => {
     const named = location.hash ? document.getElementById(location.hash.slice(1)) : null;
     if (named) named.scrollIntoView();
   }
-});
+}
+
+// ---------- tabs and collapsibles ----------
+const TABS = {
+  overview: ['value-chain', '@fam-actions'],
+  market: ['summary', 'this-week', 'capacity', 'lead-times', 'prices', 'demand', 'trade-policy', 'implications', 'watchlist'],
+  fam: ['fulton', 'verdict'],
+  appendix: ['@cap-table', 'bids', 'demand-units', 'deals', 'manufacturers', 'glossary', 'notes'],
+};
+(function buildTabs() {
+  const wrap = document.querySelector('#dash-root .tx');
+  const head = document.getElementById('top');
+  const panels = {};
+  let after = head;
+  Object.keys(TABS).forEach((t) => {
+    const p = document.createElement('div');
+    p.className = 'tx-panel';
+    p.id = 'tab-' + t;
+    p.setAttribute('role', 'tabpanel');
+    after.after(p);
+    after = p;
+    panels[t] = p;
+  });
+  Object.keys(TABS).forEach((t) => TABS[t].forEach((id) => {
+    let el;
+    if (id[0] === '@') {
+      const inner = document.getElementById(id.slice(1));
+      const card = inner && inner.closest('.tx-card');
+      if (!card) return;
+      el = document.createElement('section');
+      el.className = 'tx-section';
+      el.id = 'sec-' + id.slice(1);
+      const h = document.createElement('div');
+      h.className = 'tx-section-head';
+      const h2 = document.createElement('h2');
+      h2.className = 'tx-h2';
+      h2.textContent = t === 'overview' ? 'Action items' : 'All tracked projects';
+      h.appendChild(h2);
+      el.appendChild(h);
+      el.appendChild(card);
+    } else el = document.getElementById(id);
+    if (el) panels[t].appendChild(el);
+  }));
+  // fold: cards with a title (except charts on the market tab and everything on the overview tab)
+  document.querySelectorAll('#dash-root .tx-panel .tx-card').forEach((card) => {
+    const panel = card.closest('.tx-panel');
+    const title = card.querySelector(':scope > .tx-card-title');
+    if (!title || panel.id === 'tab-overview') return;
+    if (panel.id === 'tab-market' && card.querySelector('.tx-chart') && !card.querySelector('.tx-table')) return;
+    fold(card, title);
+  });
+  ['scorecard-title', 'fam-plays-title'].forEach((id) => {
+    const h = document.getElementById(id);
+    if (!h) return;
+    const body = h.nextElementSibling;
+    const box = document.createElement('div');
+    h.before(box);
+    box.append(h, body);
+    fold(box, h);
+  });
+  const imp = document.getElementById('imp-grid');
+  if (imp) {
+    const box = document.createElement('div');
+    const t = document.createElement('h3');
+    t.className = 'tx-card-title';
+    t.textContent = 'Show all implications';
+    imp.before(box);
+    box.append(t, imp);
+    fold(box, t);
+  }
+  function fold(container, title) {
+    const d = document.createElement('details');
+    d.className = 'tx-fold';
+    const sum = document.createElement('summary');
+    title.before(d);
+    sum.appendChild(title);
+    const body = document.createElement('div');
+    body.className = 'tx-fold-body';
+    while (d.nextSibling && d.parentElement === container) body.appendChild(d.nextSibling);
+    let prev = d.previousSibling;
+    const before = [];
+    while (prev) { before.unshift(prev); prev = prev.previousSibling; }
+    d.append(sum, body);
+    d.addEventListener('toggle', () => { if (d.open) redraw(); });
+  }
+})();
+let currentTab = 'overview';
+function redraw() { try { renderAll(); } catch (e) { console.error(e); } }
+function showTab(t, scrollTo) {
+  if (!TABS[t]) t = 'overview';
+  currentTab = t;
+  document.querySelectorAll('#dash-root .tx-panel').forEach((p) => { p.hidden = p.id !== 'tab-' + t; });
+  document.querySelectorAll('#dash-root .tx-tabs button').forEach((b) => b.setAttribute('aria-selected', String(b.getAttribute('data-tab') === t)));
+  redraw();
+  if (scrollTo) { const el = document.getElementById(scrollTo); if (el) { const d = el.closest('details'); if (d) d.open = true; el.scrollIntoView(); } }
+}
+document.querySelectorAll('#dash-root .tx-tabs button').forEach((b) => b.addEventListener('click', () => { showTab(b.getAttribute('data-tab')); dash.setLink(b.getAttribute('data-tab')); }));
+(function initTab() {
+  const h = location.hash.slice(1);
+  if (TABS[h]) return showTab(h);
+  const el = h && document.getElementById(h);
+  const panel = el && el.closest('.tx-panel');
+  showTab(panel ? panel.id.slice(4) : 'overview', panel ? h : null);
+})();
+dash.onData(renderAll);
 </script>
