@@ -248,6 +248,7 @@ details.tx-fold > summary::-webkit-details-marker { display: none; }
 details.tx-fold > summary::before { content: "▸"; color: var(--color-fg-muted); transition: transform .15s; }
 details.tx-fold[open] > summary::before { transform: rotate(90deg); }
 details.tx-fold > .tx-fold-body { display: flex; flex-direction: column; gap: var(--cds-gap-sm); padding-top: var(--cds-pad-sm); min-width: 0; }
+#fam-summary .tx-bottom-text { max-width: none; }
 @media (prefers-reduced-motion: no-preference) {
   .tx-svg .tx-anim { animation: tx-grow var(--cds-dur-slow) var(--cds-ease-out) both; transform-origin: bottom; transform-box: fill-box; }
   @keyframes tx-grow { from { transform: scaleY(0); } to { transform: scaleY(1); } }
@@ -2335,7 +2336,7 @@ function renderAll() {
 
 // ---------- tabs and collapsibles ----------
 const TABS = {
-  overview: ['value-chain', '@fam-actions'],
+  overview: ['@@fam-summary', 'value-chain', '@fam-actions'],
   market: ['summary', 'this-week', 'capacity', 'lead-times', 'prices', 'demand', 'trade-policy', 'implications', 'watchlist'],
   fam: ['fulton', 'verdict'],
   appendix: ['@cap-table', 'bids', 'demand-units', 'deals', 'manufacturers', 'glossary', 'notes'],
@@ -2356,7 +2357,11 @@ const TABS = {
   });
   Object.keys(TABS).forEach((t) => TABS[t].forEach((id) => {
     let el;
-    if (id[0] === '@') {
+    if (id.slice(0, 2) === '@@') {
+      el = document.createElement('section');
+      el.className = 'tx-section';
+      el.appendChild(document.getElementById(id.slice(2)));
+    } else if (id[0] === '@') {
       const inner = document.getElementById(id.slice(1));
       const card = inner && inner.closest('.tx-card');
       if (!card) return;
