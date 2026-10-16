@@ -43,7 +43,7 @@ HEAD = """<!doctype html>
   }
 }
 html, body { margin: 0; background: var(--color-bg); color: var(--color-fg); font-family: var(--font-anthropic-sans); font-size: var(--cds-font-size-body); }
-#dash-root { padding: 24px 16px 48px; }
+#dash-root { padding: 24px clamp(16px, 2.5vw, 40px) 48px; }
 .dash-skeleton { position: relative; min-height: 2rem; border-radius: var(--cds-radius); background: linear-gradient(90deg, var(--color-border-line) 0%, var(--color-panel) 50%, var(--color-border-line) 100%); background-size: 200% 100%; animation: dash-sk 1.4s linear infinite; color: transparent; }
 @keyframes dash-sk { from { background-position: 200% 0; } to { background-position: -200% 0; } }
 </style>
