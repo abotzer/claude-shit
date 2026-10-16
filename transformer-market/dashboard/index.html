@@ -301,6 +301,22 @@ details.tx-fold-inline[open] > summary { margin-bottom: var(--cds-gap-sm); }
 .tx-board-item details p { -webkit-line-clamp: unset; display: block; color: var(--color-fg); margin-top: var(--cds-gap-xs); }
 .tx-chart-deals { min-height: 15rem; }
 .tx-chart-opps { min-height: 18rem; }
+/* Whitesail Labs branding */
+.tx { --ws-navy: #1A3263; --ws-cream: #F3EEE8; --ws-amber: #FAB95B; }
+.ws-band { display: flex; flex-wrap: wrap; align-items: center; gap: var(--cds-gap-sm) var(--cds-gap-md); background: var(--ws-navy); color: var(--ws-cream); border-radius: var(--cds-radius); padding: var(--cds-pad-sm) var(--cds-pad-lg); margin-bottom: var(--cds-gap-sm); position: relative; overflow: hidden; }
+.ws-band::after { content: ""; position: absolute; right: -2rem; top: 0; bottom: 0; width: 9rem; background: repeating-linear-gradient(180deg, transparent 0 .9rem, color-mix(in srgb, var(--ws-amber) 55%, transparent) .9rem 1.15rem); opacity: .35; transform: skewX(-20deg); pointer-events: none; }
+.ws-logo { flex: none; display: block; box-shadow: 0 0 0 2px var(--ws-cream); border-radius: 50%; }
+.ws-brand { display: flex; flex-direction: column; line-height: 1.15; }
+.ws-name { font-family: var(--font-anthropic-serif); font-size: var(--cds-font-size-heading); letter-spacing: .01em; }
+.ws-tag { font-size: var(--cds-font-size-caption); letter-spacing: .08em; text-transform: uppercase; color: var(--ws-amber); }
+.ws-for { margin-left: auto; font-size: var(--cds-font-size-caption); color: color-mix(in srgb, var(--ws-cream) 80%, transparent); position: relative; z-index: 1; }
+.ws-for b { color: var(--ws-cream); font-weight: var(--cds-font-weight-medium); }
+.tx-tabs button[aria-selected="true"] { border-bottom-color: var(--ws-amber); }
+.tx-bottom { border-left: 4px solid var(--ws-amber); }
+.tx-title { position: relative; padding-left: .9rem; }
+.tx-title::before { content: ""; position: absolute; left: 0; top: .15em; bottom: .15em; width: 4px; border-radius: 2px; background: var(--ws-amber); }
+.ws-foot { display: flex; align-items: center; gap: var(--cds-gap-sm); border-top: 1px solid var(--color-border-line); padding-top: var(--cds-pad-md); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+@media (max-width: 40rem) { .ws-for { margin-left: 0; width: 100%; } .ws-band::after { display: none; } }
 @media (prefers-reduced-motion: no-preference) {
   .tx-svg .tx-anim { animation: tx-grow var(--cds-dur-slow) var(--cds-ease-out) both; transform-origin: bottom; transform-box: fill-box; }
   @keyframes tx-grow { from { transform: scaleY(0); } to { transform: scaleY(1); } }
@@ -309,7 +325,18 @@ details.tx-fold-inline[open] > summary { margin-bottom: var(--cds-gap-sm); }
 
 <div class="tx">
   <header class="tx-head" id="top">
-    <p class="tx-eyebrow">Prepared for Fulton Asset Management</p>
+    <div class="ws-band">
+      <svg class="ws-logo" role="img" aria-label="Whitesail Labs logo" width="40" height="40" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M600 300C600 465.685 465.685 600 300 600C134.315 600 0 465.685 0 300C0 134.315 134.315 0 300 0C465.685 0 600 134.315 600 300Z" fill="#1A3263"/>
+<path d="M457.192 481.78C500.075 352.231 497.886 271.239 468.271 145.981C465.039 132.31 446.892 129.636 439.289 141.567C352.657 277.505 282.146 357.897 146.558 462.131C134.311 471.546 140.577 491.299 155.948 491.374L441.868 492.778C448.786 492.812 455.012 488.367 457.192 481.78Z" fill="#F3EEE8"/>
+<path d="M468.271 145.981L475.572 144.185L468.271 145.981ZM457.192 481.78L464.311 484.07V484.07L457.192 481.78ZM146.558 462.131L151.091 468.059V468.059L146.558 462.131ZM439.289 141.567L445.603 145.55L445.603 145.55L439.289 141.567ZM468.271 145.981L475.572 144.185C490.447 207.104 498.548 259.358 497.417 312.354C496.286 365.392 485.92 418.788 464.311 484.07L457.192 481.78L450.074 479.49C471.347 415.222 481.328 363.348 482.419 312.188C483.511 260.987 475.709 210.116 460.971 147.777L468.271 145.981ZM441.868 492.778L441.754 500.277L155.834 498.874L155.948 491.374L156.062 483.875L441.982 485.279L441.868 492.778ZM146.558 462.131L142.024 456.204C276.868 352.542 346.789 272.823 432.975 137.583L439.289 141.567L445.603 145.55C358.525 282.188 287.425 363.252 151.091 468.059L146.558 462.131ZM155.948 491.374L155.834 498.874C133.069 498.762 124.309 469.822 142.024 456.204L146.558 462.131L151.091 468.059C144.313 473.27 148.085 483.836 156.062 483.875L155.948 491.374ZM457.192 481.78L464.311 484.07C461.089 493.802 451.915 500.327 441.754 500.277L441.868 492.778L441.982 485.279C445.657 485.297 448.934 482.931 450.074 479.49L457.192 481.78ZM468.271 145.981L460.971 147.777C459.317 140.783 449.769 139.013 445.603 145.55L439.289 141.567L432.975 137.583C444.015 120.26 470.761 123.837 475.572 144.185L468.271 145.981Z" fill="#1A3263"/>
+<path d="M257.334 291H188.109" stroke-width="20" stroke-linecap="round" stroke="#FAB95B"/>
+<path d="M211.717 230H142.491" stroke-width="20" stroke-linecap="round" stroke="#FAB95B"/>
+<path d="M302.952 169H233.726" stroke-width="20" stroke-linecap="round" stroke="#FAB95B"/>
+</svg>
+      <div class="ws-brand"><span class="ws-name">Whitesail Labs</span><span class="ws-tag">Market intelligence</span></div>
+      <div class="ws-for">Prepared for <b>Fulton Asset Management</b></div>
+    </div>
     <h1 class="tx-title">North American transformer market</h1>
     <p class="tx-lede tx-fill" data-source="fulton_plan" data-field="body" data-where="id=headline">—</p>
     <p class="tx-updated tx-fill" data-source="figures" data-field="label" data-where="id=report_window">—</p>
@@ -711,6 +738,10 @@ details.tx-fold-inline[open] > summary { margin-bottom: var(--cds-gap-sm); }
     </div>
     <ul class="tx-caveats dash-skeleton" id="caveats"></ul>
   </section>
+  <footer class="ws-foot">
+    <svg class="ws-mark" viewBox="0 0 600 600" width="18" height="18" aria-hidden="true"><path d="M600 300C600 465.685 465.685 600 300 600C134.315 600 0 465.685 0 300C0 134.315 134.315 0 300 0C465.685 0 600 134.315 600 300Z" fill="#1A3263"/><path d="M457.192 481.78C500.075 352.231 497.886 271.239 468.271 145.981C465.039 132.31 446.892 129.636 439.289 141.567C352.657 277.505 282.146 357.897 146.558 462.131C134.311 471.546 140.577 491.299 155.948 491.374L441.868 492.778C448.786 492.812 455.012 488.367 457.192 481.78Z" fill="#F3EEE8"/></svg>
+    <span>Whitesail Labs · Prepared for Fulton Asset Management · Confidential</span>
+  </footer>
   <div class="tx-gpop" id="gloss-pop" role="tooltip" hidden></div>
 </div>
 
