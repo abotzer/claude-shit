@@ -21,8 +21,8 @@ HEAD = """<!doctype html>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
 <style>
 :root {
-  --font-anthropic-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-anthropic-serif: "Source Serif 4", Georgia, serif;
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: "Source Serif 4", Georgia, serif;
   --color-bg: #faf9f5; --color-panel: #ffffff; --color-fg: #1f1e1d; --color-fg-muted: #6b6a66;
   --color-border-line: #e4e1d8; --color-ok: #2f7d4f; --color-warn: #c27c0e; --color-bad: #b4372f;
   --cds-border: #d9d5ca; --cds-surface-popover: #ffffff; --cds-shadow-popover: 0 8px 24px rgba(0,0,0,.12);
@@ -94,14 +94,29 @@ SHIM = """<script>
 """
 
 
+def scrub(obj):
+    """Drop links to the working repository and local file paths from the published data."""
+    if isinstance(obj, dict):
+        return {k: scrub(v) for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [scrub(v) for v in obj]
+    if isinstance(obj, str):
+        if "github.com/abotzer/" in obj:
+            return ""
+        if "/home/user/" in obj:
+            return "Baseline market map (S)"
+    return obj
+
+
 def main(page_path, data_dir, out, domain=None):
     page = open(page_path).read()
     data = {}
     for f in sorted(os.listdir(data_dir)):
         if f.endswith(".json"):
             data[f[:-5]] = json.load(open(os.path.join(data_dir, f)))
+    data = scrub(data)
     blob = json.dumps(data, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
-    html = HEAD + SHIM % blob + page + "\n</div>\n</body>\n</html>\n"
+    html = (HEAD + SHIM % blob + page).replace("--font-anthropic-", "--font-") + "\n</div>\n</body>\n</html>\n"
     os.makedirs(out, exist_ok=True)
     open(os.path.join(out, "index.html"), "w").write(html)
     logo = os.path.join(os.path.dirname(os.path.abspath(page_path)), "brand", "whitesail-logo.svg")
