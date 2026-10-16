@@ -1,0 +1,74 @@
+[
+ {
+  "id": "forgent",
+  "company": "Forgent Power Solutions",
+  "period": "Q4 FY26 (Jun 2026)",
+  "metric": "Adj. EBITDA",
+  "now_pct": 24.4,
+  "prior_pct": 18.0,
+  "gross": "FY26 ~35.1% (computed) vs ~36.9%",
+  "note": "Revenue +94% in Q4; backlog $3.0B; book-to-bill 3.3x",
+  "confidence": "P",
+  "source_url": "https://www.sec.gov/"
+ },
+ {
+  "id": "hdhe",
+  "company": "HD Hyundai Electric",
+  "period": "Q2 2026",
+  "metric": "Operating",
+  "now_pct": 25.1,
+  "prior_pct": 23.1,
+  "gross": "n/a",
+  "note": "North America revenue +10%; gain from price and mix",
+  "confidence": "S",
+  "source_url": "https://www.mt.co.kr/"
+ },
+ {
+  "id": "hubbell",
+  "company": "Hubbell Utility Solutions",
+  "period": "Q2 2026",
+  "metric": "Adj. operating",
+  "now_pct": 25.6,
+  "prior_pct": 25.5,
+  "gross": "n/a",
+  "note": "Low-single-digit price; inflation and tariffs offset",
+  "confidence": "P",
+  "source_url": "https://www.sec.gov/"
+ },
+ {
+  "id": "gev",
+  "company": "GE Vernova Electrification",
+  "period": "Q2 2026",
+  "metric": "Segment EBITDA",
+  "now_pct": 18.4,
+  "prior_pct": 14.5,
+  "gross": "n/a",
+  "note": "+700 bp organic; includes Prolec from Feb 2",
+  "confidence": "P",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000147/gevpressrelease2q26.htm"
+ },
+ {
+  "id": "hammond",
+  "company": "Hammond Power Solutions",
+  "period": "Q2 2026",
+  "metric": "Adj. EBITDA",
+  "now_pct": 16.4,
+  "prior_pct": 14.9,
+  "gross": "31.5% (flat)",
+  "note": "Backlog -6.9% QoQ; Canada pricing competitive",
+  "confidence": "P",
+  "source_url": "https://tedmag.com/hammond-power-solutions-reports-2q-2026-results/"
+ },
+ {
+  "id": "hyosung",
+  "company": "Hyosung Heavy Industries",
+  "period": "Q2 2026",
+  "metric": "Operating (consolidated)",
+  "now_pct": 15.7,
+  "prior_pct": 10.8,
+  "gross": "n/a",
+  "note": "Higher-margin US EHV transformer and breaker sales",
+  "confidence": "S",
+  "source_url": "https://www.bloter.net/"
+ }
+]

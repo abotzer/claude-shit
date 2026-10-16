@@ -1,0 +1,68 @@
+[
+ {
+  "id": "gsu",
+  "cls": "Generator step-up (GSU)",
+  "low_wks": 144,
+  "typical_wks": 144,
+  "high_wks": 160,
+  "extreme_wks": null,
+  "note": "Wood Mackenzie Q2 2025 average 144 weeks; 2026 trackers report more than 160.",
+  "confidence": "S",
+  "source_url": "https://www.woodmac.com/news/opinion/transformer-troubles-manufacturing-and-policy-constraints-hit-us-transformer-supply/"
+ },
+ {
+  "id": "lpt",
+  "cls": "Large power (>100 MVA)",
+  "low_wks": 110,
+  "typical_wks": 128,
+  "high_wks": 160,
+  "extreme_wks": 208,
+  "note": "128-week average (Wood Mackenzie). Some extra-high-voltage quotes run four to five years.",
+  "confidence": "S",
+  "source_url": "https://pv-magazine-usa.com/2026/05/11/u-s-transformer-market-faces-severe-supply-constraints-as-lead-times-extend-to-four-years/"
+ },
+ {
+  "id": "mid",
+  "cls": "Substation units (buyer quotes)",
+  "low_wks": 45,
+  "typical_wks": 130,
+  "high_wks": 156,
+  "extreme_wks": 260,
+  "note": "Municipal records 2025-26: median about 130 weeks across 9 quotes, from 45 weeks (emergency) to 3-5 years.",
+  "confidence": "W",
+  "source_url": "https://github.com/abotzer/claude-shit/blob/claude/na-transformer-market-monitor-phxkdi/transformer-market/deep-dive/2026-10-12-deep-dive.md"
+ },
+ {
+  "id": "appa",
+  "cls": "All types, APPA member median",
+  "low_wks": 50,
+  "typical_wks": 50,
+  "high_wks": 50,
+  "extreme_wks": 180,
+  "note": "APPA told DOE in Jun 2025 that its members waited a median 50 weeks, some up to 180.",
+  "confidence": "P",
+  "source_url": "https://www.regulations.gov/docket/EERE-2025-BT-STD-0001"
+ },
+ {
+  "id": "pad",
+  "cls": "New 3-phase pad-mount",
+  "low_wks": 30,
+  "typical_wks": 45,
+  "high_wks": 60,
+  "extreme_wks": null,
+  "note": "Quoted 40-50 weeks in early 2026 testimony; trackers show 30-60. Bids under 20 weeks have not appeared.",
+  "confidence": "W",
+  "source_url": "https://usevawn.com/resources/electrical-equipment-lead-times/"
+ },
+ {
+  "id": "dist",
+  "cls": "Single-phase and stock units",
+  "low_wks": 6,
+  "typical_wks": null,
+  "high_wks": 20,
+  "extreme_wks": null,
+  "note": "Stock quotes of 6-13 weeks; Howard tells DOE most of its lines are under 20 weeks, some under 10.",
+  "confidence": "P",
+  "source_url": "https://www.regulations.gov/document/EERE-2026-BT-STD-0133-0032"
+ }
+]

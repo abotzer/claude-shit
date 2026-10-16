@@ -1,0 +1,198 @@
+[
+ {
+  "id": "w00",
+  "sort_date": "2026-10-15",
+  "when": "2026-10-15",
+  "item": "BLS September PPI (WPU117409, PCU335311, WPU1174)",
+  "why": "Shows whether the July step holds, provides the missing August WPU117409 value, and allows re-checking the +8.7% YoY."
+ },
+ {
+  "id": "w01",
+  "sort_date": "2026-10-12",
+  "when": "Now (Oct 2026)",
+  "item": "Status of DPA Title III authority after Sep 30, 2026 and any FY27 DPA Fund appropriation",
+  "why": "If Title III lapsed, PD 2026-10 has no money behind it."
+ },
+ {
+  "id": "w02",
+  "sort_date": "2026-10-18",
+  "when": "~2026-10-18 to 10-20",
+  "item": "China GACC September exports by HS 8504.22/.23/.34, North America-bound",
+  "why": "First full post-EO month."
+ },
+ {
+  "id": "w03",
+  "sort_date": "2026-10-19",
+  "when": "2026-10-19",
+  "item": "Cleveland-Cliffs Q3 call",
+  "why": "GOES tonnage, price, Butler timing and any merchant allocation."
+ },
+ {
+  "id": "w04",
+  "sort_date": "2026-10-20",
+  "when": "2026-10-20 to 10-31",
+  "item": "regulations.gov posting of DOE-HQ-2026-1123 comments",
+  "why": "Positions from NEMA, EEI, APPA, NRECA, the Data Center Coalition, OEMs and utilities on thresholds, grandfathering, prequalification and data-center carve-outs."
+ },
+ {
+  "id": "w05",
+  "sort_date": "2026-10-21",
+  "when": "~2026-10-21 to 10-22",
+  "item": "GE Vernova Q3",
+  "why": "Electrification margin, Prolec contribution, data-center orders and pricing."
+ },
+ {
+  "id": "w06",
+  "sort_date": "2026-10-25",
+  "when": "Late Oct 2026",
+  "item": "HD Hyundai Electric, Hyosung and LS Electric Q3 (DART preliminary)",
+  "why": "Whether US price-led margin gains continue."
+ },
+ {
+  "id": "w07",
+  "sort_date": "2026-10-28",
+  "when": "Late Oct to early Nov 2026",
+  "item": "Hubbell and Eaton Q3",
+  "why": "Hubbell's price vs cost; Eaton's book-to-bill and Jonesville progress."
+ },
+ {
+  "id": "w08",
+  "sort_date": "2026-11-05",
+  "when": "Early Nov 2026",
+  "item": "Census September trade data (HS-10 via API)",
+  "why": "Tests the NextMSC unit counts and the Chinese size mix."
+ },
+ {
+  "id": "w09",
+  "sort_date": "2026-11-06",
+  "when": "Early Nov 2026",
+  "item": "Hammond Q3",
+  "why": "Whether the backlog falls a second quarter (walk-away #6) and the gross margin holds above ~29.5%."
+ },
+ {
+  "id": "w10",
+  "sort_date": "2026-11-15",
+  "when": "Nov 2026",
+  "item": "Forgent Q1 FY27",
+  "why": "Gross margin vs ~35%, backlog, FY27 guide and utilization of its claimed capacity."
+ },
+ {
+  "id": "w11",
+  "sort_date": "2026-11-16",
+  "when": "Nov 2026",
+  "item": "Siemens Energy FY2026 results",
+  "why": "Charlotte timing and Grid Technologies backlog."
+ },
+ {
+  "id": "w12",
+  "sort_date": "2026-11-24",
+  "when": "2026-11-24",
+  "item": "Fed G.17 annual revision",
+  "why": "May restate NAICS 335 utilization."
+ },
+ {
+  "id": "w13",
+  "sort_date": "2026-12-01",
+  "when": "Q4 2026",
+  "item": "MacLean-Delta Star and TJC-Sunbelt Solomon closings; ECIDA final vote on Niagara",
+  "why": "Possible price disclosures; whether Niagara proceeds."
+ },
+ {
+  "id": "w14",
+  "sort_date": "2026-12-10",
+  "when": "Late 2026",
+  "item": "Howard Ellisville completion; PTT pad-mount building; Siemens Charlotte building; Hitachi Gallman construction start",
+  "why": "Confirms or slips the near-term additions in 10-100 MVA and pad-mount."
+ },
+ {
+  "id": "w15",
+  "sort_date": "2026-12-20",
+  "when": "Ongoing (2026-27)",
+  "item": "Construction-stormwater NOIs and county minutes for VTC Muscle Shoals (Colbert County) and Hitachi Gallman (Copiah County)",
+  "why": "The best public proof that the two largest announced plants have started."
+ },
+ {
+  "id": "w16",
+  "sort_date": "2026-12-24",
+  "when": "~2026-12-24 to 12-27",
+  "item": "DOE rules under EO 14421",
+  "why": "MVA floor, treatment of data-center and generating-station equipment, the definition of 'foreign-produced', licensing and grandfathering. This is walk-away #1."
+ },
+ {
+  "id": "w17",
+  "sort_date": "2026-12-31",
+  "when": "End-2026",
+  "item": "EDGE rescoring of Hyosung's 2019 PILOT",
+  "why": "May reveal job and capex commitments for the 2025 expansion."
+ },
+ {
+  "id": "w18",
+  "sort_date": "2027-02-22",
+  "when": "~2027-02-22",
+  "item": "FAR recommendations under EO 14421",
+  "why": "Federal procurement preferences for domestic and allied equipment."
+ },
+ {
+  "id": "w19",
+  "sort_date": "2027-02-15",
+  "when": "Q1 2027",
+  "item": "PTT pad-mount first shipments; VTC Rincon completion (Mar 2027)",
+  "why": "First 2027 pad-mount and mid-power additions arrive."
+ },
+ {
+  "id": "w20",
+  "sort_date": "2027-04-15",
+  "when": "Apr to mid-2027",
+  "item": "HD Hyundai Montgomery #2 start-up",
+  "why": "EHV capacity timing."
+ },
+ {
+  "id": "w21",
+  "sort_date": "2027-06-30",
+  "when": "2027",
+  "item": "Eaton Jonesville, ERMCO Waddell, Siemens Charlotte start-ups; JST at 1,000/yr",
+  "why": "Whether the 2027 wave arrives on time."
+ },
+ {
+  "id": "w22",
+  "sort_date": "2027-07-15",
+  "when": "2027-07",
+  "item": "USMCA annual review",
+  "why": "Mexican-built supply and any Section 232 relief."
+ },
+ {
+  "id": "w23",
+  "sort_date": "2027-08-31",
+  "when": "2027-08-31",
+  "item": "Korean LPT antidumping review results",
+  "why": "Rates for HD Hyundai, Hyosung and LS."
+ },
+ {
+  "id": "w24",
+  "sort_date": "2027-12-31",
+  "when": "2027-12-31",
+  "item": "Prolec Goldsboro investment deadline; Annex III 15% tier expiry",
+  "why": "The medium-power addition lands, and large-unit shelter may revert to 25%."
+ },
+ {
+  "id": "w25",
+  "sort_date": "2028-06-30",
+  "when": "2027-2029",
+  "item": "Wind Point exit from Central Moloney",
+  "why": "The most actionable acquisition target for a distribution base."
+ },
+ {
+  "id": "w26",
+  "sort_date": "2028-07-01",
+  "when": "2028",
+  "item": "VTC Muscle Shoals (Jan); Cliffs Butler GOES completion",
+  "why": "The largest mid-power addition, and the only new domestic GOES."
+ },
+ {
+  "id": "w27",
+  "sort_date": "2029-06-30",
+  "when": "2029",
+  "item": "Hitachi Gallman; Hitachi South Boston (~2029, W); DOE efficiency compliance Apr 23",
+  "why": "Main 10-160 MVA loosening risk; LPT capacity; core redesign."
+ }
+]

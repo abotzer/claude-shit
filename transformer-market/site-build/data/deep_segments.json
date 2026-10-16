@@ -1,0 +1,82 @@
+[
+ {
+  "id": "00-substation-transformers-10-60-mva-to-100",
+  "order": 0,
+  "segment": "Substation transformers 10-60 MVA (to ~100), 69-138 kV primaries (HTS 8504.23.0040/0041), via an acquired plant or a brownfield line with a test bay",
+  "attractiveness": "High",
+  "rank": 0,
+  "why": "This is where EO coverage, scarcity and pricing power overlap:\n• EO 14421 reaches equipment at ≥69 kV with no MVA floor.\n• Municipal quotes run ~130 weeks.\n• Power makers show price-led margin gains.\n• Several incumbent additions in this band are late or smaller than announced (Gallman relocation, Rincon slip, Muscle Shoals unverified, Niagara pre-construction).\n• Korean units below 60 MVA pay no antidumping duty, though.\n\nThe 'high' rating applies only to a buyer with a qualified plant or a ~$100-140M brownfield line with a test bay. As greenfield it is low. Utility unit demand is not counted, and Howard (250 MVA/345 kV, end-2026), Prolec Goldsboro (+200 units, end-2027) and Gallman (2029) compete directly."
+ },
+ {
+  "id": "01-3-phase-pad-mount-and-unit-substations-0",
+  "order": 1,
+  "segment": "3-phase pad-mount and unit substations, ~0.5-5 MVA (HTS 8504.22; dry >500 kVA in 8504.34)",
+  "attractiveness": "Medium",
+  "rank": 1,
+  "why": "The fastest product to build: ~12-18 months in an existing building.\n\nFor it:\n• 25% tariff shelter against imports.\n• Data-center pull of 460-890 units per GW.\n• Prices of ~$28-32/kVA at 1.5-2 MVA.\n• New-unit quotes were still 40-50 weeks in early 2026.\n\nAgainst it:\n• EO 14421 excludes local distribution.\n• Chinese-owned US plants (JST/Jinpan, Eaglerise) and Korean makers already compete on price.\n• Stated 2027 additions roughly match data-center pull in ERCOT and PJM.\n\nUse it as the volume base and phase-1 product, not the thesis. Upside if DOE treats generating-station MV step-ups (solar/BESS) as covered."
+ },
+ {
+  "id": "02-aftermarket-rewind-remanufacture-mobile-",
+  "order": 2,
+  "segment": "Aftermarket: rewind, remanufacture, mobile/rental substations",
+  "attractiveness": "Medium",
+  "rank": 1,
+  "why": "Buyers pay for speed:\n• Rebuilt pad-mounts sell at near-new $/kVA ($18-34/kVA) with 4-12 week delivery.\n• Small municipal utilities are turning to remanufacturers.\n• Emergency units carry a ~33% premium.\n\nIt also trains coil winders and builds utility relationships. But PE roll-ups (TJC/Sunbelt Solomon, IPS/Belyea, Voltaris) compete for targets, and no margin data was found."
+ },
+ {
+  "id": "03-small-and-mid-gsus-100-mva-for-industria",
+  "order": 3,
+  "segment": "Small and mid GSUs (≤100 MVA) for industrial/aeroderivative turbines, hydro and BESS",
+  "attractiveness": "Medium",
+  "rank": 1,
+  "why": "These come off the same factory capability as the 69-138 kV line, and GSU lead times are the longest in the market:\n• Siemens booked 48 industrial turbines in one quarter.\n• USACE plans a ~10-year hydro custom-transformer IDIQ.\n• Snohomish is buying two 52.8 MVA GSUs.\n\nAgainst that, GSUs are custom and need a proven test bay. Korean makers (LS Electric) are already shortlisted, and US unit counts by size are weak. Treat this as a phase-3 option."
+ },
+ {
+  "id": "04-large-power-ehv-100-mva-incl-765-kv",
+  "order": 4,
+  "segment": "Large power / EHV >100 MVA incl. 765 kV",
+  "attractiveness": "Low",
+  "rank": 2,
+  "why": "The tightest market, and the wrong one for a newcomer:\n• 765 kV demand is under ~150 units over 2029-34.\n• Plants cost $150-457M and qualification takes years.\n• Shelter is 15% through 2027, with 0% antidumping for HD Hyundai.\n• Incumbents are expanding (Hyosung, HD Hyundai, Siemens, Hitachi, PTT)."
+ },
+ {
+  "id": "05-large-gsu-100-mva",
+  "order": 5,
+  "segment": "Large GSU (>100 MVA)",
+  "attractiveness": "Low",
+  "rank": 2,
+  "why": "Lead times are the longest of any class, but the barriers are the same as large power. Large-frame turbine backlogs (GE Vernova, MHI) translate into LPT-class units for incumbents."
+ },
+ {
+  "id": "06-single-phase-pole-pad-distribution-hts-8",
+  "order": 6,
+  "segment": "Single-phase pole/pad distribution (HTS 8504.21)",
+  "attractiveness": "Low",
+  "rank": 2,
+  "why": "Loosening:\n• Stock quotes of 6-13 weeks; Howard says most of its lines are under 20 weeks.\n• Units sell for ~$3,000.\n• Incumbents are entrenched (Howard, ERMCO, Eaton, Central Moloney).\n• Korean makers sit on Austin Energy's contracts.\n• Cores must be redesigned for the 2029 efficiency rule."
+ },
+ {
+  "id": "07-dry-type",
+  "order": 7,
+  "segment": "Dry-type",
+  "attractiveness": "Low",
+  "rank": 2,
+  "why": "Shows the clearest softening at maker level:\n• Hammond's backlog fell 6.9% QoQ, and Canadian pricing is competitive.\n• Hammond's Mexico plants are ramping.\n• 8504.34 above 500 kVA gets only 15% shelter until end-2027."
+ },
+ {
+  "id": "08-cores-and-laminations-service-center",
+  "order": 8,
+  "segment": "Cores and laminations service center",
+  "attractiveness": "Low",
+  "rank": 2,
+  "why": "Cliffs strip is not available to newcomers, and imported strip reportedly pays 50%. Revisit if cores are confirmed at 50% duty, which would make domestic cutting more valuable, or if Cliffs opens merchant allocations after 2028."
+ },
+ {
+  "id": "09-solid-state-transformers",
+  "order": 9,
+  "segment": "Solid-state transformers",
+  "attractiveness": "Low",
+  "rank": 2,
+  "why": "Venture-funded and unproven at scale:\n• Heron's 286k sq ft Morgan Hill plant targets late 2027, with a $26.4M CalCompetes award and an RWE pilot.\n\nIt is a medium-term substitution risk in data-center MV, not a fit for a conventional builder."
+ }
+]

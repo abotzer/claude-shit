@@ -1,0 +1,146 @@
+[
+ {
+  "id": "d00",
+  "driver": "ERCOT 765-kV STEP core plan (2024 RTP)",
+  "quantity": "12 new 765-kV substations (8 Permian, 4 Eastern); ~2,468 mi; $32.99B",
+  "units_implied": "~27 765/345-kV banks = 3 sites x 3 + 9 x 2 (ERCOT rule). ~81 single-phase units + ~12 spares if single-phase [computed, W]. ~65 GVA at 2,403 MVA each [computed]",
+  "timing": "Eastern 2030-2032; Permian not found",
+  "source_url": "https://www.ercot.com/files/docs/2025/01/27/EHV%20765-kV%20ERCOT%20Workshop_01_27_2025.pdf"
+ },
+ {
+  "id": "d01",
+  "driver": "ERCOT Eastern Backbone (25RPG025), Board-endorsed Dec 2025",
+  "quantity": "$9,384.6M; 1,109 mi; Watermill, Hillje, Blu Lacy, Martin Lake 765/345-kV substations",
+  "units_implied": "~11 banks (3+3+3+2; Martin Lake assumed 2) = ~33 single-phase + ~4 spares [computed]; plus 300 MVAr shunt reactors",
+  "timing": "2030-2032",
+  "source_url": "https://www.ercot.com/files/docs/2025/12/01/14.1-25RPG025-AEP-Texas-CPS-Energy-Oncor-and-CNP-Texas-765-kV-STEP-Eastern-Backbone-Project.pdf"
+ },
+ {
+  "id": "d02",
+  "driver": "Hillje 765-kV substation",
+  "quantity": "3 x 765/345 kV at >=2,403 MVA normal / 2,772 emergency; 4 x 300 MVAr reactors",
+  "units_implied": "3 banks (9 single-phase + 1 spare if single-phase) [stated count; phase split assumed]; >=7,209 MVA [computed]",
+  "timing": "2030-2032",
+  "source_url": ""
+ },
+ {
+  "id": "d03",
+  "driver": "ERCOT Permian 765-kV import paths",
+  "quantity": "8 new 765-kV substations; PUCT approved 2 Oncor CCNs (~424 mi, ~$3.95B) on Aug 28, 2026 (W)",
+  "units_implied": "~16 banks (8 x 2) = ~48 single-phase + ~8 spares [computed]",
+  "timing": "ISD not found",
+  "source_url": "https://www.texaspowercost.com/news/puct-approves-765kv-permian-basin-transmission-lines-2026.php"
+ },
+ {
+  "id": "d04",
+  "driver": "ERCOT Euclid 765-kV (26RPG001)",
+  "quantity": "+1 substation beyond the 2024 RTP; Euclid-Hillje line",
+  "units_implied": "Not found (2 banks if ERCOT's 'others' rule applies) [assumption]",
+  "timing": "2026 review",
+  "source_url": "https://www.ercot.com/files/docs/2026/05/22/5.6-26RPG001-LCRA-TSC-and-CEHE-Euclid-765-kV-Substation-and-Transmission-Line-Addition-Planning-Group-RPG-Project.pdf"
+ },
+ {
+  "id": "d05",
+  "driver": "PJM 2024 RTEP W1",
+  "quantity": "~261 mi 765 kV; 1 x 765/500-kV substation + 1 switching station; ~$5.9B",
+  "units_implied": "~2 765/500-kV banks [assumption by ERCOT analogy]",
+  "timing": "~2029-2030 (partial)",
+  "source_url": "https://www.pjm.com/-/media/DotCom/committees-groups/committees/teac/2025/20250204/20250204-pjm-board-whitepaper-february-2025.pdf"
+ },
+ {
+  "id": "d06",
+  "driver": "PJM 2025 RTEP W1 (approved Feb 12, 2026)",
+  "quantity": "~$11.8B; 510 mi 765 kV (3 projects); 185 mi 525-kV HVDC",
+  "units_implied": "Not found; HVDC needs 2 converter stations with converter transformers",
+  "timing": "Not found",
+  "source_url": "https://insidelines.pjm.com/pjm-board-approves-transmission-improvements-needed-for-grid-reliability/"
+ },
+ {
+  "id": "d07",
+  "driver": "MISO Tranche 2.1",
+  "quantity": "$21.8B; 24 projects; 323 facilities; 3,631 mi 765/345 kV",
+  "units_implied": "Not found (MTEP24 Appendix A needed)",
+  "timing": "2032-2034",
+  "source_url": "https://www.misoenergy.org/meet-miso/media-center/miso-matters/transforming-the-grid-misos-$21.8-billion-tranche-2.1-transmission-portfolio"
+ },
+ {
+  "id": "d08",
+  "driver": "MISO BECI (Transource/BHE)",
+  "quantity": "$1.2B; ~190-200 mi 765 kV",
+  "units_implied": "Not found",
+  "timing": "By June 1, 2034",
+  "source_url": "https://cdn.misoenergy.org/BECI%20Selection%20Report734487.pdf"
+ },
+ {
+  "id": "d09",
+  "driver": "ERCOT large-load queue",
+  "quantity": "474 GW requested (June 2026); 9,456 MW approved to energize",
+  "units_implied": "On 9.456 GW: ~85-210 HV/MV power transformers + ~4,400-8,400 MV/LV 2.5-3 MVA units [computed, W, assumption-based]",
+  "timing": "Rolling 2026-2030",
+  "source_url": "https://www.utilitydive.com/news/texas-hits-pause-data-center-interconnections/827046/"
+ },
+ {
+  "id": "d10",
+  "driver": "PJM 2026 load forecast",
+  "quantity": "+~65.7 GW summer peak by 2036 (222,106 MW)",
+  "units_implied": "At 460-890 MV/LV units/GW if all were data centers: ~30,000-58,000 units [computed, W; overstates because not all load growth is data centers]",
+  "timing": "2026-2036",
+  "source_url": "https://www.pjm.com/-/media/DotCom/library/reports-notices/load-forecast/2026-load-report.pdf"
+ },
+ {
+  "id": "d11",
+  "driver": "GE Vernova gas",
+  "quantity": "116 GW (53 firm + 63 SRA); 20-30 GW/yr output",
+  "units_implied": "~254 turbines at 457 MW each; x1.0-1.5 GSUs [computed]",
+  "timing": "~2026-2031",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/1996810/000199681026000147/gevpressrelease2q26.htm"
+ },
+ {
+  "id": "d12",
+  "driver": "Siemens Energy gas",
+  "quantity": "69 GW backlog; FQ3: 73 turbines / 15 GW",
+  "units_implied": "~151-337 turbines (457 or 205 MW each); x1.0-1.5 GSUs [computed]",
+  "timing": "3+ yr lead times",
+  "source_url": "https://www.utilitydive.com/news/siemens-gas-turbine-backlog-nears-70-gw-as-company-expands-manufacturing/827390/"
+ },
+ {
+  "id": "d13",
+  "driver": "MHI gas",
+  "quantity": "35 GW large-frame backlog; FY2025 35 units = 16 GW",
+  "units_implied": "~77 turbines at 457 MW each; x1.0-1.5 GSUs [computed]",
+  "timing": "Not stated",
+  "source_url": "https://www.utilitydive.com/news/mitsubishi-gas-turbine-backlog-earnings/827761/"
+ },
+ {
+  "id": "d14",
+  "driver": "3-OEM total",
+  "quantity": "~220 GW (mixed firm and SRA)",
+  "units_implied": "~480-1,600 GSUs worldwide; ~240-800 US (50% share proxy); ~50-160 US GSUs/yr [computed, W]",
+  "timing": "~2026-2031",
+  "source_url": ""
+ },
+ {
+  "id": "d15",
+  "driver": "EIA 2026 gas additions",
+  "quantity": "6.3 GW (3.3 CC + 2.8 CT)",
+  "units_implied": "Unit count needs 860M; largest plants are 1,158 MW and 900 MW",
+  "timing": "2026",
+  "source_url": "https://www.eia.gov/todayinenergy/detail.php?id=67205"
+ },
+ {
+  "id": "d16",
+  "driver": "NREL distribution demand",
+  "quantity": "+160-260% capacity by 2050 vs 2021; stock 60-80M units, >3 TW",
+  "units_implied": "~62-269 GVA/yr net additions; ~1.5-2.7M units/yr replacement at a 30-40 yr life [computed, W]",
+  "timing": "2021-2050",
+  "source_url": "https://docs.nrel.gov/docs/fy25osti/92076.pdf"
+ },
+ {
+  "id": "d17",
+  "driver": "GE Vernova Electrification data-center orders",
+  "quantity": "$2.7B in 2Q26; >$5B YTD",
+  "units_implied": "Dollar figure only; transformer units not disclosed",
+  "timing": "2026 bookings",
+  "source_url": "https://www.gevernova.com/sites/default/files/gev_webcast_transcript_07222026.pdf"
+ }
+]

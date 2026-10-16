@@ -1,0 +1,1538 @@
+[
+ {
+  "id": "3pl",
+  "term": "3PL (third-party logistics)",
+  "aliases": "3PL | 3PLs | third-party logistics | flatbed | flatbeds",
+  "case_sensitive": false,
+  "category": "Markets & finance",
+  "definition": "A firm that manages freight for shippers by arranging trucks, warehousing and brokerage. Flatbed trucks carry steel, cable reels and distribution transformers."
+ },
+ {
+  "id": "48c",
+  "term": "48C tax credit",
+  "aliases": "48C tax credit | 48C | 48C credit | Section 48C",
+  "case_sensitive": true,
+  "category": "Policy & trade",
+  "definition": "The Qualifying Advanced Energy Project Credit, a federal investment tax credit of up to 30% for building or re-equipping clean-energy manufacturing plants, allocated by DOE and Treasury in competitive rounds. Its funding is fully allocated, so new plants cannot count on it."
+ },
+ {
+  "id": "765kv",
+  "term": "765 kV",
+  "aliases": "765 kV | 765-kV | 765/345 kV | 765/345-kV | 765/500 kV | 765/500-kV",
+  "case_sensitive": true,
+  "category": "Grid & demand",
+  "definition": "The highest AC transmission voltage used in North America, which moves large amounts of power over long distances with low losses. ERCOT, PJM and MISO are planning major new 765 kV networks; '765/345 kV' denotes a transformer linking a 765 kV and a 345 kV network."
+ },
+ {
+  "id": "add-on",
+  "term": "Add-on acquisition",
+  "aliases": "Add-on acquisition | add-on | add-ons | add-on acquisitions | bolt-on | bolt-ons | tuck-in | tuck-ins",
+  "case_sensitive": false,
+  "category": "Markets & finance",
+  "definition": "A smaller company bought by an existing portfolio company (the platform) to add products, customers, plants or skills."
+ },
+ {
+  "id": "aftermarket",
+  "term": "Aftermarket",
+  "aliases": "Aftermarket",
+  "case_sensitive": false,
+  "category": "Markets & finance",
+  "definition": "Businesses that serve transformers already in service: repair, rewinding, remanufacturing, testing, field service and rental of mobile units. It needs less capital than new manufacturing and is being consolidated by private equity."
+ },
+ {
+  "id": "amorphous",
+  "term": "Amorphous metal (amorphous cores)",
+  "aliases": "Amorphous metal | amorphous | amorphous ribbon | amorphous cores | amorphous wound cores",
+  "case_sensitive": false,
+  "category": "Materials",
+  "definition": "A thin metal ribbon cooled so fast that it never forms crystals, giving lower core losses than GOES. It is used in some high-efficiency distribution transformers, and tighter federal efficiency standards could increase its use."
+ },
+ {
+  "id": "annex-ia-ib",
+  "term": "Annex I-A / Annex I-B",
+  "aliases": "Annex I-A / Annex I-B | Annex I-A | Annex I-B | I-A | I-B",
+  "case_sensitive": true,
+  "category": "Policy & trade",
+  "definition": "Product lists in the April 2026 Section 232 metals proclamation that carry different tariff rates. Sources disagree on which list covers imported transformer cores and laminations, so their duty reads as 50% (I-A) or 25% (I-B)."
+ },
+ {
+  "id": "annex-iii",
+  "term": "Annex III (temporary grid-equipment tier)",
+  "aliases": "Annex III | temporary grid-equipment tier | Temporary grid-equipment tier | grid-equipment tier",
+  "case_sensitive": true,
+  "category": "Policy & trade",
+  "definition": "A Section 232 product list that gives certain grid equipment a temporary lower tariff, reported as 15%, through Dec 31, 2027. It lists large liquid-filled transformers (HTS 8504.23) and large dry-types (8504.34); sources dispute whether its scope is wider, and distribution transformers stay at 25%."
+ },
+ {
+  "id": "antidumping",
+  "term": "Antidumping duty (AD)",
+  "aliases": "Antidumping duty | antidumping | Antidumping | anti-dumping | antidumping duty | antidumping duties | AD | all-others rate",
+  "case_sensitive": true,
+  "category": "Policy & trade",
+  "definition": "An extra duty on imports that the Commerce Department finds are sold in the US below fair value, once the US International Trade Commission finds they injure a US industry. Commerce sets company-specific rates, reviews them periodically and applies an 'all-others' rate to exporters it did not examine; large power transformers from Korea are under such an order."
+ },
+ {
+  "id": "appa",
+  "term": "APPA (American Public Power Association)",
+  "aliases": "APPA | American Public Power Association",
+  "case_sensitive": true,
+  "category": "Organizations",
+  "definition": "The trade association of US community-owned (municipal and other public) electric utilities."
+ },
+ {
+  "id": "autotransformer",
+  "term": "Autotransformer",
+  "aliases": "Autotransformer | autotransformers",
+  "case_sensitive": false,
+  "category": "Equipment",
+  "definition": "A transformer in which part of a single winding is shared by the high- and low-voltage sides. When the two voltages are fairly close it is smaller and cheaper than a two-winding design, and it is the usual way to link two transmission networks, such as 765 kV and 345 kV."
+ },
+ {
+  "id": "backlog",
+  "term": "Backlog",
+  "aliases": "Backlog | backlogs | order book | order books",
+  "case_sensitive": false,
+  "category": "Markets & finance",
+  "definition": "Orders a company has won but not yet delivered and billed. A large backlog signals future revenue, but orders taken at fixed prices can squeeze margins if input costs rise."
+ },
+ {
+  "id": "base-oil",
+  "term": "Base oil (transformer fluid)",
+  "aliases": "Base oil | base-oil | base stock | base-stock | transformer oil | insulating oil",
+  "case_sensitive": false,
+  "category": "Materials",
+  "definition": "Refined mineral oil that is processed into transformer insulating oil, the fluid that fills liquid-filled units to insulate and cool them. Its price is a direct input cost; some units use natural or synthetic ester fluids instead."
+ },
+ {
+  "id": "bess",
+  "term": "BESS (battery energy storage system)",
+  "aliases": "BESS",
+  "case_sensitive": true,
+  "category": "Grid & demand",
+  "definition": "Grid-scale battery installations. Each needs inverters and medium-voltage step-up transformers, and large sites need a substation and main power transformer to connect to the grid."
+ },
+ {
+  "id": "bil",
+  "term": "BIL (basic impulse insulation level)",
+  "aliases": "BIL",
+  "case_sensitive": true,
+  "category": "Electrical",
+  "definition": "The lightning-surge voltage a transformer's insulation is designed to withstand, stated in kV. Higher-voltage systems need a higher BIL, which makes units bigger and harder to build and test."
+ },
+ {
+  "id": "bls",
+  "term": "BLS (Bureau of Labor Statistics)",
+  "aliases": "BLS | Bureau of Labor Statistics",
+  "case_sensitive": true,
+  "category": "Organizations",
+  "definition": "The US Labor Department agency that publishes producer price indexes and employment and wage data."
+ },
+ {
+  "id": "ppi-series",
+  "term": "BLS transformer price series",
+  "aliases": "BLS transformer price series | WPU117409 | PCU335311 | WPU1174",
+  "case_sensitive": true,
+  "category": "Data & statistics",
+  "definition": "Codes for specific BLS price indexes: WPU117409 tracks power and distribution transformer prices as a product, PCU335311 tracks output prices of the transformer manufacturing industry, and WPU1174 covers the broader transformers and power regulators group."
+ },
+ {
+  "id": "book-to-bill",
+  "term": "Book-to-bill ratio",
+  "aliases": "Book-to-bill ratio | book-to-bill",
+  "case_sensitive": false,
+  "category": "Markets & finance",
+  "definition": "New orders booked in a period divided by revenue billed in the same period. A ratio above 1.0 means the order backlog is growing."
+ },
+ {
+  "id": "bp",
+  "term": "bp (basis point)",
+  "aliases": "bp",
+  "case_sensitive": true,
+  "category": "Markets & finance",
+  "definition": "One hundredth of a percentage point. A margin rising 700 bp means it went up 7 percentage points."
+ },
+ {
+  "id": "brownfield",
+  "term": "Brownfield",
+  "aliases": "Brownfield",
+  "case_sensitive": false,
+  "category": "Markets & finance",
+  "definition": "Building in, converting or expanding an existing facility or developed site. It is usually faster and cheaper than greenfield."
+ },
+ {
+  "id": "bulk-power-system",
+  "term": "Bulk-power system",
+  "aliases": "Bulk-power system | bulk power system | bulk-power equipment | bulk-power",
+  "case_sensitive": false,
+  "category": "Grid & demand",
+  "definition": "The interconnected network of power plants and high-voltage transmission, as distinct from local distribution. EO 14421 covers bulk-power equipment at 69 kV and above, which brings 69-138 kV substation transformers into its scope."
+ },
+ {
+  "id": "bushing",
+  "term": "Bushing",
+  "aliases": "Bushing | bushings",
+  "case_sensitive": false,
+  "category": "Equipment",
+  "definition": "The insulated porcelain or composite sleeve that carries a high-voltage conductor through a transformer's grounded metal tank. High-voltage bushings come from few suppliers and are a recognized supply bottleneck."
+ },
+ {
+  "id": "calcompetes",
+  "term": "CalCompetes",
+  "aliases": "CalCompetes | California Competes",
+  "case_sensitive": false,
+  "category": "Policy & trade",
+  "definition": "California Competes, a state program awarding tax credits and grants to businesses that create jobs and invest in the state."
+ },
+ {
+  "id": "capex",
+  "term": "Capex (capital expenditure)",
+  "aliases": "Capex | capital expenditure | capital expenditures | capital spending",
+  "case_sensitive": false,
+  "category": "Markets & finance",
+  "definition": "Money spent on long-lived assets such as plants, power lines and substations, as opposed to day-to-day operating costs. Utility capex forecasts are the main gauge of future transformer demand."
+ },
+ {
+  "id": "carve-out",
+  "term": "Carve-out",
+  "aliases": "Carve-out | carve-outs | corporate carve-out",
+  "case_sensitive": false,
+  "category": "Markets & finance",
+  "definition": "Buying a business unit, product line or plant that a larger company is selling, rather than a whole company."
+ },
+ {
+  "id": "cathodic-protection",
+  "term": "Cathodic protection and zinc anodes",
+  "aliases": "Cathodic protection and zinc anodes | cathodic protection | zinc anode | zinc anodes | sacrificial anode | sacrificial anodes | anodes",
+  "case_sensitive": false,
+  "category": "Materials",
+  "definition": "A way to keep buried or submerged steel from corroding by wiring it to a more reactive metal, often zinc or magnesium, that corrodes instead."
+ },
+ {
+  "id": "cbp",
+  "term": "CBP",
+  "aliases": "CBP",
+  "case_sensitive": true,
+  "category": "Organizations",
+  "definition": "US Customs and Border Protection, which collects tariffs at the border and is processing refunds of the IEEPA tariffs the Supreme Court struck down."
+ },
+ {
+  "id": "ccn",
+  "term": "CCN (certificate of convenience and necessity)",
+  "aliases": "CCN | CCNs",
+  "case_sensitive": true,
+  "category": "Grid & demand",
+  "definition": "The approval a state utility commission, in Texas the PUCT, must grant before a utility builds a new transmission line or other major facility."
+ },
+ {
+  "id": "cnc",
+  "term": "CNC machining",
+  "aliases": "CNC machining | CNC | machining | machined parts | machine shop | machine shops",
+  "case_sensitive": false,
+  "category": "Equipment",
+  "definition": "Cutting metal to precise shapes with computer-controlled mills and lathes. Transformer makers buy machined parts for tap changers, bushings, terminals and tank fittings."
+ },
+ {
+  "id": "co-sponsor",
+  "term": "Co-sponsor and co-investment",
+  "aliases": "Co-sponsor and co-investment | co-sponsor | co-sponsors | co-invest | co-investment | co-investments | co-investor | co-investors",
+  "case_sensitive": false,
+  "category": "Markets & finance",
+  "definition": "Another investor that buys a company alongside the lead investor, sharing the equity check and, usually, control."
+ },
+ {
+  "id": "coil-winders",
+  "term": "Coil winders",
+  "aliases": "Coil winders | coil winder | winders",
+  "case_sensitive": false,
+  "category": "Markets & finance",
+  "definition": "Production workers who wind conductor into transformer coils, tracked by BLS as 'coil winders, tapers and finishers'. Their scarcity is a binding constraint on new plants."
+ },
+ {
+  "id": "colocation",
+  "term": "Colocation data center",
+  "aliases": "Colocation data center | colocation | co-location | colo",
+  "case_sensitive": false,
+  "category": "Grid & demand",
+  "definition": "A data center that rents space, power and cooling to many tenants, unlike a hyperscaler's own campus. Equinix and Digital Realty are the largest operators."
+ },
+ {
+  "id": "cc-ct",
+  "term": "Combined cycle (CC) and combustion turbine (CT)",
+  "aliases": "Combined cycle | combined cycle | combined-cycle | combustion turbine | combustion turbines | simple-cycle",
+  "case_sensitive": true,
+  "category": "Grid & demand",
+  "definition": "Two types of gas-fired power plant. A combustion turbine (CT, or simple-cycle plant) burns gas to spin a generator; a combined-cycle (CC) plant also captures the exhaust heat to drive a steam turbine, making it more efficient."
+ },
+ {
+  "id": "comex",
+  "term": "COMEX and LME (metal exchanges)",
+  "aliases": "COMEX and LME | COMEX | LME",
+  "case_sensitive": true,
+  "category": "Markets & finance",
+  "definition": "The two main exchanges that set copper prices: COMEX in New York (part of CME Group) is the US benchmark, and the London Metal Exchange (LME) is the global one. Copper windings are one of a transformer's largest material costs."
+ },
+ {
+  "id": "copper-cathode-rod",
+  "term": "Copper cathode and rod",
+  "aliases": "Copper cathode and rod | copper cathode | cathode | copper rod | rod mill | rod mills | continuous-cast rod",
+  "case_sensitive": false,
+  "category": "Materials",
+  "definition": "Cathode is refined copper in sheets from a refinery. Rod mills melt cathode, and some clean scrap, into continuous-cast rod, the feedstock that wire and magnet-wire makers draw down."
+ },
+ {
+  "id": "core-making",
+  "term": "Core cutting and core builders",
+  "aliases": "Core cutting and core builders | slitting | slitter | core cutting | core-cutting | core builder | core builders | core maker | core makers | core shop | core shops | laminator | laminators | wound cores | stacked cores | mitered cores",
+  "case_sensitive": false,
+  "category": "Equipment",
+  "definition": "Electrical-steel coils are slit into strips and cut into laminations, which are stacked or wound into a transformer core. Core shops sit between steel mills and builders; some builders make cores in-house and others buy them finished."
+ },
+ {
+  "id": "cores-laminations",
+  "term": "Cores and laminations",
+  "aliases": "Cores and laminations | transformer cores | cores | laminations | core-making",
+  "case_sensitive": false,
+  "category": "Equipment",
+  "definition": "The core is the stack of thin electrical-steel sheets (laminations) that carries the magnetic field inside a transformer. Makers either cut and stack cores from steel strip themselves or buy finished cores, which are classed as transformer parts (HTS 8504.90) and face their own Section 232 rate."
+ },
+ {
+  "id": "ctc",
+  "term": "CTC (continuously transposed conductor)",
+  "aliases": "CTC | continuously transposed conductor | continuously transposed conductors",
+  "case_sensitive": true,
+  "category": "Materials",
+  "definition": "A winding conductor made of many small insulated copper strands that swap positions along its length and are wrapped together. Large power transformers use it to cut eddy-current losses; few plants make it, so it can hold up large units."
+ },
+ {
+  "id": "data-center-substation",
+  "term": "Data-center substation",
+  "aliases": "Data-center substation | data-center substations",
+  "case_sensitive": false,
+  "category": "Grid & demand",
+  "definition": "The substation a data center builds or funds to take power from the transmission grid. DOE's pending rules under EO 14421 will decide whether these count as covered bulk-power equipment."
+ },
+ {
+  "id": "casting",
+  "term": "Die, investment and sand casting",
+  "aliases": "Die, investment and sand casting | die casting | die-casting | die-cast | investment casting | investment castings | sand casting | sand castings | castings | foundry | foundries",
+  "case_sensitive": false,
+  "category": "Equipment",
+  "definition": "Ways of shaping molten metal. Die casting forces it into steel molds under pressure for zinc and aluminum parts in volume; investment casting pours it into ceramic shells for precise alloy parts; sand casting suits large or low-volume parts."
+ },
+ {
+  "id": "distribution-transformer",
+  "term": "Distribution transformer",
+  "aliases": "Distribution transformer | distribution transformers | distribution-transformer | distribution-transformers",
+  "case_sensitive": false,
+  "category": "Equipment",
+  "definition": "A small transformer near the customer that steps distribution-line voltage down to the level homes and businesses use. Utilities buy them by the thousands, mainly as pole-mounts and pad-mounts, and they are far more standardized than power transformers."
+ },
+ {
+  "id": "doe",
+  "term": "DOE (Department of Energy)",
+  "aliases": "DOE | Department of Energy",
+  "case_sensitive": true,
+  "category": "Organizations",
+  "definition": "The US Department of Energy. On this page it matters as the agency writing the rules under EO 14421, setting distribution-transformer efficiency standards, and holding grant, loan and Defense Production Act tools that could fund new capacity."
+ },
+ {
+  "id": "doe-efficiency-rule",
+  "term": "DOE distribution-transformer efficiency rule",
+  "aliases": "DOE distribution-transformer efficiency rule | efficiency rule | 2029 efficiency rule | DOE efficiency decision | DOE efficiency compliance | DOE distribution-transformer efficiency review",
+  "case_sensitive": false,
+  "category": "Policy & trade",
+  "definition": "Federal minimum-efficiency standards for distribution transformers, finalized in 2024 with compliance due in 2029. Meeting them shapes the choice of core material (GOES versus amorphous), and DOE opened a review of the rule in July 2026."
+ },
+ {
+  "id": "dpa",
+  "term": "DPA Title III (Defense Production Act)",
+  "aliases": "DPA Title III | DPA | Defense Production Act | Defense Production Act determination | Title III | Sec. 303 | PD 2026-10 | Presidential Determination 2026-10",
+  "case_sensitive": true,
+  "category": "Policy & trade",
+  "definition": "The Defense Production Act of 1950 lets the government secure industrial supply needed for national defense; its Title III (section 303) funds new domestic capacity through purchases, purchase commitments, loans and grants. Presidential Determination 2026-10 (April 2026) named transformers and electrical core steel, but no Title III solicitation or award had appeared by October 2026, and the authority may have lapsed on Sep 30, 2026."
+ },
+ {
+  "id": "dry-type",
+  "term": "Dry-type transformer",
+  "aliases": "Dry-type transformer | dry-type | dry-types | dry-type transformers",
+  "case_sensitive": false,
+  "category": "Equipment",
+  "definition": "A transformer cooled by air and insulated with solid materials instead of oil, so it can be installed indoors with lower fire risk. Typical uses are commercial buildings, factories and data centers."
+ },
+ {
+  "id": "ebitda",
+  "term": "EBITDA",
+  "aliases": "EBITDA | EBITDA margin | Segment EBITDA | Adj. EBITDA | adj EBITDA | adjusted EBITDA",
+  "case_sensitive": false,
+  "category": "Markets & finance",
+  "definition": "Earnings before interest, taxes, depreciation and amortization, a rough measure of operating cash profit. EBITDA margin is EBITDA as a share of revenue; 'adjusted' EBITDA excludes items the company treats as one-off."
+ },
+ {
+  "id": "ebitda-multiple",
+  "term": "EBITDA multiple (EV/EBITDA)",
+  "aliases": "EBITDA multiple | EV/EBITDA | times EBITDA | forward EBITDA | 2025E EBITDA | 2025E",
+  "case_sensitive": true,
+  "category": "Markets & finance",
+  "definition": "Enterprise value (equity value plus net debt) divided by EBITDA, the standard yardstick for pricing deals, written for example as '13x EBITDA'. An 'E' after a year, as in '2025E', marks an estimate; larger, scarcer assets usually command higher multiples than small private manufacturers."
+ },
+ {
+  "id": "ec-aluminum",
+  "term": "EC-grade aluminum",
+  "aliases": "EC-grade aluminum | EC-grade | EC grade | 1350 aluminum | electrical-conductor grade",
+  "case_sensitive": false,
+  "category": "Materials",
+  "definition": "High-purity aluminum (alloy 1350) made for electrical conductors such as winding strip, foil and cable. It is normally made from primary metal because scrap carries too many impurities."
+ },
+ {
+  "id": "edf-lpo",
+  "term": "EDF (Energy Dominance Financing) / LPO",
+  "aliases": "EDF | LPO | ex-LPO | Energy Dominance Financing | Loan Programs Office",
+  "case_sensitive": true,
+  "category": "Policy & trade",
+  "definition": "Energy Dominance Financing, a DOE lending authority for energy projects, administered by the office long known as the Loan Programs Office (LPO). It can in principle lend to equipment makers but, per the research, had not lent to a grid-equipment maker."
+ },
+ {
+  "id": "eei",
+  "term": "EEI (Edison Electric Institute)",
+  "aliases": "EEI | Edison Electric Institute",
+  "case_sensitive": true,
+  "category": "Organizations",
+  "definition": "The trade association of US investor-owned electric utilities. Its capex projections are a standard gauge of utility spending."
+ },
+ {
+  "id": "ehv",
+  "term": "EHV (extra-high voltage)",
+  "aliases": "EHV | Extra-high voltage | extra-high voltage | extra-high-voltage",
+  "case_sensitive": true,
+  "category": "Electrical",
+  "definition": "Transmission at roughly 345 kV and above (345, 500 and 765 kV in North America). EHV transformers are the largest and hardest to make, and only a handful of factories can build them."
+ },
+ {
+  "id": "eia",
+  "term": "EIA (Energy Information Administration)",
+  "aliases": "EIA | 860M | EIA-860M",
+  "case_sensitive": true,
+  "category": "Organizations",
+  "definition": "DOE's statistics agency. Its form EIA-860M is a monthly inventory of US power plants and generators, including planned additions."
+ },
+ {
+  "id": "co-op",
+  "term": "Electric cooperative (co-op)",
+  "aliases": "Electric cooperative | co-op | co-ops | electric cooperatives | cooperative | cooperatives",
+  "case_sensitive": false,
+  "category": "Organizations",
+  "definition": "A utility owned by its customers, mostly serving rural areas. ERMCO, a transformer maker, is owned by Arkansas Electric Cooperatives."
+ },
+ {
+  "id": "distributor",
+  "term": "Electrical distributor",
+  "aliases": "Electrical distributor | distributor | distributors | electrical distributors",
+  "case_sensitive": false,
+  "category": "Markets & finance",
+  "definition": "A wholesaler, such as Wesco, Graybar or Irby, that stocks and resells electrical equipment from many makers. Small utilities often buy transformers through distributors, which add a markup to the maker's price."
+ },
+ {
+  "id": "eo-14421",
+  "term": "EO 14421",
+  "aliases": "EO 14421 | Executive Order 14421",
+  "case_sensitive": true,
+  "category": "Policy & trade",
+  "definition": "The Aug 26, 2026 executive order on foreign equipment for the bulk-power system. It covers equipment at 69 kV and above, but not local distribution, from 'covered foreign entities': those of the 24 ITAR 126.1 countries, chiefly China for transformers, or owned or controlled by them. DOE can prohibit or condition a transaction once it finds undue risk, and its implementing rules are pending."
+ },
+ {
+  "id": "epc",
+  "term": "EPC (engineering, procurement and construction)",
+  "aliases": "EPC | EPCs | EPC contractor | EPC contractors",
+  "case_sensitive": true,
+  "category": "Markets & finance",
+  "definition": "A contractor that designs a project, buys its equipment and builds it under one contract. EPCs such as Quanta, MasTec and Burns & McDonnell buy transformers on behalf of utilities and developers."
+ },
+ {
+  "id": "ercot",
+  "term": "ERCOT",
+  "aliases": "ERCOT",
+  "case_sensitive": true,
+  "category": "Organizations",
+  "definition": "The Electric Reliability Council of Texas, which runs the grid serving most of Texas. Its 765 kV build-out and very large queue of data-center load requests are major sources of transformer demand."
+ },
+ {
+  "id": "esop",
+  "term": "ESOP (employee stock ownership plan)",
+  "aliases": "ESOP | ESOPs | employee stock ownership plan",
+  "case_sensitive": true,
+  "category": "Markets & finance",
+  "definition": "A US retirement plan that owns company shares for employees. When an ESOP company must buy back shares from retiring workers, the cash strain can lead to a sale, as happened at AFCO."
+ },
+ {
+  "id": "family-office",
+  "term": "Family office",
+  "aliases": "Family office | family offices",
+  "case_sensitive": false,
+  "category": "Markets & finance",
+  "definition": "A private firm that manages one wealthy family's money. Many invest directly in operating businesses and hold them longer than private-equity funds do."
+ },
+ {
+  "id": "wapa",
+  "term": "Federal power agencies (WAPA, BPA, USACE, Reclamation)",
+  "aliases": "Federal power agencies | WAPA | BPA | USACE | Army Corps of Engineers | Bureau of Reclamation",
+  "case_sensitive": true,
+  "category": "Organizations",
+  "definition": "Federal agencies that run or market power from federal dams and buy custom transformers for them: the Western Area Power Administration (WAPA), the Bonneville Power Administration (BPA) in the Pacific Northwest, the Army Corps of Engineers (USACE) and the Interior Department's Bureau of Reclamation."
+ },
+ {
+  "id": "ferc",
+  "term": "FERC",
+  "aliases": "FERC",
+  "case_sensitive": true,
+  "category": "Organizations",
+  "definition": "The Federal Energy Regulatory Commission, which regulates interstate electricity transmission and wholesale power markets."
+ },
+ {
+  "id": "ferrosilicon",
+  "term": "Ferrosilicon and silicon metal",
+  "aliases": "Ferrosilicon and silicon metal | ferrosilicon | silicon metal",
+  "case_sensitive": false,
+  "category": "Materials",
+  "definition": "Silicon additions used in steelmaking. Electrical steel carries about three percent silicon, which raises its electrical resistance and cuts core losses."
+ },
+ {
+  "id": "filot",
+  "term": "FILOT (fee in lieu of taxes)",
+  "aliases": "FILOT",
+  "case_sensitive": true,
+  "category": "Policy & trade",
+  "definition": "South Carolina's version of a PILOT: a negotiated, reduced property-tax arrangement for large investments, often fixed for decades."
+ },
+ {
+  "id": "follow-on",
+  "term": "Follow-on offering",
+  "aliases": "Follow-on offering | follow-on",
+  "case_sensitive": false,
+  "category": "Markets & finance",
+  "definition": "A sale of additional shares after a company is already public, by the company, its existing owners or both. Pricing well above the IPO price shows investors now value the company more highly."
+ },
+ {
+  "id": "form-d",
+  "term": "Form D",
+  "aliases": "Form D",
+  "case_sensitive": true,
+  "category": "Data & statistics",
+  "definition": "A short SEC notice filed when a company raises money privately under an exemption. It shows the amount raised and is often the only public trace of a private deal."
+ },
+ {
+  "id": "fiscal-year",
+  "term": "FY (fiscal year)",
+  "aliases": "FY | fiscal year | FY24 | FY25 | FY26 | FY27 | FY2024 | FY2025 | FY2026 | FY26-FY29",
+  "case_sensitive": true,
+  "category": "Data & statistics",
+  "definition": "A company's 12-month accounting year, which need not match the calendar year. Forgent's FY26, for example, ended in June 2026, so its 'Q4 FY26' is April-June 2026."
+ },
+ {
+  "id": "fed-g17",
+  "term": "G.17 (Federal Reserve industrial production)",
+  "aliases": "G.17 | capacity utilization | industrial production",
+  "case_sensitive": true,
+  "category": "Data & statistics",
+  "definition": "The Federal Reserve's monthly release on industrial production and capacity utilization, the share of potential factory output actually in use. High utilization in electrical equipment signals tight supply."
+ },
+ {
+  "id": "galvanizing",
+  "term": "Galvanizing",
+  "aliases": "Galvanizing | hot-dip galvanizing | galvanized | galvanizer | galvanizers",
+  "case_sensitive": false,
+  "category": "Materials",
+  "definition": "Coating steel with zinc, usually by dipping it in molten zinc, to stop rust. Transmission towers, substation structures and much grid hardware are galvanized, which makes zinc a grid input."
+ },
+ {
+  "id": "goes",
+  "term": "GOES (grain-oriented electrical steel) and core steel",
+  "aliases": "GOES | GOES strip | grain-oriented electrical steel | Grain-oriented electrical steel | electrical steel | Electrical steel | electrical core steel | core steel | Core steel",
+  "case_sensitive": true,
+  "category": "Materials",
+  "definition": "Electrical steel is steel made to carry magnetic fields with low energy loss; grain-oriented electrical steel (GOES), whose crystal grains are aligned in one direction, is the premium grade used in transformer cores. Cleveland-Cliffs is the only US producer, imports face Section 232 tariffs, and 'core steel' on this page covers GOES and finished cores together."
+ },
+ {
+  "id": "greenfield",
+  "term": "Greenfield",
+  "aliases": "Greenfield",
+  "case_sensitive": false,
+  "category": "Markets & finance",
+  "definition": "A new plant built from scratch on an undeveloped site. It allows the ideal layout but usually takes longest and costs most."
+ },
+ {
+  "id": "margins",
+  "term": "Gross margin and operating margin",
+  "aliases": "Gross margin and operating margin | gross margin | gross margins | operating margin | operating margins | Adj. operating",
+  "case_sensitive": false,
+  "category": "Markets & finance",
+  "definition": "Gross margin is revenue minus the direct cost of the goods sold, as a share of revenue; operating margin also subtracts overhead such as selling, administration and R&D. Operating margins rising while gross margins stay flat means gains are coming from volume rather than pricing."
+ },
+ {
+  "id": "aggregate-node",
+  "term": "Group of firms (aggregate)",
+  "aliases": "Group of firms | aggregate | aggregates",
+  "case_sensitive": false,
+  "category": "Data & statistics",
+  "definition": "In the value-chain graph, a box that stands for many smaller firms of the same kind, such as municipal utilities or regional fabricators, when naming each would not fit."
+ },
+ {
+  "id": "gsu",
+  "term": "GSU (generator step-up transformer)",
+  "aliases": "GSU | GSUs | Generator step-up | generator step-up | Large GSU",
+  "case_sensitive": true,
+  "category": "Equipment",
+  "definition": "The transformer at a power plant that raises the generator's output voltage to transmission voltage. Large gas, nuclear and hydro units each need one sized to the generator, and GSUs carry the longest quoted lead times of any transformer class."
+ },
+ {
+  "id": "heavy-haul",
+  "term": "Heavy haul and Schnabel cars",
+  "aliases": "Heavy haul and Schnabel cars | heavy haul | heavy-haul | Schnabel | Schnabel car | Schnabel cars",
+  "case_sensitive": false,
+  "category": "Equipment",
+  "definition": "Large power transformers weigh hundreds of tons and move on special rail cars (Schnabel cars, in which the load forms part of the car) or multi-axle road trailers, with permits and route surveys. Few such cars exist, so moves are booked months ahead."
+ },
+ {
+  "id": "hts",
+  "term": "HS / HTS 8504",
+  "aliases": "HS / HTS 8504 | HTS | HTS 8504 | HS | HS 8504 | HS-10",
+  "case_sensitive": true,
+  "category": "Data & statistics",
+  "definition": "The international Harmonized System (HS) of product codes and its US version, the Harmonized Tariff Schedule (HTS), used for tariffs and trade statistics; HS-10 is the most detailed, 10-digit US level. Heading 8504 covers transformers, power supplies, converters and related parts, so its totals include much more than grid transformers."
+ },
+ {
+  "id": "hts-subheadings",
+  "term": "HTS 8504 subheadings",
+  "aliases": "HTS 8504 subheadings | 8504.21 | 8504.22 | 8504.23 | 8504.23.00 | 8504.31 | 8504.32 | 8504.33 | 8504.34 | 8504.34.00 | 8504.90 | 8504.90.96xx",
+  "case_sensitive": true,
+  "category": "Data & statistics",
+  "definition": "Finer tariff codes inside 8504: 8504.21-.23 are liquid-filled transformers by size (8504.23 is above 10 MVA), 8504.31-.34 are other, mostly dry-type, transformers by size (8504.34 is above 500 kVA), and 8504.90 covers parts, including cores and laminations."
+ },
+ {
+  "id": "hv-mv-lv",
+  "term": "HV / MV / LV (high, medium, low voltage)",
+  "aliases": "HV / MV / LV | HV | MV | LV | MV/LV | HV/MV | Medium-voltage | medium-voltage | Medium voltage | medium voltage | Low-voltage | low-voltage",
+  "case_sensitive": true,
+  "category": "Electrical",
+  "definition": "Broad voltage classes: LV (low voltage) is below 1 kV, as in building wiring; MV (medium voltage) is roughly 1-35 kV, as on distribution lines and data-center feeders; HV (high voltage) covers transmission voltages above that. 'MV/LV' units step medium voltage down to low, and 'HV/MV' units step transmission voltage down to medium."
+ },
+ {
+  "id": "hvdc",
+  "term": "HVDC (high-voltage direct current)",
+  "aliases": "HVDC | converter station | converter stations | converter transformer | converter transformers",
+  "case_sensitive": true,
+  "category": "Grid & demand",
+  "definition": "Transmission using direct current, efficient over very long distances and for linking separate grids. Each end needs a converter station with specialized converter transformers."
+ },
+ {
+  "id": "hyperscaler",
+  "term": "Hyperscaler",
+  "aliases": "Hyperscaler | hyperscalers",
+  "case_sensitive": false,
+  "category": "Grid & demand",
+  "definition": "The largest cloud and AI computing companies, such as Amazon, Microsoft, Google and Meta, which build data centers at enormous scale and increasingly buy grid equipment directly."
+ },
+ {
+  "id": "ida",
+  "term": "IDA (industrial development agency)",
+  "aliases": "IDA | ECIDA",
+  "case_sensitive": true,
+  "category": "Policy & trade",
+  "definition": "A local public authority, common in New York, that grants tax breaks such as property-tax PILOTs and sales-tax exemptions to attract projects. ECIDA, Erie County's IDA, is reviewing Niagara Power Transformer's expansion."
+ },
+ {
+  "id": "idiq",
+  "term": "IDIQ (indefinite delivery, indefinite quantity)",
+  "aliases": "IDIQ",
+  "case_sensitive": true,
+  "category": "Markets & finance",
+  "definition": "A federal contract that sets terms and a ceiling but leaves exact quantities and timing open; the agency places individual orders as needs arise."
+ },
+ {
+  "id": "ieepa",
+  "term": "IEEPA",
+  "aliases": "IEEPA",
+  "case_sensitive": true,
+  "category": "Policy & trade",
+  "definition": "The International Emergency Economic Powers Act of 1977, which lets the president regulate economic transactions during a declared national emergency. On Feb 20, 2026 the Supreme Court ruled that it does not authorize tariffs, striking down the broad tariffs imposed under it."
+ },
+ {
+  "id": "iou",
+  "term": "Investor-owned utility (IOU)",
+  "aliases": "Investor-owned utility | IOU | IOUs | investor-owned",
+  "case_sensitive": false,
+  "category": "Organizations",
+  "definition": "A shareholder-owned utility, such as those in EEI. Investor-owned utilities serve most US electricity customers and account for most utility capex."
+ },
+ {
+  "id": "ipo",
+  "term": "IPO (initial public offering)",
+  "aliases": "IPO | IPOs | initial public offering",
+  "case_sensitive": true,
+  "category": "Markets & finance",
+  "definition": "A company's first sale of shares to public investors, after which its stock trades on an exchange. Private-equity owners often use an IPO to start selling down their stake."
+ },
+ {
+  "id": "iron-units",
+  "term": "Iron ore pellets, pig iron and DRI",
+  "aliases": "Iron ore pellets, pig iron and DRI | iron ore pellets | iron ore | pig iron | DRI | HBI | direct reduced iron",
+  "case_sensitive": false,
+  "category": "Materials",
+  "definition": "The iron sources behind steel: pellets of concentrated ore feed blast furnaces, which make pig iron; DRI and HBI are iron made by direct reduction for electric-arc furnaces. Scrap is the other main input."
+ },
+ {
+  "id": "itar-126-1",
+  "term": "ITAR 126.1 countries",
+  "aliases": "ITAR 126.1 countries | ITAR 126.1 | ITAR | 126.1 countries",
+  "case_sensitive": true,
+  "category": "Policy & trade",
+  "definition": "The countries listed in section 126.1 of the International Traffic in Arms Regulations, which the US subjects to arms embargoes or a policy of denying defense exports, including China, Russia and Iran. EO 14421 uses these 24 countries, plus companies they own or control, to define the foreign entities it covers."
+ },
+ {
+  "id": "jdig",
+  "term": "JDIG",
+  "aliases": "JDIG",
+  "case_sensitive": true,
+  "category": "Policy & trade",
+  "definition": "North Carolina's Job Development Investment Grant: performance-based cash payments over many years, tied to jobs created and kept."
+ },
+ {
+  "id": "kv",
+  "term": "kV (kilovolt)",
+  "aliases": "kV",
+  "case_sensitive": true,
+  "category": "Electrical",
+  "definition": "One thousand volts, the unit for line and equipment voltage. In the US most local distribution runs below about 35 kV and transmission from 69 kV up to 765 kV; higher-voltage equipment is harder to build and test."
+ },
+ {
+  "id": "kva",
+  "term": "kVA (kilovolt-ampere) and $/kVA",
+  "aliases": "kVA | $/kVA",
+  "case_sensitive": true,
+  "category": "Electrical",
+  "definition": "The kilovolt-ampere is the unit for the capacity of smaller transformers: a pole-mount serving a few homes is tens of kVA, a data-center pad-mount a few thousand. Price per kVA ($/kVA) lets buyers compare prices across sizes; bigger units usually cost less per kVA."
+ },
+ {
+  "id": "large-frame",
+  "term": "Large-frame vs aeroderivative gas turbines",
+  "aliases": "Large-frame vs aeroderivative gas turbines | large-frame | aeroderivative | aeroderivatives | aero-derivative",
+  "case_sensitive": false,
+  "category": "Grid & demand",
+  "definition": "Large-frame turbines are the biggest heavy-duty gas turbines, hundreds of MW each, made mainly by GE Vernova, Siemens Energy and Mitsubishi Heavy Industries; aeroderivatives are smaller, fast-starting units adapted from jet engines. Each turbine's generator needs a step-up transformer sized to it."
+ },
+ {
+  "id": "large-load",
+  "term": "Large-load and interconnection queues",
+  "aliases": "Large-load and interconnection queues | large-load | large-load queue | large-load queues | large load | large loads | interconnection | interconnections | interconnection queue | approved to energize",
+  "case_sensitive": false,
+  "category": "Grid & demand",
+  "definition": "Interconnection is the process, studies and equipment needed to connect a power plant or large customer to the grid, usually including new substations and transformers. A large-load queue lists very large customers, mostly data centers, waiting to connect; much of it is speculative, so loads 'approved to energize' (cleared to draw power) are a far firmer signal."
+ },
+ {
+  "id": "lead-time",
+  "term": "Lead time",
+  "aliases": "Lead time | lead times | lead-time",
+  "case_sensitive": false,
+  "category": "Markets & finance",
+  "definition": "The wait from placing an order to delivery, usually quoted in weeks. Power-transformer lead times of two to three years or more are the clearest sign of the shortage, and buyers pay premiums for anything that ships sooner."
+ },
+ {
+  "id": "lei",
+  "term": "LEI (Legal Entity Identifier)",
+  "aliases": "LEI | LEIs",
+  "case_sensitive": true,
+  "category": "Data & statistics",
+  "definition": "A global code that identifies a legal entity in financial transactions. When a new deal entity registers one, the date can hint at when a transaction happened."
+ },
+ {
+  "id": "liquid-filled",
+  "term": "Liquid-filled transformer",
+  "aliases": "Liquid-filled transformer | liquid-filled | liquid-immersed | oil-filled | liquid units",
+  "case_sensitive": false,
+  "category": "Equipment",
+  "definition": "A transformer whose core and windings sit in a tank of insulating fluid, usually mineral oil, that both insulates and carries away heat. Nearly all utility distribution and power transformers are this type."
+ },
+ {
+  "id": "local-distribution",
+  "term": "Local distribution",
+  "aliases": "Local distribution",
+  "case_sensitive": false,
+  "category": "Grid & demand",
+  "definition": "The lower-voltage lines and equipment that deliver power to end users, below the bulk-power system. EO 14421 excludes it, so ordinary distribution transformers fall outside the order."
+ },
+ {
+  "id": "lower-middle-market",
+  "term": "Lower middle market",
+  "aliases": "Lower middle market | lower-middle-market | LMM",
+  "case_sensitive": false,
+  "category": "Markets & finance",
+  "definition": "Privately held companies at the small end of the buyout market, often a few million to about a hundred million dollars of revenue (definitions vary). They tend to sell at lower EBITDA multiples than larger companies."
+ },
+ {
+  "id": "lpt",
+  "term": "LPT (large power transformer)",
+  "aliases": "LPT | LPTs | LPT-class | large power transformer | large power transformers | Large power transformer | Large power transformers | Large power | large power | large-transformer",
+  "case_sensitive": true,
+  "category": "Equipment",
+  "definition": "A power transformer rated at about 100 MVA or more, used in high-voltage transmission substations and at large power plants. Each is custom-engineered, can weigh 100-400 tons and has among the longest lead times in the market, and the US has relied on imports for most of its supply."
+ },
+ {
+  "id": "magnet-wire",
+  "term": "Magnet wire",
+  "aliases": "Magnet wire | winding wire | enameled wire | enamelled wire",
+  "case_sensitive": false,
+  "category": "Materials",
+  "definition": "Copper or aluminum wire with a thin enamel or paper insulation, used to wind the coils of transformers and motors. It is the main way copper enters a transformer."
+ },
+ {
+  "id": "medium-power",
+  "term": "Medium power transformer",
+  "aliases": "Medium power transformer | medium power | medium-power | mid power | mid-power | small power | small and mid power",
+  "case_sensitive": false,
+  "category": "Equipment",
+  "definition": "Industry shorthand for power transformers sized between distribution units and large power transformers. 'Small' and 'medium' power together run from a few MVA up to roughly 100-250 MVA, and each maker draws the boundaries differently."
+ },
+ {
+  "id": "mei",
+  "term": "MEI grant",
+  "aliases": "MEI grant | MEI",
+  "case_sensitive": true,
+  "category": "Policy & trade",
+  "definition": "Virginia's Major Employment and Investment program, which approves custom incentive grants for very large job-creating projects."
+ },
+ {
+  "id": "mezzanine",
+  "term": "Mezzanine and subordinated debt",
+  "aliases": "Mezzanine and subordinated debt | mezzanine | mezz | subordinated debt | sub debt",
+  "case_sensitive": false,
+  "category": "Markets & finance",
+  "definition": "Debt that ranks below senior bank loans and above equity, carrying higher interest and sometimes equity warrants. It lets buyers fund a deal with less equity."
+ },
+ {
+  "id": "mfn",
+  "term": "MFN (most-favored-nation) rate",
+  "aliases": "MFN | most-favored-nation",
+  "case_sensitive": true,
+  "category": "Policy & trade",
+  "definition": "The standard US import duty for trading partners that have no free-trade agreement with the US. Some recent tariffs are set as an all-in rate that includes the MFN duty, so the extra charge is the difference."
+ },
+ {
+  "id": "miso",
+  "term": "MISO",
+  "aliases": "MISO",
+  "case_sensitive": true,
+  "category": "Organizations",
+  "definition": "The Midcontinent Independent System Operator, which runs the grid across much of the central US from Louisiana to Manitoba and is planning a large 765 kV network."
+ },
+ {
+  "id": "tranche-2-1",
+  "term": "MISO Tranche 2.1",
+  "aliases": "MISO Tranche 2.1 | Tranche 2.1 | MTEP24",
+  "case_sensitive": true,
+  "category": "Grid & demand",
+  "definition": "The second portfolio of MISO's long-range transmission plan, about $21.8 billion of projects approved in December 2024 as part of its 2024 expansion plan (MTEP24). It includes a large new 765 kV network."
+ },
+ {
+  "id": "mobile-substation",
+  "term": "Mobile substation",
+  "aliases": "Mobile substation | mobile substations | mobile/rental substations | portable substation | portable substations | portable-substation",
+  "case_sensitive": false,
+  "category": "Equipment",
+  "definition": "A transformer and switchgear mounted on a trailer that can be driven to a site and connected quickly, for emergencies, maintenance outages or temporary service. Rental fleets of these units are part of the aftermarket that private equity is buying."
+ },
+ {
+  "id": "mva",
+  "term": "MVA and GVA (megavolt-ampere, gigavolt-ampere)",
+  "aliases": "MVA and GVA | MVA | GVA",
+  "case_sensitive": true,
+  "category": "Electrical",
+  "definition": "An MVA is 1,000 kVA, the usual unit for the capacity of power transformers; a GVA is 1,000 MVA. Substation units are typically tens of MVA, large power transformers about 100 MVA and up, and the biggest exceed 1,000 MVA."
+ },
+ {
+  "id": "mw-gw-tw",
+  "term": "MW, GW, TW (megawatt, gigawatt, terawatt)",
+  "aliases": "MW, GW, TW | MW | GW | TW",
+  "case_sensitive": true,
+  "category": "Electrical",
+  "definition": "Units of real power: a gigawatt (GW) is 1,000 megawatts (MW) and a terawatt (TW) is 1,000 GW. They measure power plants, data-center loads and grid demand; a large data-center campus can draw hundreds of MW."
+ },
+ {
+  "id": "ns",
+  "term": "n/s (not stated)",
+  "aliases": "n/s",
+  "case_sensitive": true,
+  "category": "Data & statistics",
+  "definition": "The source did not state this value."
+ },
+ {
+  "id": "naics",
+  "term": "NAICS",
+  "aliases": "NAICS | NAICS 335311 | NAICS 3353 | NAICS 335",
+  "case_sensitive": true,
+  "category": "Data & statistics",
+  "definition": "The North American Industry Classification System, which gives industries numeric codes. 335 covers electrical equipment, appliances and components; 3353 is electrical equipment such as transformers, motors and switchgear; 335311 is power, distribution and specialty transformer manufacturing."
+ },
+ {
+  "id": "naphthenic-oil",
+  "term": "Naphthenic transformer oil",
+  "aliases": "Naphthenic transformer oil | naphthenic | naphthenic oil | mineral oil",
+  "case_sensitive": false,
+  "category": "Materials",
+  "definition": "Mineral oil refined from naphthenic crude, the standard insulating and cooling fluid in liquid-filled transformers. It stays fluid in cold weather and resists sludge."
+ },
+ {
+  "id": "natural-ester",
+  "term": "Natural ester fluid",
+  "aliases": "Natural ester fluid | natural ester | natural esters | ester fluid | ester fluids | FR3 | Envirotemp FR3",
+  "case_sensitive": false,
+  "category": "Materials",
+  "definition": "A transformer fluid made from vegetable oil, usually soybean. It is biodegradable and far less flammable than mineral oil, so it is favored near buildings and data centers; Cargill's FR3 is the best-known brand."
+ },
+ {
+  "id": "nema",
+  "term": "NEMA",
+  "aliases": "NEMA",
+  "case_sensitive": true,
+  "category": "Organizations",
+  "definition": "The National Electrical Manufacturers Association, the US trade group for electrical equipment makers, including transformer manufacturers."
+ },
+ {
+  "id": "nerc",
+  "term": "NERC",
+  "aliases": "NERC | LTRA",
+  "case_sensitive": true,
+  "category": "Organizations",
+  "definition": "The North American Electric Reliability Corporation, which sets and enforces reliability standards for the grid and publishes the Long-Term Reliability Assessment (LTRA)."
+ },
+ {
+  "id": "new-energy-transformer",
+  "term": "New-energy transformer",
+  "aliases": "New-energy transformer | new-energy | new-energy transformers",
+  "case_sensitive": false,
+  "category": "Equipment",
+  "definition": "Chinese industry term for transformers built for solar, wind and battery-storage projects, such as the medium-voltage step-up units that connect inverters to a plant's collection grid."
+ },
+ {
+  "id": "nreca",
+  "term": "NRECA",
+  "aliases": "NRECA",
+  "case_sensitive": true,
+  "category": "Organizations",
+  "definition": "The National Rural Electric Cooperative Association, representing member-owned electric cooperatives that serve mostly rural areas."
+ },
+ {
+  "id": "nrel",
+  "term": "NREL",
+  "aliases": "NREL",
+  "case_sensitive": true,
+  "category": "Organizations",
+  "definition": "DOE's national laboratory in Golden, Colorado, long known as the National Renewable Energy Laboratory, whose studies project long-term demand for distribution transformers."
+ },
+ {
+  "id": "nte",
+  "term": "NTE (not to exceed)",
+  "aliases": "NTE",
+  "case_sensitive": true,
+  "category": "Markets & finance",
+  "definition": "A spending cap in a purchase approval: the buyer may spend up to this amount, and the final price may be lower."
+ },
+ {
+  "id": "oced",
+  "term": "OCED",
+  "aliases": "OCED",
+  "case_sensitive": true,
+  "category": "Organizations",
+  "definition": "DOE's Office of Clean Energy Demonstrations, which made large grants for industrial projects, including the 2024 award behind Cleveland-Cliffs' Butler Works GOES expansion."
+ },
+ {
+  "id": "oews",
+  "term": "OEWS",
+  "aliases": "OEWS",
+  "case_sensitive": true,
+  "category": "Data & statistics",
+  "definition": "The BLS Occupational Employment and Wage Statistics survey, which estimates employment and pay for specific occupations, such as coil winders, by industry and area."
+ },
+ {
+  "id": "oltc",
+  "term": "OLTC (on-load tap changer)",
+  "aliases": "OLTC | OLTCs | on-load tap changer | on-load tap changers | tap changer | tap changers",
+  "case_sensitive": true,
+  "category": "Equipment",
+  "definition": "A mechanism that adjusts a transformer's voltage ratio while it stays energized by switching between connection points (taps) on a winding. Many substation and power transformers carry one, and only a few specialist firms make them."
+ },
+ {
+  "id": "operating-leverage",
+  "term": "Operating leverage",
+  "aliases": "Operating leverage",
+  "case_sensitive": false,
+  "category": "Markets & finance",
+  "definition": "The lift to margins when sales grow faster than fixed costs such as plants and overhead, so each extra unit sold is more profitable."
+ },
+ {
+  "id": "osti",
+  "term": "OSTI",
+  "aliases": "OSTI",
+  "case_sensitive": true,
+  "category": "Organizations",
+  "definition": "DOE's Office of Scientific and Technical Information, which hosts DOE-funded research reports, including the one cited for US reliance on imported large power transformers."
+ },
+ {
+  "id": "state-incentives",
+  "term": "Other state and local incentive programs",
+  "aliases": "Other state and local incentive programs | One NC | MFLEX | RIF | RIF grant | readySC | Enterprise Zone | Growing Alabama",
+  "case_sensitive": true,
+  "category": "Policy & trade",
+  "definition": "Programs states and localities use to win plants: North Carolina's One NC cash grants, Mississippi's MFLEX flexible tax credits, PILOTs from Memphis-Shelby County's EDGE board, South Carolina's Rural Infrastructure Fund (RIF) grants and readySC worker training, Texas Enterprise Zone tax refunds and Growing Alabama site-development credits. Most pay out only as promised jobs and investment materialize."
+ },
+ {
+  "id": "tag-p",
+  "term": "P (primary source)",
+  "aliases": "P primary | tagged P",
+  "case_sensitive": true,
+  "category": "Data & statistics",
+  "definition": "Confidence tag for a figure taken from a company, government or filing source. The strongest of the three tags."
+ },
+ {
+  "id": "pad-mount",
+  "term": "Pad-mount transformer",
+  "aliases": "Pad-mount transformer | pad-mount | pad-mounts | pad-mounted | padmounted | pad-mount transformers",
+  "case_sensitive": false,
+  "category": "Equipment",
+  "definition": "A distribution transformer in a locked steel cabinet on a concrete pad, used where power lines run underground, such as subdivisions, commercial sites and data centers. Three-phase pad-mounts are widely used on data-center campuses, and this is where new supply is arriving fastest."
+ },
+ {
+  "id": "pe",
+  "term": "PE (private equity)",
+  "aliases": "PE | PE owner | private equity | Private equity | private-equity",
+  "case_sensitive": true,
+  "category": "Markets & finance",
+  "definition": "Investment firms that buy companies with pooled funds and borrowed money, aim to grow them, and typically sell within about three to seven years."
+ },
+ {
+  "id": "permanent-capital",
+  "term": "Permanent capital",
+  "aliases": "Permanent capital | evergreen capital",
+  "case_sensitive": false,
+  "category": "Markets & finance",
+  "definition": "Investment money with no fixed date for returning cash to investors, unlike a private-equity fund that must sell its companies within roughly a decade. It allows long holds and patient building."
+ },
+ {
+  "id": "pilot",
+  "term": "PILOT (payment in lieu of taxes)",
+  "aliases": "PILOT | PILOTs",
+  "case_sensitive": true,
+  "category": "Policy & trade",
+  "definition": "An agreement letting a company pay a negotiated, usually reduced, amount instead of regular property taxes for a set period."
+ },
+ {
+  "id": "pjm",
+  "term": "PJM",
+  "aliases": "PJM",
+  "case_sensitive": true,
+  "category": "Organizations",
+  "definition": "PJM Interconnection, the largest US grid operator, covering all or parts of 13 Mid-Atlantic and Midwest states and Washington, DC, including the northern Virginia data-center hub."
+ },
+ {
+  "id": "platform",
+  "term": "Platform acquisition",
+  "aliases": "Platform acquisition | platform acquisitions | platform company | platform investment | new platform",
+  "case_sensitive": false,
+  "category": "Markets & finance",
+  "definition": "The first, usually larger, company bought in a new sector, which later add-ons are merged into."
+ },
+ {
+  "id": "pole-mount",
+  "term": "Pole-mount transformer",
+  "aliases": "Pole-mount transformer | pole-mount | pole-mounts | pole-mounted",
+  "case_sensitive": false,
+  "category": "Equipment",
+  "definition": "The cylindrical transformer hung on a utility pole, usually single-phase and serving a handful of homes. It is the most standardized and commoditized transformer product."
+ },
+ {
+  "id": "power-transformer",
+  "term": "Power transformer",
+  "aliases": "Power transformer | power transformers | power-transformer | power-transformers",
+  "case_sensitive": false,
+  "category": "Equipment",
+  "definition": "A large transformer used at power plants, in transmission and in substations to move power between voltage levels, as opposed to the smaller distribution transformers near customers. There is no single size cut-off: definitions start anywhere from about 500 kVA to 10 MVA, and the US tariff schedule splits liquid-filled units at 10 MVA."
+ },
+ {
+  "id": "ppa",
+  "term": "PPA (power purchase agreement)",
+  "aliases": "PPA | PPAs | power purchase agreement | power purchase agreements",
+  "case_sensitive": true,
+  "category": "Grid & demand",
+  "definition": "A long-term contract to buy electricity from a generator at an agreed price. Hyperscalers sign PPAs that fund new plants, which then need step-up transformers and substations."
+ },
+ {
+  "id": "ppi",
+  "term": "PPI (producer price index)",
+  "aliases": "PPI | PPIs | producer price index | producer price indexes | producer prices",
+  "case_sensitive": true,
+  "category": "Data & statistics",
+  "definition": "A BLS index of the prices domestic producers receive for their output, published monthly. Two transformer PPIs on this page show how fast transformer prices are rising."
+ },
+ {
+  "id": "ppi-escalator",
+  "term": "PPI escalator",
+  "aliases": "PPI escalator | PPI escalators | escalator | escalators | PPI adjustment",
+  "case_sensitive": false,
+  "category": "Markets & finance",
+  "definition": "A contract clause that adjusts the price by the change in a price index, usually a BLS producer price index, between order and delivery, shifting cost inflation onto the buyer."
+ },
+ {
+  "id": "pressboard",
+  "term": "Pressboard and insulating paper",
+  "aliases": "Pressboard and insulating paper | pressboard | kraft paper | insulating paper | transformer board | insulation board",
+  "case_sensitive": false,
+  "category": "Materials",
+  "definition": "Dense cellulose board and kraft paper made from wood pulp, used to insulate and space the windings inside liquid-filled transformers. Large-unit grades come from few suppliers, which makes them a bottleneck."
+ },
+ {
+  "id": "price-mix",
+  "term": "Price and mix",
+  "aliases": "Price and mix | price/mix",
+  "case_sensitive": false,
+  "category": "Markets & finance",
+  "definition": "Revenue or margin growth that comes from higher selling prices and from selling a richer blend of products, such as more large high-voltage units, rather than from selling more units."
+ },
+ {
+  "id": "primaries",
+  "term": "Primary voltage",
+  "aliases": "Primary voltage | primaries",
+  "case_sensitive": false,
+  "category": "Electrical",
+  "definition": "The voltage of the winding that receives power, which for a step-down substation transformer is its higher-voltage side. A unit with a '69-138 kV primary' takes power from a sub-transmission line at that voltage."
+ },
+ {
+  "id": "public-power",
+  "term": "Public power / municipal utility",
+  "aliases": "Public power / municipal utility | public power | public-power | municipal utility | municipal utilities | PUD | PUDs",
+  "case_sensitive": false,
+  "category": "Organizations",
+  "definition": "Utilities owned by cities, towns or public utility districts (PUDs) rather than shareholders. They are numerous but mostly small, so they buy transformers in small lots, often through distributors."
+ },
+ {
+  "id": "puct",
+  "term": "PUCT",
+  "aliases": "PUCT",
+  "case_sensitive": true,
+  "category": "Organizations",
+  "definition": "The Public Utility Commission of Texas, which approves transmission lines and utility rates in Texas."
+ },
+ {
+  "id": "qcew",
+  "term": "QCEW",
+  "aliases": "QCEW",
+  "case_sensitive": true,
+  "category": "Data & statistics",
+  "definition": "The BLS Quarterly Census of Employment and Wages: near-complete counts of jobs and pay by industry and county, drawn from unemployment-insurance records."
+ },
+ {
+  "id": "radiators",
+  "term": "Radiators and coolers",
+  "aliases": "Radiators and coolers | radiator | radiators | cooler | coolers",
+  "case_sensitive": false,
+  "category": "Equipment",
+  "definition": "Banks of thin steel panels bolted to a liquid-filled transformer's tank; the oil circulates through them to shed heat. Larger units add fans or pumps."
+ },
+ {
+  "id": "reconductoring",
+  "term": "Reconductoring",
+  "aliases": "Reconductoring | reconductor",
+  "case_sensitive": false,
+  "category": "Grid & demand",
+  "definition": "Replacing a power line's wires with higher-capacity conductors on the existing towers, a fast way to add transmission capacity. It frees large volumes of scrap aluminum and copper conductor."
+ },
+ {
+  "id": "reman",
+  "term": "Rewind / remanufactured / rebuilt transformer",
+  "aliases": "Rewind / remanufactured / rebuilt transformer | rewind | rewinds | rewound | remanufactured | remanufacture | remanufacturer | remanufacturers | remanufacturing | reman | rebuilt | reconditioned | refurbish | refurbished | refurbishment",
+  "case_sensitive": false,
+  "category": "Equipment",
+  "definition": "Ways of returning a used or failed transformer to service: a rewind replaces the windings while reusing the core and tank, and remanufactured, rebuilt or refurbished units are repaired, retested and resold. They can ship in weeks rather than the many months or years new units take, so buyers in a hurry pay close to new prices."
+ },
+ {
+  "id": "rfi",
+  "term": "RFI (request for information)",
+  "aliases": "RFI | RFIs | Request for information | request for information",
+  "case_sensitive": true,
+  "category": "Policy & trade",
+  "definition": "A formal government request for public input, often a first step before writing rules. DOE's RFI on implementing EO 14421 was published in September 2026 and closed on Oct 9, 2026."
+ },
+ {
+  "id": "roll-up",
+  "term": "Roll-up / buy-and-build",
+  "aliases": "Roll-up / buy-and-build | roll-up | roll-ups | rolled up | buy-and-build",
+  "case_sensitive": false,
+  "category": "Markets & finance",
+  "definition": "A strategy, usually backed by private equity, of buying many small companies in a fragmented industry and combining them, aiming to sell the larger whole at a higher valuation multiple than was paid for the parts."
+ },
+ {
+  "id": "rra",
+  "term": "RRA (Regulatory Research Associates)",
+  "aliases": "RRA",
+  "case_sensitive": true,
+  "category": "Organizations",
+  "definition": "A unit of S&P Global Market Intelligence that tracks utility regulation and capital spending."
+ },
+ {
+  "id": "rtep",
+  "term": "RTEP (Regional Transmission Expansion Plan)",
+  "aliases": "RTEP | W1 | Window 1",
+  "case_sensitive": true,
+  "category": "Grid & demand",
+  "definition": "PJM's yearly process for identifying and approving grid upgrades. 'Window 1' (W1) is the main competitive window in each cycle, in which developers propose projects to meet the identified needs."
+ },
+ {
+  "id": "tag-s",
+  "term": "S (secondary source)",
+  "aliases": "S secondary | tagged S",
+  "case_sensitive": true,
+  "category": "Data & statistics",
+  "definition": "Confidence tag for a figure from trade press, a law firm or an analyst reporting on primary material. Generally reliable but one step removed."
+ },
+ {
+  "id": "secondary-metal",
+  "term": "Secondary smelting",
+  "aliases": "Secondary smelting | secondary smelter | secondary smelters | secondary aluminum | secondary copper | secondary alloys",
+  "case_sensitive": false,
+  "category": "Materials",
+  "definition": "Making metal or alloys by melting scrap instead of ore. It uses far less energy than primary production but carries more impurities, which limits it to less demanding grades."
+ },
+ {
+  "id": "section-122",
+  "term": "Section 122",
+  "aliases": "Section 122",
+  "case_sensitive": true,
+  "category": "Policy & trade",
+  "definition": "A provision of the Trade Act of 1974 that allows a temporary import surcharge of up to 15% for up to 150 days. A global surcharge under it ran from Feb 24 to Jul 24, 2026, after the Supreme Court struck down the IEEPA tariffs."
+ },
+ {
+  "id": "section-232",
+  "term": "Section 232",
+  "aliases": "Section 232 | steel derivatives | full customs value | Proclamation 11021 | Proclamation 11032",
+  "case_sensitive": true,
+  "category": "Policy & trade",
+  "definition": "A provision of the Trade Expansion Act of 1962 that lets the president restrict imports, including by tariff, that the Commerce Department finds threaten national security. Its tariffs on steel, aluminum and copper extend to 'derivative' products such as transformers, which since April 2026 pay duty on their full customs value."
+ },
+ {
+  "id": "section-301",
+  "term": "Section 301",
+  "aliases": "Section 301 | legacy 301 | forced-labor | forced-labor tariff | forced-labor tariffs",
+  "case_sensitive": true,
+  "category": "Policy & trade",
+  "definition": "A provision of the Trade Act of 1974 that lets the US Trade Representative impose tariffs in response to unfair foreign trade practices. It underlies the China tariffs in place since 2018 and the forced-labor tariffs in force since Jul 24, 2026, which exclude Section 232 goods such as transformers."
+ },
+ {
+  "id": "shunt-reactor",
+  "term": "Shunt reactor",
+  "aliases": "Shunt reactor | shunt reactors | MVAr",
+  "case_sensitive": false,
+  "category": "Equipment",
+  "definition": "A large coil connected to a long high-voltage line to absorb excess reactive power and hold voltage steady, sized in MVAr (megavolt-amperes reactive). Reactors are built in transformer factories and ordered alongside 765 kV transformers."
+ },
+ {
+  "id": "single-phase",
+  "term": "Single-phase",
+  "aliases": "Single-phase | single phase",
+  "case_sensitive": false,
+  "category": "Electrical",
+  "definition": "Power delivered on one alternating-current wave, used by homes and small loads. The largest transmission banks are also often built from three single-phase units because one three-phase unit would be too big to ship."
+ },
+ {
+  "id": "solid-state-transformer",
+  "term": "Solid-state transformer",
+  "aliases": "Solid-state transformer | solid-state | solid-state transformers",
+  "case_sensitive": false,
+  "category": "Equipment",
+  "definition": "A device that converts voltage with power electronics (semiconductor switches and a small high-frequency transformer) instead of a conventional large iron core and copper coils. It is compact, controllable and can supply direct current, but it is costly and unproven at grid scale; start-ups are targeting data centers first."
+ },
+ {
+  "id": "spares",
+  "term": "Spare transformers and strategic reserve",
+  "aliases": "Spare transformers and strategic reserve | spares | spare transformer | spare transformers | strategic reserve",
+  "case_sensitive": false,
+  "category": "Grid & demand",
+  "definition": "Spares are extra units bought and stored so a failed transformer can be replaced in days or weeks instead of waiting years for a new one; large single-phase banks often include one. A strategic reserve would be a government-held stock of spares; none exists in the US for large units, though utilities share spares through industry programs."
+ },
+ {
+  "id": "spec-building",
+  "term": "Spec building",
+  "aliases": "Spec building | spec buildings | spec shell",
+  "case_sensitive": false,
+  "category": "Markets & finance",
+  "definition": "An industrial building put up speculatively, before a tenant is signed, so a manufacturer can buy or lease it and start fitting it out at once. It can save many months compared with building from scratch."
+ },
+ {
+  "id": "spp",
+  "term": "SPP",
+  "aliases": "SPP",
+  "case_sensitive": true,
+  "category": "Organizations",
+  "definition": "The Southwest Power Pool, the grid operator for much of the central US, from the Dakotas south to Oklahoma and parts of Texas and New Mexico."
+ },
+ {
+  "id": "sra",
+  "term": "SRA (slot reservation agreement)",
+  "aliases": "SRA | SRAs | slot reservation | slot reservations | slot reservation agreement | slot reservation agreements",
+  "case_sensitive": true,
+  "category": "Grid & demand",
+  "definition": "A paid agreement, used by GE Vernova, that reserves a manufacturing slot for a future gas turbine ahead of a firm order. It is a softer commitment than a firm order, so counts that include SRAs overstate firm demand somewhat."
+ },
+ {
+  "id": "state-econ-agencies",
+  "term": "State economic development agencies",
+  "aliases": "State economic development agencies | TNECD | VEDP | EDOs",
+  "case_sensitive": true,
+  "category": "Organizations",
+  "definition": "Agencies that negotiate incentives for new plants, such as Tennessee Economic and Community Development (TNECD), the Mississippi Development Authority (MDA), the Virginia Economic Development Partnership (VEDP) and the Arizona Commerce Authority (ACA). An EDO is any local or regional economic development organization."
+ },
+ {
+  "id": "state-env-agencies",
+  "term": "State environmental agencies",
+  "aliases": "State environmental agencies | MDEQ | ADEM | TCEQ | EPD | TDEC | VA DEQ | SC DES | DAQ | MCAQD | MCAQ",
+  "case_sensitive": true,
+  "category": "Organizations",
+  "definition": "The state and county regulators that issue environmental permits for new plants, including Mississippi's MDEQ, Alabama's ADEM, Texas's TCEQ, Georgia's EPD, Tennessee's TDEC, Virginia's DEQ, South Carolina's DES, North Carolina's Division of Air Quality (DAQ), and the Mecklenburg (MCAQ) and Maricopa (MCAQD) county air agencies."
+ },
+ {
+  "id": "steel-shot",
+  "term": "Steel shot and grit",
+  "aliases": "Steel shot and grit | steel shot | steel grit | shot and grit | steel abrasives | steel abrasive | abrasives | shot blasting | blast cleaning | blasting",
+  "case_sensitive": false,
+  "category": "Materials",
+  "definition": "Small steel balls (shot) or angular particles (grit) thrown at metal to clean and roughen it before painting. Transformer tanks, radiators and enclosures are blasted before coating; Fulton's Metaltec makes these abrasives."
+ },
+ {
+  "id": "step",
+  "term": "STEP and RTP (ERCOT transmission plans)",
+  "aliases": "STEP and RTP | STEP | RTP",
+  "case_sensitive": true,
+  "category": "Grid & demand",
+  "definition": "ERCOT's Regional Transmission Plan (RTP) is its yearly study of the upgrades its grid needs; the 2024 RTP set out the 765 kV Strategic Transmission Expansion Plan (STEP). STEP would build ERCOT's first 765 kV network to serve fast-growing load, notably in the Permian Basin oil field."
+ },
+ {
+  "id": "noi-stormwater",
+  "term": "Stormwater NOI",
+  "aliases": "Stormwater NOI | NOI | NOIs | stormwater | construction-stormwater",
+  "case_sensitive": false,
+  "category": "Policy & trade",
+  "definition": "A notice of intent a developer files to obtain construction stormwater permit coverage before clearing or grading land. A filing is public evidence that site work is about to start."
+ },
+ {
+  "id": "substation",
+  "term": "Substation",
+  "aliases": "Substation | substations",
+  "case_sensitive": false,
+  "category": "Grid & demand",
+  "definition": "A fenced facility where transformers change voltage and switchgear connects and protects lines. Power passes through substations wherever transmission, distribution and large customers meet."
+ },
+ {
+  "id": "substation-transformer",
+  "term": "Substation transformer",
+  "aliases": "Substation transformer | substation transformers | substation unit | substation units",
+  "case_sensitive": false,
+  "category": "Equipment",
+  "definition": "A power transformer in a utility, industrial or data-center substation that steps sub-transmission voltage (typically 69-138 kV on this page) down to distribution voltage. Units of about 10-60 MVA in this class are the dashboard's preferred entry segment for a new builder."
+ },
+ {
+  "id": "qualification",
+  "term": "Supplier qualification",
+  "aliases": "Supplier qualification | qualification | qualifications | utility qualifications",
+  "case_sensitive": false,
+  "category": "Markets & finance",
+  "definition": "The process by which a utility approves a manufacturer and design before buying, typically including factory audits, type tests and trial units. It can take years and is a key barrier for newcomers."
+ },
+ {
+  "id": "supply-gap",
+  "term": "Supply gap (supply deficit)",
+  "aliases": "Supply gap | supply deficit | supply deficits",
+  "case_sensitive": false,
+  "category": "Grid & demand",
+  "definition": "The share of a year's expected demand that available supply cannot meet, as estimated by Wood Mackenzie. For US power transformers it fell from about 30% in 2025 to about 15% in 2026."
+ },
+ {
+  "id": "switchgear",
+  "term": "Switchgear and switchboards",
+  "aliases": "Switchgear and switchboards | switchgear | switchboard | switchboards",
+  "case_sensitive": false,
+  "category": "Equipment",
+  "definition": "Switchgear is the assembly of circuit breakers, switches and fuses that controls, protects and isolates electrical equipment; a switchboard is a low-voltage panel that divides power among many circuits in a building or data center. Both sit next to transformers and are often sold by the same companies."
+ },
+ {
+  "id": "tank-fabrication",
+  "term": "Tank and enclosure fabrication",
+  "aliases": "Tank and enclosure fabrication | tank fabrication | tank fabricator | tank fabricators | transformer tanks | tanks | enclosure | enclosures | fabricated steel",
+  "case_sensitive": false,
+  "category": "Equipment",
+  "definition": "Cutting, forming and welding steel plate into the sealed tank that holds a transformer's core, windings and oil, plus covers and cabinets. Many builders weld tanks in-house; others buy from outside fabricators, a common capacity bottleneck."
+ },
+ {
+  "id": "tap-changer",
+  "term": "Tap changer",
+  "aliases": "tap-changer | tap-changers | de-energized tap changer",
+  "case_sensitive": false,
+  "category": "Equipment",
+  "definition": "A switch that changes how many turns of a winding are in use, adjusting the transformer's output voltage. On-load tap changers do this while carrying current and are made by very few firms, chiefly Maschinenfabrik Reinhausen and Hitachi Energy."
+ },
+ {
+  "id": "tariff-shelter",
+  "term": "Tariff shelter",
+  "aliases": "Tariff shelter | large-unit tariff shelter | large-unit shelter",
+  "case_sensitive": false,
+  "category": "Policy & trade",
+  "definition": "Shorthand on this page for the price advantage a US-built product gains because competing imports pay a tariff. A 25% duty gives 25 points of shelter, less any duty the US maker pays on imported inputs such as cores."
+ },
+ {
+  "id": "test-bay",
+  "term": "Test bay and type tests",
+  "aliases": "Test bay and type tests | test bay | test bays | test-bay | type test | type tests | type-test | type testing",
+  "case_sensitive": false,
+  "category": "Equipment",
+  "definition": "A test bay is the shielded high-voltage laboratory where a factory tests finished units before shipment; bigger, higher-voltage units need costlier bays. Type tests are one-time tests on a representative unit proving a design meets standards, which utilities usually require before approving a new supplier."
+ },
+ {
+  "id": "three-phase",
+  "term": "Three-phase",
+  "aliases": "Three-phase | three phase | 3-phase",
+  "case_sensitive": false,
+  "category": "Electrical",
+  "definition": "Power delivered on three overlapping alternating-current waves, the standard for transmission, industry, commercial buildings and data centers. Three-phase transformers are larger and more complex than single-phase ones."
+ },
+ {
+  "id": "toc",
+  "term": "TOC (total owning cost)",
+  "aliases": "TOC | total owning cost | total ownership cost | total-ownership-cost | capitalized losses | loss-evaluated | loss evaluation",
+  "case_sensitive": true,
+  "category": "Markets & finance",
+  "definition": "A bid evaluation that adds the present value of a transformer's expected lifetime energy losses ('capitalized losses') to its purchase price. Loss-evaluated bids reward more efficient designs rather than the lowest price alone."
+ },
+ {
+  "id": "total-consideration",
+  "term": "Total consideration",
+  "aliases": "Total consideration",
+  "case_sensitive": false,
+  "category": "Markets & finance",
+  "definition": "The full value a buyer records for an acquisition, including cash, shares and, when it already owned part of the target, the fair value of that earlier stake. GE Vernova's $9.66 billion for Prolec GE combines $5.25 billion in cash for the half it bought with $4.40 billion for the half it already owned."
+ },
+ {
+  "id": "transformer-bank",
+  "term": "Transformer bank",
+  "aliases": "Transformer bank | transformer bank | transformer banks | 765/345 kV banks | 765/345-kV banks | 765/500-kV banks",
+  "case_sensitive": true,
+  "category": "Grid & demand",
+  "definition": "A set of transformers working together as one three-phase connection, often three single-phase units, frequently with a fourth spare on site. Counts of banks are used here to estimate how many large units grid plans require."
+ },
+ {
+  "id": "ttm",
+  "term": "TTM, YTD, H1 (reporting periods)",
+  "aliases": "TTM, YTD, H1 | TTM | YTD | H1",
+  "case_sensitive": true,
+  "category": "Data & statistics",
+  "definition": "Shorthand for periods in financial results: TTM is the trailing (most recent) twelve months, YTD is year to date, and H1 is the first half of a year."
+ },
+ {
+  "id": "uhv",
+  "term": "UHV (ultra-high voltage)",
+  "aliases": "UHV | Ultra-high voltage | ultra-high voltage | ultra-high-voltage",
+  "case_sensitive": true,
+  "category": "Electrical",
+  "definition": "Strictly, transmission above the EHV range, such as China's 1,000 kV AC and 800 kV DC lines. Korean makers and trade press also use the term loosely for their largest units, including the 345-765 kV transformers they sell in the US."
+ },
+ {
+  "id": "undue-risk",
+  "term": "Undue risk",
+  "aliases": "Undue risk | undue-risk",
+  "case_sensitive": false,
+  "category": "Policy & trade",
+  "definition": "The finding DOE must make about a specific transaction before EO 14421 lets it prohibit the purchase or attach conditions. Nothing is banned automatically."
+ },
+ {
+  "id": "unit-substation",
+  "term": "Unit substation",
+  "aliases": "Unit substation | unit substations",
+  "case_sensitive": false,
+  "category": "Equipment",
+  "definition": "A factory-built package that combines a transformer with its incoming medium-voltage switchgear and outgoing low-voltage distribution equipment, common at industrial sites and data centers."
+ },
+ {
+  "id": "usitc",
+  "term": "USITC",
+  "aliases": "USITC",
+  "case_sensitive": true,
+  "category": "Organizations",
+  "definition": "The US International Trade Commission, an independent agency that rules on whether imports injure US industries (as in antidumping cases), hears patent-import disputes and runs the DataWeb trade database."
+ },
+ {
+  "id": "usmca",
+  "term": "USMCA",
+  "aliases": "USMCA",
+  "case_sensitive": true,
+  "category": "Policy & trade",
+  "definition": "The United States-Mexico-Canada Agreement, the 2020 trade pact that replaced NAFTA. Goods meeting its rules of origin enter duty-free and are spared some newer tariffs, but not Section 232 duties; after the July 2026 joint review the US declined to extend it, so it now faces yearly reviews."
+ },
+ {
+  "id": "ustr",
+  "term": "USTR",
+  "aliases": "USTR",
+  "case_sensitive": true,
+  "category": "Organizations",
+  "definition": "The Office of the US Trade Representative, which negotiates trade agreements and runs Section 301 tariff actions."
+ },
+ {
+  "id": "vapor-phase-drying",
+  "term": "Vapor-phase drying (VPD)",
+  "aliases": "Vapor-phase drying | vapor-phase | VPD",
+  "case_sensitive": false,
+  "category": "Equipment",
+  "definition": "A factory process that heats the core-and-coil assembly with condensing solvent vapor, then applies vacuum, to drive moisture out of the paper insulation before the unit is filled with oil. Its solvent emissions can require a state air permit."
+ },
+ {
+  "id": "venture-rounds",
+  "term": "Venture rounds (Series A, Series B)",
+  "aliases": "Venture rounds | Series A | Series B | venture-backed | venture capital",
+  "case_sensitive": true,
+  "category": "Markets & finance",
+  "definition": "Successive rounds of equity funding that start-ups raise from venture capital investors: a Series A is usually the first large round, and a Series B follows once the business shows traction."
+ },
+ {
+  "id": "tag-w",
+  "term": "W (weak source)",
+  "aliases": "W weak",
+  "case_sensitive": true,
+  "category": "Data & statistics",
+  "definition": "Confidence tag for a figure from a vendor blog, aggregator or unverified summary. Treat it as directional only and check before relying on it."
+ },
+ {
+  "id": "windings",
+  "term": "Windings",
+  "aliases": "Windings | winding | coil-winding",
+  "case_sensitive": false,
+  "category": "Equipment",
+  "definition": "The coils of insulated copper or aluminum conductor wrapped around the core; the ratio of turns between windings sets the voltage change. Winding large units is skilled, largely manual work and a labor bottleneck."
+ },
+ {
+  "id": "wire-chopping",
+  "term": "Wire chopping and granulation",
+  "aliases": "Wire chopping and granulation | wire chopping | wire granulation | granulation | chopped wire | chops",
+  "case_sensitive": false,
+  "category": "Materials",
+  "definition": "Shredding insulated scrap wire and separating the metal from its plastic jacket, producing clean copper or aluminum chops that smelters and rod mills buy."
+ },
+ {
+  "id": "woodmac",
+  "term": "Wood Mackenzie (WoodMac)",
+  "aliases": "Wood Mackenzie | WoodMac",
+  "case_sensitive": false,
+  "category": "Organizations",
+  "definition": "An energy research and consulting firm whose surveys of transformer lead times and supply shortfalls are widely cited."
+ },
+ {
+  "id": "yoy",
+  "term": "YoY, QoQ, MoM (period-over-period change)",
+  "aliases": "YoY, QoQ, MoM | YoY | year over year | year-over-year | QoQ | MoM",
+  "case_sensitive": true,
+  "category": "Data & statistics",
+  "definition": "Ways of measuring change: year over year (YoY) compares with the same period a year earlier, which removes seasonal effects; quarter over quarter (QoQ) and month over month (MoM) compare with the immediately preceding quarter or month."
+ }
+]

@@ -58,6 +58,7 @@ Use web search in "extended" mode for anything time-sensitive. Run the searches 
    - Update `url`, `name` and `updated` on the matching `datasets/<id>` document.
    - Edit `files/index.html` (source in `dashboard/index.html`) only when the layout itself needs to change.
    - The value-chain graph, the Fulton section and the glossary come from `value-chain/research/workflow_result.json`. After editing that file (a new flow, a changed estimate, a new Fulton deal, a new term), run `python3 -I value-chain/build_value_chain.py value-chain/research/workflow_result.json <out_dir> value-chain`, then upload `value_chain_nodes`, `value_chain_edges`, `fulton_plan`, `fulton_portfolio`, `fulton_plays` and `glossary` the same way. When a new acronym appears in the weekly text, add it to the glossary so the page underlines it.
+4c. Rebuild the self-hosted copy (test.white-sail.ai): copy changed dataset JSON into `site-build/data/`, then run `python3 -I site-build/build_site.py dashboard/index.html site-build/data site test.white-sail.ai`. Pushing `site/` redeploys it through `.github/workflows/pages.yml`.
 5. Commit with the message `weekly: transformer market update <YYYY-MM-DD>` and push to the working branch.
 
 ## 4b. Deep-dive follow-ups each week

@@ -1,0 +1,29 @@
+[
+ {
+  "year": 2025,
+  "label": "2025",
+  "power_pct": 30,
+  "kind": "Estimate",
+  "note": "Wood Mackenzie Q2 2025 survey.",
+  "confidence": "S",
+  "source_url": "https://www.powermag.com/transformers-in-2026-shortage-scramble-or-self-inflicted-crisis/"
+ },
+ {
+  "year": 2026,
+  "label": "2026",
+  "power_pct": 15,
+  "kind": "Estimate",
+  "note": "Wood Mackenzie, Sep 2026.",
+  "confidence": "S",
+  "source_url": "https://www.woodmac.com/press-releases/us-executive-order-banning-chinese-bulk-power-equipment-set-to-worsen-critical-transformer-shortage/"
+ },
+ {
+  "year": 2030,
+  "label": "2030",
+  "power_pct": 5,
+  "kind": "Projection",
+  "note": "Secondary report of Wood Mackenzie modelling.",
+  "confidence": "W",
+  "source_url": "https://distroforge.com/blog/transformer-procurement-2026/"
+ }
+]

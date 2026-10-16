@@ -1,0 +1,134 @@
+[
+ {
+  "month": "2025-06",
+  "series": "Power and distribution transformers (WPU117409)",
+  "value": 350.532,
+  "source_url": "https://fred.stlouisfed.org/series/WPU117409"
+ },
+ {
+  "month": "2025-07",
+  "series": "Power and distribution transformers (WPU117409)",
+  "value": 351.192,
+  "source_url": "https://fred.stlouisfed.org/series/WPU117409"
+ },
+ {
+  "month": "2025-08",
+  "series": "Power and distribution transformers (WPU117409)",
+  "value": 351.192,
+  "source_url": "https://fred.stlouisfed.org/series/WPU117409"
+ },
+ {
+  "month": "2025-09",
+  "series": "Power and distribution transformers (WPU117409)",
+  "value": 351.192,
+  "source_url": "https://fred.stlouisfed.org/series/WPU117409"
+ },
+ {
+  "month": "2026-01",
+  "series": "Power and distribution transformers (WPU117409)",
+  "value": 362.638,
+  "source_url": "https://fred.stlouisfed.org/series/WPU117409"
+ },
+ {
+  "month": "2026-02",
+  "series": "Power and distribution transformers (WPU117409)",
+  "value": 362.638,
+  "source_url": "https://fred.stlouisfed.org/series/WPU117409"
+ },
+ {
+  "month": "2026-03",
+  "series": "Power and distribution transformers (WPU117409)",
+  "value": 362.638,
+  "source_url": "https://fred.stlouisfed.org/series/WPU117409"
+ },
+ {
+  "month": "2026-04",
+  "series": "Power and distribution transformers (WPU117409)",
+  "value": 364.861,
+  "source_url": "https://fred.stlouisfed.org/series/WPU117409"
+ },
+ {
+  "month": "2026-05",
+  "series": "Power and distribution transformers (WPU117409)",
+  "value": 364.861,
+  "source_url": "https://fred.stlouisfed.org/series/WPU117409"
+ },
+ {
+  "month": "2026-06",
+  "series": "Power and distribution transformers (WPU117409)",
+  "value": 364.861,
+  "source_url": "https://fred.stlouisfed.org/series/WPU117409"
+ },
+ {
+  "month": "2026-07",
+  "series": "Power and distribution transformers (WPU117409)",
+  "value": 381.783,
+  "source_url": "https://fred.stlouisfed.org/series/WPU117409"
+ },
+ {
+  "month": "2025-05",
+  "series": "Transformer manufacturing (PCU335311)",
+  "value": 438.942,
+  "source_url": "https://fred.stlouisfed.org/series/PCU335311335311"
+ },
+ {
+  "month": "2025-06",
+  "series": "Transformer manufacturing (PCU335311)",
+  "value": 438.942,
+  "source_url": "https://fred.stlouisfed.org/series/PCU335311335311"
+ },
+ {
+  "month": "2025-07",
+  "series": "Transformer manufacturing (PCU335311)",
+  "value": 440.55,
+  "source_url": "https://fred.stlouisfed.org/series/PCU335311335311"
+ },
+ {
+  "month": "2025-08",
+  "series": "Transformer manufacturing (PCU335311)",
+  "value": 440.55,
+  "source_url": "https://fred.stlouisfed.org/series/PCU335311335311"
+ },
+ {
+  "month": "2025-09",
+  "series": "Transformer manufacturing (PCU335311)",
+  "value": 440.55,
+  "source_url": "https://fred.stlouisfed.org/series/PCU335311335311"
+ },
+ {
+  "month": "2025-10",
+  "series": "Transformer manufacturing (PCU335311)",
+  "value": 458.356,
+  "source_url": "https://fred.stlouisfed.org/series/PCU335311335311"
+ },
+ {
+  "month": "2026-04",
+  "series": "Transformer manufacturing (PCU335311)",
+  "value": 454.338,
+  "source_url": "https://fred.stlouisfed.org/series/PCU335311335311"
+ },
+ {
+  "month": "2026-05",
+  "series": "Transformer manufacturing (PCU335311)",
+  "value": 456.602,
+  "source_url": "https://fred.stlouisfed.org/series/PCU335311335311"
+ },
+ {
+  "month": "2026-06",
+  "series": "Transformer manufacturing (PCU335311)",
+  "value": 456.602,
+  "source_url": "https://fred.stlouisfed.org/series/PCU335311335311"
+ },
+ {
+  "month": "2026-07",
+  "series": "Transformer manufacturing (PCU335311)",
+  "value": 474.831,
+  "source_url": "https://fred.stlouisfed.org/series/PCU335311335311"
+ },
+ {
+  "month": "2026-08",
+  "series": "Transformer manufacturing (PCU335311)",
+  "value": 475.065,
+  "source_url": "https://fred.stlouisfed.org/series/PCU335311335311"
+ }
+]

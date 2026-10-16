@@ -1,0 +1,145 @@
+[
+ {
+  "id": "p00-the-imperial-group-imper",
+  "company": "The Imperial Group / Imperial Recycling",
+  "what_it_does": "Family metals group founded in 1962 (HQ 1700 W Fulton St, Chicago). It recovers copper and aluminum from insulated, armored and oilfield cable, processes and trades metal, and is growing PVC cable-jacket recycling.",
+  "link_to_trend": "Strongest link in the portfolio.\n• Two sources of scrap: retired transformers, and the production scrap that builders generate. Both carry copper and aluminum windings, steel tanks and cores, and oil.\n• Steady feedstock: the installed base is 60-80M units, with about 1.5-2.7M replaced a year (computed).\n• Copper prices help: copper is about $14,474/t (+45% YoY), and Section 232 duties on refined copper (15% in 2027, 30% in 2028) raise the value of domestic secondary copper.\n• Addressable market (est.): $30-120M/yr for retired-unit buyback (f2) and $20-80M/yr for closed-loop copper chops to rod mills (f1). These are estimates, not sales, and they overlap.",
+  "impact": "High",
+  "impact_rank": 0,
+  "action": "Run a teardown pilot in the next 6 months.\n• Sign 3-5 supply agreements for retired units with Midwest utilities, co-ops and municipal utilities.\n• Sign 2-3 production-scrap buyback agreements with transformer plants within trucking range: Prolec GE and Eaton in Waukesha WI, and WEG in Washington MO.\n• Confirm oil-handling and PCB permits and indemnities before taking any units. PCB rules come from general knowledge, not the research.\n• Decide by mid-2027 whether to buy a regional transformer dismantler (Play 1).",
+  "confidence": "P",
+  "source_url": "https://imperialgp.com/about-us/"
+ },
+ {
+  "id": "p01-exeon-processors-imperia",
+  "company": "Exeon Processors (Imperial Group)",
+  "what_it_does": "Wire and cable processor in Jonesboro IN that granulates insulated copper and aluminum wire into clean metal chops.",
+  "link_to_trend": "Utility reconductoring, undergrounding and cable replacement raise volumes of utility cable scrap. Clean #1 copper chops are the only form a rod mill can feed into the winding-wire chain. Whether Southwire uses scrap feed is unconfirmed.",
+  "impact": "High",
+  "impact_rank": 0,
+  "action": "Submit #1 chops for qualification at one rod mill. Southwire and Freeport's rod mills are in the value-chain map, but neither is confirmed to accept scrap. Process magnet-wire and cable scrap from the teardown pilot. Add granulation capacity only after the pilot shows volume.",
+  "confidence": "P",
+  "source_url": "https://exeoninc.com/history"
+ },
+ {
+  "id": "p02-midwest-industrial-metal",
+  "company": "Midwest Industrial Metals (Imperial Group)",
+  "what_it_does": "Non-ferrous scrap buyer and processor in Northlake IL: insulated wire, copper, aluminum and brass.",
+  "link_to_trend": "A natural Chicago-area collection point for scrap from utilities, electrical contractors, transformer rebuilders and data-center construction offcuts. That includes winding copper and bushing brass.",
+  "impact": "Medium",
+  "impact_rank": 1,
+  "action": "Open accounts with Chicago-area electrical contractors and data-center construction sites. Serve as the drop-off yard for the teardown pilot. Track volume and margin by source every month so the pilot can be judged by mid-2027.",
+  "confidence": "S",
+  "source_url": "https://manufacturing-today.com/news/midwest-industrial-metals/"
+ },
+ {
+  "id": "p03-imperial-zinc-corp",
+  "company": "Imperial Zinc Corp.",
+  "what_it_does": "Chicago producer of zinc alloys and zinc anodes for galvanizing, plating, cathodic protection and die casting.",
+  "link_to_trend": "Indirect.\n• Galvanizing: zinc goes into hot-dip galvanizing of transmission towers, substation steel and some pad-mount hardware.\n• Anodes: zinc anodes protect buried substation steel.\n• Timing: demand rises mostly in 2028-34 as transmission projects are built, including ERCOT's 765 kV plan (about 2,468 mi) and MISO Tranche 2.1 (3,631 mi).\n• No direct sales to transformer makers.",
+  "impact": "Low",
+  "impact_rank": 2,
+  "action": "List the current galvanizer customers that serve utility-structure and substation-steel fabricators. Use the list to screen galvanizers as possible acquisitions (Play 7). No capex.",
+  "confidence": "S",
+  "source_url": "https://imperialzinc.com/"
+ },
+ {
+  "id": "p04-imperial-aluminum-minerv",
+  "company": "Imperial Aluminum-Minerva / Imperial Alloys",
+  "what_it_does": "Secondary aluminum smelter in Minerva OH that turns scrap into die-cast and foundry alloys.",
+  "link_to_trend": "Weak to moderate. It cannot make the EC-grade (1350) aluminum used for windings. It can do two things:\n• Absorb clean aluminum winding scrap from teardowns.\n• Sell alloy to foundries that cast bushing flanges, terminal pads and enclosure parts. Addressable market is est. $10-45M/yr (f3), not current sales.",
+  "impact": "Low",
+  "impact_rank": 2,
+  "action": "Send aluminum windings from the teardown pilot to Minerva and test what they are worth as a high-purity addition to the melt. Line up alloy supply for any foundry FAM buys under Play 3.",
+  "confidence": "S",
+  "source_url": "https://jcsentinel.com/news/article_9646492b-1c85-5a18-a30f-d5e18062ce32.html"
+ },
+ {
+  "id": "p05-mayco-industries",
+  "company": "Mayco Industries",
+  "what_it_does": "Calls itself the largest US maker of non-battery lead products: sheet, brick, radiation shielding, ballast and shot. Runs a rolling mill in Birmingham AL and a shot tower in Granite City IL.",
+  "link_to_trend": "Limited. Lead has no direct use in transformers. The only niches are lead-alloy sheathing for high-voltage underground and submarine cable, and radiation shielding.",
+  "impact": "Low",
+  "impact_rank": 2,
+  "action": "No grid program. Answer inquiries for cable-sheathing alloy as they come in; do not invest.",
+  "confidence": "S",
+  "source_url": "https://www.recyclingtoday.com/news/metalico-sells-lead-fabricating-business/"
+ },
+ {
+  "id": "p06-stainless-foundry-engine",
+  "company": "Stainless Foundry & Engineering (SFE)",
+  "what_it_does": "Milwaukee foundry making stainless and high-alloy sand and investment castings up to about 200 lb for energy, nuclear and power-generation OEMs. Lead times are about 6 weeks.",
+  "link_to_trend": "Moderate.\n• What it can make: stainless valve bodies, cooler flanges, and tap-changer (OLTC) and bushing hardware.\n• Tap changers: Reinhausen expanded its Humboldt TN plant 45% and plans to double global capacity by 2030; many of its castings still come from Germany. Addressable est. $1-5M/yr (f6).\n• Bushings: Trench's Charlotte bushing plant opened in Jul 2026.\n• Hitachi: addressable est. $2-10M/yr (f7).\n• Adjacent market: turbine and generator OEMs (GE Vernova backlog 116 GW, Siemens Energy 69 GW) supplying data-center power.",
+  "impact": "Medium",
+  "impact_rank": 1,
+  "action": "In Q4 2026, send capability packages and request RFQs from Reinhausen (Humboldt TN), Trench (Charlotte NC), Hubbell PCORE (LeRoy NY), Hitachi Energy and Qualitrol. Lead with the 6-week lead time. Target one approved first-article order by mid-2027.",
+  "confidence": "P",
+  "source_url": "https://www.formds.com/issuers/fam-sfe-holdings-llc"
+ },
+ {
+  "id": "p07-metaltec-steel-abrasive-",
+  "company": "Metaltec Steel Abrasive Company",
+  "what_it_does": "Maker of cast steel shot and grit from melted scrap in Canton Township MI. One of three leading US producers; claims to be the only North American maker of a low-carbon shot.",
+  "link_to_trend": "A direct consumable, but the pool is small.\n• Use: tanks, radiators, pad-mount cabinets, switchgear and substation steel are blasted before painting.\n• Pool size (est.): $2-8M/yr chain-wide; outsourced shops $0.3-2.8M (f4) and Howard $0.3-2M (f5).\n• Effect on Metaltec: even large share gains are a few percent of its estimated $20-50M revenue.",
+  "impact": "Low",
+  "impact_rank": 2,
+  "action": "Win the abrasive specification on blast lines that start up in 2026-27:\n• PTT Raeford pad-mount plant\n• Eaton Jonesville\n• ERMCO Waddell\n• JST Wytheville\n• Howard Ellisville\n• Prolec Goldsboro\n• VTC Rincon\n• HD Hyundai Montgomery #2\n• Hyosung Memphis\n\nLead with the low-carbon shot. Use existing distributors where they already cover a plant.",
+  "confidence": "P",
+  "source_url": "https://livingstonepartners.com/en/transaction/livingstone-advises-metaltec-on-sale-to-family-office-consortium-2/"
+ },
+ {
+  "id": "p08-panther-metalflow",
+  "company": "Panther Metalflow",
+  "what_it_does": "Swiss-type CNC turning and Metalflow zinc cast-in-place assemblies in Walled Lake MI. About 40 staff and about $5.4M revenue (weak source).",
+  "link_to_trend": "Weak to moderate. Panther could make turned terminals, studs and bushing hardware for distribution transformers and meters. The pool is est. $8-38M/yr, of which Eaton's share is est. $1-6M (f10). No grid customers were found.",
+  "impact": "Low",
+  "impact_rank": 2,
+  "action": "Quote 2-3 turned-hardware part families to Eaton (Waukesha WI) and one other distribution builder. Drop the effort if no part is approved (PPAP) within 9 months. This does not justify capex.",
+  "confidence": "S",
+  "source_url": "https://www.panthermetalflow.com/"
+ },
+ {
+  "id": "p09-afco-industries",
+  "company": "AFCO Industries",
+  "what_it_does": "Aluminum, composite and vinyl building products, plus CNC fabrication and contract manufacturing, at plants in Alexandria LA, Olive Branch MS, Pell City AL and Olmstead IL. About 300-400 staff; est. $60-110M revenue. FAM acquired it in Jul 2025.",
+  "link_to_trend": "Moderate, with the best location in the portfolio.\n• Location: the plants sit near Howard (MS), Prolec Shreveport (LA), Hitachi Crystal Springs/Gallman (MS), HD Hyundai Montgomery (AL) and Central Moloney Pine Bluff (AR).\n• Can make: parts that do not need to hold pressure, such as cabinet doors, sills, platforms, guards and brackets, plus aluminum or stainless enclosures for coastal utilities.\n• Cannot make: sealed transformer tanks; it is not a tank-welding shop.\n• Addressable market (est.): $3-20M at Howard (f8) and $3-25M at Eaton (f9). Both are subsets of builders' outsourced tank and enclosure spend.",
+  "impact": "Medium",
+  "impact_rank": 1,
+  "action": "Pick the plant with spare fabrication capacity. Quote enclosure sub-assemblies to Howard, Prolec Shreveport and HD Hyundai Montgomery by Q1 2027. Win a paid first-article order before any capex. Screen tank fabricators as an add-on only if a builder commits volume (Play 5).",
+  "confidence": "P",
+  "source_url": "https://www.businesswire.com/news/home/20250825338486/en/Fulton-Asset-Management-Acquires-AFCO-Industries-a-Leading-U.S.-Manufacturer-of-Building-Products-and-Metal-Fabrication-Services"
+ },
+ {
+  "id": "p10-setna-io",
+  "company": "Setna iO",
+  "what_it_does": "Chicago aviation aftermarket platform: aircraft and engine leasing, teardown, parts inventory and repair. Bought a majority of J&C Aero (Vilnius) in 2026.",
+  "link_to_trend": "None. The only tie is aircraft-teardown aluminum and titanium scrap that could go to Imperial.",
+  "impact": "None",
+  "impact_rank": 3,
+  "action": "No grid action. Keep sending teardown scrap to Imperial when the pricing works.",
+  "confidence": "S",
+  "source_url": "https://jcaero.com/news/setna-acquires-majority-stake-in-jc-aero-to-establish-global-cabin-interiors-capabilities/"
+ },
+ {
+  "id": "p11-transend-logistics",
+  "company": "Transend Logistics",
+  "what_it_does": "Chicago 3PL and freight broker: flatbed, dry van, drayage, cross-dock and warehousing, with Mexico-US-Canada lanes. About $43M revenue (weak source).",
+  "link_to_trend": "Moderate for distribution-size freight.\n• Mexico flows: Mexico supplied 45% of US core imports in 2019. It is also a source of magnet wire (Magnekon) and finished units (Prolec Monterrey, Eaglerise and Jinpan Mexico).\n• Addressable market (est.): $10-40M for Prolec freight (f11) and $12-45M for imported distribution units (f12).\n• No heavy haul: Transend cannot move large power units.",
+  "impact": "Medium",
+  "impact_rank": 1,
+  "action": "Within 6 months:\n• Quote Monterrey-to-US flatbed lanes to Prolec GE, Worthington's Corefficient (cores) and Magnekon.\n• Set up reverse logistics from utility yards to Imperial for the teardown pilot.\n• Do not buy heavy-haul equipment.",
+  "confidence": "S",
+  "source_url": "https://transendlogistics.com/"
+ },
+ {
+  "id": "p12-zyci-cnc-machining-minor",
+  "company": "ZYCI CNC Machining (minority partnership)",
+  "what_it_does": "AS9100-certified CNC machining for aerospace, defense and firearms in the Atlanta area. FAM partnered with it around mid-2026; the founders still run it.",
+  "link_to_trend": "Weak. Machined parts for switchgear, tap changers or test equipment are possible, but no grid customers were found. FAM is not in control.",
+  "impact": "None",
+  "impact_rank": 3,
+  "action": "No grid program. Keep the focus on aerospace and defense.",
+  "confidence": "W",
+  "source_url": "https://www.linkedin.com/in/mfree/"
+ }
+]

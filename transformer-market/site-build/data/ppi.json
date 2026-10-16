@@ -1,0 +1,22 @@
+[
+ {
+  "series": "WPU117409",
+  "name": "Power and distribution transformers",
+  "month": "2026-07",
+  "index_value": 381.783,
+  "yoy_pct": 8.7,
+  "since_jan2020_pct": 91.4,
+  "confidence": "S",
+  "source_url": "https://labordatahub.com/producer-prices/power-distribution-and-specialty-transformer-manufacturing"
+ },
+ {
+  "series": "PCU335311",
+  "name": "Transformer manufacturing (NAICS 335311)",
+  "month": "2026-03",
+  "index_value": 455.9,
+  "yoy_pct": 4.27,
+  "since_jan2020_pct": null,
+  "confidence": "S",
+  "source_url": "https://tradingeconomics.com/united-states/producer-price-index-by-industry-electric-power-and-specialty-transformer-manufacturing-fed-data.html"
+ }
+]

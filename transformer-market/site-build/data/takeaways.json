@@ -1,0 +1,170 @@
+[
+ {
+  "id": "headline",
+  "order": 0,
+  "kind": "headline",
+  "stance": "Neutral",
+  "heading": "Headline",
+  "body": "Build, but aim one size class up: 10-60 MVA substation transformers with 69-138 kV primaries, entered by buying or converting a plant that already has a test bay, with 3-phase pad-mounts as the fast first product. Commit after DOE's EO 14421 rules (around Dec 24) and the Q3 margin reports."
+ },
+ {
+  "id": "01-69-138-kv-substation-units-are-where-sca",
+  "order": 1,
+  "kind": "implication",
+  "stance": "Opportunity",
+  "heading": "69-138 kV substation units are where scarcity, EO coverage and pricing power overlap",
+  "body": "Three findings point to the same band:\n• EO 14421 reaches equipment at ≥69 kV with no MVA floor.\n• Municipal quotes for substation units run ~130 weeks.\n• Power-transformer makers show the clearest price-led margin gains.\n\nA plant that can type-test and qualify 10-60 MVA, 69-138 kV units by 2028-29 sells into the tightest segment an entrant can reach."
+ },
+ {
+  "id": "02-pad-mount-is-filling-faster-than-any-oth",
+  "order": 2,
+  "kind": "implication",
+  "stance": "Risk",
+  "heading": "Pad-mount is filling faster than any other segment and gets no EO shelter",
+  "body": "New supply is arriving on several fronts:\n• PTT's pad-mount plant (early 2027), JST/Jinpan (1,000/yr), Giga, Eaton, ERMCO and Eaglerise all add capacity.\n• Forgent claims capacity of ~2x its FY27 guide.\n\nStated additions roughly match the computed data-center pull in ERCOT and PJM. EO 14421 excludes local distribution."
+ },
+ {
+  "id": "03-incumbent-margins-show-a-real-profit-poo",
+  "order": 3,
+  "kind": "implication",
+  "stance": "Tailwind",
+  "heading": "Incumbent margins show a real profit pool",
+  "body": "EBITDA and operating margins at scale makers run 16-25% and rose through Q2 2026: Forgent 24.4%, HD Hyundai 25.1%, Hyosung 15.7%, GE Vernova Electrification 18.4% and Hammond 16.4%. An entrant can price under incumbents and still earn a return."
+ },
+ {
+  "id": "04-gross-margins-are-not-widening-q3-is-the",
+  "order": 4,
+  "kind": "implication",
+  "stance": "Risk",
+  "heading": "Gross margins are not widening; Q3 is the first full input-cost test",
+  "body": "Forgent's gross margin slipped ~1.8 points, Hammond's was flat and Hubbell Utility's margin was flat as inflation and tariffs offset price. Copper (+45%) and base oil (+111%) hit fixed-price backlogs in Q3, with results due late October to November."
+ },
+ {
+  "id": "05-chinese-owned-and-korean-suppliers-alrea",
+  "order": 5,
+  "kind": "implication",
+  "stance": "Risk",
+  "heading": "Chinese-owned and Korean suppliers already compete inside the US",
+  "body": "The competition is already local:\n• Eaglerise underbid US distributors by 18-23% at Lafayette.\n• Kerec, Sungjin and Taihan hold places on Austin Energy's $200M contracts.\n• JST sells ~$360M a year (annualized) through its US entity.\n\nThe 25% tariff does not touch their US-built units."
+ },
+ {
+  "id": "06-incumbent-mid-power-schedules-are-slippi",
+  "order": 6,
+  "kind": "implication",
+  "stance": "Opportunity",
+  "heading": "Incumbent mid-power schedules are slipping",
+  "body": "Several 10-160 MVA additions are later or smaller than announced, which widens the 2027-29 window for a qualified newcomer:\n• Gallman partly replaces Crystal Springs and arrives in 2029.\n• Rincon slipped to +50% by March 2027.\n• Muscle Shoals shows no site work.\n• Niagara is pre-construction."
+ },
+ {
+  "id": "07-howard-and-prolec-are-taking-the-10-100-",
+  "order": 7,
+  "kind": "implication",
+  "stance": "Risk",
+  "heading": "Howard and Prolec are taking the 10-100 MVA band on schedule",
+  "body": "Howard Ellisville reaches 250 MVA/345 kV by end-2026, and Prolec Goldsboro doubles medium-power output to 420 units/yr by end-2027. Win frame agreements in 2027-28 while quotes are long."
+ },
+ {
+  "id": "08-eo-driven-replacement-of-installed-chine",
+  "order": 8,
+  "kind": "implication",
+  "stance": "Neutral",
+  "heading": "EO-driven replacement of installed Chinese units is unquantified upside",
+  "body": "DOE may order monitoring, isolation or removal of equipment installed before Aug 26. If it acts on 2024-26 Chinese substation units, replacement demand would add to 69 kV+ orders. No estimate exists, so keep this out of the base case."
+ },
+ {
+  "id": "09-no-federal-money-in-the-base-case",
+  "order": 9,
+  "kind": "implication",
+  "stance": "Risk",
+  "heading": "No federal money in the base case",
+  "body": "None of the federal channels is open to a new builder:\n• No DPA Title III solicitation or award six months after PD 2026-10; authority may have lapsed Sep 30, 2026 (W).\n• 48C is exhausted.\n• EDF has not lent to a grid-equipment maker.\n• There is no reserve."
+ },
+ {
+  "id": "10-incentives-are-a-tie-breaker-labor-and-b",
+  "order": 10,
+  "kind": "implication",
+  "stance": "Neutral",
+  "heading": "Incentives are a tie-breaker; labor and buildings decide sites",
+  "body": "State and local awards come to 0.8-6.4% of capex and pay out on performance over up to 12 years. The only double-digit package (Siemens, ~17%) relied on 48C, which is gone."
+ },
+ {
+  "id": "11-labor-sets-the-pace-of-any-ramp",
+  "order": 11,
+  "kind": "implication",
+  "stance": "Risk",
+  "heading": "Labor sets the pace of any ramp",
+  "body": "Seven plants hiring in 2027-28 announce 4,388 jobs, 1.2x the 3,600 coil winders in all of NAICS 3353. Contracted wages run $65-72k, and Hitachi is building worker housing. Site away from these ramps, for example in the Chicago or Great Lakes pool."
+ },
+ {
+  "id": "12-existing-buildings-cut-time-and-capex",
+  "order": 12,
+  "kind": "implication",
+  "stance": "Opportunity",
+  "heading": "Existing buildings cut time and capex",
+  "body": "Recent entrants show the range:\n• ERMCO bought a finished 566k sq ft shell for $91M (~$161/sq ft).\n• Central Moloney produces in a leased 140k sq ft building on ~$25M.\n• VanTran converted a 430k sq ft distribution center for $20-33M.\n\nSpec space is still marketed in the West Valley."
+ },
+ {
+  "id": "13-core-costs-may-be-higher-than-modelled",
+  "order": 13,
+  "kind": "implication",
+  "stance": "Risk",
+  "heading": "Core costs may be higher than modelled",
+  "body": "One reading of the April annex puts cores and laminations at 50%, not 25%. At 50%, cores consume ~10 of the 15 points of large-unit tariff shelter (computed). Butler's new GOES does not land until 2028."
+ },
+ {
+  "id": "14-aftermarket-earns-a-speed-premium-and-tr",
+  "order": 14,
+  "kind": "implication",
+  "stance": "Opportunity",
+  "heading": "Aftermarket earns a speed premium and trains labor",
+  "body": "Rebuilt pad-mounts sell at near-new $/kVA with 4-12 week delivery, and emergency units carry a ~33% premium. A reman shop is a cash-generating on-ramp for coil winders."
+ },
+ {
+  "id": "15-the-valuation-gap-rewards-buy-and-build-",
+  "order": 15,
+  "kind": "implication",
+  "stance": "Neutral",
+  "heading": "The valuation gap rewards buy-and-build, if targets exist",
+  "body": "Scale cleared at ~12.9-14.1x EBITDA (Prolec), against 5.9-8.8x for lower-middle-market manufacturing. But Southwest Electric, Delta Star, PTT and Sunbelt Solomon are taken. Central Moloney (Wind Point, exit window 2027-29) is the most actionable target."
+ },
+ {
+  "id": "16-policy-volatility-persists",
+  "order": 16,
+  "kind": "implication",
+  "stance": "Risk",
+  "heading": "Policy volatility persists",
+  "body": "IEEPA and Section 122 tariffs were overturned. Annex III's 15% tier expires Dec 31, 2027, DPA may have lapsed, and the EO's licensing design is unknown. Any tariff-dependent margin is a policy bet."
+ },
+ {
+  "id": "bottom_line",
+  "order": 17,
+  "kind": "bottom_line",
+  "stance": "Neutral",
+  "heading": "Bottom line",
+  "body": "The shortage is real but splitting by segment. Substation and power units still quote about 130 weeks and carry rising margins; pad-mounts are filling fast with new US, Chinese-owned and Korean supply, and get no protection from the EO. A newcomer wins by owning a qualified 69-138 kV line by 2028, buying cores from two suppliers, siting away from the Southeast hiring wave, and walking away if DOE's rules, bid lead times or margins break the thresholds in the deep dive."
+ },
+ {
+  "id": "cav_sources",
+  "order": 18,
+  "kind": "caveat",
+  "stance": "Neutral",
+  "heading": "How the numbers were gathered",
+  "body": "Two rounds of multi-agent research read government, permit, filing, docket and procurement sources through web search; direct access to those sites is blocked here. Each figure links to its source and carries a P, S or W tag."
+ },
+ {
+  "id": "cav_conflicts",
+  "order": 19,
+  "kind": "caveat",
+  "stance": "Neutral",
+  "heading": "Where sources disagree",
+  "body": "The duty on imported cores reads as 25% or 50% depending on the annex reading. The >100 MVA import counts come from a vendor compilation that could not be verified. Korea's Jan-Jul 2026 export figure has one source."
+ },
+ {
+  "id": "cav_gaps",
+  "order": 20,
+  "kind": "caveat",
+  "stance": "Neutral",
+  "heading": "What is still missing",
+  "body": "Census HS-10 import units by country, QCEW plant employment, and any state permit record: permit portals are not indexed by search, so plant dates rest on groundbreakings, incentive filings and job postings."
+ }
+]

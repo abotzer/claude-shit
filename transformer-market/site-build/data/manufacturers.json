@@ -1,0 +1,245 @@
+[
+ {
+  "company": "Hitachi Energy",
+  "owner": "Hitachi (TSE: 6501)",
+  "ownership": "Public",
+  "segments": "Power, large power, bushings",
+  "na_plants": "South Boston VA; Crystal Springs MS; Varennes QC; Alamo TN",
+  "latest_move": "South Boston broke ground Jun 29, 2026; $528M Gallman MS plant (2029) partly replaces Crystal Springs",
+  "confidence": "P"
+ },
+ {
+  "company": "Prolec GE",
+  "owner": "GE Vernova (NYSE: GEV)",
+  "ownership": "Public",
+  "segments": "Power, distribution",
+  "na_plants": "Seven sites incl. Goldsboro NC, Shreveport LA, Waukesha WI, Monterrey MX",
+  "latest_move": "Now fully owned by GE Vernova; Goldsboro doubling",
+  "confidence": "P"
+ },
+ {
+  "company": "Siemens Energy",
+  "owner": "Siemens Energy (ETR: ENR)",
+  "ownership": "Public",
+  "segments": "Large power",
+  "na_plants": "Charlotte NC (under construction)",
+  "latest_move": "Charlotte production slipped to 2027",
+  "confidence": "P"
+ },
+ {
+  "company": "HD Hyundai Electric",
+  "owner": "HD Hyundai (KRX: 267260)",
+  "ownership": "Public",
+  "segments": "765 kV / EHV",
+  "na_plants": "Montgomery AL",
+  "latest_move": "$200M second plant, due Apr 2027",
+  "confidence": "S"
+ },
+ {
+  "company": "Hyosung HICO",
+  "owner": "Hyosung Heavy Industries (KRX)",
+  "ownership": "Public",
+  "segments": "765 kV / EHV",
+  "na_plants": "Memphis TN (the former Mitsubishi Electric plant)",
+  "latest_move": "$287M of US data-center orders (Sep 2026); Q2 operating margin 15.7%",
+  "confidence": "S"
+ },
+ {
+  "company": "Virginia Transformer",
+  "owner": "Private (Roanoke VA)",
+  "ownership": "Private",
+  "segments": "Power 2–500 MVA, distribution",
+  "na_plants": "Six NA plants incl. Rincon GA; Muscle Shoals AL coming",
+  "latest_move": "Muscle Shoals greenfield (May 2026); sale talk above $6B",
+  "confidence": "S"
+ },
+ {
+  "company": "Pennsylvania Transformer Technology",
+  "owner": "Quanta Services (NYSE: PWR)",
+  "ownership": "Public",
+  "segments": "Power 5–750 MVA, up to 765 kV",
+  "na_plants": "Canonsburg PA; Raeford NC",
+  "latest_move": "Raeford adds a pad-mount plant that ships early 2027",
+  "confidence": "P"
+ },
+ {
+  "company": "Niagara Power Transformer",
+  "owner": "Quanta Services (NYSE: PWR)",
+  "ownership": "Public",
+  "segments": "Power",
+  "na_plants": "Cheektowaga NY",
+  "latest_move": "$71M expansion, 90 → 140 units a year (Sep 2026)",
+  "confidence": "S"
+ },
+ {
+  "company": "Delta Star",
+  "owner": "MacLean Power Systems (Blackstone, Centerbridge), pending",
+  "ownership": "PE",
+  "segments": "Power, mobile substations",
+  "na_plants": "Lynchburg VA; San Carlos CA; Saint-Jean-sur-Richelieu QC",
+  "latest_move": "Sale to MacLean signed Sep 2026",
+  "confidence": "S"
+ },
+ {
+  "company": "Howard Industries",
+  "owner": "Private (Laurel MS)",
+  "ownership": "Private",
+  "segments": "Distribution, medium power",
+  "na_plants": "Laurel and Ellisville MS",
+  "latest_move": "Ellisville reaches 250 MVA / 345 kV by end-2026; $237M Mississippi program to ~2030",
+  "confidence": "P"
+ },
+ {
+  "company": "WEG",
+  "owner": "WEG (B3: WEGE3)",
+  "ownership": "Public",
+  "segments": "Power up to 550 kV, distribution",
+  "na_plants": "Washington MO; Atotonilco de Tula MX",
+  "latest_move": "$165M NA generator expansion (Sep 2026)",
+  "confidence": "S"
+ },
+ {
+  "company": "Eaton",
+  "owner": "Eaton (NYSE: ETN)",
+  "ownership": "Public",
+  "segments": "Three-phase, distribution, solid-state",
+  "na_plants": "Waukesha WI; Nacogdoches TX; Jonesville SC (2027)",
+  "latest_move": "$340M Jonesville plant",
+  "confidence": "P"
+ },
+ {
+  "company": "ERMCO",
+  "owner": "Arkansas Electric Cooperatives",
+  "ownership": "Co-op",
+  "segments": "Distribution, dry-type",
+  "na_plants": "Tennessee, Arkansas, plus Spire plants in GA, TN, TX, MX",
+  "latest_move": "Arizona three-phase plant for 2027",
+  "confidence": "S"
+ },
+ {
+  "company": "Central Moloney",
+  "owner": "Wind Point Partners (since Oct 2023)",
+  "ownership": "PE",
+  "segments": "Distribution",
+  "na_plants": "Pine Bluff AR; Panama City Beach FL",
+  "latest_move": "Florida pole-mount plant operating in a leased building",
+  "confidence": "P"
+ },
+ {
+  "company": "Forgent Power Solutions",
+  "owner": "NYSE: FPS (Neos Partners controls)",
+  "ownership": "Public",
+  "segments": "Data-center distribution, switchboards",
+  "na_plants": "MGM (Vernon CA); VanTran (Waco TX)",
+  "latest_move": "FY26 revenue $1.42B; Q4 adj. EBITDA margin 24.4%; claims capacity for ~$5B revenue",
+  "confidence": "P"
+ },
+ {
+  "company": "JST Power Equipment",
+  "owner": "Hainan Jinpan (China)",
+  "ownership": "Public",
+  "segments": "Pad-mount; switchgear",
+  "na_plants": "Wytheville VA; Lake Mary FL",
+  "latest_move": "Opened Wytheville May 2026; 1,000 units a year from 2027. Chinese-owned, so likely covered by EO 14421",
+  "confidence": "P"
+ },
+ {
+  "company": "Eaglerise Electric",
+  "owner": "Eaglerise (China, SZSE)",
+  "ownership": "Public",
+  "segments": "Pad-mount, new-energy transformers",
+  "na_plants": "US plant; Mexico plant",
+  "latest_move": "Ramping both plants; underbid US distributors 18-23% at Lafayette LA",
+  "confidence": "S"
+ },
+ {
+  "company": "SGB-SMIT",
+  "owner": "OEP (private equity)",
+  "ownership": "PE",
+  "segments": "Power and distribution",
+  "na_plants": "Southwest Electric (Oklahoma)",
+  "latest_move": "Bought Southwest Electric in Mar 2025",
+  "confidence": "S"
+ },
+ {
+  "company": "Giga Energy",
+  "owner": "Private (venture-backed)",
+  "ownership": "Private",
+  "segments": "Medium-voltage pad-mount",
+  "na_plants": "Houston TX; Long Beach CA",
+  "latest_move": "Houston plant planned to start Q1 2026",
+  "confidence": "P"
+ },
+ {
+  "company": "Hammond Power Solutions",
+  "owner": "TSX: HPS.A",
+  "ownership": "Public",
+  "segments": "Dry-type",
+  "na_plants": "Canada, US, Mexico",
+  "latest_move": "Bought AEG Power Solutions (Jul 2026)",
+  "confidence": "P"
+ },
+ {
+  "company": "Cleveland-Cliffs",
+  "owner": "NYSE: CLF",
+  "ownership": "Public",
+  "segments": "GOES steel; planned distribution plant",
+  "na_plants": "Butler PA; Weirton WV (planned)",
+  "latest_move": "Weirton transformer plant cancelled May 2025; Butler GOES +25% due 2028",
+  "confidence": "P"
+ },
+ {
+  "company": "Sunbelt Solomon",
+  "owner": "TJC, pending (from Trilantic)",
+  "ownership": "PE",
+  "segments": "New and remanufactured distribution",
+  "na_plants": "Sharon PA; Elba AL",
+  "latest_move": "TJC deal signed Jul 2026",
+  "confidence": "S"
+ },
+ {
+  "company": "Integrated Power Services",
+  "owner": "Private equity-backed",
+  "ownership": "PE",
+  "segments": "Aftermarket, refurbished high voltage",
+  "na_plants": "Greenville SC; Easton PA (Belyea)",
+  "latest_move": "Bought Belyea’s high-voltage business (Oct 7, 2026)",
+  "confidence": "S"
+ },
+ {
+  "company": "Heron Power",
+  "owner": "Venture (a16z, Breakthrough Energy)",
+  "ownership": "Private",
+  "segments": "Solid-state",
+  "na_plants": "Morgan Hill CA (converted warehouse)",
+  "latest_move": "First factory site picked Aug 2026; production late 2027",
+  "confidence": "P"
+ },
+ {
+  "company": "DG Matrix",
+  "owner": "Venture (Engine; ABB and MHI)",
+  "ownership": "Private",
+  "segments": "Solid-state",
+  "na_plants": "Raleigh NC",
+  "latest_move": "$60M Series A",
+  "confidence": "S"
+ },
+ {
+  "company": "Marsons + Cleanhill",
+  "owner": "Marsons (India) and Cleanhill Partners (NY)",
+  "ownership": "JV",
+  "segments": "11–345 kV, GSUs up to 200 MVA (imported)",
+  "na_plants": "US company (planned)",
+  "latest_move": "Joint venture approved Oct 6, 2026",
+  "confidence": "S"
+ },
+ {
+  "company": "LS Electric",
+  "owner": "LS Electric (KRX)",
+  "ownership": "Public",
+  "segments": "Ultra-high voltage (built in Korea)",
+  "na_plants": "Switchboard plants in Bastrop TX and Cedar City UT",
+  "latest_move": "$123M UHV order for western US projects",
+  "confidence": "S"
+ }
+]

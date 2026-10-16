@@ -1,0 +1,100 @@
+[
+ {
+  "id": "00-is-the-north-american-transformer-shorta",
+  "order": 0,
+  "question": "Is the North American transformer shortage real and durable through 2030?",
+  "answer": "Real, and now visibly split by segment.\n• Substation and power units are still scarce: municipal records show a ~130-week median quoted lead time, and WoodMac's 2026 deficits are 15% for power and 8% for substation units.\n• Single-phase distribution is loosening: stock quotes run 6-13 weeks and rebuilt units 4-12 weeks.\n• New 3-phase pad-mounts were still at 40-50 weeks in early 2026 (W).\n\nWhether it lasts to 2030 depends on the 2027-29 wave. That wave is later in mid-power and earlier in pad-mount than the headlines suggest.",
+  "confidence": "Medium"
+ },
+ {
+  "id": "01-are-transformer-prices-still-rising",
+  "order": 1,
+  "question": "Are transformer prices still rising?",
+  "answer": "Yes. Index levels are confirmed at records: WPU117409 was 381.783 in July, up 4.6% in one month, and PCU335311 was flat in August at 475.065. Round 1's YoY rates of +7.6-8.7% were not re-checked. Buyers are paying PPI escalators and premiums for speed. Base case: mid-single-digit nominal growth, arriving in steps and mostly passing through costs.",
+  "confidence": "High"
+ },
+ {
+  "id": "02-are-maker-margins-expanding",
+  "order": 2,
+  "question": "Are maker margins expanding?",
+  "answer": "Yes at the EBITDA level through Q2 2026, mainly from operating leverage and, in power transformers, from price and mix:\n• Forgent: 24.4%.\n• HD Hyundai: 25.1%.\n• Hyosung: 15.7%, +490 bp.\n• GE Vernova Electrification: 18.4%, +700 bp organic.\n• Hammond: 16.4%.\n\nGross margins at distribution makers are flat to down; Forgent fell from ~36.9% to ~35.1%. Hubbell Utility was flat as inflation and tariffs offset price. Q3 is the first quarter with the full copper and oil step.",
+  "confidence": "Medium"
+ },
+ {
+  "id": "03-will-eo-14421-hand-domestic-builders-a-l",
+  "order": 3,
+  "question": "Will EO 14421 hand domestic builders a large new market?",
+  "answer": "Not in distribution. EO 14421 covers bulk-power equipment at ≥69 kV, excludes local distribution, and bans nothing until DOE finds undue risk in a specific transaction.\n\nWhere it does reach:\n• 69-138 kV substation units, with no MVA floor.\n• Chinese-owned firms anywhere, through an ownership test.\n• Installed equipment, which DOE may order removed.\n\nMost of the substitution goes to Korea, Mexico, Brazil and India, none of which is covered.",
+  "confidence": "Medium"
+ },
+ {
+  "id": "04-does-trade-policy-protect-a-new-us-plant",
+  "order": 4,
+  "question": "Does trade policy protect a new US plant?",
+  "answer": "Distribution: Section 232 charges 25% from all origins (round 1; not re-verified). But Chinese-owned firms are localizing (JST, Eaglerise) and pay nothing on units built in the US.\n\nPower: 15% through 2027 (Annex III listing confirmed, rate secondary-sourced), plus 0-4.32% Korean antidumping on units of 60 MVA and up.\n\nCores: imported cores may pay 25% or 50% (unresolved). That would cost a US large-unit builder that imports cores 5-10 of its 15 points of shelter (computed).",
+  "confidence": "Medium"
+ },
+ {
+  "id": "05-who-would-a-us-plant-displace",
+  "order": 5,
+  "question": "Who would a US plant displace?",
+  "answer": "Mostly allies, near-shore suppliers and foreign-owned US plants:\n• Power: Mexico, Brazil and Korea supplied 57% of >100 MVA import units in 2025 (unverified series).\n• Distribution: Eaglerise underbid US distributors by 18-23% at Lafayette, Korean makers hold places on Austin Energy's $200M supply contracts, and Jinpan's JST sells ~$360M a year (annualized) through its US entity.",
+  "confidence": "Medium"
+ },
+ {
+  "id": "06-will-the-incumbents-2027-29-capacity-wav",
+  "order": 6,
+  "question": "Will the incumbents' 2027-29 capacity wave close the gap?",
+  "answer": "It depends on the segment:\n• 3-phase pad-mount: largely closed by 2027-28. PTT's new pad-mount plant, JST, Giga, Eaton, ERMCO and Eaglerise all add capacity, and Forgent says it can support ~2x its FY27 revenue guide.\n• 10-160 MVA: later and smaller than announced. Gallman nets ≈1x Crystal Springs in 2029, Rincon is +50% by March 2027, Muscle Shoals is unverified and Niagara is pre-construction. Howard and Prolec are on schedule, though.\n• LPT: slipping. Siemens moved to 2027, and South Boston possibly to 2029.",
+  "confidence": "Medium"
+ },
+ {
+  "id": "07-can-a-new-builder-secure-core-steel",
+  "order": 7,
+  "question": "Can a new builder secure core steel?",
+  "answer": "Core steel is still the hardest input to secure:\n• Butler's +25% GOES output is now a $170M project due in 2028, per the CEO.\n• Cliffs disclosed no GOES price or tonnage, and Weirton is cancelled.\n• Imported cores pay 25% or 50% (unresolved).\n\nPlan on two North American core suppliers and an amorphous option.",
+  "confidence": "Medium"
+ },
+ {
+  "id": "08-is-labor-a-binding-constraint",
+  "order": 8,
+  "question": "Is labor a binding constraint?",
+  "answer": "Yes for 2027-28:\n• Seven plants hiring in that window announce 4,388 jobs, 1.2x the 3,600 coil winders in all of NAICS 3353 (2023).\n• Contracted average wages are $65-72k, 52-56% above county averages.\n• Hitachi is building worker housing, and Eaton relies on state pre-hire training.\n\nQCEW headcount is still missing.",
+  "confidence": "Medium"
+ },
+ {
+  "id": "09-is-distribution-softening-while-large-po",
+  "order": 9,
+  "question": "Is distribution softening while large power stays scarce?",
+  "answer": "Partly established. Buyer data supports loosening in single-phase and stock units, but not in new 3-phase pad-mounts. It also confirms substation and large units are still scarce. The round-1 trigger of 3-phase bids under 20 weeks has not tripped.",
+  "confidence": "Medium"
+ },
+ {
+  "id": "10-buy-or-build",
+  "order": 10,
+  "question": "Buy or build?",
+  "answer": "Buy, convert or expand. Use greenfield only for distribution, and only in an existing building. Benchmarks:\n• ERMCO bought a finished 566k sq ft shell for $91M (~$161/sq ft).\n• Central Moloney leased 140k sq ft and spent ~$25M.\n• Eaton is converting a distribution center with a $10M state grant.\n\nScale assets clear at 12.9-14.1x EBITDA (Prolec), against 5.9-8.8x for lower-middle-market manufacturing. But qualified medium-power targets are scarce.",
+  "confidence": "Medium"
+ },
+ {
+  "id": "11-is-demand-durable-through-2030",
+  "order": 11,
+  "question": "Is demand durable through 2030?",
+  "answer": "Yes, and it is now partly countable in units:\n• ~27 ERCOT 765/345 kV banks (2030-32 and later).\n• ~50-160 US GSUs a year.\n• 460-890 MV/LV units and 9-22 HV/MV units per GW of data-center load; ERCOT has 9.5 GW approved, and PJM expects +65.7 GW by 2036.\n• NREL projects +160-260% distribution capacity by 2050.\n\nUtility distribution-substation counts are still missing.",
+  "confidence": "Medium"
+ },
+ {
+  "id": "12-will-federal-money-or-federal-purchasing",
+  "order": 12,
+  "question": "Will federal money or federal purchasing help a new builder?",
+  "answer": "Not in the base case:\n• DPA PD 2026-10 names transformers and core steel, but no solicitation or award was found, and Title III may have sunset on Sep 30, 2026 (W).\n• 48C is fully allocated.\n• EDF has not lent to a grid-equipment maker.\n• There is no strategic reserve.\n\nFederal buying (WAPA, USACE) is for custom GSU and LPT units, often through installing integrators.",
+  "confidence": "Medium"
+ },
+ {
+  "id": "13-do-incentives-change-the-siting-decision",
+  "order": 13,
+  "question": "Do incentives change the siting decision?",
+  "answer": "No. Disclosed state and local awards are 0.8-6.4% of capex, or 9.4% at Niagara if NYPA's award is counted. Only 48C lifted one project (Siemens) to ~17%, and 48C is gone. Labor and existing buildings decide where plants go.",
+  "confidence": "High"
+ }
+]

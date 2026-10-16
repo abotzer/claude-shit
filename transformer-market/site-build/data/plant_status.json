@@ -1,0 +1,344 @@
+[
+ {
+  "id": "00-hitachi-energy-gallman-ms-10-160-mva-230",
+  "plant": "Hitachi Energy, Gallman MS (10-160 MVA, ≤230 kV; $528M)",
+  "announced_online": "2029 (construction to start late 2026)",
+  "verdict": "unverified",
+  "verdict_label": "Unverified",
+  "evidence": "Announced Sep 15, 2026. No groundbreaking, permit or MDEQ notice found. MFLEX value undisclosed. Jobs: 654 (state) vs >700 (company). Partly relocates Crystal Springs, so the net addition is ≈1x Crystal Springs (S, computed)",
+  "source_url": "https://www.hitachienergy.com/news-and-events/press-releases/2026/09/hitachi-deepens-commitment-to-u-s-manufacturing-with-528-million-mississippi-transformer-factory"
+ },
+ {
+  "id": "01-hitachi-energy-crystal-springs-ms-existi",
+  "plant": "Hitachi Energy, Crystal Springs MS (existing 10-160 MVA)",
+  "announced_online": "Operating; production moves to Gallman ~2029",
+  "verdict": "operating",
+  "verdict_label": "Operating",
+  "evidence": "Trade press says Crystal Springs production moves to Gallman. Fate of the building unknown (S)",
+  "source_url": "https://infraday.com/2026/10/04/hitachi-energy-gallman-mississippi-transformer-factory-2026/"
+ },
+ {
+  "id": "02-hitachi-energy-south-boston-va-lpt-457m-",
+  "plant": "Hitachi Energy, South Boston VA (LPT; $457M; 825 jobs)",
+  "announced_online": "2028 (baseline); ~2029 (one W summary)",
+  "verdict": "at_risk",
+  "verdict_label": "At risk",
+  "evidence": "Groundbreaking Jun 29, 2026. $29.4M MEI grant. County land for 96-136 workforce homes. No VA DEQ or building record found",
+  "source_url": "https://www.hitachienergy.com/us/en/news-and-events/press-releases/2026/06/hitachi-energy-breaks-ground-on-the-nation-s-largest-facility-for-the-production-of-large-power-transformers-in-south-boston-virginia"
+ },
+ {
+  "id": "03-hitachi-energy-varennes-qc-lpt-3x-test-b",
+  "plant": "Hitachi Energy, Varennes QC (LPT, ~3x; test bay)",
+  "announced_online": "2027",
+  "verdict": "unverified",
+  "verdict_label": "Unverified",
+  "evidence": "No round-2 evidence. Baseline S only",
+  "source_url": "https://www.theglobeandmail.com/business/article-hitachi-plans-270-million-expansion-of-quebec-power-transformer"
+ },
+ {
+  "id": "04-hitachi-energy-alamo-tn-bushings-to-800-",
+  "plant": "Hitachi Energy, Alamo TN (bushings to 800 kV; $106M / $97M)",
+  "announced_online": "~2027 (two-year build, inference)",
+  "verdict": "on_track",
+  "verdict_label": "On track",
+  "evidence": "Groundbreaking Aug 20, 2025. TNECD gives $97M initial investment. No TDEC record (P)",
+  "source_url": "https://www.tn.gov/ecd/news/2025/8/20/hitachi-energy-to-expand-manufacturing-operations-in-crockett-county.html"
+ },
+ {
+  "id": "05-prolec-ge-goldsboro-nc-medium-power-220-",
+  "plant": "Prolec GE, Goldsboro NC (medium power, 220 -> 420 units/yr; $140M)",
+  "announced_online": "End-2027 (investment deadline Dec 31, 2027)",
+  "verdict": "on_track",
+  "verdict_label": "On track",
+  "evidence": "Groundbreaking Mar 17, 2026. JDIG up to $4.696M over 12 years, $71,912 average wage. Not surfaced on the NC DAQ list (P)",
+  "source_url": "https://www.prolec.energy/news/prolec-ge-waukesha-breaks-ground-on-major-expansion-in-wayne-county/"
+ },
+ {
+  "id": "06-prolec-ge-shreveport-la-1-500-small-unit",
+  "plant": "Prolec GE, Shreveport LA (+1,500 small units/yr; $34M)",
+  "announced_online": "2025",
+  "verdict": "operating",
+  "verdict_label": "Operating",
+  "evidence": "Complete per baseline (S). Not re-checked in round 2",
+  "source_url": "https://bossierpress.com/prolec-ge-completes-34-million-expansion-of-shreveport-facility-boosting-energy-transition-efforts-and-local-economy/"
+ },
+ {
+  "id": "07-prolec-ge-monterrey-mx-85m-2x-mexico-out",
+  "plant": "Prolec GE, Monterrey MX ($85M; 2x Mexico output)",
+  "announced_online": "2025-06",
+  "verdict": "unverified",
+  "verdict_label": "Unverified",
+  "evidence": "Completion unverified. No round-2 evidence",
+  "source_url": "https://transformer-magazine.com/news/prolec-ge-invests-85-m-in-transformer-manufacturing-capacity/"
+ },
+ {
+  "id": "08-siemens-energy-charlotte-nc-lpt-24-57-yr",
+  "plant": "Siemens Energy, Charlotte NC (LPT, 24 -> 57/yr; $150M)",
+  "announced_online": "2027 (originally early 2026)",
+  "verdict": "slipped",
+  "verdict_label": "Slipped",
+  "evidence": "Aug 2026 job postings say the building is done in late 2026. JDIG up to $6.98M. 48C credit $18.3M. No MCAQ permit found",
+  "source_url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Process-Engineer-Transformer-Factory-Greenfield-Build/298177"
+ },
+ {
+  "id": "09-siemens-energy-nc-program-421m-feb-2026-",
+  "plant": "Siemens Energy, NC program ($421M, Feb 2026; partly LPT manufacturing and service, mostly generators and turbines)",
+  "announced_online": "Not stated",
+  "verdict": "unverified",
+  "verdict_label": "Unverified",
+  "evidence": "City of Charlotte release. Transformer share not split out. State incentive status disputed",
+  "source_url": "https://www.charlottenc.gov/City-News/Siemens-Energy-Expands-Operations-in-Charlotte-Creating-More-Jobs"
+ },
+ {
+  "id": "10-hd-hyundai-electric-montgomery-al-2-50-e",
+  "plant": "HD Hyundai Electric, Montgomery AL #2 (+50% EHV, 765 kV; $200M; 312k sq ft)",
+  "announced_online": "Apr 2027 (company) / mid-2027 (Chamber)",
+  "verdict": "on_track",
+  "verdict_label": "On track",
+  "evidence": "Groundbreaking Mar 6, 2026. No ADEM record; the only Hyundai notice is an unrelated seating plant",
+  "source_url": "https://www.constructionequipmentguide.com/s-al-hyu-electric/70873"
+ },
+ {
+  "id": "11-hyosung-hico-memphis-tn-ehv-765-kv-130-2",
+  "plant": "Hyosung HICO, Memphis TN (EHV/765 kV, 130 -> 250+ units/yr; $51M + $157M + $30M building)",
+  "announced_online": "Phased through 2027-28",
+  "verdict": "on_track",
+  "verdict_label": "On track",
+  "evidence": "Contractor groundbreaking Nov 24, 2025. 2019 EDGE PILOT met two years early, rescored end-2026. No 2025 PILOT or Shelby County air notice found",
+  "source_url": "https://www.tn.gov/ecd/news/2025/11/12/hyosung-hico--ltd--expands-u-s--manufacturing-headquarters-for-second-time-in-six-months.html"
+ },
+ {
+  "id": "12-mitsubishi-electric-power-products-memph",
+  "plant": "Mitsubishi Electric Power Products, Memphis TN (baseline row)",
+  "announced_online": "Operating, as Hyosung HICO",
+  "verdict": "operating",
+  "verdict_label": "Operating",
+  "evidence": "Hyosung bought the plant in 2019 for $45M, so the baseline row double-counts Memphis capacity. Remove it as separate capacity (S)",
+  "source_url": "https://dailymemphian.com/article/60828"
+ },
+ {
+  "id": "13-virginia-transformer-rincon-ga-40m",
+  "plant": "Virginia Transformer, Rincon GA ($40M)",
+  "announced_online": "Mar 2027 at +50% (was ~end-2026 at +70%)",
+  "verdict": "slipped",
+  "verdict_label": "Slipped",
+  "evidence": "Company groundbreaking release. Scope includes vapor-phase drying, which likely needs a GA EPD air action; none found (P)",
+  "source_url": "https://www.prnewswire.com/news-releases/virginia-transformer-announces-plan-to-further-expand-with-new-greenfield-plant-in-muscle-shoals-alabama-bringing-1-100-high-paying-jobs-to-the-region-302776563.html"
+ },
+ {
+  "id": "14-virginia-transformer-muscle-shoals-al-2-",
+  "plant": "Virginia Transformer, Muscle Shoals AL (2-500 MVA; 600k sq ft; 1,100 jobs; ~$300M reported)",
+  "announced_online": "Jan 2028",
+  "verdict": "at_risk",
+  "verdict_label": "At risk",
+  "evidence": "Announced May 19, 2026. City abatement for Caravels LLC ('Project Jolt'). $4.5M Growing Alabama site and rail award. No groundbreaking, site work, stormwater notice or hiring found since. Reported capex looks low at ~$273k per job",
+  "source_url": "https://governor.alabama.gov/newsroom/2026/05/governor-ivey-announces-virginia-transformer-plant-will-bring-1100-jobs-to-northwest-alabama/"
+ },
+ {
+  "id": "15-pennsylvania-transformer-technology-quan",
+  "plant": "Pennsylvania Transformer Technology (Quanta), Raeford NC (5-750 MVA plus new 150k sq ft pad-mount plant; $102.5M)",
+  "announced_online": "Pad-mount building Q4 2026; first shipments early 2027",
+  "verdict": "on_track",
+  "verdict_label": "On track",
+  "evidence": "Groundbreaking Dec 10, 2025. One NC grant $800k ($64,949 average wage). NCRR rail grant $400k. Not surfaced on the NC DAQ list",
+  "source_url": "https://www.patransformer.com/news/pad-mount-transformer-facility/"
+ },
+ {
+  "id": "16-niagara-power-transformer-quanta-cheekto",
+  "plant": "Niagara Power Transformer (Quanta), Cheektowaga NY (90 -> 140 units/yr; $71.2M)",
+  "announced_online": "Not stated; likely 2028+ (judgment)",
+  "verdict": "unverified",
+  "verdict_label": "Unverified",
+  "evidence": "ECIDA hearing Aug 25, 2026. $2.19M inducement on the September agenda; vote unconfirmed. NYPA $4.5M on Sep 29. No construction evidence",
+  "source_url": "https://www.ecidany.com/documents/2026%20Board%20Documents/Agenda%20Only/ECIDA%20Board%20Agenda%20-September%202026.pdf"
+ },
+ {
+  "id": "17-howard-industries-ellisville-ms-medium-p",
+  "plant": "Howard Industries, Ellisville MS (medium power to 250 MVA, 345 kV; $100M)",
+  "announced_online": "Building ~Sep 2026; full project end-2026",
+  "verdict": "on_track",
+  "verdict_label": "On track",
+  "evidence": "Groundbreaking Apr 2, 2026. No MDEQ record (P/S)",
+  "source_url": "https://www.howardcomputers.com/INFO/news/2026/04/02/howard-industries-announces-100-million-expansion-of-medium-power-transformer-plant-in-ellisville-mississippi.cfm"
+ },
+ {
+  "id": "18-howard-industries-clarke-jones-simpson-c",
+  "plant": "Howard Industries, Clarke/Jones/Simpson counties MS ($236.95M; 450 jobs)",
+  "announced_online": "Within five years of Jun 2025 (~2030)",
+  "verdict": "unverified",
+  "verdict_label": "Unverified",
+  "evidence": "MDA announcement only (P)",
+  "source_url": "https://mississippi.org/news/howard-industries-investing-236-million-in-clarke-jones-and-simpson-counties/"
+ },
+ {
+  "id": "19-delta-star-lynchburg-va-power-and-mobile",
+  "plant": "Delta Star, Lynchburg VA (power and mobile substations; $35M)",
+  "announced_online": "In progress",
+  "verdict": "unverified",
+  "verdict_label": "Unverified",
+  "evidence": "No round-2 evidence on the expansion. MacLean acquisition signed Sep 1, 2026, closing Q4",
+  "source_url": "https://www.businesswire.com/news/home/20260901860730/en/MacLean-Power-Systems-to-Acquire-Delta-Star"
+ },
+ {
+  "id": "20-eaton-jonesville-sc-3-phase-distribution",
+  "plant": "Eaton, Jonesville SC (3-phase distribution; $340M; 700 jobs)",
+  "announced_online": "2027",
+  "verdict": "on_track",
+  "verdict_label": "On track",
+  "evidence": "Retrofit of an 861k sq ft former Belk distribution center. $10M RIF grant plus job development credits; readySC training. No SC DES permit found",
+  "source_url": "https://www.sccommerce.com/news/eaton-expands-south-carolina-footprint-new-manufacturing-facility-union-county"
+ },
+ {
+  "id": "21-ermco-waddell-maricopa-county-az-3-phase",
+  "plant": "ERMCO, Waddell (Maricopa County) AZ (3-phase; 566k sq ft; >500 jobs)",
+  "announced_online": "2027 (ACA wording: phase 1 2026, phase 2 2027)",
+  "verdict": "on_track",
+  "verdict_label": "On track",
+  "evidence": "Bought a finished spec shell for $91M (county records via press). No MCAQD permit or ACA award found",
+  "source_url": "https://www.commercialsearch.com/news/ermco-drops-91m-for-phoenix-industrial-facility/"
+ },
+ {
+  "id": "22-central-moloney-panama-city-beach-bay-co",
+  "plant": "Central Moloney, Panama City Beach (Bay County) FL (single-phase pole-mount; leased 140k sq ft)",
+  "announced_online": "Operating (first-production date not found)",
+  "verdict": "operating",
+  "verdict_label": "Operating",
+  "evidence": "Regional EDO says producing. Active hiring. ≥$25M and ≥200 jobs (P/W)",
+  "source_url": "https://www.floridasgreatnorthwest.com/page/central-moloney-inc-creates-550-jobs-in-northwest-florida/"
+ },
+ {
+  "id": "23-central-moloney-second-northwest-florida",
+  "plant": "Central Moloney, second Northwest Florida site",
+  "announced_online": "Not stated",
+  "verdict": "unverified",
+  "verdict_label": "Unverified",
+  "evidence": "The EDO says two NW Florida sites total 550 jobs and $75M. The second site was not identified",
+  "source_url": "https://www.floridasgreatnorthwest.com/page/central-moloney-inc-creates-550-jobs-in-northwest-florida/"
+ },
+ {
+  "id": "24-jst-power-equipment-jinpan-subsidiary-wy",
+  "plant": "JST Power Equipment (Jinpan subsidiary), Wytheville VA (pad-mount; 45k sq ft)",
+  "announced_online": "Opened May 2026; 150 units (2026) -> 1,000/yr (2027)",
+  "verdict": "operating",
+  "verdict_label": "Operating",
+  "evidence": "Company release. Jinpan's annual report defines JST USA as its subsidiary. No VEDP or county record found (P)",
+  "source_url": "https://jstpower.com/news/new-transformer-manufacturing-plant-in-virginia-usa/"
+ },
+ {
+  "id": "25-jst-power-equipment-jinpan-lake-mary-fl-",
+  "plant": "JST Power Equipment (Jinpan), Lake Mary FL (AIS switchgear)",
+  "announced_online": "Operating since 2021 (acquired 2019)",
+  "verdict": "operating",
+  "verdict_label": "Operating",
+  "evidence": "SSE-filed legal opinion (P)",
+  "source_url": "https://static.sse.com.cn/stock/disclosure/announcement/c/202508/688676_20250819_5YPI.pdf"
+ },
+ {
+  "id": "26-eaglerise-electric-china-us-plant-locati",
+  "plant": "Eaglerise Electric (China), US plant (location not found)",
+  "announced_online": "In production and ramping (Sep 2026)",
+  "verdict": "operating",
+  "verdict_label": "Operating",
+  "evidence": "Company investor event via Tencent News. A bidder named Eaglerise Renewable Energy USA was Lafayette's low bidder (link inferred) (S)",
+  "source_url": "https://news.qq.com/rain/a/20260915A0CJ9F00"
+ },
+ {
+  "id": "27-eaglerise-electric-china-mexico-plant-ne",
+  "plant": "Eaglerise Electric (China), Mexico plant (new-energy transformers)",
+  "announced_online": "Production started 2026; ramping",
+  "verdict": "operating",
+  "verdict_label": "Operating",
+  "evidence": "Company investor event and Q&A (S)",
+  "source_url": "https://news.qq.com/rain/a/20260915A0CJ9F00"
+ },
+ {
+  "id": "28-jinpan-china-mexico-plant-5-000-mva-yr-c",
+  "plant": "Jinpan (China), Mexico plant (~5,000 MVA/yr claimed)",
+  "announced_online": "Existing (claim)",
+  "verdict": "unverified",
+  "verdict_label": "Unverified",
+  "evidence": "Undated broker meeting notes only (W)",
+  "source_url": "https://reportify-1252068037.cos.ap-beijing.myqcloud.com/media/production/s_78a68390_78a68390f076a673b26c61bd75457251.pdf"
+ },
+ {
+  "id": "29-giga-energy-houston-tx-mv-60k-sq-ft",
+  "plant": "Giga Energy, Houston TX (MV; 60k sq ft)",
+  "announced_online": "Q1 2026",
+  "verdict": "operating",
+  "verdict_label": "Operating",
+  "evidence": "Trade press 'opens' headline. Capacity conflicts: 1,000+ units/yr (company) vs >3,000 (press). No TCEQ record or abatement found",
+  "source_url": "https://transformer-magazine.com/news/giga-energy-opens-houston-transformer-factory/"
+ },
+ {
+  "id": "30-vantran-mgm-forgent-waco-tx-430k-sq-ft",
+  "plant": "VanTran / MGM (Forgent), Waco TX (430k sq ft)",
+  "announced_online": "Opened May 2025",
+  "verdict": "operating",
+  "verdict_label": "Operating",
+  "evidence": "Former Sherwin-Williams distribution center. Texas Enterprise Zone refund up to $960k. Capex $20-33M (conflicting)",
+  "source_url": "https://wacoeconomicdevelopment.com/about-us/news/vantran-transformers-to-expand"
+ },
+ {
+  "id": "31-hammond-power-solutions-mexico-mont-3-4-",
+  "plant": "Hammond Power Solutions, Mexico ('Mont 3/4', likely Monterrey; dry-type)",
+  "announced_online": "Shipping since Q1 2026",
+  "verdict": "operating",
+  "verdict_label": "Operating",
+  "evidence": "Mont 4 fully ramped, Mont 3 ramping, per the Q2 call (S)",
+  "source_url": "https://finance.yahoo.com/markets/stocks/articles/hammond-power-solutions-q2-earnings-100344328.html"
+ },
+ {
+  "id": "32-weg-atotonilco-de-tula-mx-power-to-550-k",
+  "plant": "WEG, Atotonilco de Tula MX (power to 550 kV; $156M)",
+  "announced_online": "Not stated",
+  "verdict": "unverified",
+  "verdict_label": "Unverified",
+  "evidence": "No round-2 evidence. Baseline S only",
+  "source_url": "https://transformer-technology.com/weg-s-a-unleashes-245-million-investment-to-supercharge-transformer-production-across-americas/"
+ },
+ {
+  "id": "33-weg-washington-mo-us-expansion-60-mva",
+  "plant": "WEG, Washington MO US expansion (≤60 MVA)",
+  "announced_online": "~2028",
+  "verdict": "unverified",
+  "verdict_label": "Unverified",
+  "evidence": "Baseline text only. No round-2 evidence",
+  "source_url": ""
+ },
+ {
+  "id": "34-heron-power-morgan-hill-ca-solid-state-2",
+  "plant": "Heron Power, Morgan Hill CA (solid-state; 286k sq ft former warehouse)",
+  "announced_online": "Late 2027",
+  "verdict": "unverified",
+  "verdict_label": "Unverified",
+  "evidence": "Site chosen Aug 13, 2026. $26.4M CalCompetes. RWE pilot Sep 21. Lease vs purchase unknown (P)",
+  "source_url": "https://heronpower.com/news-stories/press-release-heron-power-selects-first-factory-location-to-build-next-generation-power-electronics-in-the-united-states"
+ },
+ {
+  "id": "35-cleveland-cliffs-weirton-wv-distribution",
+  "plant": "Cleveland-Cliffs, Weirton WV (distribution transformers; $150M)",
+  "announced_online": "Cancelled May 2025",
+  "verdict": "cancelled",
+  "verdict_label": "Cancelled",
+  "evidence": "Confirmed by multiple outlets. $50M WV incentive and 600 union jobs forgone (S)",
+  "source_url": "https://www.post-gazette.com/business/pittsburgh-company-news/2025/05/07/cleveland-cliffs-steel-weirton-w-va-transformer-jobs/stories/202505070089"
+ },
+ {
+  "id": "36-cleveland-cliffs-butler-pa-goes-25-170m-",
+  "plant": "Cleveland-Cliffs, Butler PA (GOES +25%; $170M plus $75M DOE grant)",
+  "announced_online": "2028 (CEO); DOE's 2029 date not re-found",
+  "verdict": "on_track",
+  "verdict_label": "On track",
+  "evidence": "Passed federal review. No GOES tonnage, price or merchant terms disclosed",
+  "source_url": "https://finance.yahoo.com/sectors/energy/articles/cleveland-cliffs-170m-butler-works-151908192.html"
+ },
+ {
+  "id": "37-worthington-steel-burlington-on-transfor",
+  "plant": "Worthington Steel, Burlington ON (transformer cores)",
+  "announced_online": "Not stated",
+  "verdict": "unverified",
+  "verdict_label": "Unverified",
+  "evidence": "Baseline P (SEC annual report). No round-2 evidence",
+  "source_url": "https://www.sec.gov/Archives/edgar/data/0001968487/000119312526352313/d163827dars.pdf"
+ }
+]
